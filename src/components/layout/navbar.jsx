@@ -15,20 +15,17 @@ export function Navbar() {
           Felixo.com.br
         </a>
         <nav className="ml-auto hidden md:flex items-center gap-6 text-sm">
+          <a href="#inicio" className="opacity-80 hover:opacity-100">
+            Início
+          </a>
           <a href="#sobre" className="opacity-80 hover:opacity-100">
             Sobre
           </a>
           <a href="#portfolio" className="opacity-80 hover:opacity-100">
-            Portfólio
-          </a>
-          <a href="#projetos" className="opacity-80 hover:opacity-100">
             Projetos
           </a>
-          <a href="#blog" className="opacity-80 hover:opacity-100">
-            Blog
-          </a>
-          <a href="#felixoverse" className="opacity-80 hover:opacity-100">
-            FelixoVerse
+          <a href="#extras" className="opacity-80 hover:opacity-100">
+            Extras
           </a>
           <a href="#contato" className="opacity-80 hover:opacity-100">
             Contato

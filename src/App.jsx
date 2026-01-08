@@ -26,13 +26,17 @@ import { items } from "./data/projects.jsx";
 import { Navbar } from "./components/layout/navbar";
 import { Footer } from "./components/layout/footer";
 import { HeroSection } from "./sections/hero";
+import { AboutSection } from "./sections/about";
 import { PortfolioSection } from "./sections/portfolio";
 import { ProjectsSection } from "./sections/projects";
-import { BlogSection } from "./sections/blog";
-import { FelixoVerseSection } from "./sections/felixoverse";
+import { ExtrasSection } from "./sections/extras";
 import { ContactSection } from "./sections/contact";
+import FelixoVersePage from "./pages/FelixoVersePage";
 
 export default function App() {
+  // Estado TEMPORÁRIO para visualizar a página do FelixoVerse
+  const [showFelixoVerse, setShowFelixoVerse] = useState(false);
+
   // Estado da busca por texto
   const [q, setQ] = useState("");
   
@@ -57,14 +61,35 @@ export default function App() {
     });
   }, [q, activeTag]);
 
+  if (showFelixoVerse) {
+    return (
+      <>
+        <button 
+          onClick={() => setShowFelixoVerse(false)}
+          className="fixed top-4 right-4 z-[9999] bg-red-600 text-white px-4 py-2 rounded-lg font-bold shadow-lg hover:bg-red-700 transition"
+        >
+          Voltar para Portfólio
+        </button>
+        <FelixoVersePage />
+      </>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-zinc-900 to-black text-zinc-50 selection:bg-cyan-500/40">
+    <div className="min-h-screen bg-gradient-to-b from-black via-zinc-900 to-black text-zinc-50 selection:bg-cyan-500/40 font-sans relative">
+      <button 
+        onClick={() => setShowFelixoVerse(true)}
+        className="fixed bottom-4 right-4 z-50 bg-cyan-600 text-white px-4 py-2 rounded-lg font-bold shadow-lg hover:bg-cyan-700 transition"
+      >
+        Ver FelixoVerse (Preview)
+      </button>
+
       <Navbar />
       <HeroSection q={q} setQ={setQ} activeTag={activeTag} setActiveTag={setActiveTag} />
+      <AboutSection />
       <PortfolioSection items={filtered.length ? filtered : items} />
       <ProjectsSection items={filtered} />
-      <BlogSection />
-      <FelixoVerseSection />
+      <ExtrasSection />
       <ContactSection />
       <Footer />
     </div>

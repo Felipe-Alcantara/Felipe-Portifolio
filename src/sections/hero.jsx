@@ -7,13 +7,23 @@ import { tags } from "../data/projects.jsx";
 
 export function HeroSection({ q, setQ, activeTag, setActiveTag }) {
   return (
-    <section id="sobre" className="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <section id="inicio" className="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight">Código, Música e Comunidade.</h1>
-        <p className="mt-4 text-zinc-300">
-          Um hub criativo que conecta desenvolvimento web, produção musical e projetos colaborativos. Bora construir algo
-          incrível hoje.
-        </p>
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+          Programação simples, criativa, e colaborativa
+        </h1>
+        <div className="mt-4 text-zinc-300 space-y-4">
+          <p>
+            Olá, eu sou <strong>Felipe Martin</strong>: desenvolvo aplicações, produzo música e crio experiências colaborativas.
+          </p>
+          <p>
+            Aqui você encontra meus projetos, demos e colaborações e um link dedicado ao meu projeto{" "}
+            <a href="/felixoverse" className="text-cyan-400 hover:underline font-semibold" title="Em breve">
+              FelixoVerse
+            </a>
+            , minha comunidade e plataforma de divulgação artística, de desenvolvimento e entretenimento!
+          </p>
+        </div>
         <div className="mt-6 flex gap-3">
           <Button asChild>
             <a href="#portfolio" className="inline-flex items-center gap-2">
