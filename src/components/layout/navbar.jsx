@@ -1,6 +1,7 @@
 import React from "react";
 import { Menu } from "lucide-react";
 import { Button } from "../ui/button";
+import cattLogo from "../../../Imagens/CATT transparente.png";
 
 export function Navbar() {
   return (
@@ -9,8 +10,9 @@ export function Navbar() {
         <Button variant="ghost" size="icon" className="md:hidden">
           <Menu />
         </Button>
-        <a href="#sobre" className="text-lg font-semibold tracking-tight">
-          FelixoVerse
+        <a href="#sobre" className="text-lg font-semibold tracking-tight flex items-center gap-2">
+          <img src={cattLogo} alt="Logo" className="w-8 h-8 object-contain" />
+          Felixo.com.br
         </a>
         <nav className="ml-auto hidden md:flex items-center gap-6 text-sm">
           <a href="#sobre" className="opacity-80 hover:opacity-100">
