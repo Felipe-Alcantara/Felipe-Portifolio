@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 import { Rocket, Mail, Search, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "../components/ui/button";
+import Particles from "../components/ui/particles";
 import { Input } from "../components/ui/input";
 import { Badge } from "../components/ui/badge";
 import { tags, items } from "../data/projects.jsx";
@@ -132,7 +133,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
       </AnimatePresence>
 
       <div>
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-white via-emerald-200 to-white bg-clip-text text-transparent animate-title-glow">
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-white via-emerald-200 to-white bg-clip-text text-transparent animate-title-glow text-glow-white">
           Programação simples, criativa, e colaborativa
         </h1>
         <div className="mt-4 text-zinc-300 space-y-4 text-glow-white">
@@ -153,13 +154,10 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
               {/* Brilho passando (Shimmer) */}
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
               
-              {/* Partículas sutis */}
-              <span className="absolute top-1 left-2 w-0.5 h-0.5 bg-purple-200 rounded-full animate-pulse z-0" />
-              <span className="absolute bottom-1 right-2 w-0.5 h-0.5 bg-purple-200 rounded-full animate-pulse delay-300 z-0" />
-              <span className="absolute top-1/2 right-1/4 w-0.5 h-0.5 bg-white rounded-full animate-ping duration-[1.5s] z-0" />
+              <Particles variant="purple" />
 
               <Rocket size={18} className="relative z-10" /> 
-              <span className="relative z-10">Ver Portfólio</span>
+              <span className="relative z-10">Ver projetos</span>
             </a>
           </Button>
           <Button variant="outline" asChild className="relative group overflow-hidden border-white/30 bg-white/5 text-white shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:bg-white/10 hover:shadow-[0_0_28px_rgba(255,255,255,0.35)] transition-all duration-300">
@@ -167,10 +165,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
               {/* Brilho passando (Shimmer) */}
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent z-0" />
 
-              {/* Partículas sutis */}
-              <span className="absolute top-1 left-2 w-0.5 h-0.5 bg-white rounded-full animate-pulse z-0" />
-              <span className="absolute bottom-1 right-2 w-0.5 h-0.5 bg-white rounded-full animate-pulse delay-300 z-0" />
-              <span className="absolute top-1/2 right-1/4 w-0.5 h-0.5 bg-white rounded-full animate-ping duration-[1.5s] z-0" />
+              <Particles variant="white" />
 
               <Mail size={18} className="relative z-10" /> 
               <span className="relative z-10">Falar comigo</span>

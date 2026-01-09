@@ -22,7 +22,7 @@ export function Navbar() {
             Sobre
           </a>
           <a href="#portfolio" className="opacity-80 hover:opacity-100">
-            Projetos
+            Aplicações Web
           </a>
           <a href="#extras" className="opacity-80 hover:opacity-100">
             Extras
