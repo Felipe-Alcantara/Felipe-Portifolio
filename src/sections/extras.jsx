@@ -44,7 +44,7 @@ export function ExtrasSection() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Coluna Acadêmica */}
           <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-cyan-400 flex items-center gap-2">
+            <h3 className="text-xl font-semibold text-purple-400 flex items-center gap-2">
               <GraduationCap /> Acadêmico
             </h3>
             
@@ -68,7 +68,7 @@ export function ExtrasSection() {
 
           {/* Coluna Cursos Livres/Alura */}
           <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-cyan-400 flex items-center gap-2">
+            <h3 className="text-xl font-semibold text-purple-400 flex items-center gap-2">
               <CheckCircle2 /> Cursos & Certificações
             </h3>
             

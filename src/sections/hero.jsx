@@ -55,10 +55,10 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag }) {
 
               <div className="flex items-center gap-2 mb-6">
                 <div className="relative flex-1">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-cyan-400" size={18} />
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-purple-400" size={18} />
                   <Input
                     autoFocus
-                    className="pl-10 h-12 text-lg bg-black/50 border-white/10 focus-visible:ring-1 focus-visible:ring-cyan-500"
+                    className="pl-10 h-12 text-lg bg-black/50 border-white/10 focus-visible:ring-1 focus-visible:ring-purple-600"
                     placeholder="O que você procura?"
                     value={q}
                     onChange={(e) => setQ(e.target.value)}
@@ -75,7 +75,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag }) {
                     className={
                       "cursor-pointer px-4 py-2 text-sm transition-all " +
                       (activeTag === t.id 
-                        ? "bg-cyan-500 text-black shadow-[0_0_15px_rgba(6,182,212,0.5)] scale-105" 
+                        ? "bg-purple-600 text-black shadow-[0_0_15px_rgba(147,51,234,0.5)] scale-105" 
                         : "bg-zinc-800 hover:bg-zinc-700")
                     }
                   >
@@ -102,14 +102,14 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag }) {
                       onClick={() => window.location.href = item.link}
                     >
                       <div className="flex items-start justify-between mb-2">
-                         <div className="p-2 bg-black/40 rounded-lg text-cyan-400">
+                         <div className="p-2 bg-black/40 rounded-lg text-purple-400">
                            {item.icon}
                          </div>
                          <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-500 border border-zinc-700 px-2 py-0.5 rounded-full">
                            {item.tag}
                          </span>
                       </div>
-                      <h3 className="font-bold text-zinc-100 group-hover:text-cyan-400 transition-colors">
+                      <h3 className="font-bold text-zinc-100 group-hover:text-purple-400 transition-colors">
                         {item.title}
                       </h3>
                       <p className="text-xs text-zinc-400 mt-1 line-clamp-2">
@@ -143,7 +143,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag }) {
           </p>
           <p>
             Aqui você encontra meus projetos, demos e colaborações e um link dedicado ao meu projeto{" "}
-            <a href="/felixoverse" className="text-cyan-400 hover:underline font-semibold" title="Em breve">
+            <a href="/felixoverse" className="text-purple-400 hover:underline font-semibold" title="Em breve">
               FelixoVerse
             </a>
             , minha comunidade e plataforma de divulgação artística, de desenvolvimento e entretenimento!
@@ -177,7 +177,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag }) {
           className="rounded-3xl border border-white/10 p-6 bg-gradient-to-br from-zinc-800/50 to-zinc-900/30 shadow-xl cursor-pointer hover:border-white/20 transition-colors group"
           onClick={() => setIsFocused(true)}
         >
-          <div className="text-sm text-zinc-300 group-hover:text-cyan-400 transition-colors">Busca rápida</div>
+          <div className="text-sm text-zinc-300 group-hover:text-purple-400 transition-colors">Busca rápida</div>
           <div className="mt-3 flex items-center gap-2">
             <div className="relative flex-1 pointer-events-none"> 
               <Search className="absolute left-3 top-1/2 -translate-y-1/2" size={16} />

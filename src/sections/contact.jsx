@@ -10,11 +10,11 @@ export function ContactSection() {
         <h2 className="text-3xl font-bold text-center mb-8">Entre em contato</h2>
         
         <div className="flex justify-center gap-6 mb-12">
-           <a href="mailto:seuemail@exemplo.com" className="flex items-center gap-2 text-zinc-400 hover:text-cyan-400 transition-colors">
+           <a href="mailto:seuemail@exemplo.com" className="flex items-center gap-2 text-zinc-400 hover:text-purple-400 transition-colors">
               <Mail size={20} />
               <span>seuemail@exemplo.com</span>
            </a>
-           <a href="https://github.com/SeuUsuario" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-zinc-400 hover:text-cyan-400 transition-colors">
+           <a href="https://github.com/SeuUsuario" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-zinc-400 hover:text-purple-400 transition-colors">
               <Github size={20} />
               <span>GitHub</span>
            </a>
@@ -30,7 +30,7 @@ export function ContactSection() {
               <div>
                 <label className="block text-sm text-zinc-400 mb-2">Mensagem</label>
                 <textarea 
-                  className="w-full min-h-[120px] rounded-xl bg-zinc-800/50 border border-white/10 p-3 text-sm text-white outline-none focus:ring-1 focus:ring-cyan-500/50 resize-y"
+                  className="w-full min-h-[120px] rounded-xl bg-zinc-800/50 border border-white/10 p-3 text-sm text-white outline-none focus:ring-1 focus:ring-purple-600/50 resize-y"
                   placeholder="Digite sua mensagem..."
                 ></textarea>
               </div>

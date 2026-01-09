@@ -32,7 +32,7 @@ function ExperienceTimer() {
     return () => clearInterval(interval);
   }, []);
 
-  return <span className="font-mono text-cyan-400 font-bold whitespace-nowrap inline-block">{time}</span>;
+  return <span className="font-mono text-teal-400 font-bold whitespace-nowrap inline-block">{time}</span>;
 }
 
 export function AboutSection() {
@@ -44,7 +44,7 @@ export function AboutSection() {
           <div className="relative group">
             <div className="relative w-48 h-48 md:w-56 md:h-56">
               {/* Glow cinematográfico */}
-              <div className="pointer-events-none absolute -inset-8 rounded-[28px] bg-gradient-to-tr from-cyan-500/20 via-white/5 to-transparent blur-2xl animate-photo-glow-1" style={{backgroundSize: '200% 200%'}} />
+              <div className="pointer-events-none absolute -inset-8 rounded-[28px] bg-gradient-to-tr from-purple-600/20 via-white/5 to-transparent blur-2xl animate-photo-glow-1" style={{backgroundSize: '200% 200%'}} />
               <div className="pointer-events-none absolute -inset-6 rounded-[26px] bg-gradient-to-b from-white/10 to-transparent blur-xl animate-photo-glow-2" style={{backgroundSize: '200% 200%'}} />
 
               {/* Quadro da foto */}
@@ -59,28 +59,28 @@ export function AboutSection() {
           <div className="flex gap-3 w-full justify-start">
             <a 
               href="mailto:FelipeTheFeh@Gmail.com" 
-              className="flex items-center gap-2 text-zinc-300 hover:text-cyan-400 transition-colors group"
+              className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
               title="E-mail"
             >
-              <Mail size={28} className="text-cyan-400 group-hover:scale-110 transition-transform" />
+              <Mail size={28} className="text-purple-400 group-hover:scale-110 transition-transform" />
             </a>
             <a 
               href="https://github.com/Felipe-Alcantara" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-zinc-300 hover:text-cyan-400 transition-colors group"
+              className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
               title="GitHub"
             >
-              <Github size={28} className="text-cyan-400 group-hover:scale-110 transition-transform" />
+              <Github size={28} className="text-purple-400 group-hover:scale-110 transition-transform" />
             </a>
             <a 
               href="https://www.linkedin.com/in/felipealcantaramartins/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-zinc-300 hover:text-cyan-400 transition-colors group"
+              className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
               title="LinkedIn"
             >
-              <Linkedin size={28} className="text-cyan-400 group-hover:scale-110 transition-transform" />
+              <Linkedin size={28} className="text-purple-400 group-hover:scale-110 transition-transform" />
             </a>
           </div>
         </div>
@@ -88,10 +88,10 @@ export function AboutSection() {
         {/* Coluna do Texto */}
         <div className="space-y-6 text-zinc-300 leading-relaxed md:text-lg text-glow-white">
           <p>
-            Sou o <a href="https://github.com/Felipe-Alcantara" target="_blank" rel="noopener noreferrer" className="text-xl md:text-2xl text-cyan-400 font-bold hover:text-cyan-300 transition-colors underline decoration-cyan-400/30 hover:decoration-cyan-300">Felipe</a>, estudante de <strong className="text-cyan-400">Sistemas de Informação</strong> na <strong className="text-cyan-400">Universidade Geraldo de Biase</strong> e programo há <ExperienceTimer />. Trabalho com <strong>Python</strong> para automações, scraping e aplicações desktop, e com <strong>TypeScript</strong> para construir aplicações web modernas e escaláveis. Tenho diversos projetos e sites criativos; mesmo os mais simples valem muito para mim porque priorizo simplicidade e aprendizado contínuo.
+            Sou o <a href="https://github.com/Felipe-Alcantara" target="_blank" rel="noopener noreferrer" className="text-xl md:text-2xl text-teal-400 font-bold hover:text-teal-300 transition-colors underline decoration-teal-400/30 hover:decoration-teal-300">Felipe</a>, estudante de <strong className="text-teal-400">Sistemas de Informação</strong> na <strong className="text-teal-400">Universidade Geraldo de Biase</strong> e programo há <ExperienceTimer />. Trabalho com <strong className="text-teal-400">Python</strong> para automações, scraping e aplicações desktop, e com <strong className="text-teal-400">TypeScript</strong> para construir aplicações web modernas e escaláveis. Tenho diversos projetos e sites criativos; mesmo os mais simples valem muito para mim porque priorizo simplicidade e aprendizado contínuo.
           </p>
           <p>
-            Meus projetos abrangem áreas como produtividade, música, jogos, comunidade e ferramentas que facilitem o dia a dia das pessoas. Gosto de transformar ideias em protótipos funcionais: desde pequenos utilitários que economizam tempo até experiências interativas que conectam pessoas. Acredito que <strong>código bem pensado e interfaces claras</strong> tornam qualquer solução mais útil e acessível.
+            Meus projetos abrangem áreas como produtividade, música, jogos, comunidade e ferramentas que facilitem o dia a dia das pessoas. Gosto de transformar ideias em protótipos funcionais: desde pequenos utilitários que economizam tempo até experiências interativas que conectam pessoas. Acredito que <strong className="text-teal-400">código bem pensado e interfaces claras</strong> tornam qualquer solução mais útil e acessível.
           </p>
 
         </div>

@@ -19,11 +19,11 @@ export default function FelixoVersePage() {
                 <div className="text-sm text-zinc-400 mb-4 uppercase tracking-widest">Roadmap Inicial</div>
                 <ol className="space-y-4 text-lg">
                     <li className="flex items-center gap-3">
-                        <span className="w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-sm font-bold">1</span>
+                        <span className="w-6 h-6 rounded-full bg-purple-600/20 text-purple-400 flex items-center justify-center text-sm font-bold">1</span>
                         Publicar landing responsiva
                     </li>
                     <li className="flex items-center gap-3">
-                        <span className="w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-sm font-bold">2</span>
+                        <span className="w-6 h-6 rounded-full bg-purple-600/20 text-purple-400 flex items-center justify-center text-sm font-bold">2</span>
                         Conectar blog (MDX ou Notion API)
                     </li>
                     <li className="flex items-center gap-3">
