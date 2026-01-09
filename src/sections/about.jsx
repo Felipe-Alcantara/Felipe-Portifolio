@@ -131,8 +131,8 @@ export function AboutSection() {
         </div>
 
         {/* Coluna de Tecnologias (usa o espaço à direita no desktop) */}
-        <div className="hidden lg:flex justify-end">
-          <div className="relative w-full">
+        <div className="flex justify-center md:justify-end md:col-span-2 lg:col-span-1">
+          <div className="relative w-full max-w-[280px]">
             {/* Glow cinematográfico */}
             <div className="pointer-events-none absolute -inset-4 rounded-3xl blur-2xl animate-tech-glow" />
             <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-gradient-to-b from-white/10 to-transparent blur-xl animate-photo-glow-2" style={{backgroundSize: '200% 200%'}} />
