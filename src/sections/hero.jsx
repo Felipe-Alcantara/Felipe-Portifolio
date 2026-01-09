@@ -139,7 +139,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag }) {
         </h1>
         <div className="mt-4 text-zinc-300 space-y-4 text-glow-white">
           <p>
-            Olá, eu sou <strong>Felipe Martin</strong>: desenvolvo aplicações, bots, extensões e automações, também atuo com produção musical e sound design, e crio experiências colaborativas.
+            Olá, eu sou <strong className="text-teal-400">Felipe Martin</strong>: desenvolvo aplicações, bots, extensões e automações, também atuo com produção musical e sound design, e crio experiências colaborativas.
           </p>
           <p>
             Aqui você encontra meus projetos, demos e colaborações e um link dedicado ao meu projeto{" "}

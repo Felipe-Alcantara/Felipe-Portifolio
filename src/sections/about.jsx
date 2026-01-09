@@ -1,7 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
-import { Button } from "../components/ui/button";
 import felipeFoto from "../../Imagens/IMG_20240605_212259_494 cortado.jpg";
+import brythonLogo from "../../Imagens/Gemini_Generated_Image_k6r461k6r461k6r4.png";
+import {
+  TbBrandCSharp,
+  TbBrandCss3,
+  TbBrandDjango,
+  TbBrandGit,
+  TbBrandGithub,
+  TbBrandHtml5,
+  TbBrandJavascript,
+  TbBrandPython,
+  TbBrandReact,
+  TbBrandTailwind,
+  TbBrandTypescript,
+  TbBrandVite,
+  TbBrandVscode,
+  TbBrandWindows,
+} from "react-icons/tb";
 
 function ExperienceTimer() {
   const [time, setTime] = useState("");
@@ -36,9 +52,27 @@ function ExperienceTimer() {
 }
 
 export function AboutSection() {
+  const tech = [
+    { label: "HTML", Icon: TbBrandHtml5, color: "#E34F26" },
+    { label: "CSS", Icon: TbBrandCss3, color: "#1572B6" },
+    { label: "JS", Icon: TbBrandJavascript, color: "#F7DF1E" },
+    { label: "TypeScript", Icon: TbBrandTypescript, color: "#3178C6" },
+    { label: "Tailwind", Icon: TbBrandTailwind, color: "#06B6D4" },
+    { label: "React", Icon: TbBrandReact, color: "#61DAFB" },
+    { label: "Vite", Icon: TbBrandVite, color: "#646CFF" },
+    { label: "Python", Icon: TbBrandPython, color: "#3776AB" },
+    { label: "Brython", isImage: true, src: brythonLogo },
+    { label: "Django", Icon: TbBrandDjango, color: "#0C4B33" },
+    { label: "C#", Icon: TbBrandCSharp, color: "#512BD4" },
+    { label: "Git", Icon: TbBrandGit, color: "#F05032" },
+    { label: "GitHub", Icon: TbBrandGithub, color: "#FFFFFF" },
+    { label: "VSCode", Icon: TbBrandVscode, color: "#007ACC" },
+    { label: "Windows", Icon: TbBrandWindows, color: "#0078D4" },
+  ];
+
   return (
     <section id="sobre" className="border-t border-white/5 bg-zinc-900/20">
-      <div className="mx-auto max-w-7xl px-6 py-14 grid md:grid-cols-[280px_1fr] gap-8 items-start">
+      <div className="mx-auto max-w-7xl pl-6 pr-6 lg:pr-0 py-14 grid md:grid-cols-[280px_1fr] lg:grid-cols-[280px_1fr_240px] gap-8 items-start">
         {/* Coluna da Foto e Redes */}
         <div className="flex flex-col items-center md:items-start gap-4">
           <div className="relative group">
@@ -88,12 +122,52 @@ export function AboutSection() {
         {/* Coluna do Texto */}
         <div className="space-y-6 text-zinc-300 leading-relaxed md:text-lg text-glow-white">
           <p>
-            Sou o <a href="https://github.com/Felipe-Alcantara" target="_blank" rel="noopener noreferrer" className="text-xl md:text-2xl text-teal-400 font-bold hover:text-teal-300 transition-colors underline decoration-teal-400/30 hover:decoration-teal-300">Felipe</a>, estudante de <strong className="text-teal-400">Sistemas de Informação</strong> na <strong className="text-teal-400">Universidade Geraldo de Biase</strong> e programo há <ExperienceTimer />. Trabalho com <strong className="text-teal-400">Python</strong> para automações, scraping e aplicações desktop, e com <strong className="text-teal-400">TypeScript</strong> para construir aplicações web modernas e escaláveis. Tenho diversos projetos e sites criativos; mesmo os mais simples valem muito para mim porque priorizo simplicidade e aprendizado contínuo.
+            Sou estudante de <strong className="text-teal-400">Sistemas de Informação</strong> na <strong className="text-[#1E6BB8]">Universidade Geraldo de Biase</strong> e programo há <ExperienceTimer />. Trabalho com <strong className="text-[#3776AB]">Python</strong> para automações, scraping e aplicações desktop, e com <strong className="text-[#3178C6]">TypeScript</strong> para construir aplicações web modernas e escaláveis. Tenho diversos projetos e sites criativos; mesmo os mais simples valem muito para mim porque priorizo simplicidade e aprendizado contínuo.
           </p>
           <p>
             Meus projetos abrangem áreas como produtividade, música, jogos, comunidade e ferramentas que facilitem o dia a dia das pessoas. Gosto de transformar ideias em protótipos funcionais: desde pequenos utilitários que economizam tempo até experiências interativas que conectam pessoas. Acredito que <strong className="text-teal-400">código bem pensado e interfaces claras</strong> tornam qualquer solução mais útil e acessível.
           </p>
 
+        </div>
+
+        {/* Coluna de Tecnologias (usa o espaço à direita no desktop) */}
+        <div className="hidden lg:flex justify-end">
+          <div className="relative w-full">
+            {/* Glow cinematográfico */}
+            <div className="pointer-events-none absolute -inset-4 rounded-3xl blur-2xl animate-tech-glow" />
+            <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-gradient-to-b from-white/10 to-transparent blur-xl animate-photo-glow-2" style={{backgroundSize: '200% 200%'}} />
+            
+            <div className="relative w-full rounded-2xl bg-zinc-900/30 border border-white/5 p-4">
+              {/* Camada escura para suavizar o brilho */}
+              <div className="absolute inset-0 rounded-2xl bg-black/40 pointer-events-none" />
+              
+              <div className="relative grid grid-cols-3 gap-3 justify-items-center">
+              {tech.map(({ label, Icon, color, isImage, src }) => (
+                <span
+                  key={label}
+                  title={label}
+                  aria-label={label}
+                  className="group relative p-2 rounded-xl bg-black/20 border border-white/5 hover:border-white/20 hover:scale-150 hover:z-50 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-200 cursor-pointer flex items-center justify-center"
+                  style={!isImage ? { color } : undefined}
+                >
+                  {/* Tooltip com nome da tecnologia */}
+                  <span
+                    className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 rounded-md bg-black/90 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none"
+                    style={{ color: isImage ? '#3776AB' : color }}
+                  >
+                    {label}
+                  </span>
+                  
+                  {isImage ? (
+                    <img src={src} alt={label} className="w-7 h-7 object-contain" />
+                  ) : (
+                    <Icon size={28} strokeWidth={1.6} />
+                  )}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </section>
