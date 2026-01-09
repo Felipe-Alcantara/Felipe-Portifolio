@@ -40,7 +40,7 @@ export function AboutSection() {
     <section id="sobre" className="border-t border-white/5 bg-zinc-900/20">
       <div className="mx-auto max-w-7xl px-6 py-14 grid md:grid-cols-[280px_1fr] gap-8 items-start">
         {/* Coluna da Foto e Redes */}
-        <div className="flex flex-col items-center md:items-start gap-6">
+        <div className="flex flex-col items-center md:items-start gap-4">
           <div className="relative group">
             <div className="relative w-48 h-48 md:w-56 md:h-56">
               {/* Glow cinematográfico */}
@@ -56,22 +56,32 @@ export function AboutSection() {
             </div>
           </div>
           
-          <div className="flex gap-2 w-full justify-center md:justify-start">
-            <Button variant="outline" size="icon" asChild>
-              <a href="https://github.com/SeuUsuario" target="_blank" rel="noopener noreferrer">
-                <Github size={20} />
-              </a>
-            </Button>
-            <Button variant="outline" size="icon" asChild>
-              <a href="https://linkedin.com/in/SeuUsuario" target="_blank" rel="noopener noreferrer">
-                <Linkedin size={20} />
-              </a>
-            </Button>
-            <Button variant="outline" size="icon" asChild>
-              <a href="mailto:seuemail@exemplo.com">
-                <Mail size={20} />
-              </a>
-            </Button>
+          <div className="flex gap-3 w-full justify-start">
+            <a 
+              href="mailto:FelipeTheFeh@Gmail.com" 
+              className="flex items-center gap-2 text-zinc-300 hover:text-cyan-400 transition-colors group"
+              title="E-mail"
+            >
+              <Mail size={28} className="text-cyan-400 group-hover:scale-110 transition-transform" />
+            </a>
+            <a 
+              href="https://github.com/Felipe-Alcantara" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-zinc-300 hover:text-cyan-400 transition-colors group"
+              title="GitHub"
+            >
+              <Github size={28} className="text-cyan-400 group-hover:scale-110 transition-transform" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/felipealcantaramartins/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-zinc-300 hover:text-cyan-400 transition-colors group"
+              title="LinkedIn"
+            >
+              <Linkedin size={28} className="text-cyan-400 group-hover:scale-110 transition-transform" />
+            </a>
           </div>
         </div>
 
