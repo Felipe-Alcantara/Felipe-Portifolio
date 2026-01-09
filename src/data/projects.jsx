@@ -59,6 +59,22 @@ export const items = [
     link: "https://example.com/dj",
     icon: <Music size={16} />,
   },
+  // Placeholders para Tags Tecnológicas
+  { title: "Projetos HTML", tag: "HTML", desc: "Demonstração de projetos utilizando HTML.", link: "#", icon: <Code size={16} /> },
+  { title: "Projetos CSS", tag: "CSS", desc: "Demonstração de projetos utilizando CSS.", link: "#", icon: <Code size={16} /> },
+  { title: "Projetos JS", tag: "JS", desc: "Demonstração de projetos utilizando JS.", link: "#", icon: <Code size={16} /> },
+  { title: "Projetos TypeScript", tag: "TypeScript", desc: "Demonstração de projetos utilizando TypeScript.", link: "#", icon: <Code size={16} /> },
+  { title: "Projetos Tailwind", tag: "Tailwind", desc: "Demonstração de projetos utilizando Tailwind.", link: "#", icon: <Code size={16} /> },
+  { title: "Projetos React", tag: "React", desc: "Demonstração de projetos utilizando React.", link: "#", icon: <Code size={16} /> },
+  { title: "Projetos Vite", tag: "Vite", desc: "Demonstração de projetos utilizando Vite.", link: "#", icon: <Code size={16} /> },
+  { title: "Projetos Python", tag: "Python", desc: "Demonstração de projetos utilizando Python.", link: "#", icon: <Code size={16} /> },
+  { title: "Projetos Brython", tag: "Brython", desc: "Demonstração de projetos utilizando Brython.", link: "#", icon: <Code size={16} /> },
+  { title: "Projetos Django", tag: "Django", desc: "Demonstração de projetos utilizando Django.", link: "#", icon: <Code size={16} /> },
+  { title: "Projetos C#", tag: "C#", desc: "Demonstração de projetos utilizando C#.", link: "#", icon: <Code size={16} /> },
+  { title: "Projetos Git", tag: "Git", desc: "Demonstração de projetos utilizando Git.", link: "#", icon: <Code size={16} /> },
+  { title: "Projetos GitHub", tag: "GitHub", desc: "Demonstração de projetos utilizando GitHub.", link: "#", icon: <Code size={16} /> },
+  { title: "Projetos VSCode", tag: "VSCode", desc: "Demonstração de projetos utilizando VSCode.", link: "#", icon: <Code size={16} /> },
+  { title: "Projetos Windows", tag: "Windows", desc: "Demonstração de projetos utilizando Windows.", link: "#", icon: <Code size={16} /> },
 ];
 
 /**

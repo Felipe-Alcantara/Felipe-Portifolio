@@ -6,9 +6,7 @@ import { Input } from "../components/ui/input";
 import { Badge } from "../components/ui/badge";
 import { tags, items } from "../data/projects.jsx";
 
-export function HeroSection({ q, setQ, activeTag, setActiveTag }) {
-  const [isFocused, setIsFocused] = useState(false);
-
+export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, setIsSearchOpen }) {
   // Filtra itens para o overlay
   const filteredItems = useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -27,13 +25,13 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag }) {
     <section id="inicio" className="mx-auto max-w-7xl px-6 py-12 grid md:grid-cols-2 gap-10 items-center relative">
       {/* Overlay de Busca Focada */}
       <AnimatePresence>
-        {isFocused && (
+        {isSearchOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex flex-col items-center pt-20 px-4 overflow-y-auto"
-            onClick={() => setIsFocused(false)}
+            onClick={() => setIsSearchOpen(false)}
           >
             {/* Container da Busca que "cresce" */}
             <motion.div
@@ -47,7 +45,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag }) {
                     variant="ghost" 
                     size="icon" 
                     className="h-8 w-8 hover:bg-white/10 rounded-full"
-                    onClick={() => setIsFocused(false)}
+                    onClick={() => setIsSearchOpen(false)}
                 >
                     <X size={18} />
                 </Button>
@@ -164,9 +162,9 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag }) {
       </div>
       
       {/* Card Original (Estático) */}
-      {/* Quando focado (isFocused), mostramos um placeholder INVISÍVEL para manter o espaço no layout */}
+      {/* Quando focado (isSearchOpen), mostramos um placeholder INVISÍVEL para manter o espaço no layout */}
       {/* mas não renderizamos o componente real com layoutId para evitar conflito na animação de saída */}
-      {isFocused ? (
+      {isSearchOpen ? (
         <div className="rounded-3xl border border-transparent p-6 opacity-0 pointer-events-none">
           {/* Replica altura aproximada para não quebrar o grid */}
           <div className="h-40"></div>
@@ -175,7 +173,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag }) {
         <motion.div 
           layoutId="search-container"
           className="rounded-3xl border border-white/10 p-6 bg-gradient-to-br from-zinc-800/50 to-zinc-900/30 shadow-xl cursor-pointer hover:border-white/20 transition-colors group"
-          onClick={() => setIsFocused(true)}
+          onClick={() => setIsSearchOpen(true)}
         >
           <div className="text-sm text-zinc-300 group-hover:text-purple-400 transition-colors">Busca rápida</div>
           <div className="mt-3 flex items-center gap-2">

@@ -43,6 +43,15 @@ export default function App() {
   // Estado da tag/categoria ativa ("all" mostra todos)
   const [activeTag, setActiveTag] = useState("all");
 
+  // Estado para controlar se a busca está aberta
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  // Função para abrir busca filtrada por tecnologia
+  const handleTechClick = (tag) => {
+    setActiveTag(tag);
+    setIsSearchOpen(true);
+  };
+
   /**
    * LÓGICA DE FILTROS
    * Combina busca por texto + filtro por categoria
@@ -85,8 +94,19 @@ export default function App() {
       </button>
 
       <Navbar />
-      <HeroSection q={q} setQ={setQ} activeTag={activeTag} setActiveTag={setActiveTag} />
-      <AboutSection />
+      <HeroSection 
+        q={q} 
+        setQ={setQ} 
+        activeTag={activeTag} 
+        setActiveTag={setActiveTag}
+        isSearchOpen={isSearchOpen}
+        setIsSearchOpen={setIsSearchOpen}
+      />
+      <AboutSection 
+        onTechClick={handleTechClick} 
+        activeTag={activeTag} 
+        isSearchOpen={isSearchOpen} 
+      />
       <PortfolioSection items={filtered.length ? filtered : items} />
       <ProjectsSection items={filtered} />
       <ExtrasSection />

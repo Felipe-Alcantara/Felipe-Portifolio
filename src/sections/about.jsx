@@ -51,7 +51,7 @@ function ExperienceTimer() {
   return <span className="font-mono text-teal-400 font-bold whitespace-nowrap inline-block">{time}</span>;
 }
 
-export function AboutSection() {
+export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
   const tech = [
     { label: "HTML", Icon: TbBrandHtml5, color: "#E34F26" },
     { label: "CSS", Icon: TbBrandCss3, color: "#1572B6" },
@@ -131,29 +131,44 @@ export function AboutSection() {
         </div>
 
         {/* Coluna de Tecnologias (usa o espaço à direita no desktop) */}
-        <div className="flex justify-center md:justify-end md:col-span-2 lg:col-span-1">
-          <div className="relative w-full max-w-[280px]">
-            {/* Glow cinematográfico */}
-            <div className="pointer-events-none absolute -inset-4 rounded-3xl blur-2xl animate-tech-glow" />
-            <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-gradient-to-b from-white/10 to-transparent blur-xl animate-photo-glow-2" style={{backgroundSize: '200% 200%'}} />
-            
-            <div className="relative w-full rounded-2xl bg-zinc-900/30 border border-white/5 p-4">
-              {/* Camada escura para suavizar o brilho */}
-              <div className="absolute inset-0 rounded-2xl bg-black/40 pointer-events-none" />
+        <div className="flex flex-col items-center md:items-end justify-start md:col-span-2 lg:col-span-1 gap-4 lg:-mt-4">
+          {/* Wrapper para agrupar Título e Logos */}
+          <div className="w-full max-w-[280px] flex flex-col items-center gap-4">
+            <div className="relative w-full">
+              {/* Glow cinematográfico */}
+              <div className="pointer-events-none absolute -inset-4 rounded-3xl blur-2xl animate-tech-glow" />
+              <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-gradient-to-b from-white/10 to-transparent blur-xl animate-photo-glow-2" style={{backgroundSize: '200% 200%'}} />
+              
+              <div className="relative w-full rounded-2xl bg-zinc-900/30 border border-white/5 p-4">
+                {/* Camada escura para suavizar o brilho */}
+                <div className="absolute inset-0 rounded-2xl bg-black/40 pointer-events-none" />
+                
+                <h2 className="relative text-2xl md:text-3xl font-bold leading-tight bg-gradient-to-r from-white via-emerald-200 to-white bg-clip-text text-transparent animate-title-glow text-glow-white text-center mb-4">
+                  minha stack
+                </h2>
               
               <div className="relative grid grid-cols-3 gap-3 justify-items-center">
               {tech.map(({ label, Icon, color, isImage, src }) => (
                 <span
                   key={label}
+                  onClick={() => onTechClick && onTechClick(label)}
                   title={label}
                   aria-label={label}
-                  className="group relative p-2 rounded-xl bg-black/20 border border-white/5 hover:border-white/20 hover:scale-150 hover:z-50 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-200 cursor-pointer flex items-center justify-center"
+                  className={`group relative p-2 rounded-xl bg-black/20 border border-white/5 hover:border-white/20 hover:scale-150 hover:z-50 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-200 cursor-pointer flex items-center justify-center ${
+                    activeTag === label && isSearchOpen 
+                      ? "border-white/20 scale-150 z-50 shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+                      : ""
+                  }`}
                   style={!isImage ? { color } : undefined}
                 >
                   {/* Tooltip com nome da tecnologia */}
                   <span
-                    className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 rounded-md bg-black/90 text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none"
-                    style={{ color: isImage ? '#3776AB' : color }}
+                    className={`absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 rounded-md bg-black/90 text-xs font-semibold whitespace-nowrap transition-opacity duration-200 pointer-events-none ${
+                      activeTag === label && isSearchOpen 
+                        ? "opacity-100" 
+                        : "opacity-0 group-hover:opacity-100"
+                    }`}
+                    style={{ color: isImage ? '#F7DF1E' : color }}
                   >
                     {label}
                   </span>
@@ -168,6 +183,7 @@ export function AboutSection() {
             </div>
           </div>
         </div>
+          </div>
         </div>
       </div>
     </section>
