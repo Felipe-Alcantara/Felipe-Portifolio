@@ -24,7 +24,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag }) {
   }, [q, activeTag]);
 
   return (
-    <section id="inicio" className="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-2 gap-10 items-center relative">
+    <section id="inicio" className="mx-auto max-w-7xl px-6 py-12 grid md:grid-cols-2 gap-10 items-center relative">
       {/* Overlay de Busca Focada */}
       <AnimatePresence>
         {isFocused && (

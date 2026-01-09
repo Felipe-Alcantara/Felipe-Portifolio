@@ -38,7 +38,7 @@ export function ExtrasSection() {
 
   return (
     <section id="extras" className="border-t border-white/5">
-      <div className="mx-auto max-w-6xl px-4 py-16">
+      <div className="mx-auto max-w-7xl px-6 py-12">
         <h2 className="text-3xl font-bold mb-8">Formação & Extras</h2>
         
         <div className="grid md:grid-cols-2 gap-12">

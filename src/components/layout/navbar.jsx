@@ -6,7 +6,7 @@ import cattLogo from "../../../Imagens/CATT transparente.png";
 export function Navbar() {
   return (
     <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-zinc-900/60 border-b border-white/5">
-      <div className="mx-auto max-w-6xl px-4 py-3 flex items-center gap-3">
+      <div className="mx-auto max-w-7xl px-6 py-3 flex items-center gap-3">
         <Button variant="ghost" size="icon" className="md:hidden">
           <Menu />
         </Button>
