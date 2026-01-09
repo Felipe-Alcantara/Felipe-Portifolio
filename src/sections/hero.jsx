@@ -1,13 +1,138 @@
-import React from "react";
-import { Rocket, Mail, Search } from "lucide-react";
+import React, { useState, useMemo } from "react";
+import { Rocket, Mail, Search, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Badge } from "../components/ui/badge";
-import { tags } from "../data/projects.jsx";
+import { tags, items } from "../data/projects.jsx";
 
 export function HeroSection({ q, setQ, activeTag, setActiveTag }) {
+  const [isFocused, setIsFocused] = useState(false);
+
+  // Filtra itens para o overlay
+  const filteredItems = useMemo(() => {
+    const query = q.trim().toLowerCase();
+    return items.filter((it) => {
+      const byTag = activeTag === "all" || it.tag === activeTag;
+      const byQuery =
+        !query ||
+        it.title.toLowerCase().includes(query) ||
+        it.desc.toLowerCase().includes(query) ||
+        it.tag.toLowerCase().includes(query);
+      return byTag && byQuery;
+    });
+  }, [q, activeTag]);
+
   return (
-    <section id="inicio" className="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <section id="inicio" className="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-2 gap-10 items-center relative">
+      {/* Overlay de Busca Focada */}
+      <AnimatePresence>
+        {isFocused && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex flex-col items-center pt-20 px-4 overflow-y-auto"
+            onClick={() => setIsFocused(false)}
+          >
+            {/* Container da Busca que "cresce" */}
+            <motion.div
+              layoutId="search-container"
+              className="w-full max-w-3xl bg-zinc-900 border border-white/20 rounded-3xl p-6 shadow-2xl relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="text-sm text-zinc-300">Busca Interativa</div>
+                <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className="h-8 w-8 hover:bg-white/10 rounded-full"
+                    onClick={() => setIsFocused(false)}
+                >
+                    <X size={18} />
+                </Button>
+              </div>
+
+              <div className="flex items-center gap-2 mb-6">
+                <div className="relative flex-1">
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-cyan-400" size={18} />
+                  <Input
+                    autoFocus
+                    className="pl-10 h-12 text-lg bg-black/50 border-white/10 focus-visible:ring-1 focus-visible:ring-cyan-500"
+                    placeholder="O que você procura?"
+                    value={q}
+                    onChange={(e) => setQ(e.target.value)}
+                  />
+                </div>
+              </div>
+
+              {/* Tags no overlay */}
+              <div className="flex gap-2 flex-wrap mb-6 justify-center">
+                {tags.map((t) => (
+                  <Badge
+                    key={t.id}
+                    onClick={() => setActiveTag(t.id)}
+                    className={
+                      "cursor-pointer px-4 py-2 text-sm transition-all " +
+                      (activeTag === t.id 
+                        ? "bg-cyan-500 text-black shadow-[0_0_15px_rgba(6,182,212,0.5)] scale-105" 
+                        : "bg-zinc-800 hover:bg-zinc-700")
+                    }
+                  >
+                    {t.label}
+                  </Badge>
+                ))}
+              </div>
+
+              {/* Grid de Resultados (Bolhas) */}
+              <motion.div 
+                layout 
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-h-[50vh] overflow-y-auto overflow-x-hidden pr-2 custom-scrollbar"
+              >
+                <AnimatePresence>
+                  {filteredItems.map((item) => (
+                    <motion.div
+                      layout
+                      key={item.title} // Idealmente use um ID único se tiver
+                      initial={{ scale: 0.5, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      exit={{ scale: 0, opacity: 0, transition: { duration: 0.2 } }}
+                      transition={{ type: "spring", damping: 20, stiffness: 300 }}
+                      className="group flex flex-col p-4 bg-zinc-800/50 hover:bg-zinc-800 border border-white/5 rounded-xl transition-colors cursor-pointer"
+                      onClick={() => window.location.href = item.link}
+                    >
+                      <div className="flex items-start justify-between mb-2">
+                         <div className="p-2 bg-black/40 rounded-lg text-cyan-400">
+                           {item.icon}
+                         </div>
+                         <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-500 border border-zinc-700 px-2 py-0.5 rounded-full">
+                           {item.tag}
+                         </span>
+                      </div>
+                      <h3 className="font-bold text-zinc-100 group-hover:text-cyan-400 transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs text-zinc-400 mt-1 line-clamp-2">
+                        {item.desc}
+                      </p>
+                    </motion.div>
+                  ))}
+                </AnimatePresence>
+                {filteredItems.length === 0 && (
+                   <motion.div 
+                     initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+                     className="col-span-full py-10 text-center text-zinc-500"
+                   >
+                     Nenhum projeto encontrado. Tente outra busca.
+                   </motion.div>
+                )}
+              </motion.div>
+
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div>
         <h1 className="text-4xl md:text-5xl font-bold leading-tight">
           Programação simples, criativa, e colaborativa
@@ -37,48 +162,52 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag }) {
           </Button>
         </div>
       </div>
-      <div className="rounded-3xl border border-white/10 p-6 bg-gradient-to-br from-zinc-800/50 to-zinc-900/30 shadow-2xl">
-        <div className="text-sm text-zinc-300">Busca rápida</div>
-        <div className="mt-3 flex items-center gap-2">
-          <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2" size={16} />
-            <Input
-              className="pl-9 bg-zinc-800/50 border-white/10 focus-visible:ring-0 focus-visible:ring-offset-0"
-              placeholder="Pesquisar cards, tags, descrições…"
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-            />
+      
+      {/* Card Original (Estático) */}
+      {/* Quando focado (isFocused), mostramos um placeholder INVISÍVEL para manter o espaço no layout */}
+      {/* mas não renderizamos o componente real com layoutId para evitar conflito na animação de saída */}
+      {isFocused ? (
+        <div className="rounded-3xl border border-transparent p-6 opacity-0 pointer-events-none">
+          {/* Replica altura aproximada para não quebrar o grid */}
+          <div className="h-40"></div>
+        </div>
+      ) : (
+        <motion.div 
+          layoutId="search-container"
+          className="rounded-3xl border border-white/10 p-6 bg-gradient-to-br from-zinc-800/50 to-zinc-900/30 shadow-xl cursor-pointer hover:border-white/20 transition-colors group"
+          onClick={() => setIsFocused(true)}
+        >
+          <div className="text-sm text-zinc-300 group-hover:text-cyan-400 transition-colors">Busca rápida</div>
+          <div className="mt-3 flex items-center gap-2">
+            <div className="relative flex-1 pointer-events-none"> 
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2" size={16} />
+              <Input
+                readOnly 
+                className="pl-9 bg-zinc-800/50 border-white/10"
+                placeholder="Pesquisar cards..."
+                value={q}
+              />
+            </div>
+            <div className="hidden md:flex gap-2">
+              {tags.slice(0, 3).map((t) => (
+                <Badge
+                  key={t.id}
+                  className="bg-zinc-800 text-zinc-400 pointer-events-none"
+                >
+                  {t.label}
+                </Badge>
+              ))}
+            </div>
           </div>
-          <div className="hidden md:flex gap-2">
-            {tags.map((t) => (
-              <Badge
-                key={t.id}
-                onClick={() => setActiveTag(t.id)}
-                className={
-                  "cursor-pointer transition " +
-                  (activeTag === t.id ? "bg-white text-black" : "bg-zinc-800 hover:bg-zinc-700")
-                }
-              >
+          <div className="mt-2 md:hidden flex gap-2 flex-wrap">
+            {tags.slice(0, 3).map((t) => (
+              <Badge key={t.id} className="bg-zinc-800 text-zinc-400 pointer-events-none">
                 {t.label}
               </Badge>
             ))}
           </div>
-        </div>
-        <div className="mt-2 md:hidden flex gap-2 flex-wrap">
-          {tags.map((t) => (
-            <Badge
-              key={t.id}
-              onClick={() => setActiveTag(t.id)}
-              className={
-                "cursor-pointer transition " +
-                (activeTag === t.id ? "bg-white text-black" : "bg-zinc-800 hover:bg-zinc-700")
-              }
-            >
-              {t.label}
-            </Badge>
-          ))}
-        </div>
-      </div>
+        </motion.div>
+      )}
     </section>
   );
 }
