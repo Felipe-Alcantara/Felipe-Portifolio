@@ -42,12 +42,17 @@ export function AboutSection() {
         {/* Coluna da Foto e Redes */}
         <div className="flex flex-col items-center md:items-start gap-6">
           <div className="relative group">
-            <div className="w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden border-2 border-zinc-700 shadow-xl bg-zinc-800">
-              <img 
-                src={felipeFoto} 
-                alt="Felipe Martin" 
-                className="w-full h-full object-cover"
-              />
+            <div className="relative w-48 h-48 md:w-56 md:h-56">
+              {/* Glow cinematográfico */}
+              <div className="pointer-events-none absolute -inset-8 rounded-[28px] bg-gradient-to-tr from-cyan-500/20 via-white/5 to-transparent blur-2xl animate-photo-glow-1" style={{backgroundSize: '200% 200%'}} />
+              <div className="pointer-events-none absolute -inset-6 rounded-[26px] bg-gradient-to-b from-white/10 to-transparent blur-xl animate-photo-glow-2" style={{backgroundSize: '200% 200%'}} />
+
+              {/* Quadro da foto */}
+              <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-zinc-700 shadow-xl bg-zinc-800">
+                <img src={felipeFoto} alt="Felipe Martin" className="w-full h-full object-cover" />
+                {/* Vinheta sutil (cinema) */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/10" />
+              </div>
             </div>
           </div>
           
@@ -71,7 +76,7 @@ export function AboutSection() {
         </div>
 
         {/* Coluna do Texto */}
-        <div className="space-y-6 text-zinc-300 leading-relaxed md:text-lg">
+        <div className="space-y-6 text-zinc-300 leading-relaxed md:text-lg text-glow-white">
           <p>
             Sou o <a href="https://github.com/Felipe-Alcantara" target="_blank" rel="noopener noreferrer" className="text-xl md:text-2xl text-cyan-400 font-bold hover:text-cyan-300 transition-colors underline decoration-cyan-400/30 hover:decoration-cyan-300">Felipe</a>, estudante de <strong className="text-cyan-400">Sistemas de Informação</strong> na <strong className="text-cyan-400">Universidade Geraldo de Biase</strong> e programo há <ExperienceTimer />. Trabalho com <strong>Python</strong> para automações, scraping e aplicações desktop, e com <strong>TypeScript</strong> para construir aplicações web modernas e escaláveis. Tenho diversos projetos e sites criativos; mesmo os mais simples valem muito para mim porque priorizo simplicidade e aprendizado contínuo.
           </p>
