@@ -1,6 +1,7 @@
 import React from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "../components/ui/button";
+import felipeFoto from "../../Imagens/IMG_20240605_212259_494 cortado.jpg";
 
 export function AboutSection() {
   return (
@@ -10,10 +11,11 @@ export function AboutSection() {
         <div className="flex flex-col items-center md:items-start gap-6">
           <div className="relative group">
             <div className="w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden border-2 border-zinc-700 shadow-xl bg-zinc-800">
-              {/* Placeholder para foto - Substitua pelo arquivo real quando disponível */}
-              <div className="w-full h-full flex items-center justify-center text-zinc-500 bg-zinc-800 text-center p-4">
-                Foto do Felipe
-              </div>
+              <img 
+                src={felipeFoto} 
+                alt="Felipe Martin" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           
