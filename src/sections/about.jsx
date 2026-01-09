@@ -122,10 +122,10 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
         {/* Coluna do Texto */}
         <div className="space-y-6 text-zinc-300 leading-relaxed md:text-lg text-glow-white">
           <p>
-            Sou estudante de <strong className="text-teal-400">Sistemas de Informação</strong> na <strong className="text-[#1E6BB8]">Universidade Geraldo de Biase</strong> e programo há <ExperienceTimer />. Trabalho com <strong className="text-[#3776AB]">Python</strong> para automações, scraping e aplicações desktop, e com <strong className="text-[#3178C6]">TypeScript</strong> para construir aplicações web modernas e escaláveis. Tenho diversos projetos e sites criativos; mesmo os mais simples valem muito para mim porque priorizo simplicidade e aprendizado contínuo.
+            Sou estudante de <strong className="text-teal-400">Sistemas de Informação</strong> na <strong className="text-[#1E6BB8]">Universidade Geraldo de Biase</strong> e programo há <ExperienceTimer />. Trabalho com <strong className="text-[#3776AB]">Python</strong> para <strong className="text-[#3776AB]">automações, scraping e aplicações desktop</strong>, e com <strong className="text-[#3178C6]">TypeScript</strong> para construir <strong className="text-[#3178C6]">aplicações web modernas e escaláveis</strong>. Tenho diversos projetos e sites criativos; mesmo os mais simples valem muito para mim porque priorizo <strong className="text-teal-400">simplicidade e aprendizado contínuo</strong>.
           </p>
           <p>
-            Meus projetos abrangem áreas como produtividade, música, jogos, comunidade e ferramentas que facilitem o dia a dia das pessoas. Gosto de transformar ideias em protótipos funcionais: desde pequenos utilitários que economizam tempo até experiências interativas que conectam pessoas. Acredito que <strong className="text-teal-400">código bem pensado e interfaces claras</strong> tornam qualquer solução mais útil e acessível.
+            Meus projetos abrangem áreas como <strong className="text-teal-400">produtividade, música, jogos, comunidade e ferramentas que facilitem o dia a dia das pessoas</strong>. Gosto de transformar ideias em protótipos funcionais: desde pequenos <strong className="text-teal-400">utilitários que economizam tempo</strong> até <span className="text-purple-400 font-semibold">experiências interativas que conectam pessoas</span>. Acredito que <strong className="text-teal-400">código bem pensado e interfaces claras</strong> tornam qualquer solução mais útil e acessível.
           </p>
 
         </div>
