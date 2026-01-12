@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'felixo-purple': '#C084FC',
+        'felixo-purple-bright': '#A855F7',
+      },
+    },
   },
   plugins: [],
 }

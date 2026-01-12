@@ -133,7 +133,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
       </AnimatePresence>
 
       <div>
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-white via-emerald-200 to-white bg-clip-text text-transparent animate-title-glow text-glow-white">
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-white via-emerald-200 to-white bg-clip-text text-transparent animate-title-glow-purple text-felixo-purple-glow">
           Programação simples, criativa, e colaborativa
         </h1>
         <div className="mt-4 text-zinc-300 space-y-4 text-glow-white">
@@ -142,7 +142,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
           </p>
           <p>
             Aqui você encontra meus projetos, demos e colaborações e um link dedicado ao meu projeto{" "}
-            <a href="/felixoverse" className="text-purple-400 hover:underline font-semibold" title="Em breve">
+            <a href="/felixoverse" className="text-felixo-purple hover:underline font-semibold" title="Em breve">
               FelixoVerse
             </a>
             , minha comunidade e plataforma de divulgação artística, de desenvolvimento e entretenimento!
