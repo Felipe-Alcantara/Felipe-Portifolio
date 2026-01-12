@@ -220,30 +220,51 @@
     color: #C084FC;
   }
 
-  /* Animação de respiração (pulso) para textos com glow roxo */
+  /* Variáveis e utilitários para controlar intensidade do glow */
+  :root {
+    --felixo-glow-intensity: 1; /* padrão 100% */
+  }
+
+  /* Utilitários de intensidade prontos (em porcentagem) */
+  .felixo-glow-intensity-25 { --felixo-glow-intensity: 0.25; }
+  .felixo-glow-intensity-50 { --felixo-glow-intensity: 0.5; }
+  .felixo-glow-intensity-75 { --felixo-glow-intensity: 0.75; }
+  .felixo-glow-intensity-100 { --felixo-glow-intensity: 1; }
+  .felixo-glow-intensity-150 { --felixo-glow-intensity: 1.5; }
+
+  /* Animação de respiração (pulso) para textos com glow roxo — intensidades variáveis */
   @keyframes text-glow-breathe {
     0%, 100% {
-      text-shadow: 0 0 6px rgba(168, 85, 247, 0.35), 0 0 34px rgba(168, 85, 247, 0.2);
-      filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.18));
+      text-shadow: 0 0 calc(8px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.45 * var(--felixo-glow-intensity))),
+                   0 0 calc(44px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.28 * var(--felixo-glow-intensity)));
+      filter: drop-shadow(0 0 calc(26px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.28 * var(--felixo-glow-intensity))));
+      transform: translateZ(0);
     }
 
     50% {
-      text-shadow: 0 0 10px rgba(168, 85, 247, 0.65), 0 0 44px rgba(168, 85, 247, 0.35);
-      filter: drop-shadow(0 0 34px rgba(168, 85, 247, 0.4));
+      text-shadow: 0 0 calc(18px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.9 * var(--felixo-glow-intensity))),
+                   0 0 calc(68px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.6 * var(--felixo-glow-intensity)));
+      filter: drop-shadow(0 0 calc(56px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.6 * var(--felixo-glow-intensity))));
+      transform: translateZ(0);
     }
   }
 
   .text-felixo-purple-glow {
     /* cor mais viva para sombra e glow animado */
+    --felixo-glow-blur: calc(8px * var(--felixo-glow-intensity));
+    --felixo-glow-spread: calc(44px * var(--felixo-glow-intensity));
+    --felixo-glow-alpha: calc(0.55 * var(--felixo-glow-intensity));
+
     color: #A855F7;
     /* realça textos (parágrafos/destaques) sem alterar ícones */
-    text-shadow: 0 0 6px rgba(168, 85, 247, 0.45), 0 0 34px rgba(168, 85, 247, 0.25);
-    will-change: text-shadow, filter;
-    /* animação combinada: glow pulsante + respiração */
+    text-shadow: 0 0 var(--felixo-glow-blur) rgba(168 85 247 / var(--felixo-glow-alpha)),
+                 0 0 var(--felixo-glow-spread) rgba(168 85 247 / calc(0.32 * var(--felixo-glow-intensity)));
+    will-change: text-shadow, filter, transform;
+    /* animação combinada: glow pulsante + respiração (intensidade controlada por var) */
     animation: title-glow-purple 3s ease-in-out infinite, text-glow-breathe 3.8s ease-in-out infinite;
   }
 
-  /* Classe combinada para título com gradiente e glow roxo */
+  /* Classe combinada para título com gradiente e glow roxo (respeita intensidade) */
   .text-gradient-glow-purple {
     /* gradiente de fundo */
     background: linear-gradient(to right, white, #10b981, white);
@@ -254,8 +275,9 @@
     animation: title-glow-purple 3s ease-in-out infinite, gradient-orbit 7.5s linear infinite;
     background-size: 220% 220%;
     will-change: background-position, filter;
-    /* sombra de texto roxa */
-    text-shadow: 0 0 6px rgba(168, 85, 247, 0.45), 0 0 34px rgba(168, 85, 247, 0.25);
+    /* sombra de texto roxa (usa mesma variável de intensidade) */
+    text-shadow: 0 0 calc(6px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.45 * var(--felixo-glow-intensity))),
+                 0 0 calc(34px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.25 * var(--felixo-glow-intensity)));
   }
 
   /* Brilho branco suave ao redor do texto (mantido para compatibilidade) */

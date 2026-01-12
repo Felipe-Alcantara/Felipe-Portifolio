@@ -20,3 +20,23 @@ export function cx(...classes) {
  * a ilusão de rolagem infinita
  */
 export const loop = (arr) => [...arr, ...arr, ...arr];
+
+/**
+ * Retorna um objeto de estilo para aplicar uma intensidade personalizada ao glow
+ * Uso: <span style={felixoGlowIntensityStyle(150)}>texto</span> // 150% intensidade
+ */
+export function felixoGlowIntensityStyle(percent) {
+  const p = Math.max(0, Math.min(percent, 200));
+  const value = p / 100;
+  return { "--felixo-glow-intensity": value };
+}
+
+/**
+ * Retorna uma classe utilitária existente (25/50/75/100/150) ou 100 se inválida
+ * Uso: className={getFelixoGlowClass(75)}
+ */
+export function getFelixoGlowClass(percent) {
+  const allowed = [25, 50, 75, 100, 150];
+  const p = allowed.includes(percent) ? percent : 100;
+  return `felixo-glow-intensity-${p}`;
+}

@@ -274,6 +274,51 @@ transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
 
 ---
 
+### ✨ Estilos de Destaque — Roxo Felixo
+
+Adicionamos utilitários para padronizar destaques em roxo e controlar a intensidade do *glow*.
+
+- Classes principais:
+  - `text-felixo-purple` — roxo estático (mesmo tom do `FelixoVerse`).
+  - `text-felixo-purple-glow` — roxo brilhante com animação de *glow*.
+  - `text-gradient-glow-purple` — título com gradiente + glow (mesmo efeito do H1 do Hero).
+
+- Classes de intensidade (pré-definidas):
+  - `felixo-glow-intensity-25`, `-50`, `-75`, `-100`, `-150` — controlam a intensidade do brilho (25%..150%).
+
+Exemplos de uso:
+
+1) Usando classes prontas:
+```jsx
+// 150% de intensidade (mais intenso)
+<strong className="text-felixo-purple-glow felixo-glow-intensity-150">Felipe Martin</strong>
+
+// Título com gradiente + glow
+<h1 className="text-4xl text-gradient-glow-purple">Programação simples, criativa, e colaborativa</h1>
+```
+
+2) Usando helpers (JS) para gerar classe ou estilo dinamicamente:
+```jsx
+import { getFelixoGlowClass, felixoGlowIntensityStyle, cx } from "../lib/utils";
+
+// Retorna a classe utilitária correspondente
+const intensityClass = getFelixoGlowClass(75); // "felixo-glow-intensity-75"
+
+// Retorna um objeto style para aplicar uma intensidade personalizada (0..200)
+const style = felixoGlowIntensityStyle(125); // { "--felixo-glow-intensity": 1.25 }
+
+// Exemplos:
+<strong className={cx("text-felixo-purple-glow", intensityClass)}>Nome</strong>
+<strong style={style} className="text-felixo-purple-glow">Nome</strong>
+```
+
+3) Observações e boas práticas:
+- Evite aplicar o glow em ícones ou inputs de busca — o efeito foi pensado para **textos** e destaques de parágrafo.
+- Prefira classes reutilizáveis ao invés de estilos inline para manter consistência e facilitar alterações futuras.
+- Valores máximos recomendados: 150% para destaque forte; use 25–75% para destaques sutis.
+
+---
+
 ## 🎯 Componentes UI Básicos
 
 ### Button (Botão)
