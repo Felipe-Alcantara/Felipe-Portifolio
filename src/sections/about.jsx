@@ -48,7 +48,7 @@ function ExperienceTimer() {
     return () => clearInterval(interval);
   }, []);
 
-  return <span className="font-mono text-teal-400 font-bold whitespace-nowrap inline-block">{time}</span>;
+  return <span className="font-mono text-felixo-purple font-bold whitespace-nowrap inline-block">{time}</span>;
 }
 
 export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
@@ -120,12 +120,12 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
         </div>
 
         {/* Coluna do Texto */}
-        <div className="space-y-6 text-zinc-300 leading-relaxed md:text-lg text-glow-white">
+        <div className="space-y-6 text-zinc-300 leading-relaxed md:text-lg">
           <p>
-            Sou estudante de <strong className="text-teal-400">Sistemas de Informação</strong> na <strong className="text-[#1E6BB8]">Universidade Geraldo de Biase</strong> e programo há <ExperienceTimer />. Trabalho com <strong className="text-[#3776AB]">Python</strong> para <strong className="text-[#3776AB]">automações, scraping e aplicações desktop</strong>, e com <strong className="text-[#3178C6]">TypeScript</strong> para construir <strong className="text-[#3178C6]">aplicações web modernas e escaláveis</strong>. Tenho diversos projetos e sites criativos; mesmo os mais simples valem muito para mim porque priorizo <strong className="text-teal-400">simplicidade e aprendizado contínuo</strong>.
+            Sou estudante de <strong className="text-felixo-purple">Sistemas de Informação</strong> na <strong className="text-[#1E6BB8]">Universidade Geraldo de Biase</strong> e programo há <ExperienceTimer />. Trabalho com <strong className="text-[#3776AB]">Python</strong> para <strong className="text-felixo-purple">automações, scraping e aplicações desktop</strong>, e com <strong className="text-[#3178C6]">TypeScript</strong> para construir <strong className="text-felixo-purple">aplicações web modernas e escaláveis</strong>. Tenho diversos projetos e sites criativos; mesmo os mais simples valem muito para mim porque priorizo <strong className="text-felixo-purple">simplicidade e aprendizado contínuo</strong>.
           </p>
           <p>
-            Meus projetos abrangem áreas como <strong className="text-teal-400">produtividade, música, jogos, comunidade e ferramentas que facilitem o dia a dia das pessoas</strong>. Gosto de transformar ideias em protótipos funcionais: desde pequenos <strong className="text-teal-400">utilitários que economizam tempo</strong> até <span className="text-felixo-purple font-semibold">experiências interativas que conectam pessoas</span>. Acredito que <strong className="text-teal-400">código bem pensado e interfaces claras</strong> tornam qualquer solução mais útil e acessível.
+            Meus projetos abrangem áreas como <strong className="text-felixo-purple">produtividade, música, jogos, comunidade e ferramentas que facilitem o dia a dia das pessoas</strong>. Gosto de transformar ideias em protótipos funcionais: desde pequenos <strong className="text-felixo-purple">utilitários que economizam tempo</strong> até <span className="text-felixo-purple font-semibold">experiências interativas que conectam pessoas</span>. Acredito que <strong className="text-felixo-purple">código bem pensado e interfaces claras</strong> tornam qualquer solução mais útil e acessível.
           </p>
 
         </div>
@@ -143,7 +143,7 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
                 {/* Camada escura para suavizar o brilho */}
                 <div className="absolute inset-0 rounded-2xl bg-black/40 pointer-events-none" />
                 
-                <h2 className="relative text-2xl md:text-3xl font-bold leading-tight bg-gradient-to-r from-white via-emerald-200 to-white bg-clip-text text-transparent animate-title-glow text-glow-white text-center mb-4">
+                <h2 className="relative text-2xl md:text-3xl font-bold leading-tight bg-gradient-to-r from-white via-purple-800 to-white bg-clip-text text-transparent text-center mb-4">
                   minha stack
                 </h2>
               

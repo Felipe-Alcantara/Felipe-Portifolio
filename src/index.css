@@ -294,6 +294,10 @@
     animation: card-glow-breathe 3s ease-in-out infinite;
   }
 
+  .felixo-card-glow {
+    animation: card-glow-breathe 3s ease-in-out infinite;
+  }
+
   /* Animação de respiração branca para botões secundários */
   @keyframes card-glow-breathe-white {
     0%, 100% {
@@ -307,6 +311,10 @@
   }
 
   .hover-felixo-card-glow-white:hover {
+    animation: card-glow-breathe-white 3s ease-in-out infinite;
+  }
+
+  .felixo-card-glow-white {
     animation: card-glow-breathe-white 3s ease-in-out infinite;
   }
 

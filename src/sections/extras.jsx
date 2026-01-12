@@ -4,7 +4,7 @@ import { Badge } from "../components/ui/badge";
 
 export function ExtrasSection() {
   const renderCourseTitle = (title) => {
-    const parts = title.split(/(Python|TypeScript|JavaScript)/g);
+    const parts = title.split(/(Python|TypeScript|JavaScript|HTML)/g);
 
     return parts.map((part, index) => {
       if (part === "Python") {
@@ -26,6 +26,14 @@ export function ExtrasSection() {
       if (part === "JavaScript") {
         return (
           <span key={index} className="text-[#F7DF1E] font-semibold">
+            {part}
+          </span>
+        );
+      }
+
+      if (part === "HTML") {
+        return (
+          <span key={index} className="text-[#E34F26] font-semibold">
             {part}
           </span>
         );
@@ -92,7 +100,7 @@ export function ExtrasSection() {
             </div>
 
             <div className="p-6 rounded-2xl bg-zinc-900/40 border border-white/5">
-              <h4 className="font-bold text-lg">Curso de HTML5</h4>
+              <h4 className="font-bold text-lg">Curso de <span className="text-[#E34F26]">HTML5</span></h4>
               <p className="text-zinc-400">Curso em Vídeo</p>
               <Badge variant="secondary" className="mt-2 text-xs">2024</Badge>
             </div>

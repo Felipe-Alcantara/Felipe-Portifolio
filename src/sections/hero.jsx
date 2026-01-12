@@ -8,6 +8,19 @@ import { Badge } from "../components/ui/badge";
 import { tags, items } from "../data/projects.jsx";
 
 export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, setIsSearchOpen }) {
+  // Lógica das partículas de fundo movida para cá para evitar problemas de import
+  const backgroundParticles = useMemo(() => {
+    return Array.from({ length: 35 }).map((_, i) => ({
+      id: i,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      size: Math.random() * 4 + 2,
+      duration: Math.random() * 8 + 4,
+      delay: Math.random() * 2,
+      opacity: Math.random() * 0.5 + 0.5,
+    }));
+  }, []);
+
   // Filtra itens para o overlay
   const filteredItems = useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -23,7 +36,34 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
   }, [q, activeTag]);
 
   return (
-    <section id="inicio" className="mx-auto max-w-7xl px-6 py-12 grid md:grid-cols-2 gap-10 items-center relative">
+    <section id="inicio" className="relative w-full overflow-hidden">
+      {/* Partículas de fundo (renderizadas diretamente aqui) */}
+      <div className="absolute inset-0 pointer-events-none select-none z-0">
+        {backgroundParticles.map((p) => (
+          <motion.div
+            key={p.id}
+            className="absolute rounded-full bg-purple-200 shadow-[0_0_15px_rgba(192,132,252,0.8)] blur-[0.5px]"
+            style={{
+              left: `${p.x}%`,
+              top: `${p.y}%`,
+              width: p.size,
+              height: p.size,
+            }}
+            animate={{
+              y: [0, -150],
+              opacity: [0, p.opacity, 0],
+            }}
+            transition={{
+              duration: p.duration,
+              repeat: Infinity,
+              ease: "linear",
+              delay: p.delay,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 py-12 grid md:grid-cols-2 gap-10 items-center relative z-10">
       {/* Overlay de Busca Focada */}
       <AnimatePresence>
         {isSearchOpen && (
@@ -149,7 +189,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
           </p>
         </div>
         <div className="mt-6 flex gap-3">
-          <Button asChild variant="outline" className="relative group overflow-hidden border-purple-500/50 bg-purple-500/10 text-white shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:bg-purple-500/20 hover-felixo-card-glow transition-all duration-300">
+          <Button asChild variant="outline" className="relative group overflow-hidden border-purple-500/50 bg-purple-500/10 text-white shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:bg-purple-500/20 felixo-card-glow transition-all duration-300">
             <a href="#portfolio" className="inline-flex items-center gap-2">
               {/* Brilho passando (Shimmer) */}
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
@@ -160,7 +200,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
               <span className="relative z-10">Ver projetos</span>
             </a>
           </Button>
-          <Button variant="outline" asChild className="relative group overflow-hidden border-white/30 bg-white/5 text-white shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:bg-white/10 hover-felixo-card-glow-white transition-all duration-300">
+          <Button variant="outline" asChild className="relative group overflow-hidden border-white/30 bg-white/5 text-white shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:bg-white/10 felixo-card-glow-white transition-all duration-300">
             <a href="#contato" className="inline-flex items-center gap-2">
               {/* Brilho passando (Shimmer) */}
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent z-0" />
@@ -185,10 +225,10 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
       ) : (
         <motion.div 
           layoutId="search-container"
-          className="rounded-3xl border border-white/10 p-6 bg-gradient-to-br from-zinc-800/50 to-zinc-900/30 shadow-xl cursor-pointer hover-felixo-card-glow transition-colors group"
+          className="rounded-3xl border border-white/10 p-6 bg-gradient-to-br from-zinc-800/50 to-zinc-900/30 shadow-xl cursor-pointer felixo-card-glow transition-colors group"
           onClick={() => setIsSearchOpen(true)}
         >
-          <div className="text-sm text-zinc-300 group-hover:text-purple-400 transition-colors">Busca rápida</div>
+          <div className="text-sm text-purple-400 transition-colors">Busca rápida</div>
           <div className="mt-3 flex items-center gap-2">
             <div className="relative flex-1 pointer-events-none"> 
               <Search className="absolute left-3 top-1/2 -translate-y-1/2" size={16} />
@@ -219,6 +259,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
           </div>
         </motion.div>
       )}
+      </div>
     </section>
   );
 }
