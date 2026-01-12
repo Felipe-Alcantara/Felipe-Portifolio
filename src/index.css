@@ -238,14 +238,12 @@
       text-shadow: 0 0 calc(8px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.45 * var(--felixo-glow-intensity))),
                    0 0 calc(44px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.28 * var(--felixo-glow-intensity)));
       filter: drop-shadow(0 0 calc(26px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.28 * var(--felixo-glow-intensity))));
-      transform: translateZ(0);
     }
 
     50% {
       text-shadow: 0 0 calc(18px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.9 * var(--felixo-glow-intensity))),
                    0 0 calc(68px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.6 * var(--felixo-glow-intensity)));
       filter: drop-shadow(0 0 calc(56px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.6 * var(--felixo-glow-intensity))));
-      transform: translateZ(0);
     }
   }
 

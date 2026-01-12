@@ -96,7 +96,7 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
               className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
               title="E-mail"
             >
-              <Mail size={28} className="text-purple-400 group-hover:scale-110 transition-transform" />
+              <Mail size={28} className="text-felixo-purple-glow group-hover:scale-200 transition-transform" />
             </a>
             <a 
               href="https://github.com/Felipe-Alcantara" 
@@ -105,7 +105,7 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
               className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
               title="GitHub"
             >
-              <Github size={28} className="text-purple-400 group-hover:scale-110 transition-transform" />
+              <Github size={28} className="text-felixo-purple-glow group-hover:scale-200 transition-transform" />
             </a>
             <a 
               href="https://www.linkedin.com/in/felipealcantaramartins/" 
@@ -114,7 +114,7 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
               className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
               title="LinkedIn"
             >
-              <Linkedin size={28} className="text-purple-400 group-hover:scale-110 transition-transform" />
+              <Linkedin size={28} className="text-felixo-purple-glow group-hover:scale-200 transition-transform" />
             </a>
           </div>
         </div>
