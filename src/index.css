@@ -220,14 +220,42 @@
     color: #C084FC;
   }
 
+  /* Animação de respiração (pulso) para textos com glow roxo */
+  @keyframes text-glow-breathe {
+    0%, 100% {
+      text-shadow: 0 0 6px rgba(168, 85, 247, 0.35), 0 0 34px rgba(168, 85, 247, 0.2);
+      filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.18));
+    }
+
+    50% {
+      text-shadow: 0 0 10px rgba(168, 85, 247, 0.65), 0 0 44px rgba(168, 85, 247, 0.35);
+      filter: drop-shadow(0 0 34px rgba(168, 85, 247, 0.4));
+    }
+  }
+
   .text-felixo-purple-glow {
     /* cor mais viva para sombra e glow animado */
     color: #A855F7;
     /* realça textos (parágrafos/destaques) sem alterar ícones */
     text-shadow: 0 0 6px rgba(168, 85, 247, 0.45), 0 0 34px rgba(168, 85, 247, 0.25);
     will-change: text-shadow, filter;
-    /* animação de glow (usa keyframes roxos) */
-    animation: title-glow-purple 3s ease-in-out infinite;
+    /* animação combinada: glow pulsante + respiração */
+    animation: title-glow-purple 3s ease-in-out infinite, text-glow-breathe 3.8s ease-in-out infinite;
+  }
+
+  /* Classe combinada para título com gradiente e glow roxo */
+  .text-gradient-glow-purple {
+    /* gradiente de fundo */
+    background: linear-gradient(to right, white, #10b981, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* animação de glow roxo */
+    animation: title-glow-purple 3s ease-in-out infinite, gradient-orbit 7.5s linear infinite;
+    background-size: 220% 220%;
+    will-change: background-position, filter;
+    /* sombra de texto roxa */
+    text-shadow: 0 0 6px rgba(168, 85, 247, 0.45), 0 0 34px rgba(168, 85, 247, 0.25);
   }
 
   /* Brilho branco suave ao redor do texto (mantido para compatibilidade) */
