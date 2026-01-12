@@ -185,7 +185,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
       ) : (
         <motion.div 
           layoutId="search-container"
-          className="rounded-3xl border border-white/10 p-6 bg-gradient-to-br from-zinc-800/50 to-zinc-900/30 shadow-xl cursor-pointer hover:border-white/20 transition-colors group"
+          className="rounded-3xl border border-white/10 p-6 bg-gradient-to-br from-zinc-800/50 to-zinc-900/30 shadow-xl cursor-pointer hover-felixo-card-glow transition-colors group"
           onClick={() => setIsSearchOpen(true)}
         >
           <div className="text-sm text-zinc-300 group-hover:text-purple-400 transition-colors">Busca rápida</div>

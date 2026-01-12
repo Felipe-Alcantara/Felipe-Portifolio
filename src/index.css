@@ -280,9 +280,24 @@
                  0 0 calc(34px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.25 * var(--felixo-glow-intensity)));
   }
 
+  /* Animação de respiração para o card de busca (borda e sombra roxa) */
+  @keyframes card-glow-breathe {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
+      border-color: rgba(168, 85, 247, 0.25);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(168, 85, 247, 0.45);
+      border-color: rgba(168, 85, 247, 0.65);
+    }
+  }
+
+  .hover-felixo-card-glow:hover {
+    animation: card-glow-breathe 3s ease-in-out infinite;
+  }
+
   /* Brilho branco suave ao redor do texto (mantido para compatibilidade) */
   .text-glow-white {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.35), 0 0 20px rgba(255, 255, 255, 0.15);
   }
 }
-
