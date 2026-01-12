@@ -149,7 +149,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
           </p>
         </div>
         <div className="mt-6 flex gap-3">
-          <Button asChild variant="outline" className="relative group overflow-hidden border-purple-500/50 bg-purple-500/10 text-white shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:bg-purple-500/20 hover:shadow-[0_0_35px_rgba(168,85,247,0.8)] transition-all duration-300">
+          <Button asChild variant="outline" className="relative group overflow-hidden border-purple-500/50 bg-purple-500/10 text-white shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:bg-purple-500/20 hover-felixo-card-glow transition-all duration-300">
             <a href="#portfolio" className="inline-flex items-center gap-2">
               {/* Brilho passando (Shimmer) */}
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
@@ -160,7 +160,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
               <span className="relative z-10">Ver projetos</span>
             </a>
           </Button>
-          <Button variant="outline" asChild className="relative group overflow-hidden border-white/30 bg-white/5 text-white shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:bg-white/10 hover:shadow-[0_0_28px_rgba(255,255,255,0.35)] transition-all duration-300">
+          <Button variant="outline" asChild className="relative group overflow-hidden border-white/30 bg-white/5 text-white shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:bg-white/10 hover-felixo-card-glow-white transition-all duration-300">
             <a href="#contato" className="inline-flex items-center gap-2">
               {/* Brilho passando (Shimmer) */}
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent z-0" />

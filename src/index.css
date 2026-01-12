@@ -294,6 +294,22 @@
     animation: card-glow-breathe 3s ease-in-out infinite;
   }
 
+  /* Animação de respiração branca para botões secundários */
+  @keyframes card-glow-breathe-white {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.45);
+      border-color: rgba(255, 255, 255, 0.65);
+    }
+  }
+
+  .hover-felixo-card-glow-white:hover {
+    animation: card-glow-breathe-white 3s ease-in-out infinite;
+  }
+
   /* Brilho branco suave ao redor do texto (mantido para compatibilidade) */
   .text-glow-white {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.35), 0 0 20px rgba(255, 255, 255, 0.15);
