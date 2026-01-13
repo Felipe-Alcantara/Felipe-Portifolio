@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useState, useEffect } from "react";
+import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 import { Button } from "../components/ui/button";
 import { PortfolioCard } from "../components/parts/portfolio-card";
 import Particles from "../components/ui/particles";
@@ -7,6 +7,34 @@ import { loop } from "../lib/utils";
 
 export function PortfolioSection({ items }) {
   const marquee = loop(items.length ? items : []);
+  const carouselRef = useRef(null);
+  const x = useMotionValue(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [itemWidth, setItemWidth] = useState(0);
+
+  useEffect(() => {
+    if (carouselRef.current) {
+      // O carrossel tem 3 cópias. O tamanho de uma cópia é 1/3 do total.
+      setItemWidth(carouselRef.current.scrollWidth / 3);
+    }
+  }, [marquee]);
+
+  useAnimationFrame((t, delta) => {
+    if (!isDragging && itemWidth > 0) {
+      const moveBy = delta * 0.04; // Velocidade do auto-scroll
+      let newX = x.get() - moveBy;
+      if (newX <= -itemWidth) newX += itemWidth;
+      x.set(newX);
+    }
+  });
+
+  const handleDrag = () => {
+    const currentX = x.get();
+    if (itemWidth > 0) {
+      if (currentX <= -itemWidth) x.set(currentX + itemWidth);
+      else if (currentX > 0) x.set(currentX - itemWidth);
+    }
+  };
 
   return (
     <section id="portfolio" className="border-t border-white/5">
@@ -24,11 +52,13 @@ export function PortfolioSection({ items }) {
 
         <div className="mt-6 overflow-hidden">
           <motion.div
-            className="flex gap-4 py-10 px-4"
+            ref={carouselRef}
+            className="flex gap-4 py-10 px-4 cursor-grab active:cursor-grabbing"
+            style={{ x }}
             drag="x"
-            dragConstraints={{ left: -400, right: 0 }}
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+            onDragStart={() => setIsDragging(true)}
+            onDrag={handleDrag}
+            onDragEnd={() => setIsDragging(false)}
           >
             {marquee.map((it, idx) => (
               <div key={`${it.title}-${idx}`} className="relative shrink-0 rounded-3xl felixo-card-glow-intense border border-transparent w-80 md:w-96 overflow-hidden flex flex-col [&>*]:h-full [&>*]:w-full">
