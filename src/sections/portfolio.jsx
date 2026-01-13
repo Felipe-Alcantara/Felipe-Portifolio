@@ -13,10 +13,14 @@ export function PortfolioSection({ items }) {
   const [itemWidth, setItemWidth] = useState(0);
 
   useEffect(() => {
-    if (carouselRef.current) {
-      // O carrossel tem 3 cópias. O tamanho de uma cópia é 1/3 do total.
-      setItemWidth(carouselRef.current.scrollWidth / 3);
-    }
+    const calculateWidth = () => {
+      if (carouselRef.current) {
+        setItemWidth(carouselRef.current.scrollWidth / 3);
+      }
+    };
+    calculateWidth();
+    window.addEventListener("resize", calculateWidth);
+    return () => window.removeEventListener("resize", calculateWidth);
   }, [marquee]);
 
   useAnimationFrame((t, delta) => {
@@ -24,15 +28,17 @@ export function PortfolioSection({ items }) {
       const moveBy = delta * 0.04; // Velocidade do auto-scroll
       let newX = x.get() - moveBy;
       if (newX <= -itemWidth) newX += itemWidth;
+      if (newX > 0) newX -= itemWidth;
       x.set(newX);
     }
   });
 
   const handleDrag = () => {
-    const currentX = x.get();
     if (itemWidth > 0) {
-      if (currentX <= -itemWidth) x.set(currentX + itemWidth);
-      else if (currentX > 0) x.set(currentX - itemWidth);
+      const currentX = x.get();
+      let newX = currentX % itemWidth;
+      if (newX > 0) newX -= itemWidth;
+      x.set(newX);
     }
   };
 
@@ -56,6 +62,7 @@ export function PortfolioSection({ items }) {
             className="flex gap-4 py-10 px-4 cursor-grab active:cursor-grabbing"
             style={{ x }}
             drag="x"
+            dragMomentum={false}
             onDragStart={() => setIsDragging(true)}
             onDrag={handleDrag}
             onDragEnd={() => setIsDragging(false)}
