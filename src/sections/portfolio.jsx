@@ -24,14 +24,16 @@ export function PortfolioSection({ items }) {
 
         <div className="mt-6 overflow-hidden">
           <motion.div
-            className="flex gap-4"
+            className="flex gap-4 py-10 px-4"
             drag="x"
             dragConstraints={{ left: -400, right: 0 }}
             animate={{ x: ["0%", "-50%"] }}
             transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
           >
             {marquee.map((it, idx) => (
-              <PortfolioCard key={`${it.title}-${idx}`} item={it} />
+              <div key={`${it.title}-${idx}`} className="relative shrink-0 rounded-3xl felixo-card-glow-intense border border-transparent w-80 md:w-96 overflow-hidden flex flex-col [&>*]:h-full [&>*]:w-full">
+                <PortfolioCard item={it} />
+              </div>
             ))}
           </motion.div>
         </div>

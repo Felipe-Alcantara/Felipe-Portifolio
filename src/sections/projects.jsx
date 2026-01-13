@@ -10,7 +10,7 @@ export function ProjectsSection({ items }) {
         <h2 className="text-2xl font-semibold">Projetos</h2>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {items.slice(0, 6).map((it, i) => (
-            <Card key={i} className="bg-zinc-900/50 border-white/10">
+            <Card key={i} className="bg-zinc-900/50 border-white/10 hover-felixo-card-glow transition-all duration-300">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   {it.icon} {it.title}

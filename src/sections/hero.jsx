@@ -137,7 +137,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
                       animate={{ scale: 1, opacity: 1 }}
                       exit={{ scale: 0, opacity: 0, transition: { duration: 0.2 } }}
                       transition={{ type: "spring", damping: 20, stiffness: 300 }}
-                      className="group flex flex-col p-4 bg-zinc-800/50 hover:bg-zinc-800 border border-white/5 rounded-xl transition-colors cursor-pointer"
+                      className="group flex flex-col p-4 bg-zinc-800/50 hover:bg-zinc-800 border border-white/5 rounded-xl transition-colors cursor-pointer hover-felixo-card-glow"
                       onClick={() => window.location.href = item.link}
                     >
                       <div className="flex items-start justify-between mb-2">
