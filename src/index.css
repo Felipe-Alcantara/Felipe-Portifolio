@@ -298,12 +298,44 @@
     }
   }
 
+  /* Animação de respiração mais intensa para o card com hover */
+  @keyframes card-glow-breathe-intense-hover {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
+      border-color: rgba(168, 85, 247, 0.35);
+    }
+    50% {
+      box-shadow: 0 0 55px rgba(168, 85, 247, 0.65);
+      border-color: rgba(168, 85, 247, 0.85);
+    }
+  }
+
+  /* Animação de respiração sutil para cards adjacentes */
+  @keyframes card-glow-breathe-subtle {
+    0%, 100% {
+      box-shadow: 0 0 8px rgba(168, 85, 247, 0.1);
+      border-color: rgba(168, 85, 247, 0.15);
+    }
+    50% {
+      box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.3);
+    }
+  }
+
   .hover-felixo-card-glow:hover {
     animation: card-glow-breathe 3s ease-in-out infinite;
   }
 
   .felixo-card-glow {
     animation: card-glow-breathe 3s ease-in-out infinite;
+  }
+
+  .felixo-card-glow-intense-hover {
+    animation: card-glow-breathe-intense-hover 2.5s ease-in-out infinite;
+  }
+
+  .felixo-card-glow-subtle {
+    animation: card-glow-breathe-subtle 3s ease-in-out infinite;
   }
 
   /* Animação de respiração branca para botões secundários */

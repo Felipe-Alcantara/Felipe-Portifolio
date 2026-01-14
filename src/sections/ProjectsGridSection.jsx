@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
+import { cx } from "../lib/utils";
 
 const ITEMS_PER_PAGE = 9; // 3x3 grid
 
@@ -41,10 +42,15 @@ const cardVariants = {
   exit: { scale: 0.8, opacity: 0, y: -20, transition: { duration: 0.2 } }
 };
 
-const ProjectCard = ({ item, variants }) => (
+const ProjectCard = ({ item, variants, onMouseEnter, isHovered, isAdjacent }) => (
   <motion.div
+    onMouseEnter={onMouseEnter}
     variants={variants}
-    className="group flex h-full flex-col bg-zinc-900/50 border border-white/10 rounded-2xl transition-colors hover:border-white/20 hover-felixo-card-glow"
+    className={cx(
+      "group flex h-full flex-col bg-zinc-900/50 border border-white/10 rounded-2xl transition-all duration-300",
+      isHovered ? "felixo-card-glow-intense-hover" : "hover:border-white/20",
+      !isHovered && isAdjacent && "felixo-card-glow-subtle"
+    )}
   >
     <a href={item.link} target="_blank" rel="noopener noreferrer" className="flex flex-col h-full p-5">
       <div className="flex items-start justify-between mb-3">
@@ -68,12 +74,29 @@ const ProjectCard = ({ item, variants }) => (
 export function ProjectsGridSection({ items }) {
   const [page, setPage] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   // Filtra projetos que não são da categoria "web" para evitar duplicatas com o carrossel
   const otherProjects = items.filter(it => it.tag.toLowerCase() !== 'web');
   
   const totalPages = Math.ceil(otherProjects.length / ITEMS_PER_PAGE);
+  const COLS = 3;
 
+  const areAdjacent = (index1, index2) => {
+    if (index1 === null || index2 === null) return false;
+    if (index1 === index2) return false;
+
+    const row1 = Math.floor(index1 / COLS);
+    const col1 = index1 % COLS;
+    const row2 = Math.floor(index2 / COLS);
+    const col2 = index2 % COLS;
+
+    const rowDiff = Math.abs(row1 - row2);
+    const colDiff = Math.abs(col1 - col2);
+
+    return rowDiff <= 1 && colDiff <= 1;
+  };
+  
   const handleNext = () => {
     setDirection(1);
     setPage((prev) => (prev + 1) % totalPages);
@@ -126,9 +149,16 @@ export function ProjectsGridSection({ items }) {
             animate="center"
             exit="exit"
             className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+            onMouseLeave={() => setHoveredIndex(null)}
           >
-            {currentItems.map((item) => (
-              <ProjectCard key={item.title} item={item} variants={cardVariants} />
+            {currentItems.map((item, index) => (
+              <ProjectCard 
+                key={item.title} 
+                item={item} 
+                variants={cardVariants}
+                onMouseEnter={() => setHoveredIndex(index)}
+                isHovered={hoveredIndex === index}
+                isAdjacent={areAdjacent(hoveredIndex, index)} />
             ))}
           </motion.div>
         </AnimatePresence>
