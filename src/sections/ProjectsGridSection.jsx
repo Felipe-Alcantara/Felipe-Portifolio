@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
 import { cx } from "../lib/utils";
+import { BackgroundParticles } from "../components/ui/BackgroundParticles";
 
 const ITEMS_PER_PAGE = 9; // 3x3 grid
 
@@ -121,8 +122,9 @@ export function ProjectsGridSection({ items }) {
   }
 
   return (
-    <section id="outros-projetos" className="border-t border-white/5">
-      <div className="mx-auto max-w-6xl px-4 py-14">
+    <section id="outros-projetos" className="relative border-t border-white/5 overflow-hidden">
+      <BackgroundParticles />
+      <div className="relative z-10 mx-auto max-w-6xl px-4 py-14">
         <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
           <h2 className="text-2xl md:text-3xl font-bold">Outros Projetos</h2>
           {totalPages > 1 && (
