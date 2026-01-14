@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, LayoutGrid } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
 import { cx } from "../lib/utils";
@@ -72,7 +72,7 @@ const ProjectCard = ({ item, variants, onMouseEnter, isHovered, isAdjacent }) =>
   </motion.div>
 );
 
-export function ProjectsGridSection({ items }) {
+export function ProjectsGridSection({ items, setIsProjectsModalOpen, setInitialTagForProjectsModal }) {
   const [page, setPage] = useState(0);
   const [direction, setDirection] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -127,19 +127,29 @@ export function ProjectsGridSection({ items }) {
       <div className="relative z-10 mx-auto max-w-6xl px-4 py-14">
         <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
           <h2 className="text-2xl md:text-3xl font-bold">Outros Projetos</h2>
-          {totalPages > 1 && (
-            <div className="flex items-center gap-2">
-              <Button variant="outline" size="icon" onClick={handlePrev} aria-label="Página anterior">
-                <ArrowLeft size={18} />
-              </Button>
-              <span className="text-sm text-zinc-400 font-mono w-12 text-center">
-                {page + 1} / {totalPages}
-              </span>
-              <Button variant="outline" size="icon" onClick={handleNext} aria-label="Próxima página">
-                <ArrowRight size={18} />
-              </Button>
-            </div>
-          )}
+          <div className="flex items-center gap-4">
+            {totalPages > 1 && (
+              <div className="flex items-center gap-2">
+                <Button variant="outline" size="icon" onClick={handlePrev} aria-label="Página anterior">
+                  <ArrowLeft size={18} />
+                </Button>
+                <span className="text-sm text-zinc-400 font-mono w-12 text-center">
+                  {page + 1} / {totalPages}
+                </span>
+                <Button variant="outline" size="icon" onClick={handleNext} aria-label="Próxima página">
+                  <ArrowRight size={18} />
+                </Button>
+              </div>
+            )}
+            <Button variant="outline" onClick={() => {
+              // Garante que as funções existem antes de chamar
+              if (setInitialTagForProjectsModal) setInitialTagForProjectsModal("all");
+              if (setIsProjectsModalOpen) setIsProjectsModalOpen(true);
+            }}>
+              <LayoutGrid size={16} className="mr-2" />
+              Ver todos
+            </Button>
+          </div>
         </div>
 
         <AnimatePresence mode="wait" custom={direction}>

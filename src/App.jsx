@@ -120,7 +120,11 @@ export default function App() {
         setInitialTagForProjectsModal={setInitialTagForProjectsModal}
         sectionTag="web"
       />
-      <ProjectsGridSection items={items} />
+      <ProjectsGridSection 
+        items={items} 
+        setIsProjectsModalOpen={setIsProjectsModalOpen}
+        setInitialTagForProjectsModal={setInitialTagForProjectsModal}
+      />
       <ContactSection />
       <Footer />
 
