@@ -5,7 +5,7 @@ import { PortfolioCard } from "../components/parts/portfolio-card";
 import Particles from "../components/ui/particles";
 import { loop } from "../lib/utils";
 
-export function PortfolioSection({ items }) {
+export function PortfolioSection({ items, setIsProjectsModalOpen, setInitialTagForProjectsModal }) {
   const marquee = loop(items.length ? items : []);
   const carouselRef = useRef(null);
   const x = useMotionValue(0);
@@ -51,8 +51,11 @@ export function PortfolioSection({ items }) {
             <Particles variant="white" />
             <p className="text-zinc-400">Cards passando lado a lado, com loop e drag.</p>
           </div>
-          <Button variant="outline" asChild>
-            <a href="#projetos">Ver projetos</a>
+          <Button variant="outline" onClick={() => {
+            setInitialTagForProjectsModal("web");
+            setIsProjectsModalOpen(true);
+          }}>
+            Ver projetos
           </Button>
         </div>
 

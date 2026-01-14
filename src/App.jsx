@@ -28,8 +28,7 @@ import { Footer } from "./components/layout/footer";
 import { HeroSection } from "./sections/hero";
 import { AboutSection } from "./sections/about";
 import { PortfolioSection } from "./sections/portfolio";
-import { ProjectsSection } from "./sections/projects";
-import { ExtrasSection } from "./sections/extras";
+import { ProjectsModal } from "./components/ui/projects-modal";
 import { ContactSection } from "./sections/contact";
 import FelixoVersePage from "./pages/FelixoVersePage";
 
@@ -45,6 +44,12 @@ export default function App() {
 
   // Estado para controlar se a busca está aberta
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  // Estado para controlar se o modal de projetos está aberto
+  const [isProjectsModalOpen, setIsProjectsModalOpen] = useState(false);
+
+  // Estado para controlar a tag inicial do modal de projetos
+  const [initialTagForProjectsModal, setInitialTagForProjectsModal] = useState("all");
 
   // Função para abrir busca filtrada por tecnologia
   const handleTechClick = (tag) => {
@@ -107,11 +112,22 @@ export default function App() {
         activeTag={activeTag} 
         isSearchOpen={isSearchOpen} 
       />
-      <PortfolioSection items={filtered.length ? filtered : items} />
-      <ProjectsSection items={filtered} />
-      <ExtrasSection />
+      <PortfolioSection 
+        items={filtered.length ? filtered : items} 
+        setIsProjectsModalOpen={setIsProjectsModalOpen}
+        setInitialTagForProjectsModal={setInitialTagForProjectsModal}
+      />
       <ContactSection />
       <Footer />
+
+      <ProjectsModal 
+        isOpen={isProjectsModalOpen}
+        onClose={() => {
+          setIsProjectsModalOpen(false);
+          setInitialTagForProjectsModal("all");
+        }}
+        initialTag={initialTagForProjectsModal}
+      />
     </div>
   );
 }
