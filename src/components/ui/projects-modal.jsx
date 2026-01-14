@@ -40,7 +40,7 @@ export function ProjectsModal({ isOpen, onClose, initialTag = "all" }) {
         >
           <motion.div
             layoutId="projects-container"
-            className="w-full max-w-5xl bg-zinc-900 border border-white/20 rounded-3xl p-6 shadow-2xl relative"
+            className="w-full max-w-5xl bg-zinc-950 border border-white/20 rounded-3xl p-6 shadow-2xl relative"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between mb-4">

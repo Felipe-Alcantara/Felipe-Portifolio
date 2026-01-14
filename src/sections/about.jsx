@@ -71,7 +71,7 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
   ];
 
   return (
-    <section id="sobre" className="border-t border-white/5 bg-zinc-900/20">
+    <section id="sobre" className="border-t border-white/5 bg-zinc-950/20">
       <div className="mx-auto max-w-7xl pl-6 pr-6 lg:pr-0 py-14 grid md:grid-cols-[280px_1fr] lg:grid-cols-[280px_1fr_240px] gap-8 items-start">
         {/* Coluna da Foto e Redes */}
         <div className="flex flex-col items-center md:items-start gap-4">
@@ -139,7 +139,7 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
               <div className="pointer-events-none absolute -inset-4 rounded-3xl blur-2xl animate-tech-glow" />
               <div className="pointer-events-none absolute -inset-3 rounded-3xl bg-gradient-to-b from-white/10 to-transparent blur-xl animate-photo-glow-2" style={{backgroundSize: '200% 200%'}} />
               
-              <div className="relative w-full rounded-2xl bg-zinc-900/30 border border-white/5 p-4">
+              <div className="relative w-full rounded-2xl bg-zinc-950/30 border border-white/5 p-4">
                 {/* Camada escura para suavizar o brilho */}
                 <div className="absolute inset-0 rounded-2xl bg-black/40 pointer-events-none" />
                 

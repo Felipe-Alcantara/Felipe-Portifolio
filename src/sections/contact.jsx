@@ -5,7 +5,7 @@ import { Input } from "../components/ui/input";
 
 export function ContactSection() {
   return (
-    <section id="contato" className="border-t border-white/5 bg-zinc-900/10">
+    <section id="contato" className="border-t border-white/5 bg-zinc-950/10">
       <div className="mx-auto max-w-5xl px-6 py-14">
         <h2 className="text-3xl font-bold text-center mb-8">Entre em contato</h2>
         
@@ -20,7 +20,7 @@ export function ContactSection() {
            </a>
         </div>
 
-        <div className="bg-zinc-900/50 border border-white/10 rounded-3xl p-6 md:p-8 shadow-xl">
+        <div className="bg-zinc-950/50 border border-white/10 rounded-3xl p-6 md:p-8 shadow-xl">
            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div>
                 <label className="block text-sm text-zinc-400 mb-2">Nome / E-mail</label>

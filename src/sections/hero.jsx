@@ -42,7 +42,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
             {/* Container da Busca que "cresce" */}
             <motion.div
               layoutId="search-container"
-              className="w-full max-w-3xl bg-zinc-900 border border-white/20 rounded-3xl p-6 shadow-2xl relative"
+              className="w-full max-w-3xl bg-zinc-950 border border-white/20 rounded-3xl p-6 shadow-2xl relative"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between mb-4">
@@ -190,7 +190,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
       ) : (
         <motion.div 
           layoutId="search-container"
-          className="rounded-3xl border border-white/10 p-6 bg-gradient-to-br from-zinc-800/50 to-zinc-900/30 shadow-xl cursor-pointer felixo-card-glow transition-colors group"
+          className="rounded-3xl border border-white/10 p-6 bg-gradient-to-br from-zinc-800/50 to-zinc-950/30 shadow-xl cursor-pointer felixo-card-glow transition-colors group"
           onClick={() => setIsSearchOpen(true)}
         >
           <div className="text-sm text-purple-400 transition-colors">Busca rápida</div>

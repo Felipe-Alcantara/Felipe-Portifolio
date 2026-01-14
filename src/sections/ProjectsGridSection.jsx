@@ -48,7 +48,7 @@ const ProjectCard = ({ item, variants, onMouseEnter, isHovered, isAdjacent }) =>
     onMouseEnter={onMouseEnter}
     variants={variants}
     className={cx(
-      "group flex h-full flex-col bg-zinc-900/50 border border-white/10 rounded-2xl transition-all duration-300",
+      "group flex h-full flex-col bg-zinc-950/50 border border-white/10 rounded-2xl transition-all duration-300",
       isHovered ? "felixo-card-glow-intense-hover" : "hover:border-white/20",
       !isHovered && isAdjacent && "felixo-card-glow-subtle"
     )}
