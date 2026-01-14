@@ -29,6 +29,7 @@ import { HeroSection } from "./sections/hero";
 import { AboutSection } from "./sections/about";
 import { PortfolioSection } from "./sections/portfolio";
 import { ProjectsModal } from "./components/ui/projects-modal";
+import { ExtrasSection } from "./sections/extras";
 import { ProjectsGridSection } from "./sections/ProjectsGridSection";
 import { ContactSection } from "./sections/contact";
 import FelixoVersePage from "./pages/FelixoVersePage";
@@ -125,6 +126,7 @@ export default function App() {
         setIsProjectsModalOpen={setIsProjectsModalOpen}
         setInitialTagForProjectsModal={setInitialTagForProjectsModal}
       />
+      <ExtrasSection />
       <ContactSection />
       <Footer />
 
