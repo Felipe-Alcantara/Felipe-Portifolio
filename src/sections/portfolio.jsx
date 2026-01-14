@@ -5,8 +5,10 @@ import { PortfolioCard } from "../components/parts/portfolio-card";
 import Particles from "../components/ui/particles";
 import { loop } from "../lib/utils";
 
-export function PortfolioSection({ items, setIsProjectsModalOpen, setInitialTagForProjectsModal }) {
-  const marquee = loop(items.length ? items : []);
+export function PortfolioSection({ items, setIsProjectsModalOpen, setInitialTagForProjectsModal, sectionTag }) {
+  // Filtrar itens por sectionTag se fornecido
+  const displayItems = sectionTag ? items.filter(it => it.tag?.toLowerCase() === sectionTag.toLowerCase()) : items;
+  const marquee = loop(displayItems.length ? displayItems : []);
   const carouselRef = useRef(null);
   const x = useMotionValue(0);
   const [isDragging, setIsDragging] = useState(false);

@@ -19,7 +19,19 @@ export function cx(...classes) {
  * Usado na seção Portfolio para que os cards se repitam e criem
  * a ilusão de rolagem infinita
  */
-export const loop = (arr) => [...arr, ...arr, ...arr];
+export const loop = (arr) => {
+  if (!arr || arr.length === 0) return [];
+
+  // Garante itens suficientes para cobrir telas largas (evita "pulos" visuais)
+  // Se a lista for pequena, repetimos ela até ter pelo menos 6 itens
+  let filled = [...arr];
+  while (filled.length < 6) {
+    filled = [...filled, ...arr];
+  }
+
+  // Triplica o array preenchido (buffer inicial, conteúdo, buffer final)
+  return [...filled, ...filled, ...filled];
+};
 
 /**
  * Retorna um objeto de estilo para aplicar uma intensidade personalizada ao glow

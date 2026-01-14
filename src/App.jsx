@@ -113,9 +113,11 @@ export default function App() {
         isSearchOpen={isSearchOpen} 
       />
       <PortfolioSection 
+        key={activeTag}
         items={filtered.length ? filtered : items} 
         setIsProjectsModalOpen={setIsProjectsModalOpen}
         setInitialTagForProjectsModal={setInitialTagForProjectsModal}
+        sectionTag="web"
       />
       <ContactSection />
       <Footer />
