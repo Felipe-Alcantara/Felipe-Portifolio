@@ -98,13 +98,13 @@ export function ExtrasSection() {
               <img src={academicData.logo} alt="Logo UGB" className="h-8 w-8 object-contain" />
               <h3 className="text-xl font-semibold text-purple-400">Graduação Acadêmica</h3>
             </div>
-            <div className="flex-1 p-6 rounded-2xl bg-zinc-900/60 border border-white/10 space-y-4 hover:ring-2 hover:ring-offset-2 hover:ring-offset-background hover:ring-purple-500 transition-all animate-tech-glow">
+            <div className="flex-1 p-9 rounded-2xl bg-zinc-900/60 border border-white/10 space-y-4 hover:ring-2 hover:ring-offset-2 hover:ring-offset-background hover:ring-purple-500 transition-all animate-tech-glow">
               <div>
                 <h4 className="font-bold text-lg">{academicData.course}</h4>
                 <p className="text-[#1E6BB8] font-semibold text-sm">{academicData.institution}</p>
                 <Badge variant="secondary" className="mt-2 text-xs">{academicData.date}</Badge>
               </div>
-              <p className="text-sm text-zinc-300 border-t border-white/10 pt-4">
+              <p className="text-xs text-zinc-300 border-t border-white/10 pt-4">
                 {academicData.description}
               </p>
             </div>
@@ -118,7 +118,7 @@ export function ExtrasSection() {
             </div>
             <div className="flex-1 grid grid-rows-2 gap-4">
               {freeCoursesData.map((course, index) => (
-                <div key={index} className="p-6 rounded-2xl bg-zinc-900/60 border border-white/10 space-y-3 hover:ring-2 hover:ring-offset-2 hover:ring-offset-background hover:ring-purple-500 transition-all animate-tech-glow">
+                <div key={index} className="p-8 rounded-2xl bg-zinc-900/60 border border-white/10 space-y-3 hover:ring-2 hover:ring-offset-2 hover:ring-offset-background hover:ring-purple-500 transition-all animate-tech-glow">
                   <h4 className="font-bold">{renderCourseTitle(course.title)}</h4>
                   <p className="text-zinc-400 text-sm">{course.institution}</p>
                   <p className="text-xs text-zinc-300 border-t border-white/10 pt-3 line-clamp-4">{course.description}</p>
@@ -142,7 +142,7 @@ export function ExtrasSection() {
 
                                     {aluraCoursesData.map((course, index) => (
 
-                                      <div key={index} className="p-6 rounded-2xl bg-zinc-900/60 border border-white/10 hover:ring-2 hover:ring-offset-2 hover:ring-offset-background hover:ring-purple-500 transition-all flex flex-col animate-tech-glow">
+                                      <div key={index} className="p-4 rounded-2xl bg-zinc-900/60 border border-white/10 hover:ring-2 hover:ring-offset-2 hover:ring-offset-background hover:ring-purple-500 transition-all flex flex-col animate-tech-glow">
                   <h4 className="font-medium text-sm">{renderCourseTitle(course.title)}</h4>
                   <div className="flex justify-between items-end mt-auto">
                     <span className="text-xs text-zinc-500">{course.date}</span>
