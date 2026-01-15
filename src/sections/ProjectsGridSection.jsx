@@ -43,14 +43,17 @@ const cardVariants = {
   exit: { scale: 0.8, opacity: 0, y: -20, transition: { duration: 0.2 } }
 };
 
-const ProjectCard = ({ item, variants, onMouseEnter, isHovered, isAdjacent }) => (
+const ProjectCard = ({ item, variants, onMouseEnter, isHovered, isAdjacent, isFaded }) => (
   <motion.div
     onMouseEnter={onMouseEnter}
     variants={variants}
     className={cx(
-      "group flex h-full flex-col bg-zinc-950/50 border border-white/10 rounded-2xl transition-all duration-300",
-      isHovered ? "felixo-card-glow-intense-hover" : "hover:border-white/20",
-      !isHovered && isAdjacent && "felixo-card-glow-subtle"
+      "group flex h-full flex-col bg-zinc-950/50 border border-white/10 rounded-2xl transition-all duration-1000",
+      isHovered
+        ? "felixo-card-glow-intense-hover"
+        : "hover:border-white/20",
+      !isHovered && isAdjacent && "felixo-card-glow-subtle",
+      isFaded && "card-faded"
     )}
   >
     <a href={item.link} target="_blank" rel="noopener noreferrer" className="flex flex-col h-full p-5">
@@ -164,13 +167,15 @@ export function ProjectsGridSection({ items, setIsProjectsModalOpen, setInitialT
             onMouseLeave={() => setHoveredIndex(null)}
           >
             {currentItems.map((item, index) => (
-              <ProjectCard 
-                key={item.title} 
-                item={item} 
+              <ProjectCard
+                key={item.title}
+                item={item}
                 variants={cardVariants}
                 onMouseEnter={() => setHoveredIndex(index)}
                 isHovered={hoveredIndex === index}
-                isAdjacent={areAdjacent(hoveredIndex, index)} />
+                isAdjacent={areAdjacent(hoveredIndex, index)}
+                isFaded={hoveredIndex !== null && hoveredIndex !== index}
+              />
             ))}
           </motion.div>
         </AnimatePresence>

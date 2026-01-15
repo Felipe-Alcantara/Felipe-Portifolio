@@ -378,4 +378,8 @@
   .text-glow-white {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.35), 0 0 20px rgba(255, 255, 255, 0.15);
   }
+
+  .card-faded {
+    opacity: 0.2;
+  }
 }
