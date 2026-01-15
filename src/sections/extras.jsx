@@ -7,17 +7,21 @@ import { FaYoutube } from 'react-icons/fa';
 
 // Helper para colorir nomes de tecnologias nos títulos dos cursos
 const renderCourseTitle = (title) => {
-  const parts = title.split(/(Python|TypeScript|JavaScript|HTML)/g);
+  const parts = title.split(/(Python 3|Python|TypeScript|JavaScript|HTML5|HTML|CSS3)/g);
   return parts.map((part, index) => {
     switch (part) {
+      case "Python 3":
       case "Python":
         return <span key={index} className="text-[#3776AB] font-semibold">{part}</span>;
       case "TypeScript":
         return <span key={index} className="text-[#3178C6] font-semibold">{part}</span>;
       case "JavaScript":
         return <span key={index} className="text-[#F7DF1E] font-semibold">{part}</span>;
+      case "HTML5":
       case "HTML":
         return <span key={index} className="text-[#E34F26] font-semibold">{part}</span>;
+      case "CSS3":
+        return <span key={index} className="text-[#1572B6] font-semibold">{part}</span>;
       default:
         return <React.Fragment key={index}>{part}</React.Fragment>;
     }
@@ -30,7 +34,7 @@ const academicData = {
   course: "Sistemas de Informação",
   institution: "Universidade Geraldo de Biase",
   date: "Metade de 2023 - Presente",
-  description: "O curso de Sistemas de Informação forma profissionais capazes de administrar o fluxo de informações em redes de computadores, além de desenvolver e evoluir sistemas de informação para uso em processos organizacionais. A formação abrange desde a infraestrutura de TI e engenharia de software até a gestão de projetos e segurança da informação.",
+  description: "O curso de Sistemas de Informação forma profissionais aptos a atuar na concepção, desenvolvimento, implantação e gestão de sistemas de informação. Abrangendo desde a administração do fluxo de dados em redes de computadores até a evolução de sistemas complexos para otimização de processos organizacionais, a formação aprofunda-se em infraestrutura de TI, engenharia de software, gestão de projetos, segurança da informação e análise de dados, preparando o estudante para os desafios do mercado tecnológico.",
   logo: ugbLogo
 };
 
@@ -86,36 +90,36 @@ export function ExtrasSection() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-16">
         <h2 className="text-3xl font-bold mb-12 text-center">Formação & Certificações</h2>
         
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-4 gap-10">
 
           {/* Coluna 1: Graduação Acadêmica */}
-          <div className="space-y-6">
+          <div className="flex flex-col space-y-6 col-span-1">
             <div className="flex items-center gap-3">
               <img src={academicData.logo} alt="Logo UGB" className="h-8 w-8 object-contain" />
               <h3 className="text-xl font-semibold text-purple-400">Graduação Acadêmica</h3>
             </div>
-            <div className="p-6 rounded-2xl bg-zinc-900/40 border border-white/10 space-y-4">
+            <div className="flex-1 p-6 rounded-2xl bg-zinc-900/40 border border-white/10 space-y-4 hover:ring-2 hover:ring-offset-2 hover:ring-offset-background hover:ring-purple-500 transition-all">
               <div>
                 <h4 className="font-bold text-lg">{academicData.course}</h4>
                 <p className="text-[#1E6BB8] font-semibold text-sm">{academicData.institution}</p>
                 <Badge variant="secondary" className="mt-2 text-xs">{academicData.date}</Badge>
               </div>
-              <p className="text-sm text-zinc-300 border-t border-white/10 pt-4 line-clamp-5">
+              <p className="text-sm text-zinc-300 border-t border-white/10 pt-4">
                 {academicData.description}
               </p>
             </div>
           </div>
 
           {/* Coluna 2: Cursos Gratuitos */}
-          <div className="space-y-6">
+          <div className="flex flex-col space-y-6 col-span-1">
             <div className="flex items-center gap-3">
               <FaYoutube className="text-red-600 h-8 w-8" />
               <h3 className="text-xl font-semibold text-purple-400">Cursos da Web Gratuitos</h3>
             </div>
-            <div className="space-y-4">
+            <div className="flex-1 grid grid-rows-2 gap-4">
               {freeCoursesData.map((course, index) => (
-                <div key={index} className="p-6 rounded-2xl bg-zinc-900/40 border border-white/10 space-y-3">
-                  <h4 className="font-bold">{course.title}</h4>
+                <div key={index} className="p-6 rounded-2xl bg-zinc-900/40 border border-white/10 space-y-3 hover:ring-2 hover:ring-offset-2 hover:ring-offset-background hover:ring-purple-500 transition-all">
+                  <h4 className="font-bold">{renderCourseTitle(course.title)}</h4>
                   <p className="text-zinc-400 text-sm">{course.institution}</p>
                   <p className="text-xs text-zinc-300 border-t border-white/10 pt-3 line-clamp-4">{course.description}</p>
                   <Badge variant="secondary" className="text-xs">{course.date}</Badge>
@@ -124,17 +128,23 @@ export function ExtrasSection() {
             </div>
           </div>
 
-          {/* Coluna 3: Alura */}
-          <div className="space-y-6">
-            <div className="flex items-center gap-3">
-                <img src="https://www.alura.com.br/assets/img/alura-logo.svg" alt="Logo Alura" className="h-7 w-auto" />
-                <h3 className="text-xl font-semibold text-purple-400">Alura</h3>
-            </div>
-            <div className="space-y-3">
-              {aluraCoursesData.map((course, index) => (
-                <div key={index} className="p-4 rounded-xl bg-zinc-900/40 border border-white/10 hover:bg-zinc-800/40 transition-colors">
+                              {/* Coluna 3: Alura */}
+
+                              <div className="flex flex-col space-y-6 col-span-2">
+
+                      <div className="flex items-center gap-3 justify-center">
+
+                          <img src="https://www.alura.com.br/assets/img/alura-logo.svg" alt="Logo Alura" className="h-7 w-auto" />
+
+                      </div>
+
+                                  <div className="flex-1 space-y-4">
+
+                                    {aluraCoursesData.map((course, index) => (
+
+                                      <div key={index} className="p-6 rounded-2xl bg-zinc-900/40 border border-white/10 hover:ring-2 hover:ring-offset-2 hover:ring-offset-background hover:ring-purple-500 transition-all flex flex-col">
                   <h4 className="font-medium text-sm">{renderCourseTitle(course.title)}</h4>
-                  <div className="flex justify-between items-center mt-2">
+                  <div className="flex justify-between items-end mt-auto">
                     <span className="text-xs text-zinc-500">{course.date}</span>
                     <Badge variant="outline" className="text-[10px] h-5 px-2 bg-green-500/10 text-green-400 border-green-500/20">
                       Concluído
