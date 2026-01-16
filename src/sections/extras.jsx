@@ -43,40 +43,40 @@ const freeCoursesData = [
     title: "Curso de HTML5 e CSS3",
     institution: "Curso em Vídeo",
     date: "2024",
-    description: "O curso ensina a criar sites usando as três linguagens fundamentais da web: HTML5 para estrutura, CSS3 para estilos e JavaScript para interatividade. Abrange desde o básico até a publicação de um site completo, com projetos práticos."
+    description: "O curso ensina a criar sites usando as três linguagens fundamentais da web: HTML5 para estrutura, CSS3 para estilos e JavaScript para interatividade."
   },
   {
     title: "Curso de Python 3",
     institution: "Curso em Vídeo",
     date: "2024",
-    description: "Dividido em 'Mundos', o curso cobre desde os fundamentos da linguagem Python até estruturas de controle, de dados (listas, tuplas, dicionários) e funções. Ideal para iniciantes, com foco em resolução de problemas."
+    description: "Dividido em 'Mundos', o curso cobre desde os fundamentos da linguagem Python até estruturas de controle, de dados e funções."
   }
 ];
 
 const aluraCoursesData = [
     {
       title: "Lógica de programação: mergulhe em programação com JavaScript",
-      date: "03, fev., 2025",
+      date: "fev., 2025",
     },
     {
       title: "JavaScript e HTML: desenvolva um jogo e pratique lógica de programação",
-      date: "03, fev., 2025",
+      date: "fev., 2025",
     },
     {
       title: "Lógica de programação: praticando com desafios",
-      date: "03, fev., 2025",
+      date: "fev., 2025",
     },
     {
       title: "Lógica de programação: explore funções e listas",
-      date: "02, jan., 2025",
+      date: "jan., 2025",
     },
     {
       title: "Viabilidade de Projetos & Negócios: fluxo de caixa, juros, VPL, TIR e payback",
-      date: "17, abr., 2024",
+      date: "abr., 2024",
     },
     {
       title: "Python: crie a sua primeira aplicação",
-      date: "03, abr., 2024",
+      date: "abr., 2024",
     }
 ];
 
