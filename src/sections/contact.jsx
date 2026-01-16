@@ -5,7 +5,7 @@ import { Input } from "../components/ui/input";
 
 export function ContactSection() {
   return (
-    <section id="contato" className="border-t border-white/5 bg-zinc-950/10">
+    <section id="contato" className="border-t border-white/5">
       <div className="mx-auto max-w-5xl px-6 py-14">
         <h2 className="text-3xl font-bold text-center mb-8 glowing-spinning-text">Entre em contato</h2>
         

@@ -33,6 +33,7 @@ import { ExtrasSection } from "./sections/extras";
 import { ProjectsGridSection } from "./sections/ProjectsGridSection";
 import { ContactSection } from "./sections/contact";
 import FelixoVersePage from "./pages/FelixoVersePage";
+import { BackgroundParticles } from "./components/ui/BackgroundParticles"; // Importação do componente de partículas
 
 export default function App() {
   // Estado TEMPORÁRIO para visualizar a página do FelixoVerse
@@ -93,6 +94,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-zinc-950 to-black text-zinc-50 selection:bg-purple-600/40 font-sans relative">
+      <BackgroundParticles /> {/* Adiciona o componente de partículas */}
       <button 
         onClick={() => setShowFelixoVerse(true)}
         className="fixed bottom-4 right-4 z-50 bg-purple-700 text-white px-4 py-2 rounded-lg font-bold shadow-lg hover:bg-purple-800 transition"
