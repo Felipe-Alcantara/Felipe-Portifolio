@@ -49,21 +49,19 @@ export function ContactSection() {
                 </Button>
 
                 <div className="flex items-center gap-4">
-                    <span className="text-sm text-zinc-500 hidden md:inline-block">Outros canais:</span>
-                    
-                    <a href="https://wa.me/" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-[#25D366] transition-colors p-2 hover:bg-white/5 rounded-full" title="WhatsApp">
+                    <a href="https://wa.me/24998545803" target="_blank" rel="noreferrer" className="group p-2 rounded-xl bg-black/20 border border-white/5 hover:border-white/20 hover:scale-125 hover:z-50 hover:shadow-[0_0_30px_rgba(37,211,102,0.4)] transition-all duration-200 flex items-center justify-center text-[#25D366]" title="WhatsApp">
                         <FaWhatsapp size={24} />
                     </a>
                     
-                    <a href="https://x.com/Felixo_Tech" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-[#1DA1F2] transition-colors p-2 hover:bg-white/5 rounded-full" title="Twitter">
+                    <a href="https://x.com/Felixo_Tech" target="_blank" rel="noreferrer" className="group p-2 rounded-xl bg-black/20 border border-white/5 hover:border-white/20 hover:scale-125 hover:z-50 hover:shadow-[0_0_30px_rgba(29,161,242,0.4)] transition-all duration-200 flex items-center justify-center text-[#1DA1F2]" title="Twitter">
                         <FaTwitter size={24} />
                     </a>
                     
-                    <a href="mailto:FelipeTheFeh@Gmail.com" className="text-zinc-400 hover:text-red-400 transition-colors p-2 hover:bg-white/5 rounded-full" title="Email">
+                    <a href="mailto:FelipeTheFeh@Gmail.com" className="group p-2 rounded-xl bg-black/20 border border-white/5 hover:border-white/20 hover:scale-125 hover:z-50 hover:shadow-[0_0_30px_rgba(248,113,113,0.4)] transition-all duration-200 flex items-center justify-center text-red-400" title="Email">
                         <Mail size={24} />
                     </a>
                     
-                    <a href="http://discord.gg/DmW9tHcGpV" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-[#5865F2] transition-colors p-2 hover:bg-white/5 rounded-full" title="Discord">
+                    <a href="http://discord.gg/DmW9tHcGpV" target="_blank" rel="noreferrer" className="group p-2 rounded-xl bg-black/20 border border-white/5 hover:border-white/20 hover:scale-125 hover:z-50 hover:shadow-[0_0_30px_rgba(88,101,242,0.4)] transition-all duration-200 flex items-center justify-center text-[#5865F2]" title="Discord">
                         <FaDiscord size={24} />
                     </a>
                 </div>
