@@ -384,4 +384,21 @@
   .card-faded {
     opacity: 0.2;
   }
+
+  /* Animação de brilho para o texto (agora branco) */
+  @keyframes glow-effect {
+    0%, 100% {
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+      text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  /* Classe para o texto brilhante (agora branco, sem giro) */
+  .glowing-spinning-text {
+    color: #FFFFFF; /* Branco */
+    animation: glow-effect 3s ease-in-out infinite;
+    will-change: text-shadow; /* Otimização de performance */
+  }
 }

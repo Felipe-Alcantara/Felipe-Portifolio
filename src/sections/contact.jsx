@@ -7,16 +7,16 @@ export function ContactSection() {
   return (
     <section id="contato" className="border-t border-white/5 bg-zinc-950/10">
       <div className="mx-auto max-w-5xl px-6 py-14">
-        <h2 className="text-3xl font-bold text-center mb-8">Entre em contato</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 glowing-spinning-text">Entre em contato</h2>
         
         <div className="flex justify-center gap-6 mb-12">
            <a href="mailto:seuemail@exemplo.com" className="flex items-center gap-2 text-zinc-400 hover:text-purple-400 transition-colors">
               <Mail size={20} />
-              <span>seuemail@exemplo.com</span>
+              <span className="glowing-spinning-text">seuemail@exemplo.com</span>
            </a>
            <a href="https://github.com/SeuUsuario" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-zinc-400 hover:text-purple-400 transition-colors">
               <Github size={20} />
-              <span>GitHub</span>
+              <span className="glowing-spinning-text">GitHub</span>
            </a>
         </div>
 
