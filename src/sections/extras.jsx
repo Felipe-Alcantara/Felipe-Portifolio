@@ -98,13 +98,13 @@ export function ExtrasSection() {
               <img src={academicData.logo} alt="Logo UGB" className="h-8 w-8 object-contain" />
               <h3 className="text-xl font-semibold text-purple-400">Graduação Acadêmica</h3>
             </div>
-            <div className="flex-1 p-9 rounded-2xl bg-zinc-900/60 border border-white/10 space-y-4 hover:ring-2 hover:ring-offset-2 hover:ring-offset-background hover:ring-purple-500 transition-all animate-tech-glow">
+            <div className="flex-1 flex flex-col p-9 rounded-2xl bg-zinc-900/60 border border-white/10 space-y-4 hover:ring-2 hover:ring-offset-2 hover:ring-offset-background hover:ring-purple-500 transition-all animate-tech-glow">
               <div>
                 <h4 className="font-bold text-lg">{academicData.course}</h4>
                 <p className="text-[#1E6BB8] font-semibold text-sm">{academicData.institution}</p>
                 <Badge variant="secondary" className="mt-2 text-xs">{academicData.date}</Badge>
               </div>
-              <p className="text-xs text-zinc-300 border-t border-white/10 pt-4">
+              <p className="flex-1 text-xs text-zinc-300 border-t border-white/10 pt-4">
                 {academicData.description}
               </p>
             </div>
