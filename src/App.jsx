@@ -21,7 +21,7 @@
  * PARA REMOVER: Delete ou comente a linha do componente
  * PARA ADICIONAR: Importe uma nova seção e adicione na estrutura
  */
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { items } from "./data/projects.jsx";
 import { Navbar } from "./components/layout/navbar";
 import { Footer } from "./components/layout/footer";
@@ -53,6 +53,14 @@ export default function App() {
 
   // Estado para controlar a tag inicial do modal de projetos
   const [initialTagForProjectsModal, setInitialTagForProjectsModal] = useState("all");
+
+  // Garante que a página inicie sempre no topo (Hero) ao recarregar
+  useEffect(() => {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  }, []);
 
   // Função para abrir busca filtrada por tecnologia
   const handleTechClick = (tag) => {
