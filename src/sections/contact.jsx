@@ -21,7 +21,13 @@ export function ContactSection() {
            </a>
         </div>
 
-        <div className="bg-zinc-950/50 border border-white/10 rounded-3xl p-6 md:p-8 shadow-xl">
+        <div 
+          className="relative bg-zinc-950/50 border border-white/10 rounded-3xl p-6 md:p-8 
+                     shadow-2xl shadow-purple-500/20 
+                     transition-all duration-300 hover:border-purple-400/50 hover:shadow-purple-500/40"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
            <form 
              className="space-y-4" 
              action="mailto:FelipeTheFeh@Gmail.com" 
@@ -30,14 +36,14 @@ export function ContactSection() {
            >
               <div>
                 <label className="block text-sm text-zinc-400 mb-2">Nome / E-mail</label>
-                <Input name="contact_info" placeholder="Digite seu nome ou e-mail..." />
+                <Input name="contact_info" placeholder="Digite seu nome ou e-mail..." className="input-glowing-border" />
               </div>
               
               <div>
                 <label className="block text-sm text-zinc-400 mb-2">Mensagem</label>
                 <textarea 
                   name="message"
-                  className="w-full min-h-[120px] rounded-xl bg-zinc-800/50 border border-white/10 p-3 text-sm text-white outline-none focus:ring-1 focus:ring-purple-600/50 resize-y"
+                  className="w-full min-h-[120px] rounded-xl bg-zinc-800/50 border border-white/10 p-3 text-sm text-white outline-none focus:ring-1 focus:ring-purple-600/50 resize-y input-glowing-border"
                   placeholder="Digite sua mensagem..."
                 ></textarea>
               </div>

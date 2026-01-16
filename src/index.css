@@ -401,4 +401,13 @@
     animation: glow-effect 3s ease-in-out infinite;
     will-change: text-shadow; /* Otimização de performance */
   }
+
+  .input-glowing-border:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.4), /* Inner purple ring */
+                0 0 0 4px rgba(168, 85, 247, 0.2); /* Outer purple glow */
+    border-color: rgba(168, 85, 247, 0.6);
+    transition: all 0.2s ease-in-out;
+  }
 }
+
