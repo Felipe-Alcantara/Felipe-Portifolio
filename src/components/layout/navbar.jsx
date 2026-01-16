@@ -22,6 +22,42 @@ export function Navbar() {
     { name: "Contato", href: "#contato" },
   ];
 
+  const handleLinkClick = (e, href) => {
+    e.preventDefault();
+    const targetId = href.replace(/.*#/, "");
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const headerOffset = 80;
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+      const startPosition = window.scrollY;
+      const distance = offsetPosition - startPosition;
+      const duration = 2000; // 2000ms = 2 segundos (mais lento e suave)
+      let start = null;
+
+      function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        
+        // Função de Easing (Cubic Ease In Out) para suavidade no início e fim
+        const ease = (t, b, c, d) => {
+          t /= d / 2;
+          if (t < 1) return c / 2 * t * t * t + b;
+          t -= 2;
+          return c / 2 * (t * t * t + 2) + b;
+        };
+
+        window.scrollTo({ top: ease(progress, startPosition, distance, duration), behavior: "auto" });
+
+        if (progress < duration) window.requestAnimationFrame(step);
+      }
+
+      window.requestAnimationFrame(step);
+    }
+    setIsOpen(false);
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 border-b ${
@@ -31,7 +67,7 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-6 flex items-center justify-between">
-        <a href="#inicio" className="text-xl font-bold tracking-tight text-white hover:opacity-80 transition-opacity">
+        <a href="#inicio" onClick={(e) => handleLinkClick(e, "#inicio")} className="text-xl font-bold tracking-tight text-white hover:opacity-80 transition-opacity">
           <img src={logo} alt="Logo" className="w-8 h-8 object-contain inline-block mr-2" /> Felixo<span className="text-purple-500">.</span>com<span className="text-purple-500">.</span>br
         </a>
 
@@ -41,6 +77,7 @@ export function Navbar() {
             <a
               key={link.name}
               href={link.href}
+              onClick={(e) => handleLinkClick(e, link.href)}
               className="text-zinc-400 hover:text-white transition-colors"
             >
               {link.name}
@@ -67,7 +104,7 @@ export function Navbar() {
               key={link.name}
               href={link.href}
               className="text-zinc-400 hover:text-white hover:bg-white/5 transition-all py-3 px-4 rounded-xl font-medium"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => handleLinkClick(e, link.href)}
             >
               {link.name}
             </a>
