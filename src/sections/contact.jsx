@@ -3,6 +3,7 @@ import { Mail, Github, Send } from "lucide-react";
 import { FaWhatsapp, FaTwitter, FaDiscord } from "react-icons/fa";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
+import Particles from "../components/ui/particles";
 
 export function ContactSection() {
   return (
@@ -49,9 +50,14 @@ export function ContactSection() {
               </div>
 
               <div className="pt-2 flex flex-col md:flex-row items-center justify-between gap-6">
-                <Button className="w-full md:w-auto" type="submit">
-                  <Send size={16} className="mr-2" />
-                  Enviar mensagem
+                <Button variant="outline" asChild className="w-full md:w-auto relative group overflow-hidden border-white/30 bg-white/5 text-white shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:bg-white/10 felixo-card-glow-white transition-all duration-300" type="submit">
+                  <a href="mailto:FelipeTheFeh@Gmail.com" className="inline-flex items-center gap-2">
+                    {/* Brilho passando (Shimmer) */}
+                    <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent z-0" />
+                    <Particles variant="white" />
+                    <Mail size={18} className="relative z-10 mr-2" />
+                    <span className="relative z-10">Enviar mensagem</span>
+                  </a>
                 </Button>
 
                 <div className="flex items-center gap-4">

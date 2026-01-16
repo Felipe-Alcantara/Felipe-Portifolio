@@ -364,7 +364,7 @@ export default function App() {
       </section>
 
       <footer className="border-t border-white/5 text-center py-10 text-sm text-zinc-400">
-        © {new Date().getFullYear()} FelixoVerse — construído ao vivo.
+        © {new Date().getFullYear()} Felipe Martin — construído ao vivo.
       </footer>
     </div>
   );
