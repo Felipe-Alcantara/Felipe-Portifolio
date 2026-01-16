@@ -145,7 +145,7 @@ export function ExtrasSection() {
                                       <div key={index} className="p-4 rounded-2xl bg-zinc-900/60 border border-white/10 hover:ring-2 hover:ring-offset-2 hover:ring-offset-background hover:ring-purple-500 transition-all flex flex-col animate-tech-glow">
                   <h4 className="font-medium text-sm">{renderCourseTitle(course.title)}</h4>
                   <div className="flex justify-between items-end mt-auto">
-                    <span className="text-xs text-zinc-500">{course.date}</span>
+                    <Badge variant="secondary" className="text-xs">{course.date}</Badge>
                     <Badge variant="outline" className="text-[10px] h-5 px-2 bg-green-500/10 text-green-400 border-green-500/20">
                       Concluído
                     </Badge>
