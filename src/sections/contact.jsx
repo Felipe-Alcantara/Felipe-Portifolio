@@ -1,11 +1,21 @@
-import React from "react";
-import { Mail, Github, Send } from "lucide-react";
-import { FaWhatsapp, FaTwitter, FaDiscord } from "react-icons/fa";
+import React, { useState } from "react";
+import { Mail, Github } from "lucide-react";
+import { FaWhatsapp, FaTwitter, FaDiscord, FaLinkedin } from "react-icons/fa";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import Particles from "../components/ui/particles";
+import { ContactModal } from "../components/ui/ContactModal";
 
 export function ContactSection() {
+  const [contactInfo, setContactInfo] = useState('');
+  const [message, setMessage] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+  };
+
   return (
     <section id="contato" className="border-t border-white/5">
       <div className="mx-auto max-w-5xl px-6 py-14">
@@ -29,15 +39,16 @@ export function ContactSection() {
           data-aos="fade-up"
           data-aos-duration="1000"
         >
-           <form 
-             className="space-y-4" 
-             action="mailto:FelipeTheFeh@Gmail.com" 
-             method="POST" 
-             encType="text/plain"
-           >
+           <form onSubmit={handleFormSubmit} className="space-y-4">
               <div>
                 <label className="block text-sm text-zinc-400 mb-2">Nome / E-mail</label>
-                <Input name="contact_info" placeholder="Digite seu nome ou e-mail..." className="input-glowing-border" />
+                <Input 
+                  name="contact_info" 
+                  placeholder="Digite seu nome ou e-mail..." 
+                  className="input-glowing-border"
+                  value={contactInfo}
+                  onChange={(e) => setContactInfo(e.target.value)} 
+                />
               </div>
               
               <div>
@@ -46,23 +57,30 @@ export function ContactSection() {
                   name="message"
                   className="w-full min-h-[120px] rounded-xl bg-zinc-800/50 border border-white/10 p-3 text-sm text-white outline-none focus:ring-1 focus:ring-purple-600/50 resize-y input-glowing-border"
                   placeholder="Digite sua mensagem..."
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>
 
               <div className="pt-2 flex flex-col md:flex-row items-center justify-between gap-6">
-                <Button variant="outline" asChild className="w-full md:w-auto relative group overflow-hidden border-white/30 bg-white/5 text-white shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:bg-white/10 felixo-card-glow-white transition-all duration-300" type="submit">
-                  <a href="mailto:FelipeTheFeh@Gmail.com" className="inline-flex items-center gap-2">
-                    {/* Brilho passando (Shimmer) */}
-                    <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent z-0" />
-                    <Particles variant="white" />
-                    <Mail size={18} className="relative z-10 mr-2" />
-                    <span className="relative z-10">Enviar mensagem</span>
-                  </a>
+                <Button 
+                  variant="outline" 
+                  className="w-full md:w-auto relative group overflow-hidden border-white/30 bg-white/5 text-white shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:bg-white/10 felixo-card-glow-white transition-all duration-300 inline-flex items-center gap-2" 
+                  type="submit"
+                >
+                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent z-0" />
+                  <Particles variant="white" />
+                  <Mail size={18} className="relative z-10 mr-2" />
+                  <span className="relative z-10">Enviar mensagem</span>
                 </Button>
 
                 <div className="flex items-center gap-4">
                     <a href="https://wa.me/24998545803" target="_blank" rel="noreferrer" className="group p-2 rounded-xl bg-black/20 border border-white/5 hover:border-white/20 hover:scale-125 hover:z-50 hover:shadow-[0_0_30px_rgba(37,211,102,0.4)] transition-all duration-200 flex items-center justify-center text-[#25D366]" title="WhatsApp">
                         <FaWhatsapp size={24} />
+                    </a>
+
+                    <a href="https://linkedin.com/in/felipealcantaramartins" target="_blank" rel="noreferrer" className="group p-2 rounded-xl bg-black/20 border border-white/5 hover:border-white/20 hover:scale-125 hover:z-50 hover:shadow-[0_0_30px_rgba(10,102,194,0.4)] transition-all duration-200 flex items-center justify-center text-[#0A66C2]" title="LinkedIn">
+                        <FaLinkedin size={24} />
                     </a>
                     
                     <a href="https://x.com/Felixo_Tech" target="_blank" rel="noreferrer" className="group p-2 rounded-xl bg-black/20 border border-white/5 hover:border-white/20 hover:scale-125 hover:z-50 hover:shadow-[0_0_30px_rgba(29,161,242,0.4)] transition-all duration-200 flex items-center justify-center text-[#1DA1F2]" title="Twitter">
@@ -81,6 +99,12 @@ export function ContactSection() {
            </form>
         </div>
       </div>
+      <ContactModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        message={message}
+        contactInfo={contactInfo}
+      />
     </section>
   );
 }
