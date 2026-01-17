@@ -76,7 +76,7 @@ export function ContactSection() {
                     </div>
                   </Button>
                 ) : (
-                  <Button asChild variant="outline" className="w-full md:w-auto relative group overflow-hidden border-white/30 bg-white/5 text-white shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:bg-white/10 felixo-card-glow-white transition-all duration-300 inline-flex items-center gap-2">
+                  <Button asChild variant="outline" className="w-full md:w-auto relative group overflow-hidden border-white/30 bg-white/5 text-white shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:bg-white/10 felixo-card-glow-white transition-colors duration-300 inline-flex items-center gap-2">
                     <motion.button 
                       layoutId="contact-modal-card"
                       type="submit"

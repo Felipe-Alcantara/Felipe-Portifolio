@@ -18,7 +18,7 @@ export function ContactModal({ isOpen, onClose, message, contactInfo }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-start justify-center z-50 p-4 pt-12" 
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4" 
           onClick={onClose}
         >
           <motion.div 
