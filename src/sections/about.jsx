@@ -3,6 +3,11 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import felipeFoto from "../../Imagens/IMG_20240605_212259_494 cortado.jpg";
 import brythonLogo from "../../Imagens/Gemini_Generated_Image_k6r461k6r461k6r4.png";
 import {
+  FaWhatsapp,
+  FaDiscord,
+  FaTwitter,
+} from "react-icons/fa";
+import {
   TbBrandCSharp,
   TbBrandCss3,
   TbBrandDjango,
@@ -115,6 +120,33 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
               title="LinkedIn"
             >
               <Linkedin size={28} className="text-felixo-purple-glow group-hover:scale-200 transition-transform" />
+            </a>
+            <a 
+              href="https://wa.me/5524998545803" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
+              title="WhatsApp"
+            >
+              <FaWhatsapp size={28} className="text-felixo-purple-glow group-hover:scale-200 transition-transform" />
+            </a>
+            <a 
+              href="http://discord.gg/DmW9tHcGpV" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
+              title="Discord"
+            >
+              <FaDiscord size={28} className="text-felixo-purple-glow group-hover:scale-200 transition-transform" />
+            </a>
+            <a 
+              href="https://x.com/Felixo_Tech" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
+              title="Twitter"
+            >
+              <FaTwitter size={28} className="text-felixo-purple-glow group-hover:scale-200 transition-transform" />
             </a>
           </div>
         </div>
