@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
-import felipeFoto from "../../Imagens/IMG_20240605_212259_494 cortado.jpg";
+import felipeFoto from "../../Imagens/IMG_20251220_143247_000.jpg";
 import brythonLogo from "../../Imagens/Gemini_Generated_Image_k6r461k6r461k6r4.png";
 import {
   FaWhatsapp,
@@ -101,7 +101,7 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
               className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
               title="E-mail"
             >
-              <Mail size={28} className="text-felixo-purple-glow group-hover:scale-200 transition-transform" />
+              <Mail size={28} className="text-felixo-purple-glow group-hover:scale-150 transition-transform" />
             </a>
             <a 
               href="https://github.com/Felipe-Alcantara" 
@@ -110,7 +110,7 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
               className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
               title="GitHub"
             >
-              <Github size={28} className="text-felixo-purple-glow group-hover:scale-200 transition-transform" />
+              <Github size={28} className="text-felixo-purple-glow group-hover:scale-150 transition-transform" />
             </a>
             <a 
               href="https://www.linkedin.com/in/felipealcantaramartins/" 
@@ -119,7 +119,7 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
               className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
               title="LinkedIn"
             >
-              <Linkedin size={28} className="text-felixo-purple-glow group-hover:scale-200 transition-transform" />
+              <Linkedin size={28} className="text-felixo-purple-glow group-hover:scale-150 transition-transform" />
             </a>
             <a 
               href="https://wa.me/5524998545803" 
@@ -128,7 +128,7 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
               className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
               title="WhatsApp"
             >
-              <FaWhatsapp size={28} className="text-felixo-purple-glow group-hover:scale-200 transition-transform" />
+              <FaWhatsapp size={28} className="text-felixo-purple-glow group-hover:scale-150 transition-transform" />
             </a>
             <a 
               href="http://discord.gg/DmW9tHcGpV" 
@@ -137,7 +137,7 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
               className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
               title="Discord"
             >
-              <FaDiscord size={28} className="text-felixo-purple-glow group-hover:scale-200 transition-transform" />
+              <FaDiscord size={28} className="text-felixo-purple-glow group-hover:scale-150 transition-transform" />
             </a>
             <a 
               href="https://x.com/Felixo_Tech" 
@@ -146,7 +146,7 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
               className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
               title="Twitter"
             >
-              <FaTwitter size={28} className="text-felixo-purple-glow group-hover:scale-200 transition-transform" />
+              <FaTwitter size={28} className="text-felixo-purple-glow group-hover:scale-150 transition-transform" />
             </a>
           </div>
           <div className="w-full h-px bg-purple-400/30 shadow-[0_0_10px_0] shadow-purple-400/50 mt-3"></div>
