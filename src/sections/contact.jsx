@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { Mail, Github } from "lucide-react";
 import { FaWhatsapp, FaTwitter, FaDiscord, FaLinkedin } from "react-icons/fa";
 import { Button } from "../components/ui/button";
@@ -63,16 +64,30 @@ export function ContactSection() {
               </div>
 
               <div className="pt-2 flex flex-col md:flex-row items-center justify-between gap-6">
-                <Button 
-                  variant="outline" 
-                  className="w-full md:w-auto relative group overflow-hidden border-white/30 bg-white/5 text-white shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:bg-white/10 felixo-card-glow-white transition-all duration-300 inline-flex items-center gap-2" 
-                  type="submit"
-                >
-                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent z-0" />
-                  <Particles variant="white" />
-                  <Mail size={18} className="relative z-10 mr-2" />
-                  <span className="relative z-10">Enviar mensagem</span>
-                </Button>
+                {isModalOpen ? (
+                  <Button 
+                    asChild
+                    variant="outline" 
+                    className="w-full md:w-auto opacity-0 pointer-events-none border-white/30 bg-white/5 text-white inline-flex items-center gap-2" 
+                  >
+                    <div aria-hidden="true">
+                      <Mail size={18} className="mr-2" />
+                      <span>Enviar mensagem</span>
+                    </div>
+                  </Button>
+                ) : (
+                  <Button asChild variant="outline" className="w-full md:w-auto relative group overflow-hidden border-white/30 bg-white/5 text-white shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:bg-white/10 felixo-card-glow-white transition-all duration-300 inline-flex items-center gap-2">
+                    <motion.button 
+                      layoutId="contact-modal-card"
+                      type="submit"
+                    >
+                      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent z-0" />
+                      <Particles variant="white" />
+                      <Mail size={18} className="relative z-10 mr-2" />
+                      <span className="relative z-10">Enviar mensagem</span>
+                    </motion.button>
+                  </Button>
+                )}
 
                 <div className="flex items-center gap-4">
                     <a href="https://wa.me/24998545803" target="_blank" rel="noreferrer" className="group p-2 rounded-xl bg-black/20 border border-white/5 hover:border-white/20 hover:scale-125 hover:z-50 hover:shadow-[0_0_30px_rgba(37,211,102,0.4)] transition-all duration-200 flex items-center justify-center text-[#25D366]" title="WhatsApp">
