@@ -166,7 +166,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
             </a>
           </Button>
           <Button asChild variant="outline" className="relative group overflow-hidden border-purple-500/50 bg-purple-500/10 text-white shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:bg-purple-500/20 felixo-card-glow transition-all duration-300">
-            <a href="/Currículo/Currículo Felipe Alcântara Martins.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+            <a href="https://drive.google.com/file/d/1RNGx0D_yLZCelClUo0XJNvT9AJdgCs47/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
               {/* Brilho passando (Shimmer) */}
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
 
