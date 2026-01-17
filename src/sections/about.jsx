@@ -95,7 +95,7 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
             </div>
           </div>
           
-          <div className="flex gap-3 w-full justify-start">
+          <div className="flex flex-wrap gap-3 w-full justify-start">
             <a 
               href="mailto:FelipeTheFeh@Gmail.com" 
               className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
@@ -149,6 +149,7 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
               <FaTwitter size={28} className="text-felixo-purple-glow group-hover:scale-200 transition-transform" />
             </a>
           </div>
+          <div className="w-full h-px bg-purple-400/30 shadow-[0_0_10px_0] shadow-purple-400/50 mt-3"></div>
         </div>
 
         {/* Coluna do Texto */}
