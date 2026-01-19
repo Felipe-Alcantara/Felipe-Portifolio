@@ -31,14 +31,17 @@ export function FelixoVerseSection() {
             </Button>
           </div>
         </div>
-        <div className="rounded-3xl border border-white/10 p-6 bg-zinc-900/40 space-y-4 text-sm text-zinc-300 leading-relaxed hover-felixo-card-glow transition-all duration-300">
-          <h3 className="text-lg font-bold text-purple-400">FelixoVerse</h3>
-          <p>
-            O <strong>FelixoVerse</strong> é um projeto autoral que funciona como um <strong>hub criativo</strong>, integrando tecnologia e colaboração. Mais que uma comunidade, ele serve como um laboratório prático onde aplico conceitos de automação, desenvolvimento e gestão de sistemas em um ambiente real.
-          </p>
-          <p>
-            O projeto reúne entusiastas de programação, arte e jogos, demonstrando minha capacidade de <strong>conceber, estruturar e evoluir uma ideia do zero</strong>, unindo visão estratégica e execução técnica para criar experiências digitais engajadoras.
-          </p>
+        <div className="relative group">
+          <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000" />
+          <div className="relative rounded-3xl border border-white/10 p-6 bg-zinc-950 space-y-4 text-sm text-zinc-300 leading-relaxed">
+            <h3 className="text-lg font-bold text-purple-400">FelixoVerse</h3>
+            <p>
+              O <strong>FelixoVerse</strong> é um projeto autoral que funciona como um <strong>hub criativo</strong>, integrando tecnologia e colaboração. Mais que uma comunidade, ele serve como um laboratório prático onde aplico conceitos de automação, desenvolvimento e gestão de sistemas em um ambiente real.
+            </p>
+            <p>
+              O projeto reúne entusiastas de programação, arte e jogos, demonstrando minha capacidade de <strong>conceber, estruturar e evoluir uma ideia do zero</strong>, unindo visão estratégica e execução técnica para criar experiências digitais engajadoras.
+            </p>
+          </div>
         </div>
       </div>
     </section>
