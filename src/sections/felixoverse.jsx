@@ -31,15 +31,20 @@ export function FelixoVerseSection() {
             </Button>
           </div>
         </div>
-        <div className="rounded-3xl border border-white/10 p-6 bg-zinc-900/40">
-          <div className="text-sm text-zinc-400">Roadmap snapshot</div>
-          <ol className="mt-3 space-y-2 text-sm">
-            <li>1. Publicar landing responsiva</li>
-            <li>2. Conectar blog (MDX ou Notion API)</li>
-            <li>3. Criar microsserviço de músicas (pré‑escuta)</li>
-            <li>4. Páginas dos torneios e rankings</li>
-            <li>5. MVP do ARG (capítulo 1)</li>
-          </ol>
+        <div className="rounded-3xl border border-white/10 p-6 bg-zinc-900/40 space-y-4 text-sm text-zinc-300 leading-relaxed hover-felixo-card-glow transition-all duration-300">
+          <h3 className="text-lg font-bold text-purple-400">FelixoVerse</h3>
+          <p>
+            O <strong>FelixoVerse</strong> é um projeto autoral de comunidade digital criado com o objetivo de integrar tecnologia, criatividade e colaboração em um único ambiente online. Desenvolvido e idealizado por mim, o projeto nasce como um laboratório prático onde conceitos de organização, desenvolvimento, automação e gestão de comunidades são aplicados de forma real.
+          </p>
+          <p>
+            A proposta do FelixoVerse vai além de um servidor tradicional: ele funciona como um <strong>hub criativo</strong>, reunindo pessoas interessadas em estudo, programação, arte, música e jogos, incentivando a troca de conhecimento e a participação ativa por meio de eventos, projetos colaborativos e experiências interativas.
+          </p>
+          <p>
+            Do ponto de vista técnico e estratégico, o projeto envolve planejamento de estrutura, criação de sistemas de engajamento, uso de automações e integração com ferramentas externas, além de uma visão de expansão para plataformas como web e redes sociais.
+          </p>
+          <p>
+            O FelixoVerse representa minha capacidade de <strong>conceber, estruturar e evoluir um projeto do zero</strong>, unindo criatividade, tecnologia e visão de longo prazo, servindo como um exemplo prático das minhas habilidades em desenvolvimento, organização de sistemas e construção de experiências digitais.
+          </p>
         </div>
       </div>
     </section>
