@@ -88,7 +88,7 @@ export function ExtrasSection() {
     <section id="extras" className="relative border-t border-white/5 overflow-hidden">
       <BackgroundParticles />
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-16">
-        <h2 className="text-3xl font-bold mb-12 text-center">Formação & Certificações</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center text-gradient-glow-amethyst">Formação & Certificações</h2>
         
         <div className="grid md:grid-cols-4 gap-10">
 

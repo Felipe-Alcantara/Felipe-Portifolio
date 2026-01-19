@@ -9,7 +9,7 @@ export function FelixoVerseSection() {
     <section id="felixoverse" className="border-t border-white/5">
       <div className="mx-auto max-w-6xl px-4 py-14 grid md:grid-cols-2 gap-10 items-center">
         <div>
-          <h2 className="text-2xl font-semibold">O Hub FelixoVerse</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gradient-glow-amethyst">O Hub FelixoVerse</h2>
           <p className="mt-2 text-zinc-300">
             Comunidade, e-sports, música e projetos indie. Quer participar, apoiar ou colaborar? Vem comigo.
           </p>

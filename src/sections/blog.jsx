@@ -17,7 +17,7 @@ export function BlogSection() {
               <span className="font-semibold tracking-wide uppercase text-sm">Em Breve</span>
             </div>
             
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-gradient-glow-amethyst">
               Blog & Conhecimento
             </h2>
             

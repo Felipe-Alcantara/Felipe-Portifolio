@@ -409,5 +409,39 @@
     border-color: rgba(168, 85, 247, 0.6);
     transition: all 0.2s ease-in-out;
   }
-}
 
+  /* Brilho em cor Python (Azul) */
+  @keyframes title-glow-python {
+    0%, 100% {
+      filter: drop-shadow(0 0 22px rgba(55, 118, 171, 0.25));
+    }
+    50% {
+      filter: drop-shadow(0 0 34px rgba(55, 118, 171, 0.55));
+    }
+  }
+
+  .text-gradient-glow-python {
+    background: linear-gradient(to right, white, #3776AB, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: title-glow-python 3s ease-in-out infinite, gradient-orbit 7.5s linear infinite;
+    background-size: 220% 220%;
+    will-change: background-position, filter;
+    text-shadow: 0 0 6px rgba(55, 118, 171, 0.45),
+                 0 0 34px rgba(55, 118, 171, 0.25);
+  }
+
+  /* Brilho em cor Ametista (Roxo Puro) */
+  .text-gradient-glow-amethyst {
+    background: linear-gradient(to right, white, #A855F7, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: title-glow-purple 3s ease-in-out infinite, gradient-orbit 7.5s linear infinite;
+    background-size: 220% 220%;
+    will-change: background-position, filter;
+    text-shadow: 0 0 6px rgba(168, 85, 247, 0.45),
+                 0 0 34px rgba(168, 85, 247, 0.25);
+  }
+}
