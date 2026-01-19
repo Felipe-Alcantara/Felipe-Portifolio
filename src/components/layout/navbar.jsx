@@ -18,6 +18,8 @@ export function Navbar() {
     { name: "Sobre", href: "#sobre" },
     { name: "Aplicações Web", href: "#portfolio" },
     { name: "Outros Projetos", href: "#outros-projetos" },
+    { name: "Blog", href: "#blog" },
+    { name: "FelixoVerse", href: "#felixoverse" },
     { name: "Formação", href: "#extras" },
     { name: "Contato", href: "#contato" },
   ];
