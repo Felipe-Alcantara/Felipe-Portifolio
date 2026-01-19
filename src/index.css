@@ -11,6 +11,7 @@
 }
 
 @layer utilities {
+  /* Estilização customizada da barra de rolagem */
   .custom-scrollbar::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -29,12 +30,13 @@
     background: rgba(255, 255, 255, 0.2);
   }
 
-  /* Órbita cinematográfica ao redor da foto (2 pontos com rastro) */
+  /* Efeito de órbita ao redor da foto de perfil */
   .about-orbit {
     overflow: hidden;
     transform: translateZ(0);
   }
 
+  /* Borda estática da órbita */
   .about-orbit::before {
     content: "";
     position: absolute;
@@ -43,6 +45,7 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
+  /* Ponto de luz que gira na órbita */
   .about-orbit-dot {
     position: absolute;
     left: 50%;
@@ -57,7 +60,7 @@
       0 0 22px rgba(255, 255, 255, 0.25);
   }
 
-  /* “Calda” (rastro) */
+  /* Rastro de luz que segue o ponto */
   .about-orbit-dot::after {
     content: "";
     position: absolute;
@@ -77,6 +80,7 @@
     opacity: 0.9;
   }
 
+  /* Animação de rotação para a órbita */
   @keyframes about-orbit-spin {
     from {
       transform: rotate(0deg);
@@ -86,15 +90,17 @@
     }
   }
 
+  /* Aplica a animação de órbita com durações diferentes para criar assincronia */
   .about-orbit-a {
     animation: about-orbit-spin 6s linear infinite;
   }
 
+  /* Segunda camada da órbita com velocidade diferente */
   .about-orbit-b {
     animation: about-orbit-spin 8.5s linear infinite;
   }
 
-  /* Deixa o segundo ponto “fora de fase” */
+  /* Posiciona o segundo ponto de luz no lado oposto */
   .about-orbit-b .about-orbit-dot {
     top: 100%;
     transform: translate(-50%, 50%);
@@ -121,14 +127,14 @@
     }
   }
 
-  /* Classe de animação específica para o glow roxo */
+  /* Aplica a animação de brilho roxo e a órbita de gradiente */
   .animate-title-glow-purple {
     animation: title-glow-purple 3s ease-in-out infinite, gradient-orbit 7.5s linear infinite;
     background-size: 220% 220%;
     will-change: background-position, filter;
   }
 
-  /* Animação de respiração para o brilho da foto */
+  /* Animação de "respiração" (pulsar) para o brilho da foto de perfil */
   @keyframes photo-glow-breathe {
     0%, 100% {
       opacity: 0.6;
@@ -138,20 +144,21 @@
     }
   }
 
-  /* Animações combinadas para o brilho da foto (respiração + órbita) */
+  /* Combina a animação de pulsar com a órbita de gradiente para a foto */
   .animate-photo-glow-1 {
     animation: photo-glow-breathe 3s ease-in-out infinite, gradient-orbit 7.5s linear infinite;
     background-size: 200% 200%;
     will-change: background-position, opacity;
   }
 
+  /* Variação da animação de brilho da foto com direções e tempos diferentes */
   .animate-photo-glow-2 {
     animation: photo-glow-breathe 3s ease-in-out infinite 0.5s, gradient-orbit 7.5s linear infinite reverse;
     background-size: 200% 200%;
     will-change: background-position, opacity;
   }
 
-  /* Definição de propriedade para interpolação suave de cores */
+  /* Define uma propriedade CSS customizada para permitir transições de cor suaves na animação */
   @property --tech-glow-color {
     syntax: '<color>';
     initial-value: rgba(227, 79, 38, 0.12);
@@ -177,6 +184,7 @@
     100% { --tech-glow-color: rgba(227, 79, 38, 0.12); }
   }
 
+  /* Aplica um brilho radial que muda de cor ciclicamente, simulando as cores das tecnologias */
   .animate-tech-glow {
     background-image: radial-gradient(circle at center, var(--tech-glow-color), transparent 70%);
     animation: tech-colors-cycle 25s linear infinite, gradient-orbit 7.5s linear infinite;
@@ -184,7 +192,7 @@
     will-change: background-position;
   }
 
-  /* Movimento “circular” suave sem trocar background-image (evita cortes) */
+  /* Animação que move a posição de um fundo (geralmente gradiente) em uma órbita circular */
   @keyframes gradient-orbit {
     0% {
       background-position: 50% 0%;
@@ -203,6 +211,7 @@
     }
   }
 
+  /* Aplica a animação de brilho verde e a órbita de gradiente */
   .animate-title-glow {
     animation: title-glow 3s ease-in-out infinite, gradient-orbit 7.5s linear infinite;
     background-size: 220% 220%;
@@ -219,6 +228,7 @@
     }
   }
 
+  /* Aplica a animação de brilho azul (TypeScript) e a órbita de gradiente */
   .animate-title-glow-ts {
     animation: title-glow-ts 3s ease-in-out infinite, gradient-orbit 7.5s linear infinite;
     background-size: 220% 220%;
@@ -226,11 +236,12 @@
   }
 
   /* Utilitários de texto Felixo (roxo estático e roxo com glow) */
+  /* Cor roxa estática para textos */
   .text-felixo-purple {
     color: #C084FC;
   }
 
-  /* Variáveis e utilitários para controlar intensidade do glow */
+  /* Variável CSS para controlar a intensidade do efeito de brilho (glow) */
   :root {
     --felixo-glow-intensity: 1; /* padrão 100% */
   }
@@ -242,7 +253,7 @@
   .felixo-glow-intensity-100 { --felixo-glow-intensity: 1; }
   .felixo-glow-intensity-150 { --felixo-glow-intensity: 1.5; }
 
-  /* Animação de respiração (pulso) para textos com glow roxo — intensidades variáveis */
+  /* Animação de "respiração" (pulso) para o brilho de textos, controlada pela variável de intensidade */
   @keyframes text-glow-breathe {
     0%, 100% {
       text-shadow: 0 0 calc(8px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.45 * var(--felixo-glow-intensity))),
@@ -257,6 +268,7 @@
     }
   }
 
+  /* Aplica a cor roxa e a animação de brilho pulsante a um texto */
   .text-felixo-purple-glow {
     /* cor mais viva para sombra e glow animado */
     --felixo-glow-blur: calc(8px * var(--felixo-glow-intensity));
@@ -272,7 +284,7 @@
     animation: title-glow-purple 3s ease-in-out infinite, text-glow-breathe 3.8s ease-in-out infinite;
   }
 
-  /* Classe combinada para título com gradiente e glow roxo (respeita intensidade) */
+  /* Estilo para títulos com gradiente de texto e efeito de brilho roxo */
   .text-gradient-glow-purple {
     /* gradiente de fundo */
     background: linear-gradient(to right, white, #10b981, white);
@@ -288,7 +300,7 @@
                  0 0 calc(34px * var(--felixo-glow-intensity)) rgba(168 85 247 / calc(0.25 * var(--felixo-glow-intensity)));
   }
 
-  /* Animação de respiração para o card de busca (borda e sombra roxa) */
+  /* Animação de "respiração" para bordas e sombras de cards (brilho roxo) */
   @keyframes card-glow-breathe {
     0%, 100% {
       box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
@@ -300,7 +312,7 @@
     }
   }
 
-  /* Animação de respiração mais intensa para o card com hover */
+  /* Variação mais intensa da animação de brilho de card, para uso em hover */
   @keyframes card-glow-breathe-intense-hover {
     0%, 100% {
       box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
@@ -312,7 +324,7 @@
     }
   }
 
-  /* Animação de respiração sutil para cards adjacentes */
+  /* Variação sutil da animação de brilho, para cards adjacentes ao que está em hover */
   @keyframes card-glow-breathe-subtle {
     0%, 100% {
       box-shadow: 0 0 8px rgba(168, 85, 247, 0.1);
@@ -324,23 +336,27 @@
     }
   }
 
+  /* Aplica o brilho roxo em um card quando o mouse está sobre ele */
   .hover-felixo-card-glow:hover {
     animation: card-glow-breathe 3s ease-in-out infinite;
   }
 
+  /* Aplica o brilho roxo em um card de forma contínua */
   .felixo-card-glow {
     animation: card-glow-breathe 3s ease-in-out infinite;
   }
 
+  /* Aplica o brilho roxo intenso e contínuo (usado em hover na grade de projetos) */
   .felixo-card-glow-intense-hover {
     animation: card-glow-breathe-intense-hover 2.5s ease-in-out infinite;
   }
 
+  /* Aplica o brilho roxo sutil e contínuo (usado em cards adjacentes na grade) */
   .felixo-card-glow-subtle {
     animation: card-glow-breathe-subtle 3s ease-in-out infinite;
   }
 
-  /* Animação de respiração branca para botões secundários */
+  /* Animação de "respiração" com brilho branco, para botões e elementos secundários */
   @keyframes card-glow-breathe-white {
     0%, 100% {
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
@@ -352,15 +368,17 @@
     }
   }
 
+  /* Aplica o brilho branco em um elemento quando o mouse está sobre ele */
   .hover-felixo-card-glow-white:hover {
     animation: card-glow-breathe-white 3s ease-in-out infinite;
   }
 
+  /* Aplica o brilho branco de forma contínua */
   .felixo-card-glow-white {
     animation: card-glow-breathe-white 3s ease-in-out infinite;
   }
 
-  /* Animação de respiração intensa para destaque (Aplicações Web) */
+  /* Variação de brilho branco intenso para elementos de destaque */
   @keyframes card-glow-breathe-intense {
     0%, 100% {
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
@@ -372,20 +390,22 @@
     }
   }
 
+  /* Aplica o brilho branco intenso de forma contínua */
   .felixo-card-glow-intense {
     animation: card-glow-breathe-intense 5s ease-in-out infinite;
   }
 
-  /* Brilho branco suave ao redor do texto (mantido para compatibilidade) */
+  /* Efeito de sombra de texto simples para um brilho branco suave */
   .text-glow-white {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.35), 0 0 20px rgba(255, 255, 255, 0.15);
   }
 
+  /* Efeito que esmaece um card, usado na grade de projetos para focar no card em hover */
   .card-faded {
     opacity: 0.2;
   }
 
-  /* Animação de brilho para o texto (agora branco) */
+  /* Animação de brilho pulsante para texto na cor branca */
   @keyframes glow-effect {
     0%, 100% {
       text-shadow: 0 0 8px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
@@ -395,13 +415,14 @@
     }
   }
 
-  /* Classe para o texto brilhante (agora branco, sem giro) */
+  /* Aplica a animação de brilho branco a um texto */
   .glowing-spinning-text {
     color: #FFFFFF; /* Branco */
     animation: glow-effect 3s ease-in-out infinite;
     will-change: text-shadow; /* Otimização de performance */
   }
 
+  /* Adiciona uma borda com brilho roxo a um input quando ele está em foco */
   .input-glowing-border:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.4), /* Inner purple ring */
@@ -410,7 +431,7 @@
     transition: all 0.2s ease-in-out;
   }
 
-  /* Brilho em cor Python (Azul) */
+  /* Animação de brilho para a cor azul do Python */
   @keyframes title-glow-python {
     0%, 100% {
       filter: drop-shadow(0 0 22px rgba(55, 118, 171, 0.25));
@@ -420,6 +441,7 @@
     }
   }
 
+  /* Estilo para títulos com gradiente de texto e efeito de brilho azul (Python) */
   .text-gradient-glow-python {
     background: linear-gradient(to right, white, #3776AB, white);
     background-clip: text;
@@ -432,7 +454,7 @@
                  0 0 34px rgba(55, 118, 171, 0.25);
   }
 
-  /* Brilho em cor Ametista (Roxo Puro) */
+  /* Estilo para títulos com gradiente de texto e efeito de brilho roxo puro (Ametista) */
   .text-gradient-glow-amethyst {
     background: linear-gradient(to right, white, #A855F7, white);
     background-clip: text;
