@@ -33,13 +33,10 @@ import { ExtrasSection } from "./sections/extras";
 import { ProjectsGridSection } from "./sections/ProjectsGridSection";
 import { BlogSection } from "./sections/blog";
 import { ContactSection } from "./sections/contact";
-import FelixoVersePage from "./pages/FelixoVersePage";
+import { FelixoVerseSection } from "./sections/felixoverse";
 import { BackgroundParticles } from "./components/ui/BackgroundParticles"; // Importação do componente de partículas
 
 export default function App() {
-  // Estado TEMPORÁRIO para visualizar a página do FelixoVerse
-  const [showFelixoVerse, setShowFelixoVerse] = useState(false);
-
   // Estado da busca por texto
   const [q, setQ] = useState("");
   
@@ -87,29 +84,9 @@ export default function App() {
     });
   }, [q, activeTag]);
 
-  if (showFelixoVerse) {
-    return (
-      <>
-        <button 
-          onClick={() => setShowFelixoVerse(false)}
-          className="fixed top-4 right-4 z-[9999] bg-red-600 text-white px-4 py-2 rounded-lg font-bold shadow-lg hover:bg-red-700 transition"
-        >
-          Voltar para Portfólio
-        </button>
-        <FelixoVersePage />
-      </>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-zinc-950 to-black text-zinc-50 selection:bg-purple-600/40 font-sans relative">
       <BackgroundParticles /> {/* Adiciona o componente de partículas */}
-      <button 
-        onClick={() => setShowFelixoVerse(true)}
-        className="fixed bottom-4 right-4 z-50 bg-purple-700 text-white px-4 py-2 rounded-lg font-bold shadow-lg hover:bg-purple-800 transition"
-      >
-        Ver FelixoVerse (Preview)
-      </button>
 
       <Navbar />
       <HeroSection 
@@ -138,6 +115,7 @@ export default function App() {
         setInitialTagForProjectsModal={setInitialTagForProjectsModal}
       />
       <BlogSection />
+      <FelixoVerseSection />
       <ExtrasSection />
       <ContactSection />
       <Footer />
