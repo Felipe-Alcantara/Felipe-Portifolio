@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, Search, Rocket, Music, Code, ExternalLink, Mail } from "lucide-react";
+import { Menu, Search, Rocket, Music, Code, ExternalLink, Mail, BookOpen, Sparkles } from "lucide-react";
 
 /**
  * Preview note:
@@ -301,15 +301,50 @@ export default function App() {
       </section>
 
       {/* BLOG – placeholders */}
-      <section id="blog" className="border-t border-white/5">
-        <div className="mx-auto max-w-6xl px-4 py-14">
-          <h2 className="text-2xl font-semibold">Blog</h2>
-          <p className="mt-2 text-zinc-400">Ideias, estudos e devlogs do hub.</p>
-          <ul className="mt-6 space-y-3 text-sm text-zinc-300 list-disc list-inside">
-            <li>Como projetei o carrossel infinito com Framer Motion</li>
-            <li>Pipeline simples para publicar projetos do Vite/Next</li>
-            <li>ARG: ideias de puzzles com criptografia e esteganografia</li>
-          </ul>
+      <section id="blog" className="border-t border-white/5 bg-zinc-900/5">
+        <div className="mx-auto max-w-6xl px-4 py-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-3 text-purple-400">
+                <div className="p-2 rounded-lg bg-purple-500/10">
+                  <BookOpen size={24} />
+                </div>
+                <span className="font-semibold tracking-wide uppercase text-sm">Em Breve</span>
+              </div>
+              
+              <h2 className="text-3xl md:text-4xl font-bold text-white">
+                Blog & Conhecimento
+              </h2>
+              
+              <p className="text-lg text-zinc-300 leading-relaxed">
+                Estou preparando um ambiente dedicado ao ensino e à informação. 
+                Este blog será o canal oficial para tutoriais, novidades e 
+                aprofundamento técnico.
+              </p>
+            </div>
+
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
+              <div className="relative bg-zinc-950 border border-white/10 rounded-3xl p-8">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-full bg-zinc-900 border border-white/5 text-purple-400">
+                    <Sparkles size={20} />
+                  </div>
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-semibold text-white">O que vem por aí?</h3>
+                    <p className="text-zinc-400 leading-relaxed">
+                      Vou utilizar este espaço para <strong>ensinar programação</strong> de forma descomplicada, 
+                      postar <strong>informações e atualizações</strong> sobre o desenvolvimento do <em>FelixoVerse</em>, 
+                      e comentar <strong>notícias</strong> relevantes do mundo da tecnologia. 
+                      A ideia é criar um repositório vivo de aprendizado e colaboração.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
