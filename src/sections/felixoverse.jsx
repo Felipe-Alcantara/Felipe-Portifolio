@@ -2,6 +2,7 @@ import React from "react";
 import { Mail, Rocket } from "lucide-react";
 import { Button } from "../components/ui/button";
 import Particles from "../components/ui/particles";
+import { FaDiscord } from "react-icons/fa";
 
 export function FelixoVerseSection() {
   return (
@@ -12,7 +13,7 @@ export function FelixoVerseSection() {
           <p className="mt-2 text-zinc-300">
             Comunidade, e-sports, música e projetos indie. Quer participar, apoiar ou colaborar? Vem comigo.
           </p>
-          <div className="mt-5 flex gap-3">
+          <div className="mt-5 flex gap-3 items-center">
             <Button asChild variant="outline" className="relative group overflow-hidden border-purple-500/50 bg-purple-500/10 text-white shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:bg-purple-500/20 felixo-card-glow transition-all duration-300">
               <a href="#felixoverse" className="inline-flex items-center gap-2">
                 <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
@@ -29,6 +30,15 @@ export function FelixoVerseSection() {
                 <span className="relative z-10">Entrar em contato</span>
               </a>
             </Button>
+            <a 
+              href="http://discord.gg/DmW9tHcGpV" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"
+              title="Discord"
+            >
+              <FaDiscord size={28} className="text-felixo-purple-glow group-hover:scale-150 transition-transform" />
+            </a>
           </div>
         </div>
         <div className="relative group">
