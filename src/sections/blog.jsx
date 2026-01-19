@@ -1,5 +1,7 @@
 import React from "react";
-import { BookOpen, Sparkles } from "lucide-react";
+import { BookOpen, Sparkles, ArrowRight } from "lucide-react";
+import { Button } from "../components/ui/button";
+import Particles from "../components/ui/particles";
 
 export function BlogSection() {
   return (
@@ -24,6 +26,17 @@ export function BlogSection() {
               Este blog será o canal oficial para tutoriais, novidades e 
               aprofundamento técnico.
             </p>
+
+            <div className="pt-2">
+              <Button asChild variant="outline" className="relative group overflow-hidden border-purple-500/50 bg-purple-500/10 text-white shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:bg-purple-500/20 felixo-card-glow transition-all duration-300">
+                <a href="/blog" className="inline-flex items-center gap-2">
+                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
+                  <Particles variant="purple" />
+                  <span className="relative z-10">Acessar o Blog</span>
+                  <ArrowRight size={18} className="relative z-10" />
+                </a>
+              </Button>
+            </div>
           </div>
 
           <div className="relative group">

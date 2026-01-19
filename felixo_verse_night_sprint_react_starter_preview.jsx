@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, Search, Rocket, Music, Code, ExternalLink, Mail, BookOpen, Sparkles } from "lucide-react";
+import { Menu, Search, Rocket, Music, Code, ExternalLink, Mail, BookOpen, Sparkles, ArrowRight } from "lucide-react";
 
 /**
  * Preview note:
@@ -322,6 +322,14 @@ export default function App() {
                 Este blog será o canal oficial para tutoriais, novidades e 
                 aprofundamento técnico.
               </p>
+
+              <div className="pt-2">
+                <Button asChild>
+                  <a href="/blog" className="inline-flex items-center gap-2">
+                    Acessar o Blog <ArrowRight size={18} />
+                  </a>
+                </Button>
+              </div>
             </div>
 
             <div className="relative group">
