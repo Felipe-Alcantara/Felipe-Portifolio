@@ -1,5 +1,7 @@
 import React from "react";
+import { Mail, Rocket } from "lucide-react";
 import { Button } from "../components/ui/button";
+import Particles from "../components/ui/particles";
 
 export function FelixoVerseSection() {
   return (
@@ -10,12 +12,22 @@ export function FelixoVerseSection() {
           <p className="mt-2 text-zinc-300">
             Comunidade, e-sports, música e projetos indie. Quer participar, apoiar ou colaborar? Vem comigo.
           </p>
-          <div className="mt-5 flex flex-wrap gap-3">
-            <Button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:scale-105 hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 ease-in-out" asChild>
-              <a href="#contato">Entrar em contato</a>
+          <div className="mt-5 flex gap-3">
+            <Button asChild variant="outline" className="relative group overflow-hidden border-purple-500/50 bg-purple-500/10 text-white shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:bg-purple-500/20 felixo-card-glow transition-all duration-300">
+              <a href="#contato" className="inline-flex items-center gap-2">
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
+                <Particles variant="purple" />
+                <Mail size={18} className="relative z-10" />
+                <span className="relative z-10">Entrar em contato</span>
+              </a>
             </Button>
-            <Button variant="outline" className="font-bold py-3 px-6 rounded-lg border-2 border-purple-500 text-purple-400 hover:bg-purple-500/10 hover:text-white hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all duration-300 ease-in-out" asChild>
-              <a href="#portfolio">Ver o que já existe</a>
+            <Button variant="outline" asChild className="relative group overflow-hidden border-white/30 bg-white/5 text-white shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:bg-white/10 felixo-card-glow-white transition-all duration-300">
+              <a href="#portfolio" className="inline-flex items-center gap-2">
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent z-0" />
+                <Particles variant="white" />
+                <Rocket size={18} className="relative z-10" />
+                <span className="relative z-10">Ver o que já existe</span>
+              </a>
             </Button>
           </div>
         </div>
