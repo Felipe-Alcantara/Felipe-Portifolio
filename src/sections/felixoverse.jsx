@@ -18,7 +18,7 @@ export function FelixoVerseSection() {
                 <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
                 <Particles variant="purple" />
                 <Mail size={18} className="relative z-10" />
-                <span className="relative z-10">Entrar em contato</span>
+                <span className="relative z-10">Conhecer o projeto</span>
               </a>
             </Button>
             <Button variant="outline" asChild className="relative group overflow-hidden border-white/30 bg-white/5 text-white shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:bg-white/10 felixo-card-glow-white transition-all duration-300">
@@ -26,7 +26,7 @@ export function FelixoVerseSection() {
                 <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent z-0" />
                 <Particles variant="white" />
                 <Rocket size={18} className="relative z-10" />
-                <span className="relative z-10">Ver o que já existe</span>
+                <span className="relative z-10">Entrar em contato</span>
               </a>
             </Button>
           </div>
@@ -34,16 +34,10 @@ export function FelixoVerseSection() {
         <div className="rounded-3xl border border-white/10 p-6 bg-zinc-900/40 space-y-4 text-sm text-zinc-300 leading-relaxed hover-felixo-card-glow transition-all duration-300">
           <h3 className="text-lg font-bold text-purple-400">FelixoVerse</h3>
           <p>
-            O <strong>FelixoVerse</strong> é um projeto autoral de comunidade digital criado com o objetivo de integrar tecnologia, criatividade e colaboração em um único ambiente online. Desenvolvido e idealizado por mim, o projeto nasce como um laboratório prático onde conceitos de organização, desenvolvimento, automação e gestão de comunidades são aplicados de forma real.
+            O <strong>FelixoVerse</strong> é um projeto autoral que funciona como um <strong>hub criativo</strong>, integrando tecnologia e colaboração. Mais que uma comunidade, ele serve como um laboratório prático onde aplico conceitos de automação, desenvolvimento e gestão de sistemas em um ambiente real.
           </p>
           <p>
-            A proposta do FelixoVerse vai além de um servidor tradicional: ele funciona como um <strong>hub criativo</strong>, reunindo pessoas interessadas em estudo, programação, arte, música e jogos, incentivando a troca de conhecimento e a participação ativa por meio de eventos, projetos colaborativos e experiências interativas.
-          </p>
-          <p>
-            Do ponto de vista técnico e estratégico, o projeto envolve planejamento de estrutura, criação de sistemas de engajamento, uso de automações e integração com ferramentas externas, além de uma visão de expansão para plataformas como web e redes sociais.
-          </p>
-          <p>
-            O FelixoVerse representa minha capacidade de <strong>conceber, estruturar e evoluir um projeto do zero</strong>, unindo criatividade, tecnologia e visão de longo prazo, servindo como um exemplo prático das minhas habilidades em desenvolvimento, organização de sistemas e construção de experiências digitais.
+            O projeto reúne entusiastas de programação, arte e jogos, demonstrando minha capacidade de <strong>conceber, estruturar e evoluir uma ideia do zero</strong>, unindo visão estratégica e execução técnica para criar experiências digitais engajadoras.
           </p>
         </div>
       </div>
