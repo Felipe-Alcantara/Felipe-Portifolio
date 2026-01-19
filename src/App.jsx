@@ -31,6 +31,7 @@ import { PortfolioSection } from "./sections/portfolio";
 import { ProjectsModal } from "./components/ui/projects-modal";
 import { ExtrasSection } from "./sections/extras";
 import { ProjectsGridSection } from "./sections/ProjectsGridSection";
+import { BlogSection } from "./sections/blog";
 import { ContactSection } from "./sections/contact";
 import FelixoVersePage from "./pages/FelixoVersePage";
 import { BackgroundParticles } from "./components/ui/BackgroundParticles"; // Importação do componente de partículas
@@ -136,6 +137,7 @@ export default function App() {
         setIsProjectsModalOpen={setIsProjectsModalOpen}
         setInitialTagForProjectsModal={setInitialTagForProjectsModal}
       />
+      <BlogSection />
       <ExtrasSection />
       <ContactSection />
       <Footer />
