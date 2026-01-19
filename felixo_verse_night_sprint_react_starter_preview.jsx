@@ -343,7 +343,7 @@ export default function App() {
                     <h3 className="text-xl font-semibold text-white">O que vem por aí?</h3>
                     <p className="text-zinc-400 leading-relaxed">
                       Vou utilizar este espaço para <strong>ensinar programação</strong> de forma descomplicada, 
-                      postar <strong>informações e atualizações</strong> sobre o desenvolvimento do <em>FelixoVerse</em>, 
+                      postar <strong>informações e atualizações</strong> sobre o desenvolvimento do <em>FelixoVerse</em> e seus <strong>ARGs</strong>, 
                       e comentar <strong>notícias</strong> relevantes do mundo da tecnologia. 
                       A ideia é criar um repositório vivo de aprendizado e colaboração.
                     </p>
