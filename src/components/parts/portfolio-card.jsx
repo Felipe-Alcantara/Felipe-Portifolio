@@ -5,7 +5,7 @@ import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 
 export function PortfolioCard({ item }) {
-  const { title, icon, tag, desc, link, status, createdAt } = item;
+  const { title, icon, tag, desc, link, status, createdAt, tagColor } = item;
 
   // Formata a data para o padrão brasileiro (DD/MM/YYYY)
   const formattedDate = new Date(createdAt).toLocaleDateString('pt-BR', {
@@ -39,7 +39,7 @@ export function PortfolioCard({ item }) {
         </div>
       </CardContent>
       <CardFooter className="flex items-center justify-between mt-auto pt-4">
-        <Badge className="bg-zinc-800 capitalize">{tag}</Badge>
+        <Badge className={`${tagColor} capitalize`}>{tag}</Badge>
         <Button asChild size="sm" variant="secondary">
           <a href={link} className="inline-flex items-center gap-1">
             Abrir <ExternalLink size={16} />

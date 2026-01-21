@@ -66,6 +66,32 @@ const ICONS = {
   windows: <Monitor size={16} />,
 };
 
+// Mapeia um ID de categoria/tag para uma classe de cor Tailwind CSS.
+const COLORS = {
+  web: 'bg-blue-500',
+  music: 'bg-purple-500',
+  code: 'bg-gray-500',
+  design: 'bg-pink-500',
+  game: 'bg-green-500',
+  automation: 'bg-orange-500',
+  default: 'bg-zinc-800',
+  html: 'bg-red-500',
+  css: 'bg-blue-600',
+  js: 'bg-yellow-500',
+  ts: 'bg-blue-700',
+  tailwind: 'bg-cyan-500',
+  react: 'bg-sky-500',
+  vite: 'bg-purple-600',
+  python: 'bg-yellow-600',
+  brython: 'bg-yellow-700',
+  django: 'bg-green-700',
+  csharp: 'bg-purple-700',
+  git: 'bg-red-600',
+  github: 'bg-gray-700',
+  vscode: 'bg-blue-800',
+  windows: 'bg-blue-900',
+};
+
 // 2. CATEGORIAS DE FILTRO
 // Define as tags de filtro disponíveis. O `id` deve ser único.
 export const CATEGORIES = [
@@ -153,6 +179,7 @@ export const items = projects.map(p => ({
   icon: ICONS[p.tag] || ICONS.default,
   createdAt: p.createdAt,
   status: p.status,
+  tagColor: COLORS[p.tag] || COLORS.default, // Adiciona a cor da tag
   // Novos campos para o modal de detalhes
   complexity: p.complexity || "Média",
   stack: p.stack || [p.tag, "React", "Tailwind"], // Placeholder se não houver
