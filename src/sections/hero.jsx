@@ -8,7 +8,7 @@ import { Badge } from "../components/ui/badge";
 import { tags, items } from "../data/projects.jsx";
 import { BackgroundParticles } from "../components/ui/BackgroundParticles";
 
-export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, setIsSearchOpen }) {
+export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, setIsSearchOpen, onOpenProject }) {
   // Filtra itens para o overlay
   const filteredItems = useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -103,7 +103,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
                       exit={{ scale: 0, opacity: 0, transition: { duration: 0.2 } }}
                       transition={{ type: "spring", damping: 20, stiffness: 300 }}
                       className="group flex flex-col p-4 bg-zinc-800/50 hover:bg-zinc-800 border border-white/5 rounded-xl transition-colors cursor-pointer hover-felixo-card-glow"
-                      onClick={() => window.location.href = item.link}
+                      onClick={() => onOpenProject ? onOpenProject(item) : window.location.href = item.link}
                     >
                       <div className="flex items-start justify-between mb-2">
                          <div className="p-2 bg-black/40 rounded-lg text-purple-400">

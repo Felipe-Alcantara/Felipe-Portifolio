@@ -153,7 +153,27 @@ export const items = projects.map(p => ({
   icon: ICONS[p.tag] || ICONS.default,
   createdAt: p.createdAt,
   status: p.status,
+  // Novos campos para o modal de detalhes
+  complexity: p.complexity || "Média",
+  stack: p.stack || [p.tag, "React", "Tailwind"], // Placeholder se não houver
+  properties: p.properties || {
+    timeEstimated: "2 semanas",
+    size: "Médio",
+    online: true,
+    techPercentage: { [p.tag]: 100 }
+  },
+  links: p.links || {
+    github: "#",
+    site: p.link || "#",
+    demo: "#",
+    download: "#",
+    post: "#"
+  },
+  readme: p.readme || `# ${p.title}\n\n> Descrição detalhada do projeto.\n\nEste é um arquivo README placeholder. Aqui você pode descrever como instalar, usar e contribuir para o projeto.\n\n## Funcionalidades\n- Feature 1\n- Feature 2\n- Feature 3`
 }));
 
 // Exporta as categorias para os botões de filtro.
 export const tags = CATEGORIES;
+
+// Exporta items como allProjects para compatibilidade com App.jsx
+export const allProjects = items;

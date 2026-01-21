@@ -62,6 +62,7 @@ const ProjectCard = ({
   isHovered,
   isAdjacent,
   isFaded,
+  onClick,
 }) => (
   <motion.div
     onMouseEnter={onMouseEnter}
@@ -72,12 +73,10 @@ const ProjectCard = ({
       !isHovered && isAdjacent && "felixo-card-glow-subtle",
       isFaded && "card-faded"
     )}
+    onClick={onClick}
   >
-    <a
-      href={item.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex flex-col h-full p-5"
+    <div
+      className="flex flex-col h-full p-5 cursor-pointer"
     >
       <div className="flex items-start justify-between mb-3">
         <div className="p-2 bg-black/40 rounded-lg text-purple-400">
@@ -130,7 +129,7 @@ const ProjectCard = ({
           )}
         </div>
       )}
-    </a>
+    </div>
   </motion.div>
 );
 
@@ -138,6 +137,7 @@ export function ProjectsGridSection({
   items,
   setIsProjectsModalOpen,
   setInitialTagForProjectsModal,
+  onOpenProject,
 }) {
   const [page, setPage] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -260,6 +260,7 @@ export function ProjectsGridSection({
                 isHovered={hoveredIndex === index}
                 isAdjacent={areAdjacent(hoveredIndex, index)}
                 isFaded={hoveredIndex !== null && hoveredIndex !== index}
+                onClick={() => onOpenProject && onOpenProject(item)}
               />
             ))}
           </motion.div>

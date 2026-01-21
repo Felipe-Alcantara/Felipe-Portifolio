@@ -1,58 +1,71 @@
 /**
- * COMPONENTE PRINCIPAL - APP.JSX
- * ==============================
- * 
- * Este é o "coração" da aplicação. Ele:
- * 1. Importa todas as seções do site
- * 2. Gerencia o estado de busca e filtros
- * 3. Monta a página na ordem correta
- * 
- * ORDEM DAS SEÇÕES (de cima para baixo):
- * - Navbar (menu fixo no topo)
- * - HeroSection (cabeçalho com busca)
- * - PortfolioSection (carrossel animado)
- * - ProjectsSection (grade de projetos)
- * - BlogSection (lista de posts)
- * - FelixoVerseSection (sobre o hub)
- * - ContactSection (informações de contato)
- * - Footer (rodapé)
- * 
- * PARA REORDENAR: Mova os componentes <NomeSection /> na ordem desejada
- * PARA REMOVER: Delete ou comente a linha do componente
- * PARA ADICIONAR: Importe uma nova seção e adicione na estrutura
+ * @file Componente principal da aplicação (App.jsx).
+ * @description Este arquivo serve como o "coração" da aplicação, orquestrando
+ * a renderização de todas as seções, gerenciando o estado global (como
+ * filtros e modais) e montando a estrutura da página.
+ *
+ * @module App
  */
+
+// ================================================================================================
+// IMPORTAÇÕES
+// ================================================================================================
+// Hooks e funcionalidades do React.
 import React, { useMemo, useState, useEffect } from "react";
-import { items } from "./data/projects.jsx";
+
+// Dados centralizados de projetos.
+import { allProjects } from "./data/projects.jsx";
+
+// Componentes de layout e UI reutilizáveis.
 import { Navbar } from "./components/layout/navbar";
 import { Footer } from "./components/layout/footer";
+import { ProjectsModal } from "./components/ui/projects-modal";
+import { ProjectDetailsModal } from "./components/ui/project-details-modal";
+import { BackgroundParticles } from "./components/ui/BackgroundParticles";
+
+// Seções principais que compõem a página.
 import { HeroSection } from "./sections/hero";
 import { AboutSection } from "./sections/about";
 import { PortfolioSection } from "./sections/portfolio";
-import { ProjectsModal } from "./components/ui/projects-modal";
-import { ExtrasSection } from "./sections/extras";
 import { ProjectsGridSection } from "./sections/ProjectsGridSection";
 import { BlogSection } from "./sections/blog";
-import { ContactSection } from "./sections/contact";
 import { FelixoVerseSection } from "./sections/felixoverse";
-import { BackgroundParticles } from "./components/ui/BackgroundParticles"; // Importação do componente de partículas
+import { ExtrasSection } from "./sections/extras";
+import { ContactSection } from "./sections/contact";
 
+// ================================================================================================
+// COMPONENTE PRINCIPAL (APP)
+// ================================================================================================
+/**
+ * Renderiza a aplicação completa, gerenciando o estado e a composição das seções.
+ * @returns {JSX.Element} A aplicação renderizada.
+ */
 export default function App() {
-  // Estado da busca por texto
+  // ================================================================================================
+  // GERENCIAMENTO DE ESTADO (STATE)
+  // ================================================================================================
+
+  // Estado para o valor do campo de busca de texto.
   const [q, setQ] = useState("");
-  
-  // Estado da tag/categoria ativa ("all" mostra todos)
+  // Estado para a tag de categoria ativa (ex: "web", "code", "all").
   const [activeTag, setActiveTag] = useState("all");
-
-  // Estado para controlar se a busca está aberta
+  // Estado para controlar a visibilidade da interface de busca na HeroSection.
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
-  // Estado para controlar se o modal de projetos está aberto
+  // Estado para controlar a visibilidade do modal de projetos.
   const [isProjectsModalOpen, setIsProjectsModalOpen] = useState(false);
-
-  // Estado para controlar a tag inicial do modal de projetos
+  // Estado para definir a tag inicial ao abrir o modal de projetos.
   const [initialTagForProjectsModal, setInitialTagForProjectsModal] = useState("all");
+  // Estado para o projeto selecionado no modal de detalhes
+  const [selectedProject, setSelectedProject] = useState(null);
 
-  // Garante que a página inicie sempre no topo (Hero) ao recarregar
+  // ================================================================================================
+  // EFEITOS COLATERAIS (SIDE EFFECTS)
+  // ================================================================================================
+
+  /**
+   * Garante que a página sempre inicie no topo ao ser recarregada.
+   * Isso previne que o navegador restaure a posição de scroll anterior.
+   */
   useEffect(() => {
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
@@ -60,73 +73,123 @@ export default function App() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Função para abrir busca filtrada por tecnologia
+  // ================================================================================================
+  // MANIPULADORES DE EVENTOS (EVENT HANDLERS)
+  // ================================================================================================
+
+  /**
+   * Ativado ao clicar em uma tag de tecnologia na seção "Sobre".
+   * Define a tag como ativa e abre a interface de busca.
+   * @param {string} tag - A tag de tecnologia a ser filtrada.
+   */
   const handleTechClick = (tag) => {
     setActiveTag(tag);
     setIsSearchOpen(true);
   };
+  
+  /**
+   * Manipulador para fechar o modal de projetos, resetando os estados relacionados.
+   */
+  const handleCloseProjectsModal = () => {
+    setIsProjectsModalOpen(false);
+    setInitialTagForProjectsModal("all");
+  };
 
   /**
-   * LÓGICA DE FILTROS
-   * Combina busca por texto + filtro por categoria
-   * Atualiza automaticamente quando q ou activeTag mudam
+   * Abre o modal de detalhes para um projeto específico.
    */
-  const filtered = useMemo(() => {
+  const handleOpenProjectDetails = (project) => {
+    setSelectedProject(project);
+  };
+
+  const handleCloseProjectDetails = () => {
+    setSelectedProject(null);
+  };
+
+  // ================================================================================================
+  // DADOS MEMORIZADOS (MEMOIZED DATA)
+  // ================================================================================================
+
+  /**
+   * Lógica de filtragem que combina a busca por texto (`q`) e o filtro por categoria (`activeTag`).
+   * `useMemo` garante que o filtro só seja reexecutado quando as dependências mudarem.
+   */
+  const filteredProjects = useMemo(() => {
     const query = q.trim().toLowerCase();
-    return items.filter((it) => {
-      const byTag = activeTag === "all" || it.tag === activeTag;
+    
+    // Se não há filtro, não há necessidade de iterar
+    if (activeTag === "all" && !query) {
+      return allProjects;
+    }
+
+    return allProjects.filter((project) => {
+      const byTag = activeTag === "all" || project.tag === activeTag;
       const byQuery =
         !query ||
-        it.title.toLowerCase().includes(query) ||
-        it.desc.toLowerCase().includes(query) ||
-        it.tag.toLowerCase().includes(query);
+        project.title.toLowerCase().includes(query) ||
+        project.desc.toLowerCase().includes(query) ||
+        project.tag.toLowerCase().includes(query);
       return byTag && byQuery;
     });
   }, [q, activeTag]);
 
+  // ================================================================================================
+  // RENDERIZAÇÃO DO COMPONENTE (JSX)
+  // ================================================================================================
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-zinc-950 to-black text-zinc-50 selection:bg-purple-600/40 font-sans relative">
-      <BackgroundParticles /> {/* Adiciona o componente de partículas */}
+      {/* Componente de partículas para o fundo */}
+      <BackgroundParticles />
 
+      {/* Layout Principal */}
       <Navbar />
-      <HeroSection 
-        q={q} 
-        setQ={setQ} 
-        activeTag={activeTag} 
-        setActiveTag={setActiveTag}
-        isSearchOpen={isSearchOpen}
-        setIsSearchOpen={setIsSearchOpen}
-      />
-      <AboutSection 
-        onTechClick={handleTechClick} 
-        activeTag={activeTag} 
-        isSearchOpen={isSearchOpen} 
-      />
-      <PortfolioSection 
-        key={activeTag}
-        items={filtered.length ? filtered : items} 
-        setIsProjectsModalOpen={setIsProjectsModalOpen}
-        setInitialTagForProjectsModal={setInitialTagForProjectsModal}
-        sectionTag="web"
-      />
-      <ProjectsGridSection 
-        items={items} 
-        setIsProjectsModalOpen={setIsProjectsModalOpen}
-        setInitialTagForProjectsModal={setInitialTagForProjectsModal}
-      />
-      <BlogSection />
-      <FelixoVerseSection />
-      <ExtrasSection />
-      <ContactSection />
+      <main>
+        <HeroSection 
+          q={q} 
+          setQ={setQ} 
+          activeTag={activeTag} 
+          setActiveTag={setActiveTag}
+          isSearchOpen={isSearchOpen}
+          setIsSearchOpen={setIsSearchOpen}
+          onOpenProject={handleOpenProjectDetails}
+        />
+        <AboutSection 
+          onTechClick={handleTechClick} 
+          activeTag={activeTag} 
+          isSearchOpen={isSearchOpen} 
+        />
+        <PortfolioSection 
+          key={`portfolio-${activeTag}`} // Chave para forçar re-renderização se a tag mudar
+          items={filteredProjects.length ? filteredProjects : allProjects} 
+          setIsProjectsModalOpen={setIsProjectsModalOpen}
+          setInitialTagForProjectsModal={setInitialTagForProjectsModal}
+          sectionTag="web" // Filtra apenas projetos web para o carrossel
+        />
+        <ProjectsGridSection 
+          items={allProjects} 
+          setIsProjectsModalOpen={setIsProjectsModalOpen}
+          setInitialTagForProjectsModal={setInitialTagForProjectsModal}
+          onOpenProject={handleOpenProjectDetails}
+        />
+        <BlogSection />
+        <FelixoVerseSection />
+        <ExtrasSection />
+        <ContactSection />
+      </main>
       <Footer />
 
+      {/* Componentes de UI sobrepostos (Modais, etc.) */}
       <ProjectsModal 
         isOpen={isProjectsModalOpen}
-        onClose={() => {
-          setIsProjectsModalOpen(false);
-          setInitialTagForProjectsModal("all");
-        }}
+        onClose={handleCloseProjectsModal}
         initialTag={initialTagForProjectsModal}
+      />
+
+      <ProjectDetailsModal 
+        isOpen={!!selectedProject}
+        onClose={handleCloseProjectDetails}
+        project={selectedProject}
       />
     </div>
   );
