@@ -29,7 +29,7 @@ import {
  * 1. ÍCONES: Mapeamento de categorias para ícones do Lucide.
  * 2. CATEGORIAS: Definição das tags de filtro usadas no portfólio.
  * 3. PROJETOS: Lista unificada com todos os projetos/placeholders.
- * 4. EXPORTAÇÕES COMBINADAS: Monta os dados no formato que a UI espera.
+ * 4. EXPORTAÇÕES COMBINadas: Monta os dados no formato que a UI espera.
  * 
  * COMO ATUALIZAR:
  * - Para adicionar/modificar um projeto: Altere um objeto na lista `projects`.
@@ -88,47 +88,57 @@ const projects = [
     tag: "web",
     description: "Hero, navbar e carrossel contínuo, demonstrando UI moderna.",
     link: "https://example.com/landing",
+    createdAt: "2024-01-20",
+    status: "Finalizado",
   },
   {
     title: "Mixer de Samples",
-    tag: "music",
+    tag: "web",
     description: "Ferramenta no navegador para combinar loops de áudio.",
     link: "https://example.com/mixer",
+    createdAt: "2024-02-15",
+    status: "Em Desenvolvimento",
   },
   {
     title: "Bots & Automação",
     tag: "automation",
     description: "Coleção de scripts Python para automação de tarefas.",
     link: "https://example.com/bots",
+    createdAt: "2024-03-10",
+    status: "Em Desenvolvimento",
   },
   {
     title: "ARG Blocks",
     tag: "game",
     description: "Componentes base para criar puzzles criptográficos.",
     link: "https://example.com/arg",
+    createdAt: "2024-04-05",
+    status: "Finalizado",
   },
   {
     title: "Thumbnails para DJ",
     tag: "design",
     description: "Presets de capas para sets de música no estilo neon/pastel.",
     link: "https://example.com/dj-thumbnails",
+    createdAt: "2024-05-20",
+    status: "Em Desenvolvimento",
   },
   // Tecnologias
-  { title: "HTML", tag: "html", description: "Projetos semânticos e estruturados." },
-  { title: "CSS", tag: "css", description: "Estilização com foco em design responsivo." },
-  { title: "JavaScript", tag: "js", description: "Interatividade e manipulação do DOM." },
-  { title: "TypeScript", tag: "ts", description: "Código JS com tipagem estática para maior robustez." },
-  { title: "Tailwind CSS", tag: "tailwind", description: "CSS utilitário para desenvolvimento rápido." },
-  { title: "React", tag: "react", description: "Criação de UIs reativas e componentizadas." },
-  { title: "Vite", tag: "vite", description: "Build tool moderno e ultra-rápido para front-end." },
-  { title: "Python", tag: "python", description: "Scripts, automação e desenvolvimento back-end." },
-  { title: "Brython", tag: "brython", description: "Python no navegador para scripting web." },
-  { title: "Django", tag: "django", description: "Framework web de alto nível em Python." },
-  { title: "C#", tag: "csharp", description: "Aplicações robustas no ecossistema .NET." },
-  { title: "Git", tag: "git", description: "Controle de versão para gerenciamento de código." },
-  { title: "GitHub", tag: "github", description: "Plataforma de hospedagem e colaboração de código." },
-  { title: "VSCode", tag: "vscode", description: "Editor de código fonte com superpoderes." },
-  { title: "Windows", tag: "windows", description: "Desenvolvimento e automação em ambiente Windows." },
+  { title: "HTML", tag: "html", description: "Projetos semânticos e estruturados.", createdAt: "2024-06-01", status: "Em Desenvolvimento" },
+  { title: "CSS", tag: "css", description: "Estilização com foco em design responsivo.", createdAt: "2024-06-02", status: "Em Desenvolvimento" },
+  { title: "JavaScript", tag: "js", description: "Interatividade e manipulação do DOM.", createdAt: "2024-06-03", status: "Em Desenvolvimento" },
+  { title: "TypeScript", tag: "ts", description: "Código JS com tipagem estática para maior robustez.", createdAt: "2024-06-04", status: "Em Desenvolvimento" },
+  { title: "Tailwind CSS", tag: "tailwind", description: "CSS utilitário para desenvolvimento rápido.", createdAt: "2024-06-05", status: "Em Desenvolvimento" },
+  { title: "React", tag: "react", description: "Criação de UIs reativas e componentizadas.", createdAt: "2024-06-06", status: "Em Desenvolvimento" },
+  { title: "Vite", tag: "vite", description: "Build tool moderno e ultra-rápido para front-end.", createdAt: "2024-06-07", status: "Em Desenvolvimento" },
+  { title: "Python", tag: "python", description: "Scripts, automação e desenvolvimento back-end.", createdAt: "2024-06-08", status: "Em Desenvolvimento" },
+  { title: "Brython", tag: "brython", description: "Python no navegador para scripting web.", createdAt: "2024-06-09", status: "Em Desenvolvimento" },
+  { title: "Django", tag: "django", description: "Framework web de alto nível em Python.", createdAt: "2024-06-10", status: "Em Desenvolvimento" },
+  { title: "C#", tag: "csharp", description: "Aplicações robustas no ecossistema .NET.", createdAt: "2024-06-11", status: "Em Desenvolvimento" },
+  { title: "Git", tag: "git", description: "Controle de versão para gerenciamento de código.", createdAt: "2024-06-12", status: "Em Desenvolvimento" },
+  { title: "GitHub", tag: "github", description: "Plataforma de hospedagem e colaboração de código.", createdAt: "2024-06-13", status: "Em Desenvolvimento" },
+  { title: "VSCode", tag: "vscode", description: "Editor de código fonte com superpoderes.", createdAt: "2024-06-14", status: "Em Desenvolvimento" },
+  { title: "Windows", tag: "windows", description: "Desenvolvimento e automação em ambiente Windows.", createdAt: "2024-06-15", status: "Em Desenvolvimento" },
 ];
 
 // 4. EXPORTAÇÕES COMBINADAS
@@ -141,6 +151,8 @@ export const items = projects.map(p => ({
   desc: p.description,
   link: p.link || "#",
   icon: ICONS[p.tag] || ICONS.default,
+  createdAt: p.createdAt,
+  status: p.status,
 }));
 
 // Exporta as categorias para os botões de filtro.

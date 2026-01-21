@@ -1,25 +1,47 @@
 import React from "react";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Calendar } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 
 export function PortfolioCard({ item }) {
+  const { title, icon, tag, desc, link, status, createdAt } = item;
+
+  // Formata a data para o padrão brasileiro (DD/MM/YYYY)
+  const formattedDate = new Date(createdAt).toLocaleDateString('pt-BR', {
+    timeZone: 'UTC', // Garante que a data não mude por causa do fuso horário
+  });
+
   return (
-    <Card className="w-[300px] shrink-0 bg-zinc-900/50 border-white/10 hover:border-white/20 transition">
+    <Card className="flex flex-col w-[300px] shrink-0 bg-zinc-900/50 border-white/10 hover:border-white/20 transition">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          {item.icon} {item.title}
-        </CardTitle>
-        <CardDescription className="capitalize">{item.tag}</CardDescription>
+        <div className="flex items-start justify-between gap-2">
+          <CardTitle className="flex items-center gap-2">
+            {icon} {title}
+          </CardTitle>
+          <Badge
+            className={
+              status === "Finalizado"
+                ? "bg-green-950/80 border-green-700/60 text-green-300 shrink-0"
+                : "bg-amber-950/80 border-amber-700/60 text-amber-300 shrink-0"
+            }
+          >
+            {status}
+          </Badge>
+        </div>
+        <CardDescription className="capitalize">{tag}</CardDescription>
       </CardHeader>
-      <CardContent>
-        <p className="text-sm text-zinc-300">{item.desc}</p>
+      <CardContent className="flex-grow">
+        <p className="text-sm text-zinc-300">{desc}</p>
+        <div className="flex items-center gap-2 mt-4 text-xs text-zinc-400">
+          <Calendar size={14} />
+          <span>{formattedDate}</span>
+        </div>
       </CardContent>
-      <CardFooter className="flex items-center justify-between">
-        <Badge className="bg-zinc-800 capitalize">{item.tag}</Badge>
+      <CardFooter className="flex items-center justify-between mt-auto pt-4">
+        <Badge className="bg-zinc-800 capitalize">{tag}</Badge>
         <Button asChild size="sm" variant="secondary">
-          <a href={item.link} className="inline-flex items-center gap-1">
+          <a href={link} className="inline-flex items-center gap-1">
             Abrir <ExternalLink size={16} />
           </a>
         </Button>
