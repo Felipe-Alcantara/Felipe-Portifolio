@@ -23,7 +23,7 @@ export function PortfolioCard({ item }) {
             className={
               status === "Finalizado"
                 ? "bg-green-950/80 border-green-700/60 text-green-300 shrink-0"
-                : "bg-amber-950/80 border-amber-700/60 text-amber-300 shrink-0"
+                : "bg-yellow-400/20 border-yellow-400/40 text-yellow-100 shrink-0"
             }
           >
             {status}
