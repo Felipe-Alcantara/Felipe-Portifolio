@@ -144,9 +144,9 @@ export function ProjectsGridSection({
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   // Filtra projetos que não são da categoria "web" para evitar duplicatas com o carrossel
-  const otherProjects = items.filter((it) => it.tag.toLowerCase() !== "web");
+  const filteredProjects = items;
 
-  const totalPages = Math.ceil(otherProjects.length / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE);
   const COLS = 3;
 
   const areAdjacent = (index1, index2) => {
@@ -177,16 +177,16 @@ export function ProjectsGridSection({
   let startIndex = page * ITEMS_PER_PAGE;
 
   // Se for a última página e houver itens suficientes, recua o início para preencher a grade com itens anteriores
-  if (page === totalPages - 1 && otherProjects.length >= ITEMS_PER_PAGE) {
-    startIndex = otherProjects.length - ITEMS_PER_PAGE;
+  if (page === totalPages - 1 && filteredProjects.length >= ITEMS_PER_PAGE) {
+    startIndex = filteredProjects.length - ITEMS_PER_PAGE;
   }
 
-  const currentItems = otherProjects.slice(
+  const currentItems = filteredProjects.slice(
     startIndex,
     startIndex + ITEMS_PER_PAGE
   );
 
-  if (otherProjects.length === 0) {
+  if (filteredProjects.length === 0) {
     return null;
   }
 
