@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   X, 
@@ -16,9 +16,18 @@ import {
 } from "lucide-react";
 import { Button } from "./button";
 import { Badge } from "./badge";
-import { cx } from "../../lib/utils";
+import { cx, getTagColor } from "../../lib/utils";
+import { loadReadme } from "../../utils/readmeLoader";
 
 export function ProjectDetailsModal({ isOpen, onClose, project }) {
+  const [readmeContent, setReadmeContent] = useState(project?.readme || "");
+  
+  useEffect(() => {
+    if (isOpen && project) {
+      loadReadme(project.title).then(setReadmeContent);
+    }
+  }, [isOpen, project]);
+
   if (!isOpen || !project) return null;
 
   return (
@@ -92,7 +101,7 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {project.stack?.map((tech, i) => (
-                        <Badge key={i} variant="outline" className="bg-zinc-900/50 border-purple-500/20 text-zinc-300">
+                        <Badge key={i} variant="outline" className={getTagColor(tech)}>
                           {tech}
                         </Badge>
                       ))}
@@ -107,7 +116,7 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                       </h3>
                     </div>
                     <div className="prose prose-invert prose-sm max-w-none text-zinc-400 font-mono text-sm whitespace-pre-wrap">
-                      {project.readme}
+                      {readmeContent}
                     </div>
                   </div>
                 </div>

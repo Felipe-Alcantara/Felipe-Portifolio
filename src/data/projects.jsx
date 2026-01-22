@@ -196,7 +196,6 @@ export const items = projects.map(p => ({
     download: "#",
     post: "#"
   },
-  readme: p.readme || `# ${p.title}\n\n> Descrição detalhada do projeto.\n\nEste é um arquivo README placeholder. Aqui você pode descrever como instalar, usar e contribuir para o projeto.\n\n## Funcionalidades\n- Feature 1\n- Feature 2\n- Feature 3`
 }));
 
 // Exporta as categorias para os botões de filtro.
