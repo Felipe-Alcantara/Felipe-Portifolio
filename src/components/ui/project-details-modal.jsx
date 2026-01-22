@@ -66,7 +66,7 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                 </div>
               </div>
               <Button variant="ghost" size="icon" onClick={onClose} className="rounded-full hover:bg-white/10">
-                <X size={20} />
+                <X size={30} />
               </Button>
             </div>
 

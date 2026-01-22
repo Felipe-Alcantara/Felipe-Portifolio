@@ -12,7 +12,7 @@ export function Button({ asChild, variant = "default", size = "md", className = 
   const sizes = {
     md: "h-10",
     sm: "h-9 px-3",
-    icon: "h-10 w-10 p-0",
+    icon: "h-12 w-12 p-2",
   };
   const cls = cx(base, variants[variant] || variants.default, sizes[size] || sizes.md, className);
 
