@@ -113,38 +113,38 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                 </div>
 
                 {/* Coluna Direita: Metadados e Links */}
-                <div className="space-y-6">
-                  
-                  {/* Links de Ação */}
-                  <div className="flex flex-col gap-3">
-                    <Button className="w-full justify-start gap-3 bg-purple-600 hover:bg-purple-700 text-white" asChild>
-                      <a href={project.links?.site} target="_blank" rel="noopener noreferrer">
-                        <Globe size={18} /> Ver Site Online
-                      </a>
-                    </Button>
-                    <Button variant="secondary" className="w-full justify-start gap-3" asChild>
-                      <a href={project.links?.github} target="_blank" rel="noopener noreferrer">
-                        <Github size={18} /> Repositório GitHub
-                      </a>
-                    </Button>
-                    <Button variant="outline" className="w-full justify-start gap-3" asChild>
-                      <a href={project.links?.demo} target="_blank" rel="noopener noreferrer">
-                        <Youtube size={18} /> Ver Demonstração
-                      </a>
-                    </Button>
-                    <Button variant="outline" className="w-full justify-start gap-3" asChild>
-                      <a href={project.links?.download} target="_blank" rel="noopener noreferrer">
-                        <Download size={18} /> Download
-                      </a>
-                    </Button>
-                    <Button variant="ghost" className="w-full justify-start gap-3 text-zinc-400 hover:text-white" asChild>
-                      <a href={project.links?.post} target="_blank" rel="noopener noreferrer">
-                        <FileText size={18} /> Ler Post sobre o Projeto
-                      </a>
-                    </Button>
-                  </div>
+                        <div className="space-y-6">
+                          
+                          {/* Links de Ação */}
+                          <div className="flex flex-col gap-3">
+                          <Button variant="outline" className="w-full justify-start gap-3" asChild>
+                            <a href={project.links?.site} target="_blank" rel="noopener noreferrer">
+                            <Globe size={18} /> Ver Site Online
+                            </a>
+                          </Button>
+                          <Button variant="outline" className="w-full justify-start gap-3" asChild>
+                            <a href={project.links?.github} target="_blank" rel="noopener noreferrer">
+                            <Github size={18} /> Repositório GitHub
+                            </a>
+                          </Button>
+                          <Button variant="outline" className="w-full justify-start gap-3" asChild>
+                            <a href={project.links?.demo} target="_blank" rel="noopener noreferrer">
+                            <Youtube size={18} /> Ver Demonstração
+                            </a>
+                          </Button>
+                          <Button variant="outline" className="w-full justify-start gap-3" asChild>
+                            <a href={project.links?.download} target="_blank" rel="noopener noreferrer">
+                            <Download size={18} /> Download
+                            </a>
+                          </Button>
+                          <Button variant="outline" className="w-full justify-start gap-3" asChild>
+                            <a href={project.links?.post} target="_blank" rel="noopener noreferrer">
+                            <FileText size={18} /> Ler Post sobre o Projeto
+                            </a>
+                          </Button>
+                          </div>
 
-                  {/* Propriedades e Estatísticas */}
+                          {/* Propriedades e Estatísticas */}
                   <div className="bg-zinc-900/50 rounded-2xl border border-white/10 p-5 space-y-4">
                     <h4 className="font-semibold text-sm text-zinc-400 uppercase tracking-wider">Propriedades</h4>
                     
