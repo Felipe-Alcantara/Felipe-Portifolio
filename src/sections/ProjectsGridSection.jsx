@@ -203,27 +203,9 @@ export function ProjectsGridSection({
           </h2>
           <div className="flex items-center gap-4">
             {totalPages > 1 && (
-              <div className="flex items-center gap-2">
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={handlePrev}
-                  aria-label="Página anterior"
-                >
-                  <ArrowLeft size={18} />
-                </Button>
-                <span className="text-sm text-zinc-400 font-mono w-12 text-center">
-                  {page + 1} / {totalPages}
-                </span>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={handleNext}
-                  aria-label="Próxima página"
-                >
-                  <ArrowRight size={18} />
-                </Button>
-              </div>
+              <span className="text-sm text-zinc-400 font-mono">
+                Página {page + 1} de {totalPages}
+              </span>
             )}
             <Button
               variant="outline"
@@ -240,31 +222,56 @@ export function ProjectsGridSection({
           </div>
         </div>
 
-        <AnimatePresence mode="wait" custom={direction}>
-          <motion.div
-            key={page}
-            custom={direction}
-            variants={gridContainerVariants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            {currentItems.map((item, index) => (
-              <ProjectCard
-                key={item.title}
-                item={item}
-                variants={cardVariants}
-                onMouseEnter={() => setHoveredIndex(index)}
-                isHovered={hoveredIndex === index}
-                isAdjacent={areAdjacent(hoveredIndex, index)}
-                isFaded={hoveredIndex !== null && hoveredIndex !== index}
-                onClick={() => onOpenProject && onOpenProject(item)}
-              />
-            ))}
-          </motion.div>
-        </AnimatePresence>
+        <div className="relative">
+          <AnimatePresence mode="wait" custom={direction}>
+            <motion.div
+              key={page}
+              custom={direction}
+              variants={gridContainerVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              {currentItems.map((item, index) => (
+                <ProjectCard
+                  key={item.title}
+                  item={item}
+                  variants={cardVariants}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  isHovered={hoveredIndex === index}
+                  isAdjacent={areAdjacent(hoveredIndex, index)}
+                  isFaded={hoveredIndex !== null && hoveredIndex !== index}
+                  onClick={() => onOpenProject && onOpenProject(item)}
+                />
+              ))}
+            </motion.div>
+          </AnimatePresence>
+
+          {totalPages > 1 && (
+            <>
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={handlePrev}
+                aria-label="Página anterior"
+                className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 h-10 w-10 rounded-full bg-black/50 backdrop-blur-sm border-white/10 hover:bg-black/70 disabled:opacity-50 lg:-left-12"
+              >
+                <ArrowLeft size={18} />
+              </Button>
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={handleNext}
+                aria-label="Próxima página"
+                className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 h-10 w-10 rounded-full bg-black/50 backdrop-blur-sm border-white/10 hover:bg-black/70 disabled:opacity-50 lg:-right-12"
+              >
+                <ArrowRight size={18} />
+              </Button>
+            </>
+          )}
+        </div>
       </div>
     </section>
   );
