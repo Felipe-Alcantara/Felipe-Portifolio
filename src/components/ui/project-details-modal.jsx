@@ -50,11 +50,17 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                 <div>
                   <h2 className="text-2xl font-bold text-white">{project.title}</h2>
                   <div className="flex items-center gap-2 mt-1">
-                    <Badge variant="secondary" className="capitalize">{project.tag}</Badge>
+                    <Badge className={`capitalize ${project.tagColor}`}>{project.tag}</Badge>
                     {project.status && (
-                      <span className="text-xs text-zinc-400 border border-white/10 px-2 py-0.5 rounded-full">
+                      <Badge
+                        className={
+                          project.status === "Finalizado"
+                            ? "bg-green-950/80 border-green-700/60 text-green-300"
+                            : "bg-yellow-400/20 border-yellow-400/40 text-yellow-100"
+                        }
+                      >
                         {project.status}
-                      </span>
+                      </Badge>
                     )}
                   </div>
                 </div>
