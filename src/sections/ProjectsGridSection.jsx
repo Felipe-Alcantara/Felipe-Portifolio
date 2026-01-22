@@ -203,9 +203,27 @@ export function ProjectsGridSection({
           </h2>
           <div className="flex items-center gap-4">
             {totalPages > 1 && (
-              <span className="text-sm text-zinc-400 font-mono">
-                Página {page + 1} de {totalPages}
-              </span>
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={handlePrev}
+                  aria-label="Página anterior"
+                >
+                  <ArrowLeft size={18} />
+                </Button>
+                <span className="text-sm text-zinc-400 font-mono w-12 text-center">
+                  {page + 1} / {totalPages}
+                </span>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={handleNext}
+                  aria-label="Próxima página"
+                >
+                  <ArrowRight size={18} />
+                </Button>
+              </div>
             )}
             <Button
               variant="outline"
