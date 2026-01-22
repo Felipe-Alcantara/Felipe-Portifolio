@@ -80,13 +80,13 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
             </div>
 
             {/* Scrollable Body */}
-            <div className="flex-1 overflow-y-auto custom-scrollbar p-6 space-y-8">
+            <div className="flex-1 overflow-y-auto custom-scrollbar p-6">
               
               {/* Grid Principal */}
-              <div className="grid lg:grid-cols-3 gap-8">
+              <div className="flex gap-8 min-h-full">
                 
                 {/* Coluna Esquerda: Informações Principais */}
-                <div className="lg:col-span-2 space-y-6">
+                <div className="flex-1 space-y-6">
                   
                   {/* Descrição */}
                   <div>
@@ -122,7 +122,7 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                 </div>
 
                 {/* Coluna Direita: Metadados e Links */}
-                        <div className="space-y-6">
+                        <div className="flex flex-col space-y-4 w-80 min-h-full">
                           
                           {/* Links de Ação */}
                           <div className="flex flex-col gap-3">
@@ -154,7 +154,7 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                           </div>
 
                           {/* Propriedades e Estatísticas */}
-                  <div className="bg-zinc-900/50 rounded-2xl border border-white/10 p-5 space-y-4">
+                  <div className="bg-zinc-900/50 rounded-2xl border border-white/10 p-5 space-y-4 flex-1">
                     <h4 className="font-semibold text-sm text-zinc-400 uppercase tracking-wider">Propriedades</h4>
                     
                     <div className="space-y-3">
