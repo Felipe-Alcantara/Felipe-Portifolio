@@ -274,7 +274,7 @@ export function ProjectsGridSection({
                 size="icon"
                 onClick={handlePrev}
                 aria-label="Página anterior"
-                className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 h-10 w-10 rounded-full bg-black/50 backdrop-blur-sm border-white/10 hover:bg-black/70 disabled:opacity-50 lg:-left-12"
+                className="absolute -left-8 top-1/2 -translate-y-1/2 z-20 h-10 w-10 rounded-full bg-black/50 backdrop-blur-sm border-white/10 hover:bg-black/70 disabled:opacity-50 lg:-left-16"
               >
                 <ArrowLeft size={18} />
               </Button>
@@ -283,7 +283,7 @@ export function ProjectsGridSection({
                 size="icon"
                 onClick={handleNext}
                 aria-label="Próxima página"
-                className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 h-10 w-10 rounded-full bg-black/50 backdrop-blur-sm border-white/10 hover:bg-black/70 disabled:opacity-50 lg:-right-12"
+                className="absolute -right-8 top-1/2 -translate-y-1/2 z-20 h-10 w-10 rounded-full bg-black/50 backdrop-blur-sm border-white/10 hover:bg-black/70 disabled:opacity-50 lg:-right-16"
               >
                 <ArrowRight size={18} />
               </Button>
