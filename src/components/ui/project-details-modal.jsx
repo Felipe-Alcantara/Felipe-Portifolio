@@ -109,13 +109,13 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                   </div>
 
                   {/* README Preview Area */}
-                  <div className="bg-zinc-900/30 rounded-2xl border border-white/5 p-6">
+                  <div className="bg-zinc-900/30 rounded-2xl border border-white/5 p-6 h-96">
                     <div className="flex items-center justify-between mb-4 border-b border-white/5 pb-2">
                       <h3 className="font-mono text-sm text-zinc-400 flex items-center gap-2">
                         <FileText size={16} /> README.md
                       </h3>
                     </div>
-                    <div className="prose prose-invert prose-sm max-w-none text-zinc-400 font-mono text-sm whitespace-pre-wrap">
+                    <div className="h-80 overflow-y-auto custom-scrollbar prose prose-invert prose-sm max-w-none text-zinc-400 font-mono text-sm whitespace-pre-wrap">
                       {readmeContent}
                     </div>
                   </div>
