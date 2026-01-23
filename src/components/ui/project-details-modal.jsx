@@ -19,6 +19,33 @@ import { Badge } from "./badge";
 import { cx, getTagColor } from "../../lib/utils";
 import { loadReadme } from "../../utils/readmeLoader";
 
+// Componente simples para renderizar markdown
+function SimpleMarkdown({ content }) {
+  if (!content) return null;
+  
+  // Converte markdown básico para HTML
+  const formatContent = (text) => {
+    return text
+      .replace(/^# (.*$)/gm, '<h1 class="text-xl font-bold text-purple-400 mb-3">$1</h1>')
+      .replace(/^## (.*$)/gm, '<h2 class="text-lg font-semibold text-purple-300 mb-2">$1</h2>')
+      .replace(/^### (.*$)/gm, '<h3 class="text-base font-medium text-purple-200 mb-2">$1</h3>')
+      .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-purple-300">$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
+      .replace(/`(.*?)`/g, '<code class="bg-zinc-800 px-2 py-1 rounded text-purple-300 font-mono text-sm">$1</code>')
+      .replace(/^> (.*$)/gm, '<blockquote class="border-l-4 border-purple-500 pl-4 italic text-zinc-400 mb-3">$1</blockquote>')
+      .replace(/^- (.*$)/gm, '<li class="mb-1 list-disc list-inside">$1</li>')
+      .replace(/\n\n/g, '</p><p class="text-zinc-300 mb-3 leading-relaxed">')
+      .replace(/^(?!<[h|l|b])(.+)$/gm, '<p class="text-zinc-300 mb-3 leading-relaxed">$1</p>');
+  };
+  
+  return (
+    <div 
+      className="text-zinc-300 leading-relaxed"
+      dangerouslySetInnerHTML={{ __html: formatContent(content) }}
+    />
+  );
+}
+
 export function ProjectDetailsModal({ isOpen, onClose, project }) {
   const [readmeContent, setReadmeContent] = useState(project?.readme || "");
   
@@ -115,8 +142,12 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                         <FileText size={16} /> README.md
                       </h3>
                     </div>
-                    <div className="h-80 overflow-y-auto custom-scrollbar prose prose-invert prose-sm max-w-none text-zinc-400 font-mono text-sm whitespace-pre-wrap">
-                      {readmeContent}
+                    <div className="h-80 overflow-y-auto custom-scrollbar prose prose-invert prose-sm max-w-none">
+                      {readmeContent ? (
+                        <SimpleMarkdown content={readmeContent} />
+                      ) : (
+                        <div className="text-zinc-400 font-mono text-sm">Carregando README...</div>
+                      )}
                     </div>
                   </div>
                 </div>

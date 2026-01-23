@@ -116,6 +116,13 @@ const projects = [
     link: "https://example.com/landing",
     createdAt: "2024-01-20",
     status: "Finalizado",
+    links: {
+      github: "https://github.com/felixo/landing-felixoverse",
+      site: "https://landing-felixoverse.vercel.app",
+      demo: "https://youtube.com/watch?v=demo1",
+      download: "https://github.com/felixo/landing-felixoverse/archive/main.zip",
+      post: "https://blog.felixoverse.com/landing-project"
+    }
   },
   {
     title: "Mixer de Samples",
@@ -124,6 +131,13 @@ const projects = [
     link: "https://example.com/mixer",
     createdAt: "2024-02-15",
     status: "Em Desenvolvimento",
+    links: {
+      github: "https://github.com/felixo/mixer-samples",
+      site: "https://mixer-samples.vercel.app",
+      demo: "https://youtube.com/watch?v=demo2",
+      download: "https://github.com/felixo/mixer-samples/releases",
+      post: "https://blog.felixoverse.com/mixer-project"
+    }
   },
   {
     title: "Bots & Automação",
@@ -132,6 +146,13 @@ const projects = [
     link: "https://example.com/bots",
     createdAt: "2024-03-10",
     status: "Em Desenvolvimento",
+    links: {
+      github: "https://github.com/felixo/bots-automacao",
+      site: "https://bots.felixoverse.com",
+      demo: "https://youtube.com/watch?v=demo3",
+      download: "https://github.com/felixo/bots-automacao/releases",
+      post: "https://blog.felixoverse.com/bots-project"
+    }
   },
   {
     title: "ARG Blocks",
@@ -140,6 +161,13 @@ const projects = [
     link: "https://example.com/arg",
     createdAt: "2024-04-05",
     status: "Finalizado",
+    links: {
+      github: "https://github.com/felixo/arg-blocks",
+      site: "https://arg-blocks.felixoverse.com",
+      demo: "https://youtube.com/watch?v=demo4",
+      download: "https://github.com/felixo/arg-blocks/releases",
+      post: "https://blog.felixoverse.com/arg-project"
+    }
   },
   {
     title: "Thumbnails para DJ",
@@ -148,6 +176,13 @@ const projects = [
     link: "https://example.com/dj-thumbnails",
     createdAt: "2024-05-20",
     status: "Em Desenvolvimento",
+    links: {
+      github: "https://github.com/felixo/dj-thumbnails",
+      site: "https://thumbnails.felixoverse.com",
+      demo: "https://youtube.com/watch?v=demo5",
+      download: "https://github.com/felixo/dj-thumbnails/releases",
+      post: "https://blog.felixoverse.com/thumbnails-project"
+    }
   },
   // Tecnologias
   { title: "HTML", tag: "html", description: "Projetos semânticos e estruturados.", createdAt: "2024-06-01", status: "Em Desenvolvimento" },
