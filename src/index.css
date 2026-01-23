@@ -15,19 +15,24 @@
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
+    background: transparent;
   }
   
   ::-webkit-scrollbar-track {
-    background: #1a1a1a;
+    background: none;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #4a4a4a;
+    background: rgba(74, 74, 74, 0.8);
     border-radius: 4px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #6a6a6a;
+    background: rgba(106, 106, 106, 0.9);
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background: transparent;
   }
 
   /* Efeito de órbita ao redor da foto de perfil */
