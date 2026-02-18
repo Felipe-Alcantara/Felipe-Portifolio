@@ -10,8 +10,8 @@ import {
 } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
-import { cx, getTagColor } from "../lib/utils";
-import { BackgroundParticles } from "../components/ui/BackgroundParticles";
+import { cx, getTagColor } from "../utils/utils";
+import { BackgroundParticles } from "../components/ui/background-particles";
 
 const ITEMS_PER_PAGE = 9; // 3x3 grid
 

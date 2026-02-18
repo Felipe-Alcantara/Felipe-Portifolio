@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "../ui/button";
-import logo from "../../../Imagens/CATT transparente.png";
+import logo from "../../assets/images/CATT transparente.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

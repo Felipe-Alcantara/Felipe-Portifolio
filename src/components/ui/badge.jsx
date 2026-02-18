@@ -1,5 +1,5 @@
 import React from "react";
-import { cx } from "../../lib/utils";
+import { cx } from "../../utils/utils";
 
 export function Badge({ className = "", children, ...props }) {
   return (

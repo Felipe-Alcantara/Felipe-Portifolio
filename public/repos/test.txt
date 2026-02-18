@@ -1,3 +1,0 @@
-# Teste de README
-
-Este é um arquivo de teste para verificar se o carregamento funciona.

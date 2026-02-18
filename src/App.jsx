@@ -21,13 +21,13 @@ import { Navbar } from "./components/layout/navbar";
 import { Footer } from "./components/layout/footer";
 import { ProjectsModal } from "./components/ui/projects-modal";
 import { ProjectDetailsModal } from "./components/ui/project-details-modal";
-import { BackgroundParticles } from "./components/ui/BackgroundParticles";
+import { BackgroundParticles } from "./components/ui/background-particles";
 
 // Seções principais que compõem a página.
 import { HeroSection } from "./sections/hero";
 import { AboutSection } from "./sections/about";
 import { PortfolioSection } from "./sections/portfolio";
-import { ProjectsGridSection } from "./sections/ProjectsGridSection";
+import { ProjectsGridSection } from "./sections/projects-grid-section";
 import { BlogSection } from "./sections/blog";
 import { FelixoVerseSection } from "./sections/felixoverse";
 import { ExtrasSection } from "./sections/extras";

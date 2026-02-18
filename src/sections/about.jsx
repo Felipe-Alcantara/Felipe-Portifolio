@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
-import felipeFoto from "../../Imagens/IMG_20251220_143247_000.jpg";
-import brythonLogo from "../../Imagens/Gemini_Generated_Image_k6r461k6r461k6r4.png";
+import felipeFoto from "../assets/images/IMG_20251220_143247_000.jpg";
+import brythonLogo from "../assets/images/Gemini_Generated_Image_k6r461k6r461k6r4.png";
 import {
   FaWhatsapp,
   FaDiscord,

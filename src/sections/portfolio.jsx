@@ -3,8 +3,8 @@ import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 import { Button } from "../components/ui/button";
 import { PortfolioCard } from "../components/parts/portfolio-card";
 import Particles from "../components/ui/particles";
-import { loop } from "../lib/utils";
-import { BackgroundParticles } from "../components/ui/BackgroundParticles";
+import { loop } from "../utils/utils";
+import { BackgroundParticles } from "../components/ui/background-particles";
 
 export function PortfolioSection({ items, setIsProjectsModalOpen, setInitialTagForProjectsModal, sectionTag }) {
   // Filtrar itens por sectionTag se fornecido

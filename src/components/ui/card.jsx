@@ -1,5 +1,5 @@
 import React from "react";
-import { cx } from "../../lib/utils";
+import { cx } from "../../utils/utils";
 
 export function Card({ className = "", children }) {
   return <div className={cx("rounded-3xl border bg-zinc-950/50 border-white/10", className)}>{children}</div>;

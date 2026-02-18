@@ -5,7 +5,7 @@ import { FaWhatsapp, FaTwitter, FaDiscord, FaLinkedin } from "react-icons/fa";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import Particles from "../components/ui/particles";
-import { ContactModal } from "../components/ui/ContactModal";
+import { ContactModal } from "../components/ui/contact-modal";
 
 export function ContactSection() {
   const [contactInfo, setContactInfo] = useState('');

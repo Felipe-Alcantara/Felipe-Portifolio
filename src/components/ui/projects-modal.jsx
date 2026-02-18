@@ -5,7 +5,7 @@ import { X, Search } from "lucide-react";
 import { Input } from "./input";
 import { Badge } from "./badge";
 import { tags, items as allItems } from "../../data/projects.jsx";
-import { cx, getTagColor } from "../../lib/utils";
+import { cx, getTagColor } from "../../utils/utils";
 
 export function ProjectsModal({ isOpen, onClose, initialTag = "all" }) {
   const [q, setQ] = useState("");

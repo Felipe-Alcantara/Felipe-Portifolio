@@ -1,8 +1,8 @@
 import React from "react";
 import { GraduationCap } from "lucide-react";
 import { Badge } from "../components/ui/badge";
-import { BackgroundParticles } from "../components/ui/BackgroundParticles";
-import ugbLogo from '../../Imagens/ugb.webp';
+import { BackgroundParticles } from "../components/ui/background-particles";
+import ugbLogo from '../assets/images/ugb.webp';
 import { FaYoutube } from 'react-icons/fa';
 
 // Helper para colorir nomes de tecnologias nos títulos dos cursos

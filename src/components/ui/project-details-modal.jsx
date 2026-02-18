@@ -16,8 +16,8 @@ import {
 } from "lucide-react";
 import { Button } from "./button";
 import { Badge } from "./badge";
-import { cx, getTagColor } from "../../lib/utils";
-import { loadReadme } from "../../utils/readmeLoader";
+import { cx, getTagColor } from "../../utils/utils";
+import { loadReadme } from "../../utils/readme-loader";
 
 // Componente simples para renderizar markdown
 function SimpleMarkdown({ content }) {

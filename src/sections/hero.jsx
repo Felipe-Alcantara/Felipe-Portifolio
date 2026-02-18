@@ -6,8 +6,8 @@ import Particles from "../components/ui/particles";
 import { Input } from "../components/ui/input";
 import { Badge } from "../components/ui/badge";
 import { tags, items } from "../data/projects.jsx";
-import { cx, getTagColor } from "../lib/utils";
-import { BackgroundParticles } from "../components/ui/BackgroundParticles";
+import { cx, getTagColor } from "../utils/utils";
+import { BackgroundParticles } from "../components/ui/background-particles";
 
 export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, setIsSearchOpen, onOpenProject }) {
   // Filtra itens para o overlay
