@@ -12,4 +12,4 @@ Este diretório centraliza toda a documentação técnica e operacional do proje
 
 - Separar documentação de código-fonte para facilitar navegação.
 - Manter um ponto único para guias de operação e padrões visuais.
-- Seguir o padrão de qualidade de estrutura documental adotado em `felixo-standards`.
+- Seguir o padrão de qualidade de estrutura documental adotado em [`felixo-standards`](https://github.com/Felipe-Alcantara/Felixo-System-Design).

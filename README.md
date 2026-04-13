@@ -53,7 +53,7 @@
 
 O **FelixoVerse Portfolio** é uma aplicação front-end com foco em **design system próprio**, **interatividade com Framer Motion** e **estrutura reutilizável** para evolução contínua de portfólio e landing pages.
 
-Este repositório foi organizado com base no padrão de qualidade do acervo `felixo-standards`, centralizando documentação em `docs/` e mantendo as responsabilidades separadas entre código, guias técnicos e operação de domínio.
+Este repositório foi organizado com base no padrão de qualidade do acervo [`felixo-standards`](https://github.com/Felipe-Alcantara/Felixo-System-Design), centralizando documentação em `docs/` e mantendo as responsabilidades separadas entre código, guias técnicos e operação de domínio.
 
 ---
 
