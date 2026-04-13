@@ -1,0 +1,15 @@
+# 📚 Documentação do Repositório
+
+Este diretório centraliza toda a documentação técnica e operacional do projeto.
+
+## Índice
+
+- 📖 [Guia de customização e manutenção](./DOCUMENTATION.md)
+- 🎨 [Design system oficial](./DESIGN-SYSTEM.md)
+- 🌍 [Guia de domínio e GitHub Pages](./GUIA-DOMINIO-PAGES.md)
+
+## Objetivo desta organização
+
+- Separar documentação de código-fonte para facilitar navegação.
+- Manter um ponto único para guias de operação e padrões visuais.
+- Seguir o padrão de qualidade de estrutura documental adotado em `felixo-standards`.

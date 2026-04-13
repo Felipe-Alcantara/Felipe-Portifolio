@@ -38,7 +38,7 @@ export function Navbar() {
       const duration = 2000; // 2000ms = 2 segundos (mais lento e suave)
       let start = null;
 
-      function step(timestamp) {
+      const step = (timestamp) => {
         if (!start) start = timestamp;
         const progress = timestamp - start;
         
@@ -53,7 +53,7 @@ export function Navbar() {
         window.scrollTo({ top: ease(progress, startPosition, distance, duration), behavior: "auto" });
 
         if (progress < duration) window.requestAnimationFrame(step);
-      }
+      };
 
       window.requestAnimationFrame(step);
     }

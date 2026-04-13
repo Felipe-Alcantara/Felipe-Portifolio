@@ -1,5 +1,4 @@
 import React from "react";
-import { GraduationCap } from "lucide-react";
 import { Badge } from "../components/ui/badge";
 import { BackgroundParticles } from "../components/ui/background-particles";
 import ugbLogo from '../assets/images/ugb.webp';

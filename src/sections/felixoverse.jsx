@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Rocket } from "lucide-react";
+import { Rocket } from "lucide-react";
 import { Button } from "../components/ui/button";
 import Particles from "../components/ui/particles";
 import { FaDiscord } from "react-icons/fa";

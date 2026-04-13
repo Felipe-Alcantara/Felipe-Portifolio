@@ -1,1 +1,4 @@
 node_modules
+/felixo-standards
+dist
+.DS_Store
