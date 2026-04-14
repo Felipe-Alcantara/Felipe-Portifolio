@@ -16,6 +16,27 @@ export function ProjectsModal({ isOpen, onClose, initialTag = "all" }) {
     setActiveTag(initialTag);
   }, [initialTag, isOpen]);
 
+  useEffect(() => {
+    if (!isOpen) {
+      return undefined;
+    }
+
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousBodyPaddingRight = document.body.style.paddingRight;
+    const scrollBarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+
+    document.body.style.overflow = "hidden";
+    if (scrollBarWidth > 0) {
+      document.body.style.paddingRight = `${scrollBarWidth}px`;
+    }
+
+    return () => {
+      document.body.style.overflow = previousBodyOverflow;
+      document.body.style.paddingRight = previousBodyPaddingRight;
+    };
+  }, [isOpen]);
+
   const filteredItems = useMemo(() => {
     const query = q.trim().toLowerCase();
     return allItems.filter((it) => {
@@ -36,7 +57,7 @@ export function ProjectsModal({ isOpen, onClose, initialTag = "all" }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex flex-col items-center pt-20 px-4 overflow-y-auto"
+          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex flex-col items-center pt-20 px-4 overflow-y-auto overscroll-contain"
           onClick={onClose}
         >
           <motion.div
@@ -88,7 +109,7 @@ export function ProjectsModal({ isOpen, onClose, initialTag = "all" }) {
 
             <motion.div
               layout
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 max-h-[60vh] overflow-y-auto overflow-x-hidden pr-2 custom-scrollbar"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 max-h-[60vh] overflow-y-auto overflow-x-hidden pr-2 custom-scrollbar overscroll-contain"
             >
               <AnimatePresence>
                 {filteredItems.map((item) => (
