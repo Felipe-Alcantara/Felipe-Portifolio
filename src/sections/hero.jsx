@@ -25,7 +25,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
   }, [q, activeTag]);
 
   return (
-    <section id="inicio" className="relative w-full overflow-hidden">
+    <section id="inicio" className="relative w-full overflow-hidden pt-24 md:pt-28">
       {/* Partículas de fundo (renderizadas diretamente aqui) */}
       <BackgroundParticles />
 
