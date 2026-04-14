@@ -8,6 +8,7 @@ Este diretório centraliza toda a documentação técnica e operacional do proje
 - 🎨 [Design system oficial](./DESIGN-SYSTEM.md)
 - 🌍 [Guia de domínio e GitHub Pages](./GUIA-DOMINIO-PAGES.md)
 - 🤖 [Prompt do sub-sistema de importação de repositórios GitHub](./PROMPT-SUBSISTEMA-IMPORTACAO-REPOS-GITHUB.md)
+- 🧾 [Relatório de implementação do sub-sistema de importação GitHub](./RELATORIO-IMPLEMENTACAO-SUBSISTEMA-IMPORTACAO-GITHUB.md)
 - ✅ [Checklist de pendências do site](./PENDENCIAS-SITE.md)
 
 ## Objetivo desta organização
