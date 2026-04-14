@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Aprendendo-Orientacao-a-objeto-em-python",
+  "fullName": "Felipe-Alcantara/Aprendendo-Orientacao-a-objeto-em-python",
+  "description": "Este código define uma classe `Email` em Python que armazena informações de email, incluindo o nome do usuário, o endereço de email e o servidor de email. Ele também possui um método para imprimir o servidor de email. Uma instância da classe é criada e o método para imprimir o servidor de email é chamado.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Aprendendo-Orientacao-a-objeto-em-python",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2024-05-07T14:13:01Z",
+  "updatedAt": "2024-05-07T14:13:07Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 2,
+  "repoKey": "felipe-alcantara/aprendendo-orientacao-a-objeto-em-python",
+  "lastSyncedAt": "2026-04-14T20:00:56.173Z"
+}

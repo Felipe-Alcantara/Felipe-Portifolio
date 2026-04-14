@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Programacao-Orientada-A-Objeto-em-Python-Sistema-Bancario",
+  "fullName": "Felipe-Alcantara/Programacao-Orientada-A-Objeto-em-Python-Sistema-Bancario",
+  "description": "Este é um código Python que implementa um sistema bancário simples. Ele define classes para `Cliente`, `Conta`, `ContaCorrente` e `ContaPoupanca`. Os clientes podem abrir contas correntes ou poupanças, realizar depósitos e saques, e as transações são registradas. A `ContaPoupanca` também tem a capacidade de calcular juros.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Programacao-Orientada-A-Objeto-em-Python-Sistema-Bancario",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2024-04-26T02:07:51Z",
+  "updatedAt": "2024-05-07T02:58:15Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 10,
+  "repoKey": "felipe-alcantara/programacao-orientada-a-objeto-em-python-sistema-bancario",
+  "lastSyncedAt": "2026-04-14T20:00:56.173Z"
+}

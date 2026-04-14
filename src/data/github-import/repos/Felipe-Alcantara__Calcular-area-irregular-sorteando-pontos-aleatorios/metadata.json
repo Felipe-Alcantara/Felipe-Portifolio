@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Calcular-area-irregular-sorteando-pontos-aleatorios",
+  "fullName": "Felipe-Alcantara/Calcular-area-irregular-sorteando-pontos-aleatorios",
+  "description": "Esses códigos são parte de um programa em python de desenho interativo que permite ao usuário criar formas na tela usando o mouse e calcular a área. Esses códigos demonstram como a biblioteca `tkinter` do Python pode ser usada para criar programas de desenho interativos.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Calcular-area-irregular-sorteando-pontos-aleatorios",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2024-03-27T18:23:41Z",
+  "updatedAt": "2025-10-27T18:42:44Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 56,
+  "repoKey": "felipe-alcantara/calcular-area-irregular-sorteando-pontos-aleatorios",
+  "lastSyncedAt": "2026-04-14T20:00:56.173Z"
+}

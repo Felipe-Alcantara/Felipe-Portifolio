@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Programacao-Orientada-a-Objetos-com-Python-e-Dataclass",
+  "fullName": "Felipe-Alcantara/Programacao-Orientada-a-Objetos-com-Python-e-Dataclass",
+  "description": "Este repositório contém um sistema simples de gerenciamento de finanças pessoais, desenvolvido em Python. Ele permite que os usuários registrem suas transações financeiras, categorizem-nas e calculem seu saldo total. Além disso, cada transação e o saldo total são automaticamente salvos em um arquivo de texto.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Programacao-Orientada-a-Objetos-com-Python-e-Dataclass",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2024-05-14T15:47:33Z",
+  "updatedAt": "2024-05-14T15:47:40Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 3,
+  "repoKey": "felipe-alcantara/programacao-orientada-a-objetos-com-python-e-dataclass",
+  "lastSyncedAt": "2026-04-14T20:00:56.173Z"
+}

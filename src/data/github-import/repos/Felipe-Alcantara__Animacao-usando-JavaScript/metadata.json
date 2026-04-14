@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Animacao-usando-JavaScript",
+  "fullName": "Felipe-Alcantara/Animacao-usando-JavaScript",
+  "description": "Este algoritmo JavaScript cria uma animação de uma bola quicando em uma tela. Ele começa selecionando o elemento canvas na página e obtendo seu contexto de desenho 2D. Em seguida, define a largura e a altura do canvas para corresponder à largura e à altura da janela do navegador.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Animacao-usando-JavaScript",
+  "homepage": "",
+  "topics": [],
+  "language": "",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2024-04-17T06:27:49Z",
+  "updatedAt": "2025-11-03T05:45:32Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 21,
+  "repoKey": "felipe-alcantara/animacao-usando-javascript",
+  "lastSyncedAt": "2026-04-14T20:00:56.173Z"
+}

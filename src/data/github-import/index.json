@@ -1,326 +1,17 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-04-14T19:06:49.512Z",
+  "generatedAt": "2026-04-14T20:00:56.173Z",
   "username": "Felipe-Alcantara",
-  "authenticatedLogin": null,
-  "hasToken": false,
-  "maxRepos": 20,
+  "authenticatedLogin": "Felipe-Alcantara",
+  "hasToken": true,
+  "maxRepos": 500,
   "totals": {
-    "indexed": 20,
-    "active": 20,
+    "indexed": 69,
+    "active": 69,
     "stale": 0,
-    "errors": 22
+    "errors": 0
   },
-  "errors": [
-    {
-      "stage": "languages",
-      "repoKey": "felipe-alcantara/soundscraper-soundcloud_track_scraper_downloader",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/SoundScraper-soundcloud_track_scraper_downloader/languages",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "readme",
-      "repoKey": "felipe-alcantara/soundscraper-soundcloud_track_scraper_downloader",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/SoundScraper-soundcloud_track_scraper_downloader/readme",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "languages",
-      "repoKey": "felipe-alcantara/time_divider_clock_interface_python",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Time_Divider_Clock_Interface_Python/languages",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "readme",
-      "repoKey": "felipe-alcantara/time_divider_clock_interface_python",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Time_Divider_Clock_Interface_Python/readme",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "languages",
-      "repoKey": "felipe-alcantara/felipe-sala-board",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Felipe-Sala-Board/languages",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "readme",
-      "repoKey": "felipe-alcantara/felipe-sala-board",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Felipe-Sala-Board/readme",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "languages",
-      "repoKey": "felipe-alcantara/felixo-time-tracker",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Felixo-Time-Tracker/languages",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "readme",
-      "repoKey": "felipe-alcantara/felixo-time-tracker",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Felixo-Time-Tracker/readme",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "languages",
-      "repoKey": "felipe-alcantara/cifra-de-cesar-em-python",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Cifra-de-cesar-em-python/languages",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "readme",
-      "repoKey": "felipe-alcantara/cifra-de-cesar-em-python",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Cifra-de-cesar-em-python/readme",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "languages",
-      "repoKey": "felipe-alcantara/serum-file-sorter-organizer",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Serum-File-Sorter-Organizer/languages",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "readme",
-      "repoKey": "felipe-alcantara/serum-file-sorter-organizer",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Serum-File-Sorter-Organizer/readme",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "languages",
-      "repoKey": "felipe-alcantara/o-fogo-do-doom",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/O-Fogo-do-DOOM/languages",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "readme",
-      "repoKey": "felipe-alcantara/o-fogo-do-doom",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/O-Fogo-do-DOOM/readme",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "languages",
-      "repoKey": "felipe-alcantara/youtube-downloader-tampermonkey",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Youtube-Downloader-Tampermonkey/languages",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "readme",
-      "repoKey": "felipe-alcantara/youtube-downloader-tampermonkey",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Youtube-Downloader-Tampermonkey/readme",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "languages",
-      "repoKey": "felipe-alcantara/estudos-py-api-fastapi-echo-lab",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/estudos-py-api-fastapi-echo-lab/languages",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "readme",
-      "repoKey": "felipe-alcantara/estudos-py-api-fastapi-echo-lab",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/estudos-py-api-fastapi-echo-lab/readme",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "languages",
-      "repoKey": "felipe-alcantara/zip-extractor",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Zip-Extractor/languages",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "readme",
-      "repoKey": "felipe-alcantara/zip-extractor",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Zip-Extractor/readme",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "languages",
-      "repoKey": "felipe-alcantara/page-context-ia",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Page-Context-IA/languages",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    },
-    {
-      "stage": "readme",
-      "repoKey": "felipe-alcantara/page-context-ia",
-      "code": "GITHUB_FORBIDDEN",
-      "status": 403,
-      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-      "endpoint": "/repos/Felipe-Alcantara/Page-Context-IA/readme",
-      "rateLimit": {
-        "remaining": 0,
-        "limit": 60,
-        "reset": 1776197128
-      },
-      "retriable": false
-    }
-  ],
+  "errors": [],
   "repositories": [
     {
       "key": "felipe-alcantara/felixo-system-design",
@@ -334,14 +25,14 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Felixo-System-Design",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
         "languages": "updated",
         "readme": "updated"
       },
       "warnings": [],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/felipe-portifolio",
@@ -355,14 +46,14 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Felipe-Portifolio",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
         "languages": "updated",
         "readme": "updated"
       },
       "warnings": [],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/indentificador-numerico",
@@ -376,14 +67,56 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Indentificador-numerico",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
         "languages": "updated",
         "readme": "updated"
       },
       "warnings": [],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/trabalho-da-faculdade",
+      "owner": "Felipe-Alcantara",
+      "name": "Trabalho-da-faculdade",
+      "fullName": "Felipe-Alcantara/Trabalho-da-faculdade",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Trabalho-da-faculdade",
+      "private": true,
+      "createdAt": "2024-03-26T09:37:10Z",
+      "updatedAt": "2026-04-11T18:37:59Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Trabalho-da-faculdade",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/curso-em-video",
+      "owner": "Felipe-Alcantara",
+      "name": "Curso-em-video",
+      "fullName": "Felipe-Alcantara/Curso-em-video",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Curso-em-video",
+      "private": true,
+      "createdAt": "2024-03-26T09:16:05Z",
+      "updatedAt": "2026-04-11T18:18:20Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Curso-em-video",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/desconto-de-salario-em-python",
@@ -397,14 +130,14 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Desconto-de-salario-em-python",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
         "languages": "updated",
         "readme": "updated"
       },
       "warnings": [],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/calcular-soma-com-funcao-em-python",
@@ -418,14 +151,35 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Calcular-soma-com-funcao-em-python",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
         "languages": "updated",
         "readme": "updated"
       },
       "warnings": [],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/alura",
+      "owner": "Felipe-Alcantara",
+      "name": "Alura",
+      "fullName": "Felipe-Alcantara/Alura",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Alura",
+      "private": true,
+      "createdAt": "2024-03-26T08:06:22Z",
+      "updatedAt": "2026-04-10T19:01:53Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Alura",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/git-hub-repositories",
@@ -439,14 +193,35 @@
       "defaultBranch": "18/11/2025",
       "folder": "Felipe-Alcantara__Git-Hub-Repositories",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
         "languages": "updated",
         "readme": "updated"
       },
       "warnings": [],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/felixoverse",
+      "owner": "Felipe-Alcantara",
+      "name": "FelixoVerse",
+      "fullName": "Felipe-Alcantara/FelixoVerse",
+      "repoUrl": "https://github.com/Felipe-Alcantara/FelixoVerse",
+      "private": true,
+      "createdAt": "2026-03-02T04:44:19Z",
+      "updatedAt": "2026-04-09T23:46:23Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__FelixoVerse",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/gerador-de-cpf-valido-em-python",
@@ -460,14 +235,14 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Gerador-de-CPF-valido-em-Python",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
         "languages": "updated",
         "readme": "updated"
       },
       "warnings": [],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/calculadora-simples-em-python",
@@ -481,14 +256,14 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Calculadora-simples-em-python",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
         "languages": "updated",
         "readme": "updated"
       },
       "warnings": [],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/reading-tracker",
@@ -502,14 +277,14 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Reading-Tracker",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
         "languages": "updated",
         "readme": "updated"
       },
       "warnings": [],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/soundscraper-soundcloud_track_scraper_downloader",
@@ -523,17 +298,14 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__SoundScraper-soundcloud_track_scraper_downloader",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
-        "languages": "error_kept",
-        "readme": "error_kept"
+        "languages": "updated",
+        "readme": "updated"
       },
-      "warnings": [
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
-      ],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/time_divider_clock_interface_python",
@@ -547,17 +319,14 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Time_Divider_Clock_Interface_Python",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
-        "languages": "error_kept",
-        "readme": "error_kept"
+        "languages": "updated",
+        "readme": "updated"
       },
-      "warnings": [
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
-      ],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/felipe-sala-board",
@@ -571,17 +340,14 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Felipe-Sala-Board",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
-        "languages": "error_kept",
-        "readme": "error_kept"
+        "languages": "updated",
+        "readme": "updated"
       },
-      "warnings": [
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
-      ],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/felixo-time-tracker",
@@ -595,17 +361,14 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Felixo-Time-Tracker",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
-        "languages": "error_kept",
-        "readme": "error_kept"
+        "languages": "updated",
+        "readme": "updated"
       },
-      "warnings": [
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
-      ],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/cifra-de-cesar-em-python",
@@ -619,17 +382,35 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Cifra-de-cesar-em-python",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
-        "languages": "error_kept",
-        "readme": "error_kept"
+        "languages": "updated",
+        "readme": "updated"
       },
-      "warnings": [
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
-      ],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/meu-jogo",
+      "owner": "Felipe-Alcantara",
+      "name": "Meu-jogo",
+      "fullName": "Felipe-Alcantara/Meu-jogo",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Meu-jogo",
+      "private": true,
+      "createdAt": "2024-03-26T20:43:44Z",
+      "updatedAt": "2026-02-09T14:28:50Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Meu-jogo",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/serum-file-sorter-organizer",
@@ -643,17 +424,14 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Serum-File-Sorter-Organizer",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
-        "languages": "error_kept",
-        "readme": "error_kept"
+        "languages": "updated",
+        "readme": "updated"
       },
-      "warnings": [
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
-      ],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/o-fogo-do-doom",
@@ -667,17 +445,14 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__O-Fogo-do-DOOM",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
-        "languages": "error_kept",
-        "readme": "error_kept"
+        "languages": "updated",
+        "readme": "updated"
       },
-      "warnings": [
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
-      ],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/youtube-downloader-tampermonkey",
@@ -691,17 +466,56 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Youtube-Downloader-Tampermonkey",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
-        "languages": "error_kept",
-        "readme": "error_kept"
+        "languages": "updated",
+        "readme": "updated"
       },
-      "warnings": [
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
-      ],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/verstappen",
+      "owner": "Felipe-Alcantara",
+      "name": "verstappen",
+      "fullName": "Felipe-Alcantara/verstappen",
+      "repoUrl": "https://github.com/Felipe-Alcantara/verstappen",
+      "private": true,
+      "createdAt": "2026-01-30T07:51:00Z",
+      "updatedAt": "2026-01-30T07:51:06Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__verstappen",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/presente-de-anivers-rio-gemini-2.0",
+      "owner": "Felipe-Alcantara",
+      "name": "Presente-de-anivers-rio-Gemini-2.0",
+      "fullName": "Felipe-Alcantara/Presente-de-anivers-rio-Gemini-2.0",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Presente-de-anivers-rio-Gemini-2.0",
+      "private": true,
+      "createdAt": "2026-01-10T18:58:52Z",
+      "updatedAt": "2026-01-12T00:38:43Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Presente-de-anivers-rio-Gemini-2.0",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/estudos-py-api-fastapi-echo-lab",
@@ -715,17 +529,35 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__estudos-py-api-fastapi-echo-lab",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
-        "languages": "error_kept",
-        "readme": "error_kept"
+        "languages": "updated",
+        "readme": "updated"
       },
-      "warnings": [
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
-      ],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/lm-consultoria-imobili-ria-controle-de-captacao",
+      "owner": "Felipe-Alcantara",
+      "name": "LM-consultoria-imobili-ria-Controle-de-Captacao",
+      "fullName": "Felipe-Alcantara/LM-consultoria-imobili-ria-Controle-de-Captacao",
+      "repoUrl": "https://github.com/Felipe-Alcantara/LM-consultoria-imobili-ria-Controle-de-Captacao",
+      "private": true,
+      "createdAt": "2026-01-04T17:52:24Z",
+      "updatedAt": "2026-01-04T23:18:45Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__LM-consultoria-imobili-ria-Controle-de-Captacao",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/zip-extractor",
@@ -739,17 +571,14 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Zip-Extractor",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
-        "languages": "error_kept",
-        "readme": "error_kept"
+        "languages": "updated",
+        "readme": "updated"
       },
-      "warnings": [
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
-      ],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     },
     {
       "key": "felipe-alcantara/page-context-ia",
@@ -763,17 +592,875 @@
       "defaultBranch": "main",
       "folder": "Felipe-Alcantara__Page-Context-IA",
       "syncState": "active",
-      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
       "files": {
         "metadata": "updated",
-        "languages": "error_kept",
-        "readme": "error_kept"
+        "languages": "updated",
+        "readme": "updated"
       },
-      "warnings": [
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
-        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
-      ],
-      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/organizador-de-presentes-do-felixo",
+      "owner": "Felipe-Alcantara",
+      "name": "Organizador-de-presentes-do-Felixo",
+      "fullName": "Felipe-Alcantara/Organizador-de-presentes-do-Felixo",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Organizador-de-presentes-do-Felixo",
+      "private": false,
+      "createdAt": "2025-12-19T05:02:47Z",
+      "updatedAt": "2025-12-19T05:02:53Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Organizador-de-presentes-do-Felixo",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/following-link",
+      "owner": "Felipe-Alcantara",
+      "name": "following-Link",
+      "fullName": "Felipe-Alcantara/following-Link",
+      "repoUrl": "https://github.com/Felipe-Alcantara/following-Link",
+      "private": false,
+      "createdAt": "2025-12-18T12:36:18Z",
+      "updatedAt": "2025-12-18T12:36:24Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__following-Link",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/conversor-de-mkv-pra-mp3-em-python",
+      "owner": "Felipe-Alcantara",
+      "name": "Conversor-de-MKV-pra-MP3-em-Python",
+      "fullName": "Felipe-Alcantara/Conversor-de-MKV-pra-MP3-em-Python",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Conversor-de-MKV-pra-MP3-em-Python",
+      "private": false,
+      "createdAt": "2025-12-18T12:33:10Z",
+      "updatedAt": "2025-12-18T12:33:16Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Conversor-de-MKV-pra-MP3-em-Python",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/cardshot-roulette",
+      "owner": "Felipe-Alcantara",
+      "name": "Cardshot-Roulette",
+      "fullName": "Felipe-Alcantara/Cardshot-Roulette",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Cardshot-Roulette",
+      "private": true,
+      "createdAt": "2025-12-18T12:22:41Z",
+      "updatedAt": "2025-12-18T12:22:47Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Cardshot-Roulette",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/api-test",
+      "owner": "Felipe-Alcantara",
+      "name": "API-Test",
+      "fullName": "Felipe-Alcantara/API-Test",
+      "repoUrl": "https://github.com/Felipe-Alcantara/API-Test",
+      "private": false,
+      "createdAt": "2025-12-18T12:06:33Z",
+      "updatedAt": "2025-12-18T12:10:28Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__API-Test",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/if",
+      "owner": "Felipe-Alcantara",
+      "name": "IF",
+      "fullName": "Felipe-Alcantara/IF",
+      "repoUrl": "https://github.com/Felipe-Alcantara/IF",
+      "private": false,
+      "createdAt": "2025-09-17T00:00:11Z",
+      "updatedAt": "2025-12-18T08:25:33Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__IF",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "missing"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/identificador-de-str-em-python",
+      "owner": "Felipe-Alcantara",
+      "name": "Identificador-de-str-em-python",
+      "fullName": "Felipe-Alcantara/Identificador-de-str-em-python",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Identificador-de-str-em-python",
+      "private": false,
+      "createdAt": "2024-03-26T09:00:32Z",
+      "updatedAt": "2025-12-18T08:24:29Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Identificador-de-str-em-python",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/pitch-cents-align-tuner",
+      "owner": "Felipe-Alcantara",
+      "name": "Pitch-Cents-Align-Tuner",
+      "fullName": "Felipe-Alcantara/Pitch-Cents-Align-Tuner",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Pitch-Cents-Align-Tuner",
+      "private": false,
+      "createdAt": "2025-12-09T01:32:15Z",
+      "updatedAt": "2025-12-09T01:37:13Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Pitch-Cents-Align-Tuner",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/jogo-da-velha",
+      "owner": "Felipe-Alcantara",
+      "name": "jogo-da-velha",
+      "fullName": "Felipe-Alcantara/jogo-da-velha",
+      "repoUrl": "https://github.com/Felipe-Alcantara/jogo-da-velha",
+      "private": false,
+      "createdAt": "2025-11-25T18:49:46Z",
+      "updatedAt": "2025-11-25T18:57:45Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__jogo-da-velha",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/advice-app",
+      "owner": "Felipe-Alcantara",
+      "name": "advice-app",
+      "fullName": "Felipe-Alcantara/advice-app",
+      "repoUrl": "https://github.com/Felipe-Alcantara/advice-app",
+      "private": false,
+      "createdAt": "2025-11-21T06:24:35Z",
+      "updatedAt": "2025-11-21T07:02:15Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__advice-app",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/im-gatito",
+      "owner": "Felipe-Alcantara",
+      "name": "im-gatito",
+      "fullName": "Felipe-Alcantara/im-gatito",
+      "repoUrl": "https://github.com/Felipe-Alcantara/im-gatito",
+      "private": false,
+      "createdAt": "2025-11-14T04:44:39Z",
+      "updatedAt": "2025-11-14T04:44:46Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__im-gatito",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/cassino-do-felixo",
+      "owner": "Felipe-Alcantara",
+      "name": "Cassino-do-felixo",
+      "fullName": "Felipe-Alcantara/Cassino-do-felixo",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Cassino-do-felixo",
+      "private": false,
+      "createdAt": "2024-12-29T19:29:12Z",
+      "updatedAt": "2025-11-06T07:56:19Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Cassino-do-felixo",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/animacao-usando-javascript",
+      "owner": "Felipe-Alcantara",
+      "name": "Animacao-usando-JavaScript",
+      "fullName": "Felipe-Alcantara/Animacao-usando-JavaScript",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Animacao-usando-JavaScript",
+      "private": false,
+      "createdAt": "2024-04-17T06:27:49Z",
+      "updatedAt": "2025-11-03T05:45:32Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Animacao-usando-JavaScript",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/amostragem-casual-simples",
+      "owner": "Felipe-Alcantara",
+      "name": "Amostragem-casual-simples",
+      "fullName": "Felipe-Alcantara/Amostragem-casual-simples",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Amostragem-casual-simples",
+      "private": false,
+      "createdAt": "2024-09-03T21:57:20Z",
+      "updatedAt": "2025-10-31T05:16:07Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Amostragem-casual-simples",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/scripts-html",
+      "owner": "Felipe-Alcantara",
+      "name": "Scripts-HTML",
+      "fullName": "Felipe-Alcantara/Scripts-HTML",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Scripts-HTML",
+      "private": true,
+      "createdAt": "2024-03-26T08:24:35Z",
+      "updatedAt": "2025-10-30T05:35:56Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Scripts-HTML",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/classes-e-programacao-orientada-a-objetos-em-python",
+      "owner": "Felipe-Alcantara",
+      "name": "Classes-e-Programacao-Orientada-a-Objetos-em-Python",
+      "fullName": "Felipe-Alcantara/Classes-e-Programacao-Orientada-a-Objetos-em-Python",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Classes-e-Programacao-Orientada-a-Objetos-em-Python",
+      "private": false,
+      "createdAt": "2024-04-17T11:55:42Z",
+      "updatedAt": "2025-10-30T03:04:29Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Classes-e-Programacao-Orientada-a-Objetos-em-Python",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/como-fazer-condicoes-no-python",
+      "owner": "Felipe-Alcantara",
+      "name": "Como-fazer-condicoes-no-Python",
+      "fullName": "Felipe-Alcantara/Como-fazer-condicoes-no-Python",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Como-fazer-condicoes-no-Python",
+      "private": false,
+      "createdAt": "2024-04-17T11:17:15Z",
+      "updatedAt": "2025-10-28T05:21:04Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Como-fazer-condicoes-no-Python",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/python-classes-e-metodos",
+      "owner": "Felipe-Alcantara",
+      "name": "Python-Classes-e-Metodos",
+      "fullName": "Felipe-Alcantara/Python-Classes-e-Metodos",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Python-Classes-e-Metodos",
+      "private": false,
+      "createdAt": "2024-04-17T07:22:27Z",
+      "updatedAt": "2025-10-28T04:29:03Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Python-Classes-e-Metodos",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/calcular-area-irregular-sorteando-pontos-aleatorios",
+      "owner": "Felipe-Alcantara",
+      "name": "Calcular-area-irregular-sorteando-pontos-aleatorios",
+      "fullName": "Felipe-Alcantara/Calcular-area-irregular-sorteando-pontos-aleatorios",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Calcular-area-irregular-sorteando-pontos-aleatorios",
+      "private": false,
+      "createdAt": "2024-03-27T18:23:41Z",
+      "updatedAt": "2025-10-27T18:42:44Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Calcular-area-irregular-sorteando-pontos-aleatorios",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/automacao-em-python-e-desenvolvimento-de-interfaces-graficas-com-pysimplegui",
+      "owner": "Felipe-Alcantara",
+      "name": "Automacao-em-python-e-desenvolvimento-de-interfaces-graficas-com-PySimpleGUI",
+      "fullName": "Felipe-Alcantara/Automacao-em-python-e-desenvolvimento-de-interfaces-graficas-com-PySimpleGUI",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Automacao-em-python-e-desenvolvimento-de-interfaces-graficas-com-PySimpleGUI",
+      "private": false,
+      "createdAt": "2024-05-19T06:40:31Z",
+      "updatedAt": "2025-10-27T08:27:58Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Automacao-em-python-e-desenvolvimento-de-interfaces-graficas-com-PySimpleGUI",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/importando-bibliotecas",
+      "owner": "Felipe-Alcantara",
+      "name": "Importando-bibliotecas",
+      "fullName": "Felipe-Alcantara/Importando-bibliotecas",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Importando-bibliotecas",
+      "private": false,
+      "createdAt": "2024-03-26T19:57:45Z",
+      "updatedAt": "2025-10-27T08:19:40Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Importando-bibliotecas",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/soma-em-serie",
+      "owner": "Felipe-Alcantara",
+      "name": "Soma-em-serie",
+      "fullName": "Felipe-Alcantara/Soma-em-serie",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Soma-em-serie",
+      "private": false,
+      "createdAt": "2024-03-26T09:21:44Z",
+      "updatedAt": "2025-10-27T07:18:37Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Soma-em-serie",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/iris---cherry-hair",
+      "owner": "Felipe-Alcantara",
+      "name": "Iris---Cherry-Hair",
+      "fullName": "Felipe-Alcantara/Iris---Cherry-Hair",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Iris---Cherry-Hair",
+      "private": false,
+      "createdAt": "2025-10-08T06:24:34Z",
+      "updatedAt": "2025-10-13T20:19:11Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Iris---Cherry-Hair",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/for-iris-hub",
+      "owner": "Felipe-Alcantara",
+      "name": "For-Iris-Hub",
+      "fullName": "Felipe-Alcantara/For-Iris-Hub",
+      "repoUrl": "https://github.com/Felipe-Alcantara/For-Iris-Hub",
+      "private": false,
+      "createdAt": "2025-10-03T18:57:53Z",
+      "updatedAt": "2025-10-03T20:59:50Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__For-Iris-Hub",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/spicygame",
+      "owner": "Felipe-Alcantara",
+      "name": "SpicyGame",
+      "fullName": "Felipe-Alcantara/SpicyGame",
+      "repoUrl": "https://github.com/Felipe-Alcantara/SpicyGame",
+      "private": false,
+      "createdAt": "2025-09-03T10:15:57Z",
+      "updatedAt": "2025-09-03T19:39:45Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__SpicyGame",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/curso-em-video---curso-de-html",
+      "owner": "Felipe-Alcantara",
+      "name": "Curso-em-Video---Curso-de-HTML",
+      "fullName": "Felipe-Alcantara/Curso-em-Video---Curso-de-HTML",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Curso-em-Video---Curso-de-HTML",
+      "private": true,
+      "createdAt": "2025-04-09T06:21:22Z",
+      "updatedAt": "2025-08-11T19:36:08Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Curso-em-Video---Curso-de-HTML",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/conceitosbasicoscsharp",
+      "owner": "Felipe-Alcantara",
+      "name": "ConceitosBasicosCSharp",
+      "fullName": "Felipe-Alcantara/ConceitosBasicosCSharp",
+      "repoUrl": "https://github.com/Felipe-Alcantara/ConceitosBasicosCSharp",
+      "private": false,
+      "createdAt": "2025-05-06T02:33:38Z",
+      "updatedAt": "2025-05-06T02:33:44Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__ConceitosBasicosCSharp",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/wishboard",
+      "owner": "Felipe-Alcantara",
+      "name": "WishBoard",
+      "fullName": "Felipe-Alcantara/WishBoard",
+      "repoUrl": "https://github.com/Felipe-Alcantara/WishBoard",
+      "private": false,
+      "createdAt": "2025-04-12T08:24:24Z",
+      "updatedAt": "2025-04-12T08:24:30Z",
+      "defaultBranch": "Versão-atual!",
+      "folder": "Felipe-Alcantara__WishBoard",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/curso-de-html-completo-programacao-web",
+      "owner": "Felipe-Alcantara",
+      "name": "Curso-de-HTML-Completo-Programacao-Web",
+      "fullName": "Felipe-Alcantara/Curso-de-HTML-Completo-Programacao-Web",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Curso-de-HTML-Completo-Programacao-Web",
+      "private": true,
+      "createdAt": "2025-04-09T03:04:30Z",
+      "updatedAt": "2025-04-09T06:12:12Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Curso-de-HTML-Completo-Programacao-Web",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/aprendendo-a-fazer-bots-do-discord",
+      "owner": "Felipe-Alcantara",
+      "name": "Aprendendo-a-fazer-bots-do-discord",
+      "fullName": "Felipe-Alcantara/Aprendendo-a-fazer-bots-do-discord",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Aprendendo-a-fazer-bots-do-discord",
+      "private": true,
+      "createdAt": "2024-04-04T04:02:58Z",
+      "updatedAt": "2025-01-14T04:01:30Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Aprendendo-a-fazer-bots-do-discord",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/exemplos_clean_code",
+      "owner": "Felipe-Alcantara",
+      "name": "Exemplos_Clean_Code",
+      "fullName": "Felipe-Alcantara/Exemplos_Clean_Code",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Exemplos_Clean_Code",
+      "private": true,
+      "createdAt": "2024-10-06T22:41:15Z",
+      "updatedAt": "2024-10-06T22:41:21Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Exemplos_Clean_Code",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/programacao-orientada-a-objetos-com-python-e-dataclass",
+      "owner": "Felipe-Alcantara",
+      "name": "Programacao-Orientada-a-Objetos-com-Python-e-Dataclass",
+      "fullName": "Felipe-Alcantara/Programacao-Orientada-a-Objetos-com-Python-e-Dataclass",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Programacao-Orientada-a-Objetos-com-Python-e-Dataclass",
+      "private": false,
+      "createdAt": "2024-05-14T15:47:33Z",
+      "updatedAt": "2024-05-14T15:47:40Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Programacao-Orientada-a-Objetos-com-Python-e-Dataclass",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/aprendendo-orientacao-a-objeto-em-python",
+      "owner": "Felipe-Alcantara",
+      "name": "Aprendendo-Orientacao-a-objeto-em-python",
+      "fullName": "Felipe-Alcantara/Aprendendo-Orientacao-a-objeto-em-python",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Aprendendo-Orientacao-a-objeto-em-python",
+      "private": false,
+      "createdAt": "2024-05-07T14:13:01Z",
+      "updatedAt": "2024-05-07T14:13:07Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Aprendendo-Orientacao-a-objeto-em-python",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/programacao-orientada-a-objeto-em-python-sistema-bancario",
+      "owner": "Felipe-Alcantara",
+      "name": "Programacao-Orientada-A-Objeto-em-Python-Sistema-Bancario",
+      "fullName": "Felipe-Alcantara/Programacao-Orientada-A-Objeto-em-Python-Sistema-Bancario",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Programacao-Orientada-A-Objeto-em-Python-Sistema-Bancario",
+      "private": false,
+      "createdAt": "2024-04-26T02:07:51Z",
+      "updatedAt": "2024-05-07T02:58:15Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Programacao-Orientada-A-Objeto-em-Python-Sistema-Bancario",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/programacao-orientada-a-objeto-em-python-sistema-de-streaming",
+      "owner": "Felipe-Alcantara",
+      "name": "Programacao-Orientada-A-Objeto-em-Python-Sistema-De-Streaming",
+      "fullName": "Felipe-Alcantara/Programacao-Orientada-A-Objeto-em-Python-Sistema-De-Streaming",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Programacao-Orientada-A-Objeto-em-Python-Sistema-De-Streaming",
+      "private": false,
+      "createdAt": "2024-04-26T01:08:10Z",
+      "updatedAt": "2024-05-01T20:41:52Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Programacao-Orientada-A-Objeto-em-Python-Sistema-De-Streaming",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/cookie-counter-automation",
+      "owner": "Felipe-Alcantara",
+      "name": "Cookie-counter-automation",
+      "fullName": "Felipe-Alcantara/Cookie-counter-automation",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Cookie-counter-automation",
+      "private": false,
+      "createdAt": "2024-04-17T19:49:56Z",
+      "updatedAt": "2024-04-22T02:35:06Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Cookie-counter-automation",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/diferenca-entre-classe-objeto-e-instancia-em-python",
+      "owner": "Felipe-Alcantara",
+      "name": "Diferenca-entre-Classe-Objeto-e-Instancia-em-Python",
+      "fullName": "Felipe-Alcantara/Diferenca-entre-Classe-Objeto-e-Instancia-em-Python",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Diferenca-entre-Classe-Objeto-e-Instancia-em-Python",
+      "private": false,
+      "createdAt": "2024-04-17T19:15:27Z",
+      "updatedAt": "2024-04-17T19:15:33Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Diferenca-entre-Classe-Objeto-e-Instancia-em-Python",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/aprendendo-logica-de-programacao-de-listas-em-python",
+      "owner": "Felipe-Alcantara",
+      "name": "Aprendendo-logica-de-programacao-de-listas-em-python",
+      "fullName": "Felipe-Alcantara/Aprendendo-logica-de-programacao-de-listas-em-python",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Aprendendo-logica-de-programacao-de-listas-em-python",
+      "private": false,
+      "createdAt": "2024-04-17T06:05:15Z",
+      "updatedAt": "2024-04-17T06:05:20Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Aprendendo-logica-de-programacao-de-listas-em-python",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/python-variaveis-como-declarar-e-utilizar-nos-scripts",
+      "owner": "Felipe-Alcantara",
+      "name": "Python-Variaveis-Como-declarar-e-utilizar-nos-scripts",
+      "fullName": "Felipe-Alcantara/Python-Variaveis-Como-declarar-e-utilizar-nos-scripts",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Python-Variaveis-Como-declarar-e-utilizar-nos-scripts",
+      "private": false,
+      "createdAt": "2024-04-17T05:43:24Z",
+      "updatedAt": "2024-04-17T05:43:29Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Python-Variaveis-Como-declarar-e-utilizar-nos-scripts",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/mdn-web-docs",
+      "owner": "Felipe-Alcantara",
+      "name": "MDN-Web-Docs",
+      "fullName": "Felipe-Alcantara/MDN-Web-Docs",
+      "repoUrl": "https://github.com/Felipe-Alcantara/MDN-Web-Docs",
+      "private": true,
+      "createdAt": "2024-03-26T08:20:30Z",
+      "updatedAt": "2024-03-26T08:20:36Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__MDN-Web-Docs",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
+    },
+    {
+      "key": "felipe-alcantara/desktop-tutorial",
+      "owner": "Felipe-Alcantara",
+      "name": "desktop-tutorial",
+      "fullName": "Felipe-Alcantara/desktop-tutorial",
+      "repoUrl": "https://github.com/Felipe-Alcantara/desktop-tutorial",
+      "private": true,
+      "createdAt": "2024-03-26T08:00:05Z",
+      "updatedAt": "2024-03-26T08:00:05Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__desktop-tutorial",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T20:00:56.173Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T20:00:56.173Z"
     }
   ]
 }

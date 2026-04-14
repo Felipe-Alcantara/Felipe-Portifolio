@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Soma-em-serie",
+  "fullName": "Felipe-Alcantara/Soma-em-serie",
+  "description": "Este código Python calcula a soma da série 1 + (2*0 - 1) + (2*1 - 1) + (2*2 - 1) + ... + (2*n - 1).  ",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Soma-em-serie",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2024-03-26T09:21:44Z",
+  "updatedAt": "2025-10-27T07:18:37Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 6,
+  "repoKey": "felipe-alcantara/soma-em-serie",
+  "lastSyncedAt": "2026-04-14T20:00:56.173Z"
+}

@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Conversor-de-MKV-pra-MP3-em-Python",
+  "fullName": "Felipe-Alcantara/Conversor-de-MKV-pra-MP3-em-Python",
+  "description": "# Conversor de MKV para MP3 em Python  Este é um script Python simples e eficiente para extrair áudio de arquivos de vídeo MKV e convertê-los para o formato MP3. O projeto utiliza a biblioteca `moviepy` para realizar a conversão.  ## 📋 Funcionalidades  - **Conversão Individual**: Converta um único arquivo MKV para MP3. - **Conversão em Lote**.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Conversor-de-MKV-pra-MP3-em-Python",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2025-12-18T12:33:10Z",
+  "updatedAt": "2025-12-18T12:33:16Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 4,
+  "repoKey": "felipe-alcantara/conversor-de-mkv-pra-mp3-em-python",
+  "lastSyncedAt": "2026-04-14T20:00:56.173Z"
+}

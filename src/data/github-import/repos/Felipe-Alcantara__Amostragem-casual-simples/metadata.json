@@ -1,0 +1,22 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Amostragem-casual-simples",
+  "fullName": "Felipe-Alcantara/Amostragem-casual-simples",
+  "description": "📊 Descrição do Projeto: Técnicas de Amostragem em Python Visão Geral Este projeto é uma coleção educacional de scripts Python que demonstram e implementam três das principais técnicas de amostragem estatística de forma interativa e visual. Desenvolvido originalmente durante aulas de Estatística em setembro de 2024",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Amostragem-casual-simples",
+  "homepage": "",
+  "topics": [
+    "python"
+  ],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2024-09-03T21:57:20Z",
+  "updatedAt": "2025-10-31T05:16:07Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 2300,
+  "repoKey": "felipe-alcantara/amostragem-casual-simples",
+  "lastSyncedAt": "2026-04-14T20:00:56.173Z"
+}

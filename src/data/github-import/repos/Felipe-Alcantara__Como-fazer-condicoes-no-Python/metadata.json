@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Como-fazer-condicoes-no-Python",
+  "fullName": "Felipe-Alcantara/Como-fazer-condicoes-no-Python",
+  "description": "Exemplos de scripts Python que demonstram o uso de estruturas de controle de fluxo, como loops for e instruções if.  O primeiro script é mais complexo e envolve a manipulação de várias variáveis, listas e loops para realizar várias verificações e imprimir resultados com base nessas verificações.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Como-fazer-condicoes-no-Python",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2024-04-17T11:17:15Z",
+  "updatedAt": "2025-10-28T05:21:04Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 4,
+  "repoKey": "felipe-alcantara/como-fazer-condicoes-no-python",
+  "lastSyncedAt": "2026-04-14T20:00:56.173Z"
+}

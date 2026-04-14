@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Programacao-Orientada-A-Objeto-em-Python-Sistema-De-Streaming",
+  "fullName": "Felipe-Alcantara/Programacao-Orientada-A-Objeto-em-Python-Sistema-De-Streaming",
+  "description": "Este repositório contém um sistema de gerenciamento de clientes e filmes. O arquivo \"Cliente.py\" define uma classe `Cliente` que representa um cliente com atributos como nome, email, plano e idade.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Programacao-Orientada-A-Objeto-em-Python-Sistema-De-Streaming",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2024-04-26T01:08:10Z",
+  "updatedAt": "2024-05-01T20:41:52Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 26,
+  "repoKey": "felipe-alcantara/programacao-orientada-a-objeto-em-python-sistema-de-streaming",
+  "lastSyncedAt": "2026-04-14T20:00:56.173Z"
+}

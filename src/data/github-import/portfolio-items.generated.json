@@ -27,6 +27,33 @@
     "repoFolder": "Felipe-Alcantara__Felixo-System-Design"
   },
   {
+    "title": "FelixoVerse",
+    "tag": "code",
+    "desc": "🚀 Hub de criadores digitais: competições, eventos e gamificação. FelixoVerse é um ecossistema digital colaborativo que conecta criadores de  arte, música, programação e games através de competições, eventos e um  sistema de badges/conquistas. Mais que um servidor de Discord — é uma  plataforma de oportunidades onde talento encontra visibilidade.",
+    "link": "https://github.com/Felipe-Alcantara/FelixoVerse",
+    "createdAt": "2026-03-02T04:44:19Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "code"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Grande",
+      "online": false,
+      "techPercentage": {}
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/FelixoVerse",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/felixoverse",
+    "repoFolder": "Felipe-Alcantara__FelixoVerse"
+  },
+  {
     "title": "Felixo Time Tracker",
     "tag": "web",
     "desc": "README (breve — para usar no repo)  Título: felixo-timetracker Tagline: Ferramenta modular para marcar e analisar o tempo por categorias aninhadas, tasks e tags. O que é: Aplicação full-stack (backend Python, frontend React) para registrar sessões de trabalho/estudo/lazer, com suporte para categorias dentro de categorias, tags e exportação CSV",
@@ -192,6 +219,74 @@
     "repoFolder": "Felipe-Alcantara__Youtube-Downloader-Tampermonkey"
   },
   {
+    "title": "Verstappen",
+    "tag": "web",
+    "desc": "Verstappen é um sistema de verificação de cartões de crédito que combina uma API backend em Python (FastAPI) com interface web em React.",
+    "link": "https://github.com/Felipe-Alcantara/verstappen",
+    "createdAt": "2026-01-30T07:51:00Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python",
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 73,
+        "JavaScript": 17,
+        "CSS": 6,
+        "HTML": 4
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/verstappen",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/verstappen",
+    "repoFolder": "Felipe-Alcantara__verstappen"
+  },
+  {
+    "title": "Presente DE Anivers Rio Gemini 2.0",
+    "tag": "web",
+    "desc": "Sem descrição",
+    "link": "https://github.com/Felipe-Alcantara/Presente-de-anivers-rio-Gemini-2.0",
+    "createdAt": "2026-01-10T18:58:52Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "JavaScript": 77,
+        "CSS": 17,
+        "HTML": 6
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Presente-de-anivers-rio-Gemini-2.0",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/presente-de-anivers-rio-gemini-2.0",
+    "repoFolder": "Felipe-Alcantara__Presente-de-anivers-rio-Gemini-2.0"
+  },
+  {
     "title": "Felipe Portifolio",
     "tag": "web",
     "desc": "Um hub criativo em React que conecta código, música e projetos colaborativos. Este repositório serve como base inicial para o FelixoVerse, explorando design moderno, animações e uma estrutura flexível para crescimento contínuo.",
@@ -287,6 +382,37 @@
     "repoFolder": "Felipe-Alcantara__Reading-Tracker"
   },
   {
+    "title": "LM Consultoria Imobili Ria Controle DE Captacao",
+    "tag": "web",
+    "desc": "Aplicação web para registro e gerenciamento de captações imobiliárias, permitindo armazenar informações como código do imóvel, tipo (venda ou locação), responsável pela captação e arquivos relacionados. Desenvolvido inicialmente para uso interno da equipe, o sistema oferece uma interface simples e objetiva com foco em organização e produtividade.",
+    "link": "https://github.com/Felipe-Alcantara/LM-consultoria-imobili-ria-Controle-de-Captacao",
+    "createdAt": "2026-01-04T17:52:24Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Médio",
+      "online": false,
+      "techPercentage": {
+        "Python": 52,
+        "HTML": 48
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/LM-consultoria-imobili-ria-Controle-de-Captacao",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/lm-consultoria-imobili-ria-controle-de-captacao",
+    "repoFolder": "Felipe-Alcantara__LM-consultoria-imobili-ria-Controle-de-Captacao"
+  },
+  {
     "title": "Zip Extractor",
     "tag": "python",
     "desc": "automatiza o fluxo completo de ingestão e descompactação de arquivos ZIP, desde a detecção/baixamento até a validação e extração em um destino organizado. Ele resolve problemas comuns como arquivos duplicados, downloads interrompidos e extração parcial, fornecendo relatórios e logs para auditoria",
@@ -345,6 +471,287 @@
     "repoFolder": "Felipe-Alcantara__Page-Context-IA"
   },
   {
+    "title": "Organizador DE Presentes DO Felixo",
+    "tag": "web",
+    "desc": "Um projeto simples e funcional desenvolvido em HTML, CSS e JavaScript para ajudar na organização de ideias de presentes. A aplicação roda localmente, sem necessidade de servidor ou banco de dados externo, utilizando LocalStorage do navegador para salvar os dados.",
+    "link": "https://github.com/Felipe-Alcantara/Organizador-de-presentes-do-Felixo",
+    "createdAt": "2025-12-19T05:02:47Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "HTML": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Organizador-de-presentes-do-Felixo",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/organizador-de-presentes-do-felixo",
+    "repoFolder": "Felipe-Alcantara__Organizador-de-presentes-do-Felixo"
+  },
+  {
+    "title": "Following Link",
+    "tag": "python",
+    "desc": "# Following Link  🔗 Script Python para extrair os links de todos os perfis que você segue no GitHub.  ## 📋 Descrição  Este script faz scraping da sua página \"following\" no GitHub e extrai os links de todos os perfis que você segue, salvando-os em arquivos de texto e JSON.",
+    "link": "https://github.com/Felipe-Alcantara/following-Link",
+    "createdAt": "2025-12-18T12:36:18Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/following-Link",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/following-link",
+    "repoFolder": "Felipe-Alcantara__following-Link"
+  },
+  {
+    "title": "Conversor DE MKV Pra MP3 EM Python",
+    "tag": "python",
+    "desc": "# Conversor de MKV para MP3 em Python  Este é um script Python simples e eficiente para extrair áudio de arquivos de vídeo MKV e convertê-los para o formato MP3. O projeto utiliza a biblioteca `moviepy` para realizar a conversão.  ## 📋 Funcionalidades  - **Conversão Individual**: Converta um único arquivo MKV para MP3. - **Conversão em Lote**.",
+    "link": "https://github.com/Felipe-Alcantara/Conversor-de-MKV-pra-MP3-em-Python",
+    "createdAt": "2025-12-18T12:33:10Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Conversor-de-MKV-pra-MP3-em-Python",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/conversor-de-mkv-pra-mp3-em-python",
+    "repoFolder": "Felipe-Alcantara__Conversor-de-MKV-pra-MP3-em-Python"
+  },
+  {
+    "title": "Cardshot Roulette",
+    "tag": "web",
+    "desc": "Cardshot Roulette é um jogo de cartas experimental inspirado no conceito de Buckshot Roulette, recriado em um formato leve e acessível para navegador.  Desenvolvido apenas com HTML, CSS e JavaScript — utilizando Vite, React e TailwindCSS — o projeto oferece uma experiência \"pass-and-play\".",
+    "link": "https://github.com/Felipe-Alcantara/Cardshot-Roulette",
+    "createdAt": "2025-12-18T12:22:41Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "JavaScript": 96,
+        "CSS": 3,
+        "HTML": 1
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Cardshot-Roulette",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/cardshot-roulette",
+    "repoFolder": "Felipe-Alcantara__Cardshot-Roulette"
+  },
+  {
+    "title": "API Test",
+    "tag": "web",
+    "desc": "# API Test - Interface de Chat para Google Gemini  Este projeto é uma interface web simples e leve para testar e interagir com a API do Google Gemini (Generative AI). Desenvolvido em um único arquivo HTML, ele permite conversar com diferentes modelos do Gemini diretamente do seu navegador.",
+    "link": "https://github.com/Felipe-Alcantara/API-Test",
+    "createdAt": "2025-12-18T12:06:33Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "HTML": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/API-Test",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/api-test",
+    "repoFolder": "Felipe-Alcantara__API-Test"
+  },
+  {
+    "title": "Pitch Cents Align Tuner",
+    "tag": "web",
+    "desc": "Pitch Cents Align Tuner é uma ferramenta pensada para produtores, sound designers e músicos que trabalham com samples vindos de múltiplas fontes e precisam alinhá-los rapidamente à tonalidade da música. Em vez de tentar adivinhar na orelha ou ajustar sem critério, o Pitch Cents Align Tuner calcula automaticamente quantos cents",
+    "link": "https://github.com/Felipe-Alcantara/Pitch-Cents-Align-Tuner",
+    "createdAt": "2025-12-09T01:32:15Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python",
+      "HTML",
+      "CSS"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 52,
+        "HTML": 29,
+        "CSS": 19
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Pitch-Cents-Align-Tuner",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/pitch-cents-align-tuner",
+    "repoFolder": "Felipe-Alcantara__Pitch-Cents-Align-Tuner"
+  },
+  {
+    "title": "Jogo DA Velha",
+    "tag": "web",
+    "desc": "Sem descrição",
+    "link": "https://github.com/Felipe-Alcantara/jogo-da-velha",
+    "createdAt": "2025-11-25T18:49:46Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "JavaScript": 60,
+        "HTML": 23,
+        "CSS": 17
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/jogo-da-velha",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/jogo-da-velha",
+    "repoFolder": "Felipe-Alcantara__jogo-da-velha"
+  },
+  {
+    "title": "Advice App",
+    "tag": "web",
+    "desc": "Sem descrição",
+    "link": "https://github.com/Felipe-Alcantara/advice-app",
+    "createdAt": "2025-11-21T06:24:35Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "CSS",
+      "JavaScript",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "CSS": 46,
+        "JavaScript": 33,
+        "HTML": 21
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/advice-app",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/advice-app",
+    "repoFolder": "Felipe-Alcantara__advice-app"
+  },
+  {
+    "title": "IM Gatito",
+    "tag": "web",
+    "desc": "Im Gatito - Site Fofo com Gatinho Dançando  Um site rosa e encantador com um gatinho dançando ao som de música, corações flutuantes e controle de volume. Perfeito para relaxar e sorrir!  ## Funcionalidades - Gatinho animado com efeito neon. - Música em looping automático. - Controle de volume deslizante. - Corações flutuantes.  ## Como Usar 1.",
+    "link": "https://github.com/Felipe-Alcantara/im-gatito",
+    "createdAt": "2025-11-14T04:44:39Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "CSS",
+      "JavaScript",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Grande",
+      "online": false,
+      "techPercentage": {
+        "CSS": 53,
+        "JavaScript": 31,
+        "HTML": 16
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/im-gatito",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/im-gatito",
+    "repoFolder": "Felipe-Alcantara__im-gatito"
+  },
+  {
     "title": "Git Hub Repositories",
     "tag": "web",
     "desc": "Dashboard visual para organizar e gerenciar projetos GitHub com localStorage, filtros avançados, visualização Kanban e import/export JSON. Deploy pronto para GitHub Pages!",
@@ -378,6 +785,283 @@
     },
     "repoKey": "felipe-alcantara/git-hub-repositories",
     "repoFolder": "Felipe-Alcantara__Git-Hub-Repositories"
+  },
+  {
+    "title": "Iris Cherry Hair",
+    "tag": "web",
+    "desc": "Site institucional para “Íris — Cherry Hair”: uma landing page responsiva e coquette que apresenta serviços, preços, portfólio de antes/depois, depoimentos e agendamento via WhatsApp. Feito para destacar tratamentos e colorações personalizados, com foco em experiência do cliente e identidade visual delicada e moderna.",
+    "link": "https://github.com/Felipe-Alcantara/Iris---Cherry-Hair",
+    "createdAt": "2025-10-08T06:24:34Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "CSS",
+      "HTML",
+      "JavaScript"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Médio",
+      "online": false,
+      "techPercentage": {
+        "CSS": 55,
+        "HTML": 38,
+        "JavaScript": 7
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Iris---Cherry-Hair",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/iris---cherry-hair",
+    "repoFolder": "Felipe-Alcantara__Iris---Cherry-Hair"
+  },
+  {
+    "title": "For Iris Hub",
+    "tag": "web",
+    "desc": "For Iris Hub é um portal pessoal que reúne meus projetos e criações feitas para a Íris — desde mini-jogos e sites temáticos até textos e experimentos interativos. O objetivo é manter tudo organizado em um único repositório hospedado via GitHub Pages, com pastas separadas para cada projeto e workflows automáticos para build/deploy",
+    "link": "https://github.com/Felipe-Alcantara/For-Iris-Hub",
+    "createdAt": "2025-10-03T18:57:53Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "JavaScript"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "JavaScript": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/For-Iris-Hub",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/for-iris-hub",
+    "repoFolder": "Felipe-Alcantara__For-Iris-Hub"
+  },
+  {
+    "title": "IF",
+    "tag": "code",
+    "desc": "Presentinho",
+    "link": "https://github.com/Felipe-Alcantara/IF",
+    "createdAt": "2025-09-17T00:00:11Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "code"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {}
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/IF",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/if",
+    "repoFolder": "Felipe-Alcantara__IF"
+  },
+  {
+    "title": "SpicyGame",
+    "tag": "web",
+    "desc": "Jogo web de casal com “Eu Nunca”, “Quem é Mais Provável” e “Verdade ou Desafio”. Sem anúncios, visual vermelho e cartas personalizáveis. React + Vite + Tailwind.",
+    "link": "https://github.com/Felipe-Alcantara/SpicyGame",
+    "createdAt": "2025-09-03T10:15:57Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "TypeScript",
+      "HTML",
+      "JavaScript",
+      "CSS"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Grande",
+      "online": false,
+      "techPercentage": {
+        "TypeScript": 99,
+        "HTML": 1,
+        "JavaScript": 0,
+        "CSS": 0
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/SpicyGame",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/spicygame",
+    "repoFolder": "Felipe-Alcantara__SpicyGame"
+  },
+  {
+    "title": "ConceitosBasicosCSharp",
+    "tag": "csharp",
+    "desc": " Exercícios slides Introdução a POO",
+    "link": "https://github.com/Felipe-Alcantara/ConceitosBasicosCSharp",
+    "createdAt": "2025-05-06T02:33:38Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "C#"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Médio",
+      "online": false,
+      "techPercentage": {
+        "C#": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/ConceitosBasicosCSharp",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/conceitosbasicoscsharp",
+    "repoFolder": "Felipe-Alcantara__ConceitosBasicosCSharp"
+  },
+  {
+    "title": "WishBoard",
+    "tag": "web",
+    "desc": "Gerenciador de wishlists em estilo Kanban, integrado a Python/Django para exportar dados.",
+    "link": "https://github.com/Felipe-Alcantara/WishBoard",
+    "createdAt": "2025-04-12T08:24:24Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 81,
+        "JavaScript": 11,
+        "HTML": 4,
+        "CSS": 4
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/WishBoard",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/wishboard",
+    "repoFolder": "Felipe-Alcantara__WishBoard"
+  },
+  {
+    "title": "Curso EM Video Curso DE HTML",
+    "tag": "web",
+    "desc": "Aula 100% prática de HTML5 com CSS3. Conheça as tags básicas e saiba como criar um documento no novo padrão.",
+    "link": "https://github.com/Felipe-Alcantara/Curso-em-Video---Curso-de-HTML",
+    "createdAt": "2025-04-09T06:21:22Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "HTML": 79,
+        "CSS": 21
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Curso-em-Video---Curso-de-HTML",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/curso-em-video---curso-de-html",
+    "repoFolder": "Felipe-Alcantara__Curso-em-Video---Curso-de-HTML"
+  },
+  {
+    "title": "Curso DE HTML Completo Programacao Web",
+    "tag": "web",
+    "desc": "Sem descrição",
+    "link": "https://github.com/Felipe-Alcantara/Curso-de-HTML-Completo-Programacao-Web",
+    "createdAt": "2025-04-09T03:04:30Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Grande",
+      "online": false,
+      "techPercentage": {
+        "HTML": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Curso-de-HTML-Completo-Programacao-Web",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/curso-de-html-completo-programacao-web",
+    "repoFolder": "Felipe-Alcantara__Curso-de-HTML-Completo-Programacao-Web"
+  },
+  {
+    "title": "Cassino DO Felixo",
+    "tag": "web",
+    "desc": "Sem descrição",
+    "link": "https://github.com/Felipe-Alcantara/Cassino-do-felixo",
+    "createdAt": "2024-12-29T19:29:12Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "HTML": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Cassino-do-felixo",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/cassino-do-felixo",
+    "repoFolder": "Felipe-Alcantara__Cassino-do-felixo"
   },
   {
     "title": "SoundScraper Soundcloud Track Scraper Downloader",
@@ -415,6 +1099,35 @@
     "repoFolder": "Felipe-Alcantara__SoundScraper-soundcloud_track_scraper_downloader"
   },
   {
+    "title": "Exemplos Clean Code",
+    "tag": "python",
+    "desc": "Exemplos do livro do Cleancode",
+    "link": "https://github.com/Felipe-Alcantara/Exemplos_Clean_Code",
+    "createdAt": "2024-10-06T22:41:15Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Exemplos_Clean_Code",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/exemplos_clean_code",
+    "repoFolder": "Felipe-Alcantara__Exemplos_Clean_Code"
+  },
+  {
     "title": "Time Divider Clock Interface Python",
     "tag": "python",
     "desc": "Time Divider é um programa em Python que ajuda você a dividir o seu tempo disponível entre várias atividades e visualizar essa distribuição em um gráfico em forma de relógio. Ideal para planejamento pessoal e gerenciamento eficiente do tempo.",
@@ -442,6 +1155,445 @@
     },
     "repoKey": "felipe-alcantara/time_divider_clock_interface_python",
     "repoFolder": "Felipe-Alcantara__Time_Divider_Clock_Interface_Python"
+  },
+  {
+    "title": "Amostragem Casual Simples",
+    "tag": "web",
+    "desc": "📊 Descrição do Projeto: Técnicas de Amostragem em Python Visão Geral Este projeto é uma coleção educacional de scripts Python que demonstram e implementam três das principais técnicas de amostragem estatística de forma interativa e visual. Desenvolvido originalmente durante aulas de Estatística em setembro de 2024",
+    "link": "https://github.com/Felipe-Alcantara/Amostragem-casual-simples",
+    "createdAt": "2024-09-03T21:57:20Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "python",
+      "CSS",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Médio",
+      "online": false,
+      "techPercentage": {
+        "Python": 58,
+        "CSS": 22,
+        "HTML": 20
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Amostragem-casual-simples",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/amostragem-casual-simples",
+    "repoFolder": "Felipe-Alcantara__Amostragem-casual-simples"
+  },
+  {
+    "title": "Automacao EM Python E Desenvolvimento DE Interfaces Graficas Com PySimpleGUI",
+    "tag": "python",
+    "desc": "Interface de um robô que entre em um email, baixa as mensagens em anexo salvando numa pasta.",
+    "link": "https://github.com/Felipe-Alcantara/Automacao-em-python-e-desenvolvimento-de-interfaces-graficas-com-PySimpleGUI",
+    "createdAt": "2024-05-19T06:40:31Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Automacao-em-python-e-desenvolvimento-de-interfaces-graficas-com-PySimpleGUI",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/automacao-em-python-e-desenvolvimento-de-interfaces-graficas-com-pysimplegui",
+    "repoFolder": "Felipe-Alcantara__Automacao-em-python-e-desenvolvimento-de-interfaces-graficas-com-PySimpleGUI"
+  },
+  {
+    "title": "Programacao Orientada A Objetos Com Python E Dataclass",
+    "tag": "python",
+    "desc": "Este repositório contém um sistema simples de gerenciamento de finanças pessoais, desenvolvido em Python. Ele permite que os usuários registrem suas transações financeiras, categorizem-nas e calculem seu saldo total. Além disso, cada transação e o saldo total são automaticamente salvos em um arquivo de texto.",
+    "link": "https://github.com/Felipe-Alcantara/Programacao-Orientada-a-Objetos-com-Python-e-Dataclass",
+    "createdAt": "2024-05-14T15:47:33Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Programacao-Orientada-a-Objetos-com-Python-e-Dataclass",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/programacao-orientada-a-objetos-com-python-e-dataclass",
+    "repoFolder": "Felipe-Alcantara__Programacao-Orientada-a-Objetos-com-Python-e-Dataclass"
+  },
+  {
+    "title": "Aprendendo Orientacao A Objeto EM Python",
+    "tag": "python",
+    "desc": "Este código define uma classe `Email` em Python que armazena informações de email, incluindo o nome do usuário, o endereço de email e o servidor de email. Ele também possui um método para imprimir o servidor de email. Uma instância da classe é criada e o método para imprimir o servidor de email é chamado.",
+    "link": "https://github.com/Felipe-Alcantara/Aprendendo-Orientacao-a-objeto-em-python",
+    "createdAt": "2024-05-07T14:13:01Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Aprendendo-Orientacao-a-objeto-em-python",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/aprendendo-orientacao-a-objeto-em-python",
+    "repoFolder": "Felipe-Alcantara__Aprendendo-Orientacao-a-objeto-em-python"
+  },
+  {
+    "title": "Programacao Orientada A Objeto EM Python Sistema Bancario",
+    "tag": "python",
+    "desc": "Este é um código Python que implementa um sistema bancário simples. Ele define classes para `Cliente`, `Conta`, `ContaCorrente` e `ContaPoupanca`. Os clientes podem abrir contas correntes ou poupanças, realizar depósitos e saques, e as transações são registradas. A `ContaPoupanca` também tem a capacidade de calcular juros.",
+    "link": "https://github.com/Felipe-Alcantara/Programacao-Orientada-A-Objeto-em-Python-Sistema-Bancario",
+    "createdAt": "2024-04-26T02:07:51Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Programacao-Orientada-A-Objeto-em-Python-Sistema-Bancario",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/programacao-orientada-a-objeto-em-python-sistema-bancario",
+    "repoFolder": "Felipe-Alcantara__Programacao-Orientada-A-Objeto-em-Python-Sistema-Bancario"
+  },
+  {
+    "title": "Programacao Orientada A Objeto EM Python Sistema DE Streaming",
+    "tag": "python",
+    "desc": "Este repositório contém um sistema de gerenciamento de clientes e filmes. O arquivo \"Cliente.py\" define uma classe `Cliente` que representa um cliente com atributos como nome, email, plano e idade.",
+    "link": "https://github.com/Felipe-Alcantara/Programacao-Orientada-A-Objeto-em-Python-Sistema-De-Streaming",
+    "createdAt": "2024-04-26T01:08:10Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Programacao-Orientada-A-Objeto-em-Python-Sistema-De-Streaming",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/programacao-orientada-a-objeto-em-python-sistema-de-streaming",
+    "repoFolder": "Felipe-Alcantara__Programacao-Orientada-A-Objeto-em-Python-Sistema-De-Streaming"
+  },
+  {
+    "title": "Cookie Counter Automation",
+    "tag": "web",
+    "desc": "These updates enhance the functionality of your repository and provide different options for automating Cookie Clicker, making it a valuable resource for anyone interested in game automation. ",
+    "link": "https://github.com/Felipe-Alcantara/Cookie-counter-automation",
+    "createdAt": "2024-04-17T19:49:56Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python",
+      "JavaScript"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 55,
+        "JavaScript": 45
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Cookie-counter-automation",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/cookie-counter-automation",
+    "repoFolder": "Felipe-Alcantara__Cookie-counter-automation"
+  },
+  {
+    "title": "Diferenca Entre Classe Objeto E Instancia EM Python",
+    "tag": "python",
+    "desc": "Este código é um exemplo simples de como definir uma classe em Python, criar uma instância dessa classe e realizar uma operação básica de string. Espero que isso ajude! Se você tiver mais perguntas, fique à vontade para perguntar.",
+    "link": "https://github.com/Felipe-Alcantara/Diferenca-entre-Classe-Objeto-e-Instancia-em-Python",
+    "createdAt": "2024-04-17T19:15:27Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Diferenca-entre-Classe-Objeto-e-Instancia-em-Python",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/diferenca-entre-classe-objeto-e-instancia-em-python",
+    "repoFolder": "Felipe-Alcantara__Diferenca-entre-Classe-Objeto-e-Instancia-em-Python"
+  },
+  {
+    "title": "Classes E Programacao Orientada A Objetos EM Python",
+    "tag": "python",
+    "desc": "Esses dois códigos estão relacionados à gestão de vendas e avaliação de desempenho de vendedores. O primeiro define uma classe chamada Vendedor com métodos para registrar vendas e verificar se um vendedor atingiu uma meta específica.",
+    "link": "https://github.com/Felipe-Alcantara/Classes-e-Programacao-Orientada-a-Objetos-em-Python",
+    "createdAt": "2024-04-17T11:55:42Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Classes-e-Programacao-Orientada-a-Objetos-em-Python",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/classes-e-programacao-orientada-a-objetos-em-python",
+    "repoFolder": "Felipe-Alcantara__Classes-e-Programacao-Orientada-a-Objetos-em-Python"
+  },
+  {
+    "title": "Como Fazer Condicoes NO Python",
+    "tag": "python",
+    "desc": "Exemplos de scripts Python que demonstram o uso de estruturas de controle de fluxo, como loops for e instruções if.  O primeiro script é mais complexo e envolve a manipulação de várias variáveis, listas e loops para realizar várias verificações e imprimir resultados com base nessas verificações.",
+    "link": "https://github.com/Felipe-Alcantara/Como-fazer-condicoes-no-Python",
+    "createdAt": "2024-04-17T11:17:15Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Como-fazer-condicoes-no-Python",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/como-fazer-condicoes-no-python",
+    "repoFolder": "Felipe-Alcantara__Como-fazer-condicoes-no-Python"
+  },
+  {
+    "title": "Python Classes E Metodos",
+    "tag": "python",
+    "desc": "Os três códigos são exemplos de como usar a programação orientada a objetos em Python para modelar entidades do mundo real, como carros e computadores. Cada código define uma classe com atributos específicos e métodos que operam nesses atributos.",
+    "link": "https://github.com/Felipe-Alcantara/Python-Classes-e-Metodos",
+    "createdAt": "2024-04-17T07:22:27Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Python-Classes-e-Metodos",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/python-classes-e-metodos",
+    "repoFolder": "Felipe-Alcantara__Python-Classes-e-Metodos"
+  },
+  {
+    "title": "Animacao Usando JavaScript",
+    "tag": "code",
+    "desc": "Este algoritmo JavaScript cria uma animação de uma bola quicando em uma tela. Ele começa selecionando o elemento canvas na página e obtendo seu contexto de desenho 2D. Em seguida, define a largura e a altura do canvas para corresponder à largura e à altura da janela do navegador.",
+    "link": "https://github.com/Felipe-Alcantara/Animacao-usando-JavaScript",
+    "createdAt": "2024-04-17T06:27:49Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "code"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {}
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Animacao-usando-JavaScript",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/animacao-usando-javascript",
+    "repoFolder": "Felipe-Alcantara__Animacao-usando-JavaScript"
+  },
+  {
+    "title": "Aprendendo Logica DE Programacao DE Listas EM Python",
+    "tag": "python",
+    "desc": "Este algoritmo é um exemplo simples de como manipular listas e tuplas em Python.",
+    "link": "https://github.com/Felipe-Alcantara/Aprendendo-logica-de-programacao-de-listas-em-python",
+    "createdAt": "2024-04-17T06:05:15Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Aprendendo-logica-de-programacao-de-listas-em-python",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/aprendendo-logica-de-programacao-de-listas-em-python",
+    "repoFolder": "Felipe-Alcantara__Aprendendo-logica-de-programacao-de-listas-em-python"
+  },
+  {
+    "title": "Python Variaveis Como Declarar E Utilizar Nos Scripts",
+    "tag": "python",
+    "desc": "Este código é um exemplo básico de como manipular diferentes tipos de dados em Python. Ele demonstra a declaração de variáveis, impressão de valores e tipos de variáveis, e a conversão entre diferentes tipos de dados. Além disso, ele mostra como solicitar a entrada do usuário e trabalhar com valores booleanos.",
+    "link": "https://github.com/Felipe-Alcantara/Python-Variaveis-Como-declarar-e-utilizar-nos-scripts",
+    "createdAt": "2024-04-17T05:43:24Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Python-Variaveis-Como-declarar-e-utilizar-nos-scripts",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/python-variaveis-como-declarar-e-utilizar-nos-scripts",
+    "repoFolder": "Felipe-Alcantara__Python-Variaveis-Como-declarar-e-utilizar-nos-scripts"
+  },
+  {
+    "title": "Aprendendo A Fazer Bots DO Discord",
+    "tag": "python",
+    "desc": "Bots do discord que estou aprendendo a fazer",
+    "link": "https://github.com/Felipe-Alcantara/Aprendendo-a-fazer-bots-do-discord",
+    "createdAt": "2024-04-04T04:02:58Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Aprendendo-a-fazer-bots-do-discord",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/aprendendo-a-fazer-bots-do-discord",
+    "repoFolder": "Felipe-Alcantara__Aprendendo-a-fazer-bots-do-discord"
   },
   {
     "title": "Indentificador Numerico",
@@ -502,6 +1654,93 @@
     "repoFolder": "Felipe-Alcantara__Gerador-de-CPF-valido-em-Python"
   },
   {
+    "title": "Calcular Area Irregular Sorteando Pontos Aleatorios",
+    "tag": "python",
+    "desc": "Esses códigos são parte de um programa em python de desenho interativo que permite ao usuário criar formas na tela usando o mouse e calcular a área. Esses códigos demonstram como a biblioteca `tkinter` do Python pode ser usada para criar programas de desenho interativos.",
+    "link": "https://github.com/Felipe-Alcantara/Calcular-area-irregular-sorteando-pontos-aleatorios",
+    "createdAt": "2024-03-27T18:23:41Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Calcular-area-irregular-sorteando-pontos-aleatorios",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/calcular-area-irregular-sorteando-pontos-aleatorios",
+    "repoFolder": "Felipe-Alcantara__Calcular-area-irregular-sorteando-pontos-aleatorios"
+  },
+  {
+    "title": "Meu Jogo",
+    "tag": "python",
+    "desc": "Um jogo de cartas baseado em buckshoot roulette que eu estou fazendo em python",
+    "link": "https://github.com/Felipe-Alcantara/Meu-jogo",
+    "createdAt": "2024-03-26T20:43:44Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Meu-jogo",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/meu-jogo",
+    "repoFolder": "Felipe-Alcantara__Meu-jogo"
+  },
+  {
+    "title": "Importando Bibliotecas",
+    "tag": "python",
+    "desc": "Projeto que eu fiz quando estava aprendendo a usar bibliotecas em python",
+    "link": "https://github.com/Felipe-Alcantara/Importando-bibliotecas",
+    "createdAt": "2024-03-26T19:57:45Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Importando-bibliotecas",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/importando-bibliotecas",
+    "repoFolder": "Felipe-Alcantara__Importando-bibliotecas"
+  },
+  {
     "title": "Cifra DE Cesar EM Python",
     "tag": "python",
     "desc": "Um programa em python para criar uma cifra de cesar",
@@ -531,6 +1770,93 @@
     "repoFolder": "Felipe-Alcantara__Cifra-de-cesar-em-python"
   },
   {
+    "title": "Trabalho DA Faculdade",
+    "tag": "python",
+    "desc": "Trabalho da faculdade de programação, exercícios do livro de python",
+    "link": "https://github.com/Felipe-Alcantara/Trabalho-da-faculdade",
+    "createdAt": "2024-03-26T09:37:10Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Trabalho-da-faculdade",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/trabalho-da-faculdade",
+    "repoFolder": "Felipe-Alcantara__Trabalho-da-faculdade"
+  },
+  {
+    "title": "Soma EM Serie",
+    "tag": "python",
+    "desc": "Este código Python calcula a soma da série 1 + (2*0 - 1) + (2*1 - 1) + (2*2 - 1) + ... + (2*n - 1).  ",
+    "link": "https://github.com/Felipe-Alcantara/Soma-em-serie",
+    "createdAt": "2024-03-26T09:21:44Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Soma-em-serie",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/soma-em-serie",
+    "repoFolder": "Felipe-Alcantara__Soma-em-serie"
+  },
+  {
+    "title": "Curso EM Video",
+    "tag": "python",
+    "desc": "Meus projetos do Curso em vídeo",
+    "link": "https://github.com/Felipe-Alcantara/Curso-em-video",
+    "createdAt": "2024-03-26T09:16:05Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Curso-em-video",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/curso-em-video",
+    "repoFolder": "Felipe-Alcantara__Curso-em-video"
+  },
+  {
     "title": "Desconto DE Salario EM Python",
     "tag": "python",
     "desc": "Um programinha que eu fiz quando estava aprendendo logica com alguns cálculos simples",
@@ -558,6 +1884,35 @@
     },
     "repoKey": "felipe-alcantara/desconto-de-salario-em-python",
     "repoFolder": "Felipe-Alcantara__Desconto-de-salario-em-python"
+  },
+  {
+    "title": "Identificador DE Str EM Python",
+    "tag": "python",
+    "desc": "Testando indentificadores de string",
+    "link": "https://github.com/Felipe-Alcantara/Identificador-de-str-em-python",
+    "createdAt": "2024-03-26T09:00:32Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Identificador-de-str-em-python",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/identificador-de-str-em-python",
+    "repoFolder": "Felipe-Alcantara__Identificador-de-str-em-python"
   },
   {
     "title": "Calcular Soma Com Funcao EM Python",
@@ -616,5 +1971,127 @@
     },
     "repoKey": "felipe-alcantara/calculadora-simples-em-python",
     "repoFolder": "Felipe-Alcantara__Calculadora-simples-em-python"
+  },
+  {
+    "title": "Scripts HTML",
+    "tag": "web",
+    "desc": "Meus projetos de estudo de HTML",
+    "link": "https://github.com/Felipe-Alcantara/Scripts-HTML",
+    "createdAt": "2024-03-26T08:24:35Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "HTML": 78,
+        "CSS": 22
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Scripts-HTML",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/scripts-html",
+    "repoFolder": "Felipe-Alcantara__Scripts-HTML"
+  },
+  {
+    "title": "MDN Web Docs",
+    "tag": "web",
+    "desc": "Projetos que eu fiz com o curso do MDN",
+    "link": "https://github.com/Felipe-Alcantara/MDN-Web-Docs",
+    "createdAt": "2024-03-26T08:20:30Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "HTML": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/MDN-Web-Docs",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/mdn-web-docs",
+    "repoFolder": "Felipe-Alcantara__MDN-Web-Docs"
+  },
+  {
+    "title": "Alura",
+    "tag": "web",
+    "desc": "Projetos que fiz no curso da Alura",
+    "link": "https://github.com/Felipe-Alcantara/Alura",
+    "createdAt": "2024-03-26T08:06:22Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "JavaScript",
+      "CSS",
+      "HTML",
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Grande",
+      "online": true,
+      "techPercentage": {
+        "JavaScript": 40,
+        "CSS": 31,
+        "HTML": 26,
+        "Python": 3
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Alura",
+      "site": "https://alura-jade-seven.vercel.app",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/alura",
+    "repoFolder": "Felipe-Alcantara__Alura"
+  },
+  {
+    "title": "Desktop Tutorial",
+    "tag": "code",
+    "desc": "GitHub Desktop tutorial repository",
+    "link": "https://github.com/Felipe-Alcantara/desktop-tutorial",
+    "createdAt": "2024-03-26T08:00:05Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "code"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {}
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/desktop-tutorial",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/desktop-tutorial",
+    "repoFolder": "Felipe-Alcantara__desktop-tutorial"
   }
 ]

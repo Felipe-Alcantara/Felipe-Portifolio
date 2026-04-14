@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "API-Test",
+  "fullName": "Felipe-Alcantara/API-Test",
+  "description": "# API Test - Interface de Chat para Google Gemini  Este projeto é uma interface web simples e leve para testar e interagir com a API do Google Gemini (Generative AI). Desenvolvido em um único arquivo HTML, ele permite conversar com diferentes modelos do Gemini diretamente do seu navegador.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/API-Test",
+  "homepage": "",
+  "topics": [],
+  "language": "HTML",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2025-12-18T12:06:33Z",
+  "updatedAt": "2025-12-18T12:10:28Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 6,
+  "repoKey": "felipe-alcantara/api-test",
+  "lastSyncedAt": "2026-04-14T20:00:56.173Z"
+}

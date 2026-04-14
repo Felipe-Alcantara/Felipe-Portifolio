@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "WishBoard",
+  "fullName": "Felipe-Alcantara/WishBoard",
+  "description": "Gerenciador de wishlists em estilo Kanban, integrado a Python/Django para exportar dados.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/WishBoard",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2025-04-12T08:24:24Z",
+  "updatedAt": "2025-04-12T08:24:30Z",
+  "defaultBranch": "Versão-atual!",
+  "archived": false,
+  "sizeKb": 60,
+  "repoKey": "felipe-alcantara/wishboard",
+  "lastSyncedAt": "2026-04-14T20:00:56.173Z"
+}
