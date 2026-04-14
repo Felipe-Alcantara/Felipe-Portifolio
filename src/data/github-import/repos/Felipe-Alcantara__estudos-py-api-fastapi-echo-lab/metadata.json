@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "estudos-py-api-fastapi-echo-lab",
+  "fullName": "Felipe-Alcantara/estudos-py-api-fastapi-echo-lab",
+  "description": "Projeto sandbox para aprender conceitos de arquitetura Cliente-Servidor e requisições HTTP usando Python. Uma API minimalista em FastAPI para testes de conectividade, validação de túneis e debugging de parâmetros HTTP (Echo). Ferramenta leve de backend para verificar status de servidores",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/estudos-py-api-fastapi-echo-lab",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2026-01-08T16:10:12Z",
+  "updatedAt": "2026-01-08T16:11:38Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 4,
+  "repoKey": "felipe-alcantara/estudos-py-api-fastapi-echo-lab",
+  "lastSyncedAt": "2026-04-14T19:06:49.512Z"
+}

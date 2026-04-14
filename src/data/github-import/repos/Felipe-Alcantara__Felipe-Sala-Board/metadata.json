@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Felipe-Sala-Board",
+  "fullName": "Felipe-Alcantara/Felipe-Sala-Board",
+  "description": "Uma plataforma leve e não-oficial para estudantes: centralize horários, avisos, entregas de trabalhos, enquetes e canais de estudo. O objetivo é aumentar o engajamento da turma com ferramentas simples — calendário compartilhado, mural de avisos, tracker de tarefas e integração com o Discord (ou link direto). Desenvolvido com foco em usabilidade",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Felipe-Sala-Board",
+  "homepage": "",
+  "topics": [],
+  "language": "TypeScript",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2026-02-23T05:50:59Z",
+  "updatedAt": "2026-03-16T06:35:59Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 6448,
+  "repoKey": "felipe-alcantara/felipe-sala-board",
+  "lastSyncedAt": "2026-04-14T19:06:49.512Z"
+}

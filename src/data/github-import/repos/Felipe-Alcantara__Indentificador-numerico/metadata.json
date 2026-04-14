@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Indentificador-numerico",
+  "fullName": "Felipe-Alcantara/Indentificador-numerico",
+  "description": "Este é um pequeno programa em Python que solicita ao usuário que insira um valor. Em seguida, ele verifica se o valor inserido é numérico ou não. Portanto, este código pode ser usado para verificar se uma entrada do usuário é um valor numérico ou não. É útil em situações onde você precisa garantir que o usuário inseriu um número.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Indentificador-numerico",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2024-03-27T20:49:46Z",
+  "updatedAt": "2026-04-11T19:25:19Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 5,
+  "repoKey": "felipe-alcantara/indentificador-numerico",
+  "lastSyncedAt": "2026-04-14T19:06:49.512Z"
+}

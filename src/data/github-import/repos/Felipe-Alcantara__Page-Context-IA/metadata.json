@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Page-Context-IA",
+  "fullName": "Felipe-Alcantara/Page-Context-IA",
+  "description": "Page Context IA é uma ferramenta projetada para capturar automaticamente o texto visível de qualquer página web, estruturar esse conteúdo em partes organizadas (chunks) e enviá-lo para um backend que realiza processamento com modelos de inteligência artificial. O objetivo é permitir consultas inteligentes sobre qualquer página visitada.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Page-Context-IA",
+  "homepage": "",
+  "topics": [],
+  "language": "JavaScript",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2025-12-19T05:08:31Z",
+  "updatedAt": "2025-12-19T05:08:37Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 5,
+  "repoKey": "felipe-alcantara/page-context-ia",
+  "lastSyncedAt": "2026-04-14T19:06:49.512Z"
+}

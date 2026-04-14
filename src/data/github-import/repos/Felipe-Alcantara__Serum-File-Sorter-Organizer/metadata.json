@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Serum-File-Sorter-Organizer",
+  "fullName": "Felipe-Alcantara/Serum-File-Sorter-Organizer",
+  "description": "Uma ferramenta de automação em Python projetada para reorganizar bibliotecas enormes de presets do Serum. Ela escaneia diretórios recursivamente, identifica tipos de instrumentos com base em padrões de nomes de arquivos (Baixo, Lead, Pad, etc.) e os consolida em uma estrutura de pastas organizada e categorizada, sem excluir os arquivos originais.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Serum-File-Sorter-Organizer",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 1,
+  "forks": 0,
+  "createdAt": "2026-02-03T16:27:19Z",
+  "updatedAt": "2026-02-03T21:00:30Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 88,
+  "repoKey": "felipe-alcantara/serum-file-sorter-organizer",
+  "lastSyncedAt": "2026-04-14T19:06:49.512Z"
+}

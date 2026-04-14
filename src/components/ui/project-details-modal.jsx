@@ -51,7 +51,7 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
   
   useEffect(() => {
     if (isOpen && project) {
-      loadReadme(project.title).then(setReadmeContent);
+      loadReadme(project).then(setReadmeContent);
     }
   }, [isOpen, project]);
 

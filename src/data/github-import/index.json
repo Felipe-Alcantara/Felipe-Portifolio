@@ -1,0 +1,779 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-04-14T19:06:49.512Z",
+  "username": "Felipe-Alcantara",
+  "authenticatedLogin": null,
+  "hasToken": false,
+  "maxRepos": 20,
+  "totals": {
+    "indexed": 20,
+    "active": 20,
+    "stale": 0,
+    "errors": 22
+  },
+  "errors": [
+    {
+      "stage": "languages",
+      "repoKey": "felipe-alcantara/soundscraper-soundcloud_track_scraper_downloader",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/SoundScraper-soundcloud_track_scraper_downloader/languages",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "readme",
+      "repoKey": "felipe-alcantara/soundscraper-soundcloud_track_scraper_downloader",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/SoundScraper-soundcloud_track_scraper_downloader/readme",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "languages",
+      "repoKey": "felipe-alcantara/time_divider_clock_interface_python",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Time_Divider_Clock_Interface_Python/languages",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "readme",
+      "repoKey": "felipe-alcantara/time_divider_clock_interface_python",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Time_Divider_Clock_Interface_Python/readme",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "languages",
+      "repoKey": "felipe-alcantara/felipe-sala-board",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Felipe-Sala-Board/languages",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "readme",
+      "repoKey": "felipe-alcantara/felipe-sala-board",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Felipe-Sala-Board/readme",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "languages",
+      "repoKey": "felipe-alcantara/felixo-time-tracker",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Felixo-Time-Tracker/languages",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "readme",
+      "repoKey": "felipe-alcantara/felixo-time-tracker",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Felixo-Time-Tracker/readme",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "languages",
+      "repoKey": "felipe-alcantara/cifra-de-cesar-em-python",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Cifra-de-cesar-em-python/languages",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "readme",
+      "repoKey": "felipe-alcantara/cifra-de-cesar-em-python",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Cifra-de-cesar-em-python/readme",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "languages",
+      "repoKey": "felipe-alcantara/serum-file-sorter-organizer",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Serum-File-Sorter-Organizer/languages",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "readme",
+      "repoKey": "felipe-alcantara/serum-file-sorter-organizer",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Serum-File-Sorter-Organizer/readme",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "languages",
+      "repoKey": "felipe-alcantara/o-fogo-do-doom",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/O-Fogo-do-DOOM/languages",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "readme",
+      "repoKey": "felipe-alcantara/o-fogo-do-doom",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/O-Fogo-do-DOOM/readme",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "languages",
+      "repoKey": "felipe-alcantara/youtube-downloader-tampermonkey",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Youtube-Downloader-Tampermonkey/languages",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "readme",
+      "repoKey": "felipe-alcantara/youtube-downloader-tampermonkey",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Youtube-Downloader-Tampermonkey/readme",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "languages",
+      "repoKey": "felipe-alcantara/estudos-py-api-fastapi-echo-lab",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/estudos-py-api-fastapi-echo-lab/languages",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "readme",
+      "repoKey": "felipe-alcantara/estudos-py-api-fastapi-echo-lab",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/estudos-py-api-fastapi-echo-lab/readme",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "languages",
+      "repoKey": "felipe-alcantara/zip-extractor",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Zip-Extractor/languages",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "readme",
+      "repoKey": "felipe-alcantara/zip-extractor",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Zip-Extractor/readme",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "languages",
+      "repoKey": "felipe-alcantara/page-context-ia",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Page-Context-IA/languages",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    },
+    {
+      "stage": "readme",
+      "repoKey": "felipe-alcantara/page-context-ia",
+      "code": "GITHUB_FORBIDDEN",
+      "status": 403,
+      "message": "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+      "endpoint": "/repos/Felipe-Alcantara/Page-Context-IA/readme",
+      "rateLimit": {
+        "remaining": 0,
+        "limit": 60,
+        "reset": 1776197128
+      },
+      "retriable": false
+    }
+  ],
+  "repositories": [
+    {
+      "key": "felipe-alcantara/felixo-system-design",
+      "owner": "Felipe-Alcantara",
+      "name": "Felixo-System-Design",
+      "fullName": "Felipe-Alcantara/Felixo-System-Design",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Felixo-System-Design",
+      "private": false,
+      "createdAt": "2026-03-12T02:39:12Z",
+      "updatedAt": "2026-04-14T14:37:25Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Felixo-System-Design",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/felipe-portifolio",
+      "owner": "Felipe-Alcantara",
+      "name": "Felipe-Portifolio",
+      "fullName": "Felipe-Alcantara/Felipe-Portifolio",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Felipe-Portifolio",
+      "private": false,
+      "createdAt": "2026-01-08T17:54:47Z",
+      "updatedAt": "2026-04-14T13:57:29Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Felipe-Portifolio",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/indentificador-numerico",
+      "owner": "Felipe-Alcantara",
+      "name": "Indentificador-numerico",
+      "fullName": "Felipe-Alcantara/Indentificador-numerico",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Indentificador-numerico",
+      "private": false,
+      "createdAt": "2024-03-27T20:49:46Z",
+      "updatedAt": "2026-04-11T19:25:19Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Indentificador-numerico",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/desconto-de-salario-em-python",
+      "owner": "Felipe-Alcantara",
+      "name": "Desconto-de-salario-em-python",
+      "fullName": "Felipe-Alcantara/Desconto-de-salario-em-python",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Desconto-de-salario-em-python",
+      "private": false,
+      "createdAt": "2024-03-26T09:13:42Z",
+      "updatedAt": "2026-04-11T18:04:12Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Desconto-de-salario-em-python",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/calcular-soma-com-funcao-em-python",
+      "owner": "Felipe-Alcantara",
+      "name": "Calcular-soma-com-funcao-em-python",
+      "fullName": "Felipe-Alcantara/Calcular-soma-com-funcao-em-python",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Calcular-soma-com-funcao-em-python",
+      "private": false,
+      "createdAt": "2024-03-26T08:46:49Z",
+      "updatedAt": "2026-04-10T19:37:01Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Calcular-soma-com-funcao-em-python",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/git-hub-repositories",
+      "owner": "Felipe-Alcantara",
+      "name": "Git-Hub-Repositories",
+      "fullName": "Felipe-Alcantara/Git-Hub-Repositories",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Git-Hub-Repositories",
+      "private": false,
+      "createdAt": "2025-11-06T20:33:01Z",
+      "updatedAt": "2026-04-10T13:55:44Z",
+      "defaultBranch": "18/11/2025",
+      "folder": "Felipe-Alcantara__Git-Hub-Repositories",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/gerador-de-cpf-valido-em-python",
+      "owner": "Felipe-Alcantara",
+      "name": "Gerador-de-CPF-valido-em-Python",
+      "fullName": "Felipe-Alcantara/Gerador-de-CPF-valido-em-Python",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Gerador-de-CPF-valido-em-Python",
+      "private": false,
+      "createdAt": "2024-03-27T20:35:07Z",
+      "updatedAt": "2026-03-23T07:33:28Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Gerador-de-CPF-valido-em-Python",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/calculadora-simples-em-python",
+      "owner": "Felipe-Alcantara",
+      "name": "Calculadora-simples-em-python",
+      "fullName": "Felipe-Alcantara/Calculadora-simples-em-python",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Calculadora-simples-em-python",
+      "private": false,
+      "createdAt": "2024-03-26T08:35:40Z",
+      "updatedAt": "2026-03-23T06:44:04Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Calculadora-simples-em-python",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/reading-tracker",
+      "owner": "Felipe-Alcantara",
+      "name": "Reading-Tracker",
+      "fullName": "Felipe-Alcantara/Reading-Tracker",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Reading-Tracker",
+      "private": false,
+      "createdAt": "2026-01-05T05:36:07Z",
+      "updatedAt": "2026-03-18T05:43:34Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Reading-Tracker",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "updated",
+        "readme": "updated"
+      },
+      "warnings": [],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/soundscraper-soundcloud_track_scraper_downloader",
+      "owner": "Felipe-Alcantara",
+      "name": "SoundScraper-soundcloud_track_scraper_downloader",
+      "fullName": "Felipe-Alcantara/SoundScraper-soundcloud_track_scraper_downloader",
+      "repoUrl": "https://github.com/Felipe-Alcantara/SoundScraper-soundcloud_track_scraper_downloader",
+      "private": false,
+      "createdAt": "2024-11-06T00:38:55Z",
+      "updatedAt": "2026-03-18T05:35:56Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__SoundScraper-soundcloud_track_scraper_downloader",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "error_kept",
+        "readme": "error_kept"
+      },
+      "warnings": [
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
+      ],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/time_divider_clock_interface_python",
+      "owner": "Felipe-Alcantara",
+      "name": "Time_Divider_Clock_Interface_Python",
+      "fullName": "Felipe-Alcantara/Time_Divider_Clock_Interface_Python",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Time_Divider_Clock_Interface_Python",
+      "private": false,
+      "createdAt": "2024-09-23T00:18:05Z",
+      "updatedAt": "2026-03-18T04:19:40Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Time_Divider_Clock_Interface_Python",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "error_kept",
+        "readme": "error_kept"
+      },
+      "warnings": [
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
+      ],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/felipe-sala-board",
+      "owner": "Felipe-Alcantara",
+      "name": "Felipe-Sala-Board",
+      "fullName": "Felipe-Alcantara/Felipe-Sala-Board",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Felipe-Sala-Board",
+      "private": false,
+      "createdAt": "2026-02-23T05:50:59Z",
+      "updatedAt": "2026-03-16T06:35:59Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Felipe-Sala-Board",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "error_kept",
+        "readme": "error_kept"
+      },
+      "warnings": [
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
+      ],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/felixo-time-tracker",
+      "owner": "Felipe-Alcantara",
+      "name": "Felixo-Time-Tracker",
+      "fullName": "Felipe-Alcantara/Felixo-Time-Tracker",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Felixo-Time-Tracker",
+      "private": false,
+      "createdAt": "2026-02-27T07:23:32Z",
+      "updatedAt": "2026-03-12T05:26:33Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Felixo-Time-Tracker",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "error_kept",
+        "readme": "error_kept"
+      },
+      "warnings": [
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
+      ],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/cifra-de-cesar-em-python",
+      "owner": "Felipe-Alcantara",
+      "name": "Cifra-de-cesar-em-python",
+      "fullName": "Felipe-Alcantara/Cifra-de-cesar-em-python",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Cifra-de-cesar-em-python",
+      "private": false,
+      "createdAt": "2024-03-26T19:38:58Z",
+      "updatedAt": "2026-03-05T05:39:38Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Cifra-de-cesar-em-python",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "error_kept",
+        "readme": "error_kept"
+      },
+      "warnings": [
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
+      ],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/serum-file-sorter-organizer",
+      "owner": "Felipe-Alcantara",
+      "name": "Serum-File-Sorter-Organizer",
+      "fullName": "Felipe-Alcantara/Serum-File-Sorter-Organizer",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Serum-File-Sorter-Organizer",
+      "private": false,
+      "createdAt": "2026-02-03T16:27:19Z",
+      "updatedAt": "2026-02-03T21:00:30Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Serum-File-Sorter-Organizer",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "error_kept",
+        "readme": "error_kept"
+      },
+      "warnings": [
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
+      ],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/o-fogo-do-doom",
+      "owner": "Felipe-Alcantara",
+      "name": "O-Fogo-do-DOOM",
+      "fullName": "Felipe-Alcantara/O-Fogo-do-DOOM",
+      "repoUrl": "https://github.com/Felipe-Alcantara/O-Fogo-do-DOOM",
+      "private": false,
+      "createdAt": "2026-01-30T08:14:51Z",
+      "updatedAt": "2026-01-30T08:27:05Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__O-Fogo-do-DOOM",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "error_kept",
+        "readme": "error_kept"
+      },
+      "warnings": [
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
+      ],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/youtube-downloader-tampermonkey",
+      "owner": "Felipe-Alcantara",
+      "name": "Youtube-Downloader-Tampermonkey",
+      "fullName": "Felipe-Alcantara/Youtube-Downloader-Tampermonkey",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Youtube-Downloader-Tampermonkey",
+      "private": false,
+      "createdAt": "2026-01-30T08:01:30Z",
+      "updatedAt": "2026-01-30T08:01:36Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Youtube-Downloader-Tampermonkey",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "error_kept",
+        "readme": "error_kept"
+      },
+      "warnings": [
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
+      ],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/estudos-py-api-fastapi-echo-lab",
+      "owner": "Felipe-Alcantara",
+      "name": "estudos-py-api-fastapi-echo-lab",
+      "fullName": "Felipe-Alcantara/estudos-py-api-fastapi-echo-lab",
+      "repoUrl": "https://github.com/Felipe-Alcantara/estudos-py-api-fastapi-echo-lab",
+      "private": false,
+      "createdAt": "2026-01-08T16:10:12Z",
+      "updatedAt": "2026-01-08T16:11:38Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__estudos-py-api-fastapi-echo-lab",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "error_kept",
+        "readme": "error_kept"
+      },
+      "warnings": [
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
+      ],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/zip-extractor",
+      "owner": "Felipe-Alcantara",
+      "name": "Zip-Extractor",
+      "fullName": "Felipe-Alcantara/Zip-Extractor",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Zip-Extractor",
+      "private": false,
+      "createdAt": "2025-12-24T13:49:42Z",
+      "updatedAt": "2025-12-24T13:49:48Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Zip-Extractor",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "error_kept",
+        "readme": "error_kept"
+      },
+      "warnings": [
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
+      ],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    },
+    {
+      "key": "felipe-alcantara/page-context-ia",
+      "owner": "Felipe-Alcantara",
+      "name": "Page-Context-IA",
+      "fullName": "Felipe-Alcantara/Page-Context-IA",
+      "repoUrl": "https://github.com/Felipe-Alcantara/Page-Context-IA",
+      "private": false,
+      "createdAt": "2025-12-19T05:08:31Z",
+      "updatedAt": "2025-12-19T05:08:37Z",
+      "defaultBranch": "main",
+      "folder": "Felipe-Alcantara__Page-Context-IA",
+      "syncState": "active",
+      "lastSyncedAt": "2026-04-14T19:06:49.512Z",
+      "files": {
+        "metadata": "updated",
+        "languages": "error_kept",
+        "readme": "error_kept"
+      },
+      "warnings": [
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+        "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
+      ],
+      "lastSeenAt": "2026-04-14T19:06:49.512Z"
+    }
+  ]
+}

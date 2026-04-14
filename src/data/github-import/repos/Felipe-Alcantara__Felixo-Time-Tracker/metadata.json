@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Felixo-Time-Tracker",
+  "fullName": "Felipe-Alcantara/Felixo-Time-Tracker",
+  "description": "README (breve — para usar no repo)  Título: felixo-timetracker Tagline: Ferramenta modular para marcar e analisar o tempo por categorias aninhadas, tasks e tags. O que é: Aplicação full-stack (backend Python, frontend React) para registrar sessões de trabalho/estudo/lazer, com suporte para categorias dentro de categorias, tags e exportação CSV",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Felixo-Time-Tracker",
+  "homepage": "",
+  "topics": [],
+  "language": "JavaScript",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2026-02-27T07:23:32Z",
+  "updatedAt": "2026-03-12T05:26:33Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 143,
+  "repoKey": "felipe-alcantara/felixo-time-tracker",
+  "lastSyncedAt": "2026-04-14T19:06:49.512Z"
+}

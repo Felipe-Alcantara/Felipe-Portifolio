@@ -1,0 +1,3 @@
+# Page Context IA
+Page Context IA é uma ferramenta projetada para capturar automaticamente o texto visível de qualquer página web, estruturar esse conteúdo em partes organizadas (chunks) e enviá-lo para um backend que realiza processamento com modelos de inteligência artificial. O objetivo é permitir consultas inteligentes sobre qualquer página visitada, transformando páginas comuns em fontes pesquisáveis por IA.  Este projeto combina um userscript Tampermonkey com um backend próprio, garantindo segurança, flexibilidade e compatibilidade com diferentes modelos de linguagem. Nenhuma chave de API é exposta no cliente — o processamento é feito exclusivamente no servidor.
+

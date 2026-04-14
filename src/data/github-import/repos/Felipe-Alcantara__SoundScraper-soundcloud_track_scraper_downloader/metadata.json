@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "SoundScraper-soundcloud_track_scraper_downloader",
+  "fullName": "Felipe-Alcantara/SoundScraper-soundcloud_track_scraper_downloader",
+  "description": "Este projeto automatiza a coleta e download de faixas do SoundCloud utilizando Selenium para navegar pela página e yt-dlp para baixar os áudios. Ele facilita o processo de extrair links e salvar as músicas desejadas localmente de forma rápida e eficiente.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/SoundScraper-soundcloud_track_scraper_downloader",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 3,
+  "forks": 0,
+  "createdAt": "2024-11-06T00:38:55Z",
+  "updatedAt": "2026-03-18T05:35:56Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 55622,
+  "repoKey": "felipe-alcantara/soundscraper-soundcloud_track_scraper_downloader",
+  "lastSyncedAt": "2026-04-14T19:06:49.512Z"
+}

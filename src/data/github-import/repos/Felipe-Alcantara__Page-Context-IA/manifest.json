@@ -1,0 +1,17 @@
+{
+  "repoKey": "felipe-alcantara/page-context-ia",
+  "owner": "Felipe-Alcantara",
+  "name": "Page-Context-IA",
+  "repoUrl": "https://github.com/Felipe-Alcantara/Page-Context-IA",
+  "folderName": "Felipe-Alcantara__Page-Context-IA",
+  "files": {
+    "metadata": "updated",
+    "languages": "error_kept",
+    "readme": "error_kept"
+  },
+  "warnings": [
+    "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z).",
+    "GitHub retornou 403: acesso negado ou limite de taxa atingido (remaining=0, limit=60, reset=2026-04-14T20:05:28.000Z)."
+  ],
+  "lastSyncedAt": "2026-04-14T19:06:49.512Z"
+}

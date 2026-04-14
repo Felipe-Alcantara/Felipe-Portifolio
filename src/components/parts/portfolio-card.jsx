@@ -16,8 +16,9 @@ export function PortfolioCard({ item }) {
     <Card className="flex flex-col w-[300px] shrink-0 bg-zinc-900/50 border-white/10 hover:border-white/20 transition">
       <CardHeader>
         <div className="flex items-start justify-between gap-2">
-          <CardTitle className="flex items-center gap-2">
-            {icon} {title}
+          <CardTitle className="flex items-start gap-2 text-base leading-snug">
+            <span className="shrink-0 mt-0.5">{icon}</span>
+            <span className="line-clamp-2">{title}</span>
           </CardTitle>
           <Badge
             className={
@@ -32,7 +33,7 @@ export function PortfolioCard({ item }) {
         <CardDescription className="capitalize">{tag}</CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-sm text-zinc-300">{desc}</p>
+        <p className="text-sm text-zinc-300 line-clamp-3">{desc}</p>
         <div className="flex items-center gap-2 mt-4 text-xs text-zinc-400">
           <Calendar size={14} />
           <span>{formattedDate}</span>

@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Zip-Extractor",
+  "fullName": "Felipe-Alcantara/Zip-Extractor",
+  "description": "automatiza o fluxo completo de ingestão e descompactação de arquivos ZIP, desde a detecção/baixamento até a validação e extração em um destino organizado. Ele resolve problemas comuns como arquivos duplicados, downloads interrompidos e extração parcial, fornecendo relatórios e logs para auditoria",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Zip-Extractor",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2025-12-24T13:49:42Z",
+  "updatedAt": "2025-12-24T13:49:48Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 4,
+  "repoKey": "felipe-alcantara/zip-extractor",
+  "lastSyncedAt": "2026-04-14T19:06:49.512Z"
+}

@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Youtube-Downloader-Tampermonkey",
+  "fullName": "Felipe-Alcantara/Youtube-Downloader-Tampermonkey",
+  "description": "O YouTube Downloader Tampermonkey é uma solução híbrida que permite baixar vídeos do YouTube de forma simples e intuitiva. O projeto combina duas tecnologias principais:  Arquitetura Frontend: Userscript JavaScript que roda no navegador via Tampermonkey, adicionando um botão flutuante na interface do YouTube  Backend: Servidor FastAPI local",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Youtube-Downloader-Tampermonkey",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2026-01-30T08:01:30Z",
+  "updatedAt": "2026-01-30T08:01:36Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 8,
+  "repoKey": "felipe-alcantara/youtube-downloader-tampermonkey",
+  "lastSyncedAt": "2026-04-14T19:06:49.512Z"
+}

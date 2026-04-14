@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Time_Divider_Clock_Interface_Python",
+  "fullName": "Felipe-Alcantara/Time_Divider_Clock_Interface_Python",
+  "description": "Time Divider é um programa em Python que ajuda você a dividir o seu tempo disponível entre várias atividades e visualizar essa distribuição em um gráfico em forma de relógio. Ideal para planejamento pessoal e gerenciamento eficiente do tempo.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Time_Divider_Clock_Interface_Python",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 1,
+  "forks": 0,
+  "createdAt": "2024-09-23T00:18:05Z",
+  "updatedAt": "2026-03-18T04:19:40Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 133241,
+  "repoKey": "felipe-alcantara/time_divider_clock_interface_python",
+  "lastSyncedAt": "2026-04-14T19:06:49.512Z"
+}

@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "O-Fogo-do-DOOM",
+  "fullName": "Felipe-Alcantara/O-Fogo-do-DOOM",
+  "description": "Como programar o Fogo do DOOM em HTML, CSS, JS. Uma implementação em JavaScript do icônico efeito de fogo do jogo DOOM, recriado usando HTML, CSS e JavaScript puro. Este projeto demonstra como simular fogo realista através de algoritmos de propagação de calor e uma paleta de cores cuidadosamente escolhida.  Características Principais Simulação ",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/O-Fogo-do-DOOM",
+  "homepage": "",
+  "topics": [],
+  "language": "JavaScript",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2026-01-30T08:14:51Z",
+  "updatedAt": "2026-01-30T08:27:05Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 5,
+  "repoKey": "felipe-alcantara/o-fogo-do-doom",
+  "lastSyncedAt": "2026-04-14T19:06:49.512Z"
+}

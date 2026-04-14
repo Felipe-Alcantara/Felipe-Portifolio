@@ -14,33 +14,23 @@ import {
   FileJson,
   Server,
   Pipette,
-  Layers
+  Layers,
 } from "lucide-react";
+import generatedPortfolioItems from "./github-import/portfolio-items.generated.json";
+import overridePortfolioItems from "./github-import/portfolio-items.overrides.json";
 
 /**
  * =============================================================================
  * ARQUIVO DE DADOS DO PORTFÓLIO
  * =============================================================================
- * 
- * Este arquivo centraliza todos os dados de projetos, categorias e ícones.
- * Atualmente, todos os projetos são placeholders e serão substituídos.
- * 
- * ESTRUTURA:
- * 1. ÍCONES: Mapeamento de categorias para ícones do Lucide.
- * 2. CATEGORIAS: Definição das tags de filtro usadas no portfólio.
- * 3. PROJETOS: Lista unificada com todos os projetos/placeholders.
- * 4. EXPORTAÇÕES COMBINadas: Monta os dados no formato que a UI espera.
- * 
- * COMO ATUALIZAR:
- * - Para adicionar/modificar um projeto: Altere um objeto na lista `projects`.
- * - Para adicionar uma categoria: Adicione uma entrada em `CATEGORIES` e um ícone em `ICONS`.
- * 
- * Website dos Ícones: https://lucide.dev/icons
+ *
+ * Prioridade da fonte de dados:
+ * 1. `src/data/github-import/portfolio-items.generated.json`
+ * 2. `src/data/github-import/portfolio-items.overrides.json` (merge por `repoKey`)
+ * 3. Lista de fallback local (placeholders)
  * =============================================================================
  */
 
-// 1. ÍCONES
-// Mapeia um ID de categoria/tag para um componente de ícone específico.
 const ICONS = {
   web: <Monitor size={16} />,
   music: <Music size={16} />,
@@ -66,49 +56,57 @@ const ICONS = {
   windows: <Monitor size={16} />,
 };
 
-// Mapeia um ID de categoria/tag para uma classe de cor Tailwind CSS.
 const COLORS = {
-  web: 'bg-blue-700',
-  music: 'bg-purple-700',
-  code: 'bg-gray-600',
-  design: 'bg-pink-700',
-  game: 'bg-green-700',
-  automation: 'bg-orange-700',
-  default: 'bg-zinc-800',
-  html: 'bg-red-700',
-  css: 'bg-blue-600',
-  js: 'bg-yellow-600',
-  ts: 'bg-blue-700',
-  tailwind: 'bg-cyan-700',
-  react: 'bg-sky-600',
-  vite: 'bg-purple-600',
-  python: 'bg-yellow-700',
-  brython: 'bg-yellow-800',
-  django: 'bg-green-800',
-  csharp: 'bg-purple-700',
-  git: 'bg-red-600',
-  github: 'bg-gray-700',
-  vscode: 'bg-blue-800',
-  windows: 'bg-blue-900',
+  web: "bg-blue-700",
+  music: "bg-purple-700",
+  code: "bg-gray-600",
+  design: "bg-pink-700",
+  game: "bg-green-700",
+  automation: "bg-orange-700",
+  default: "bg-zinc-800",
+  html: "bg-red-700",
+  css: "bg-blue-600",
+  js: "bg-yellow-600",
+  ts: "bg-blue-700",
+  tailwind: "bg-cyan-700",
+  react: "bg-sky-600",
+  vite: "bg-purple-600",
+  python: "bg-yellow-700",
+  brython: "bg-yellow-800",
+  django: "bg-green-800",
+  csharp: "bg-purple-700",
+  git: "bg-red-600",
+  github: "bg-gray-700",
+  vscode: "bg-blue-800",
+  windows: "bg-blue-900",
 };
 
-// 2. CATEGORIAS DE FILTRO
-// Define as tags de filtro disponíveis. O `id` deve ser único.
-export const CATEGORIES = [
-  { id: "all", label: "Tudo" },
-  { id: "web", label: "Web" },
-  { id: "code", label: "Code" },
-  { id: "music", label: "Music" },
-  { id: "design", label: "Design" },
-  { id: "game", label: "Game" },
-  { id: "automation", label: "Automação" },
-];
+const CATEGORY_LABELS = {
+  all: "Tudo",
+  web: "Web",
+  code: "Code",
+  music: "Music",
+  design: "Design",
+  game: "Game",
+  automation: "Automação",
+  html: "HTML",
+  css: "CSS",
+  js: "JavaScript",
+  ts: "TypeScript",
+  tailwind: "Tailwind",
+  react: "React",
+  vite: "Vite",
+  python: "Python",
+  brython: "Brython",
+  django: "Django",
+  csharp: "C#",
+  git: "Git",
+  github: "GitHub",
+  vscode: "VSCode",
+  windows: "Windows",
+};
 
-// 3. PROJETOS (PLACEHOLDERS)
-// Lista unificada de todos os projetos.
-// O campo `tag` é usado para o ícone e para o filtro de categoria.
-const projects = [
-  // Projetos
+const fallbackProjects = [
   {
     title: "Landing FelixoVerse",
     tag: "web",
@@ -121,8 +119,8 @@ const projects = [
       site: "https://landing-felixoverse.vercel.app",
       demo: "https://youtube.com/watch?v=demo1",
       download: "https://github.com/felixo/landing-felixoverse/archive/main.zip",
-      post: "https://blog.felixoverse.com/landing-project"
-    }
+      post: "https://blog.felixoverse.com/landing-project",
+    },
   },
   {
     title: "Mixer de Samples",
@@ -136,8 +134,8 @@ const projects = [
       site: "https://mixer-samples.vercel.app",
       demo: "https://youtube.com/watch?v=demo2",
       download: "https://github.com/felixo/mixer-samples/releases",
-      post: "https://blog.felixoverse.com/mixer-project"
-    }
+      post: "https://blog.felixoverse.com/mixer-project",
+    },
   },
   {
     title: "Bots & Automação",
@@ -151,8 +149,8 @@ const projects = [
       site: "https://bots.felixoverse.com",
       demo: "https://youtube.com/watch?v=demo3",
       download: "https://github.com/felixo/bots-automacao/releases",
-      post: "https://blog.felixoverse.com/bots-project"
-    }
+      post: "https://blog.felixoverse.com/bots-project",
+    },
   },
   {
     title: "ARG Blocks",
@@ -166,8 +164,8 @@ const projects = [
       site: "https://arg-blocks.felixoverse.com",
       demo: "https://youtube.com/watch?v=demo4",
       download: "https://github.com/felixo/arg-blocks/releases",
-      post: "https://blog.felixoverse.com/arg-project"
-    }
+      post: "https://blog.felixoverse.com/arg-project",
+    },
   },
   {
     title: "Thumbnails para DJ",
@@ -181,60 +179,313 @@ const projects = [
       site: "https://thumbnails.felixoverse.com",
       demo: "https://youtube.com/watch?v=demo5",
       download: "https://github.com/felixo/dj-thumbnails/releases",
-      post: "https://blog.felixoverse.com/thumbnails-project"
-    }
+      post: "https://blog.felixoverse.com/thumbnails-project",
+    },
   },
-  // Tecnologias
-  { title: "HTML", tag: "html", description: "Projetos semânticos e estruturados.", createdAt: "2024-06-01", status: "Em Desenvolvimento" },
-  { title: "CSS", tag: "css", description: "Estilização com foco em design responsivo.", createdAt: "2024-06-02", status: "Em Desenvolvimento" },
-  { title: "JavaScript", tag: "js", description: "Interatividade e manipulação do DOM.", createdAt: "2024-06-03", status: "Em Desenvolvimento" },
-  { title: "TypeScript", tag: "ts", description: "Código JS com tipagem estática para maior robustez.", createdAt: "2024-06-04", status: "Em Desenvolvimento" },
-  { title: "Tailwind CSS", tag: "tailwind", description: "CSS utilitário para desenvolvimento rápido.", createdAt: "2024-06-05", status: "Em Desenvolvimento" },
-  { title: "React", tag: "react", description: "Criação de UIs reativas e componentizadas.", createdAt: "2024-06-06", status: "Em Desenvolvimento" },
-  { title: "Vite", tag: "vite", description: "Build tool moderno e ultra-rápido para front-end.", createdAt: "2024-06-07", status: "Em Desenvolvimento" },
-  { title: "Python", tag: "python", description: "Scripts, automação e desenvolvimento back-end.", createdAt: "2024-06-08", status: "Em Desenvolvimento" },
-  { title: "Brython", tag: "brython", description: "Python no navegador para scripting web.", createdAt: "2024-06-09", status: "Em Desenvolvimento" },
-  { title: "Django", tag: "django", description: "Framework web de alto nível em Python.", createdAt: "2024-06-10", status: "Em Desenvolvimento" },
-  { title: "C#", tag: "csharp", description: "Aplicações robustas no ecossistema .NET.", createdAt: "2024-06-11", status: "Em Desenvolvimento" },
-  { title: "Git", tag: "git", description: "Controle de versão para gerenciamento de código.", createdAt: "2024-06-12", status: "Em Desenvolvimento" },
-  { title: "GitHub", tag: "github", description: "Plataforma de hospedagem e colaboração de código.", createdAt: "2024-06-13", status: "Em Desenvolvimento" },
-  { title: "VSCode", tag: "vscode", description: "Editor de código fonte com superpoderes.", createdAt: "2024-06-14", status: "Em Desenvolvimento" },
-  { title: "Windows", tag: "windows", description: "Desenvolvimento e automação em ambiente Windows.", createdAt: "2024-06-15", status: "Em Desenvolvimento" },
+  {
+    title: "HTML",
+    tag: "html",
+    description: "Projetos semânticos e estruturados.",
+    createdAt: "2024-06-01",
+    status: "Em Desenvolvimento",
+  },
+  {
+    title: "CSS",
+    tag: "css",
+    description: "Estilização com foco em design responsivo.",
+    createdAt: "2024-06-02",
+    status: "Em Desenvolvimento",
+  },
+  {
+    title: "JavaScript",
+    tag: "js",
+    description: "Interatividade e manipulação do DOM.",
+    createdAt: "2024-06-03",
+    status: "Em Desenvolvimento",
+  },
+  {
+    title: "TypeScript",
+    tag: "ts",
+    description: "Código JS com tipagem estática para maior robustez.",
+    createdAt: "2024-06-04",
+    status: "Em Desenvolvimento",
+  },
+  {
+    title: "Tailwind CSS",
+    tag: "tailwind",
+    description: "CSS utilitário para desenvolvimento rápido.",
+    createdAt: "2024-06-05",
+    status: "Em Desenvolvimento",
+  },
+  {
+    title: "React",
+    tag: "react",
+    description: "Criação de UIs reativas e componentizadas.",
+    createdAt: "2024-06-06",
+    status: "Em Desenvolvimento",
+  },
+  {
+    title: "Vite",
+    tag: "vite",
+    description: "Build tool moderno e ultra-rápido para front-end.",
+    createdAt: "2024-06-07",
+    status: "Em Desenvolvimento",
+  },
+  {
+    title: "Python",
+    tag: "python",
+    description: "Scripts, automação e desenvolvimento back-end.",
+    createdAt: "2024-06-08",
+    status: "Em Desenvolvimento",
+  },
+  {
+    title: "Brython",
+    tag: "brython",
+    description: "Python no navegador para scripting web.",
+    createdAt: "2024-06-09",
+    status: "Em Desenvolvimento",
+  },
+  {
+    title: "Django",
+    tag: "django",
+    description: "Framework web de alto nível em Python.",
+    createdAt: "2024-06-10",
+    status: "Em Desenvolvimento",
+  },
+  {
+    title: "C#",
+    tag: "csharp",
+    description: "Aplicações robustas no ecossistema .NET.",
+    createdAt: "2024-06-11",
+    status: "Em Desenvolvimento",
+  },
+  {
+    title: "Git",
+    tag: "git",
+    description: "Controle de versão para gerenciamento de código.",
+    createdAt: "2024-06-12",
+    status: "Em Desenvolvimento",
+  },
+  {
+    title: "GitHub",
+    tag: "github",
+    description: "Plataforma de hospedagem e colaboração de código.",
+    createdAt: "2024-06-13",
+    status: "Em Desenvolvimento",
+  },
+  {
+    title: "VSCode",
+    tag: "vscode",
+    description: "Editor de código fonte com superpoderes.",
+    createdAt: "2024-06-14",
+    status: "Em Desenvolvimento",
+  },
+  {
+    title: "Windows",
+    tag: "windows",
+    description: "Desenvolvimento e automação em ambiente Windows.",
+    createdAt: "2024-06-15",
+    status: "Em Desenvolvimento",
+  },
 ];
 
-// 4. EXPORTAÇÕES COMBINADAS
-// A UI espera um array `items` e um array `tags`.
+function normalizeRepoKey(repoKey) {
+  return typeof repoKey === "string" ? repoKey.trim().toLowerCase() : "";
+}
 
-// Monta o array `items` final a partir da lista unificada de projetos.
-export const items = projects.map(p => ({
-  title: p.title.startsWith("Projetos ") ? p.title : `Projeto ${p.title}`,
-  tag: p.tag,
-  desc: p.description,
-  link: p.link || "#",
-  icon: ICONS[p.tag] || ICONS.default,
-  createdAt: p.createdAt,
-  status: p.status,
-  tagColor: COLORS[p.tag] || COLORS.default, // Adiciona a cor da tag
-  // Novos campos para o modal de detalhes
-  complexity: p.complexity || "Média",
-  stack: p.stack || [p.tag, "React", "Tailwind"], // Placeholder se não houver
-  properties: p.properties || {
-    timeEstimated: "2 semanas",
-    size: "Médio",
-    online: true,
-    techPercentage: { [p.tag]: 100 }
-  },
-  links: p.links || {
-    github: "#",
-    site: p.link || "#",
-    demo: "#",
-    download: "#",
-    post: "#"
-  },
+function mergeGeneratedWithOverrides(generatedItems, overrideItems) {
+  const normalizedGeneratedItems = Array.isArray(generatedItems) ? generatedItems : [];
+  const normalizedOverrideItems = Array.isArray(overrideItems) ? overrideItems : [];
+
+  const overridesByRepoKey = new Map();
+
+  for (const overrideItem of normalizedOverrideItems) {
+    const repoKey = normalizeRepoKey(overrideItem?.repoKey);
+
+    if (!repoKey) {
+      continue;
+    }
+
+    overridesByRepoKey.set(repoKey, overrideItem);
+  }
+
+  const generatedRepoKeys = new Set();
+
+  const mergedItems = normalizedGeneratedItems.map((generatedItem) => {
+    const repoKey = normalizeRepoKey(generatedItem?.repoKey);
+
+    if (repoKey) {
+      generatedRepoKeys.add(repoKey);
+    }
+
+    if (!repoKey || !overridesByRepoKey.has(repoKey)) {
+      return generatedItem;
+    }
+
+    return {
+      ...generatedItem,
+      ...overridesByRepoKey.get(repoKey),
+      repoKey: generatedItem.repoKey,
+    };
+  });
+
+  const overrideOnlyItems = [];
+
+  for (const [repoKey, overrideItem] of overridesByRepoKey.entries()) {
+    if (!generatedRepoKeys.has(repoKey)) {
+      overrideOnlyItems.push(overrideItem);
+    }
+  }
+
+  return [...mergedItems, ...overrideOnlyItems];
+}
+
+const hasGeneratedItems =
+  Array.isArray(generatedPortfolioItems) && generatedPortfolioItems.length > 0;
+const mergedGeneratedProjects = hasGeneratedItems
+  ? mergeGeneratedWithOverrides(generatedPortfolioItems, overridePortfolioItems)
+  : [];
+const hasImportedProjects = mergedGeneratedProjects.length > 0;
+const baseProjects = hasImportedProjects ? mergedGeneratedProjects : fallbackProjects;
+
+function normalizeTag(tag) {
+  return String(tag || "code")
+    .trim()
+    .toLowerCase();
+}
+
+function formatTagLabel(tag) {
+  const normalizedTag = normalizeTag(tag);
+  const mappedLabel = CATEGORY_LABELS[normalizedTag];
+
+  if (mappedLabel) {
+    return mappedLabel;
+  }
+
+  return normalizedTag
+    .replace(/[_-]+/g, " ")
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
+}
+
+function normalizeLinks(rawLinks, fallbackLink) {
+  const links = rawLinks && typeof rawLinks === "object" ? rawLinks : {};
+
+  return {
+    github:
+      typeof links.github === "string" && links.github.trim()
+        ? links.github.trim()
+        : fallbackLink,
+    site:
+      typeof links.site === "string" && links.site.trim() ? links.site.trim() : "#",
+    demo:
+      typeof links.demo === "string" && links.demo.trim() ? links.demo.trim() : "#",
+    download:
+      typeof links.download === "string" && links.download.trim()
+        ? links.download.trim()
+        : "#",
+    post:
+      typeof links.post === "string" && links.post.trim() ? links.post.trim() : "#",
+  };
+}
+
+function normalizeProperties(rawProperties, fallbackTag) {
+  const properties =
+    rawProperties && typeof rawProperties === "object" ? rawProperties : {};
+
+  const defaultTech = {};
+  defaultTech[fallbackTag] = 100;
+
+  return {
+    timeEstimated:
+      typeof properties.timeEstimated === "string" && properties.timeEstimated.trim()
+        ? properties.timeEstimated.trim()
+        : "2 semanas",
+    size:
+      typeof properties.size === "string" && properties.size.trim()
+        ? properties.size.trim()
+        : "Médio",
+    online:
+      typeof properties.online === "boolean" ? properties.online : Boolean(properties.online),
+    techPercentage:
+      properties.techPercentage &&
+      typeof properties.techPercentage === "object" &&
+      !Array.isArray(properties.techPercentage)
+        ? properties.techPercentage
+        : defaultTech,
+  };
+}
+
+function normalizeProject(project) {
+  const tag = normalizeTag(project?.tag);
+  const rawTitle =
+    typeof project?.title === "string" && project.title.trim()
+      ? project.title.trim()
+      : "Projeto sem título";
+  const normalizedTitle = hasImportedProjects
+    ? rawTitle
+    : rawTitle.startsWith("Projetos ")
+    ? rawTitle
+    : `Projeto ${rawTitle}`;
+  const description =
+    typeof project?.desc === "string" && project.desc.trim()
+      ? project.desc.trim()
+      : typeof project?.description === "string" && project.description.trim()
+      ? project.description.trim()
+      : "Sem descrição";
+  const fallbackLink =
+    typeof project?.link === "string" && project.link.trim() ? project.link.trim() : "#";
+  const normalizedLinks = normalizeLinks(project?.links, fallbackLink);
+
+  const stack = Array.isArray(project?.stack) && project.stack.length > 0
+    ? project.stack
+    : [tag, "React", "Tailwind"];
+
+  return {
+    title: normalizedTitle,
+    tag,
+    desc: description,
+    link:
+      typeof project?.link === "string" && project.link.trim()
+        ? project.link.trim()
+        : normalizedLinks.github,
+    createdAt:
+      typeof project?.createdAt === "string" && project.createdAt.trim()
+        ? project.createdAt.trim()
+        : "",
+    status:
+      typeof project?.status === "string" && project.status.trim()
+        ? project.status.trim()
+        : "Em Desenvolvimento",
+    complexity:
+      typeof project?.complexity === "string" && project.complexity.trim()
+        ? project.complexity.trim()
+        : "Média",
+    stack,
+    properties: normalizeProperties(project?.properties, tag),
+    links: normalizedLinks,
+    repoKey: project?.repoKey,
+    repoFolder: project?.repoFolder,
+  };
+}
+
+const normalizedProjects = baseProjects.map(normalizeProject);
+const dynamicTagIds = Array.from(
+  new Set(normalizedProjects.map((project) => normalizeTag(project.tag)))
+);
+
+export const CATEGORIES = [
+  { id: "all", label: "Tudo" },
+  ...dynamicTagIds.map((tagId) => ({
+    id: tagId,
+    label: formatTagLabel(tagId),
+  })),
+];
+
+export const items = normalizedProjects.map((project) => ({
+  ...project,
+  icon: ICONS[project.tag] || ICONS.default,
+  tagColor: COLORS[project.tag] || COLORS.default,
 }));
 
-// Exporta as categorias para os botões de filtro.
 export const tags = CATEGORIES;
-
-// Exporta items como allProjects para compatibilidade com App.jsx
 export const allProjects = items;

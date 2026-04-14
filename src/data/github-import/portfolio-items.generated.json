@@ -1,0 +1,620 @@
+[
+  {
+    "title": "Felixo System Design",
+    "tag": "code",
+    "desc": "Repositório central do Felixo System Design. Contém diretrizes de arquitetura, padrões de código e componentes para garantir consistência em todos os projetos.",
+    "link": "https://github.com/Felipe-Alcantara/Felixo-System-Design",
+    "createdAt": "2026-03-12T02:39:12Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "code"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {}
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Felixo-System-Design",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/felixo-system-design",
+    "repoFolder": "Felipe-Alcantara__Felixo-System-Design"
+  },
+  {
+    "title": "Felixo Time Tracker",
+    "tag": "web",
+    "desc": "README (breve — para usar no repo)  Título: felixo-timetracker Tagline: Ferramenta modular para marcar e analisar o tempo por categorias aninhadas, tasks e tags. O que é: Aplicação full-stack (backend Python, frontend React) para registrar sessões de trabalho/estudo/lazer, com suporte para categorias dentro de categorias, tags e exportação CSV",
+    "link": "https://github.com/Felipe-Alcantara/Felixo-Time-Tracker",
+    "createdAt": "2026-02-27T07:23:32Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "JavaScript",
+      "Python",
+      "Shell",
+      "Batchfile",
+      "CSS",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "JavaScript": 71,
+        "Python": 25,
+        "Shell": 1,
+        "Batchfile": 1,
+        "CSS": 1,
+        "HTML": 1
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Felixo-Time-Tracker",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/felixo-time-tracker",
+    "repoFolder": "Felipe-Alcantara__Felixo-Time-Tracker"
+  },
+  {
+    "title": "Felipe Sala Board",
+    "tag": "web",
+    "desc": "Uma plataforma leve e não-oficial para estudantes: centralize horários, avisos, entregas de trabalhos, enquetes e canais de estudo. O objetivo é aumentar o engajamento da turma com ferramentas simples — calendário compartilhado, mural de avisos, tracker de tarefas e integração com o Discord (ou link direto). Desenvolvido com foco em usabilidade",
+    "link": "https://github.com/Felipe-Alcantara/Felipe-Sala-Board",
+    "createdAt": "2026-02-23T05:50:59Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "TypeScript",
+      "HTML",
+      "JavaScript",
+      "CSS"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Grande",
+      "online": false,
+      "techPercentage": {
+        "TypeScript": 85,
+        "HTML": 10,
+        "JavaScript": 4,
+        "CSS": 1
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Felipe-Sala-Board",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/felipe-sala-board",
+    "repoFolder": "Felipe-Alcantara__Felipe-Sala-Board"
+  },
+  {
+    "title": "Serum File Sorter Organizer",
+    "tag": "python",
+    "desc": "Uma ferramenta de automação em Python projetada para reorganizar bibliotecas enormes de presets do Serum. Ela escaneia diretórios recursivamente, identifica tipos de instrumentos com base em padrões de nomes de arquivos (Baixo, Lead, Pad, etc.) e os consolida em uma estrutura de pastas organizada e categorizada, sem excluir os arquivos originais.",
+    "link": "https://github.com/Felipe-Alcantara/Serum-File-Sorter-Organizer",
+    "createdAt": "2026-02-03T16:27:19Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Serum-File-Sorter-Organizer",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/serum-file-sorter-organizer",
+    "repoFolder": "Felipe-Alcantara__Serum-File-Sorter-Organizer"
+  },
+  {
+    "title": "O Fogo DO DOOM",
+    "tag": "web",
+    "desc": "Como programar o Fogo do DOOM em HTML, CSS, JS. Uma implementação em JavaScript do icônico efeito de fogo do jogo DOOM, recriado usando HTML, CSS e JavaScript puro. Este projeto demonstra como simular fogo realista através de algoritmos de propagação de calor e uma paleta de cores cuidadosamente escolhida.  Características Principais Simulação ",
+    "link": "https://github.com/Felipe-Alcantara/O-Fogo-do-DOOM",
+    "createdAt": "2026-01-30T08:14:51Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "JavaScript",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "JavaScript": 82,
+        "HTML": 18
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/O-Fogo-do-DOOM",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/o-fogo-do-doom",
+    "repoFolder": "Felipe-Alcantara__O-Fogo-do-DOOM"
+  },
+  {
+    "title": "Youtube Downloader Tampermonkey",
+    "tag": "web",
+    "desc": "O YouTube Downloader Tampermonkey é uma solução híbrida que permite baixar vídeos do YouTube de forma simples e intuitiva. O projeto combina duas tecnologias principais:  Arquitetura Frontend: Userscript JavaScript que roda no navegador via Tampermonkey, adicionando um botão flutuante na interface do YouTube  Backend: Servidor FastAPI local",
+    "link": "https://github.com/Felipe-Alcantara/Youtube-Downloader-Tampermonkey",
+    "createdAt": "2026-01-30T08:01:30Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python",
+      "JavaScript"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 56,
+        "JavaScript": 44
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Youtube-Downloader-Tampermonkey",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/youtube-downloader-tampermonkey",
+    "repoFolder": "Felipe-Alcantara__Youtube-Downloader-Tampermonkey"
+  },
+  {
+    "title": "Felipe Portifolio",
+    "tag": "web",
+    "desc": "Um hub criativo em React que conecta código, música e projetos colaborativos. Este repositório serve como base inicial para o FelixoVerse, explorando design moderno, animações e uma estrutura flexível para crescimento contínuo.",
+    "link": "https://github.com/Felipe-Alcantara/Felipe-Portifolio",
+    "createdAt": "2026-01-08T17:54:47Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Médio",
+      "online": false,
+      "techPercentage": {
+        "JavaScript": 88,
+        "CSS": 12,
+        "HTML": 0
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Felipe-Portifolio",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/felipe-portifolio",
+    "repoFolder": "Felipe-Alcantara__Felipe-Portifolio"
+  },
+  {
+    "title": "Estudos PY Api Fastapi Echo Lab",
+    "tag": "python",
+    "desc": "Projeto sandbox para aprender conceitos de arquitetura Cliente-Servidor e requisições HTTP usando Python. Uma API minimalista em FastAPI para testes de conectividade, validação de túneis e debugging de parâmetros HTTP (Echo). Ferramenta leve de backend para verificar status de servidores",
+    "link": "https://github.com/Felipe-Alcantara/estudos-py-api-fastapi-echo-lab",
+    "createdAt": "2026-01-08T16:10:12Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/estudos-py-api-fastapi-echo-lab",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/estudos-py-api-fastapi-echo-lab",
+    "repoFolder": "Felipe-Alcantara__estudos-py-api-fastapi-echo-lab"
+  },
+  {
+    "title": "Reading Tracker",
+    "tag": "web",
+    "desc": "Tagline (1 linha) Reading-Tracker — registre sessões de leitura, acompanhe páginas × tempo e visualize sua produtividade com um heatmap estilo GitHub.  Descrição curta (para o topo do README) Reading-Tracker é um PWA leve e mobile-first que permite registrar início",
+    "link": "https://github.com/Felipe-Alcantara/Reading-Tracker",
+    "createdAt": "2026-01-05T05:36:07Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "JavaScript": 97,
+        "CSS": 2,
+        "HTML": 1
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Reading-Tracker",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/reading-tracker",
+    "repoFolder": "Felipe-Alcantara__Reading-Tracker"
+  },
+  {
+    "title": "Zip Extractor",
+    "tag": "python",
+    "desc": "automatiza o fluxo completo de ingestão e descompactação de arquivos ZIP, desde a detecção/baixamento até a validação e extração em um destino organizado. Ele resolve problemas comuns como arquivos duplicados, downloads interrompidos e extração parcial, fornecendo relatórios e logs para auditoria",
+    "link": "https://github.com/Felipe-Alcantara/Zip-Extractor",
+    "createdAt": "2025-12-24T13:49:42Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Zip-Extractor",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/zip-extractor",
+    "repoFolder": "Felipe-Alcantara__Zip-Extractor"
+  },
+  {
+    "title": "Page Context IA",
+    "tag": "web",
+    "desc": "Page Context IA é uma ferramenta projetada para capturar automaticamente o texto visível de qualquer página web, estruturar esse conteúdo em partes organizadas (chunks) e enviá-lo para um backend que realiza processamento com modelos de inteligência artificial. O objetivo é permitir consultas inteligentes sobre qualquer página visitada.",
+    "link": "https://github.com/Felipe-Alcantara/Page-Context-IA",
+    "createdAt": "2025-12-19T05:08:31Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "JavaScript"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "JavaScript": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Page-Context-IA",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/page-context-ia",
+    "repoFolder": "Felipe-Alcantara__Page-Context-IA"
+  },
+  {
+    "title": "Git Hub Repositories",
+    "tag": "web",
+    "desc": "Dashboard visual para organizar e gerenciar projetos GitHub com localStorage, filtros avançados, visualização Kanban e import/export JSON. Deploy pronto para GitHub Pages!",
+    "link": "https://github.com/Felipe-Alcantara/Git-Hub-Repositories",
+    "createdAt": "2025-11-06T20:33:01Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "JavaScript",
+      "CSS",
+      "Batchfile",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "JavaScript": 99,
+        "CSS": 1,
+        "Batchfile": 1,
+        "HTML": 0
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Git-Hub-Repositories",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/git-hub-repositories",
+    "repoFolder": "Felipe-Alcantara__Git-Hub-Repositories"
+  },
+  {
+    "title": "SoundScraper Soundcloud Track Scraper Downloader",
+    "tag": "web",
+    "desc": "Este projeto automatiza a coleta e download de faixas do SoundCloud utilizando Selenium para navegar pela página e yt-dlp para baixar os áudios. Ele facilita o processo de extrair links e salvar as músicas desejadas localmente de forma rápida e eficiente.",
+    "link": "https://github.com/Felipe-Alcantara/SoundScraper-soundcloud_track_scraper_downloader",
+    "createdAt": "2024-11-06T00:38:55Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python",
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Grande",
+      "online": false,
+      "techPercentage": {
+        "Python": 84,
+        "JavaScript": 15,
+        "CSS": 1,
+        "HTML": 0
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/SoundScraper-soundcloud_track_scraper_downloader",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/soundscraper-soundcloud_track_scraper_downloader",
+    "repoFolder": "Felipe-Alcantara__SoundScraper-soundcloud_track_scraper_downloader"
+  },
+  {
+    "title": "Time Divider Clock Interface Python",
+    "tag": "python",
+    "desc": "Time Divider é um programa em Python que ajuda você a dividir o seu tempo disponível entre várias atividades e visualizar essa distribuição em um gráfico em forma de relógio. Ideal para planejamento pessoal e gerenciamento eficiente do tempo.",
+    "link": "https://github.com/Felipe-Alcantara/Time_Divider_Clock_Interface_Python",
+    "createdAt": "2024-09-23T00:18:05Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Grande",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Time_Divider_Clock_Interface_Python",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/time_divider_clock_interface_python",
+    "repoFolder": "Felipe-Alcantara__Time_Divider_Clock_Interface_Python"
+  },
+  {
+    "title": "Indentificador Numerico",
+    "tag": "python",
+    "desc": "Este é um pequeno programa em Python que solicita ao usuário que insira um valor. Em seguida, ele verifica se o valor inserido é numérico ou não. Portanto, este código pode ser usado para verificar se uma entrada do usuário é um valor numérico ou não. É útil em situações onde você precisa garantir que o usuário inseriu um número.",
+    "link": "https://github.com/Felipe-Alcantara/Indentificador-numerico",
+    "createdAt": "2024-03-27T20:49:46Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Indentificador-numerico",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/indentificador-numerico",
+    "repoFolder": "Felipe-Alcantara__Indentificador-numerico"
+  },
+  {
+    "title": "Gerador DE CPF Valido EM Python",
+    "tag": "python",
+    "desc": "Este projeto contém um script Python que gera números de CPF (Cadastro de Pessoas Físicas) válidos de acordo com as regras estabelecidas pela Receita Federal do Brasil. O script cria os nove primeiros dígitos de forma aleatória e calcula os dois dígitos verificadores. Este código é apenas para fins de estudo e aprendizado de programação.",
+    "link": "https://github.com/Felipe-Alcantara/Gerador-de-CPF-valido-em-Python",
+    "createdAt": "2024-03-27T20:35:07Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Gerador-de-CPF-valido-em-Python",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/gerador-de-cpf-valido-em-python",
+    "repoFolder": "Felipe-Alcantara__Gerador-de-CPF-valido-em-Python"
+  },
+  {
+    "title": "Cifra DE Cesar EM Python",
+    "tag": "python",
+    "desc": "Um programa em python para criar uma cifra de cesar",
+    "link": "https://github.com/Felipe-Alcantara/Cifra-de-cesar-em-python",
+    "createdAt": "2024-03-26T19:38:58Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Cifra-de-cesar-em-python",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/cifra-de-cesar-em-python",
+    "repoFolder": "Felipe-Alcantara__Cifra-de-cesar-em-python"
+  },
+  {
+    "title": "Desconto DE Salario EM Python",
+    "tag": "python",
+    "desc": "Um programinha que eu fiz quando estava aprendendo logica com alguns cálculos simples",
+    "link": "https://github.com/Felipe-Alcantara/Desconto-de-salario-em-python",
+    "createdAt": "2024-03-26T09:13:42Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Desconto-de-salario-em-python",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/desconto-de-salario-em-python",
+    "repoFolder": "Felipe-Alcantara__Desconto-de-salario-em-python"
+  },
+  {
+    "title": "Calcular Soma Com Funcao EM Python",
+    "tag": "python",
+    "desc": "Primeira vez fazendo uma função, estava aprendendo a como fazer uma soma básica",
+    "link": "https://github.com/Felipe-Alcantara/Calcular-soma-com-funcao-em-python",
+    "createdAt": "2024-03-26T08:46:49Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Calcular-soma-com-funcao-em-python",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/calcular-soma-com-funcao-em-python",
+    "repoFolder": "Felipe-Alcantara__Calcular-soma-com-funcao-em-python"
+  },
+  {
+    "title": "Calculadora Simples EM Python",
+    "tag": "python",
+    "desc": "Uma calculadora que meu amigo me ensinou a desenvolver no começo do meu estudo",
+    "link": "https://github.com/Felipe-Alcantara/Calculadora-simples-em-python",
+    "createdAt": "2024-03-26T08:35:40Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Calculadora-simples-em-python",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/calculadora-simples-em-python",
+    "repoFolder": "Felipe-Alcantara__Calculadora-simples-em-python"
+  }
+]
