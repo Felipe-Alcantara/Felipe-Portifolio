@@ -10,7 +10,7 @@
 
 **Portfólio interativo em React com identidade visual FelixoVerse, filtros dinâmicos, modais de projeto e documentação técnica organizada.**
 
-[📖 Documentação](docs/README.md) • [🎨 Design System](docs/DESIGN-SYSTEM.md) • [🚀 Como Usar](#-como-usar)
+[📖 Documentação](docs/README.md) • [🤖 Prompt de Importação GitHub](docs/PROMPT-SUBSISTEMA-IMPORTACAO-REPOS-GITHUB.md) • [🎨 Design System](docs/DESIGN-SYSTEM.md) • [🚀 Como Usar](#-como-usar)
 
 </div>
 
@@ -116,6 +116,7 @@ Felipe-Portifolio/
 ## 📚 Documentação Completa
 
 - 📖 [Índice da documentação](docs/README.md)
+- 🤖 [Prompt do sub-sistema de importação de repositórios GitHub](docs/PROMPT-SUBSISTEMA-IMPORTACAO-REPOS-GITHUB.md)
 - 🧭 [Guia de customização e manutenção](docs/DOCUMENTATION.md)
 - 🎨 [Design system oficial](docs/DESIGN-SYSTEM.md)
 - 🌍 [Guia de domínio no GitHub Pages](docs/GUIA-DOMINIO-PAGES.md)
