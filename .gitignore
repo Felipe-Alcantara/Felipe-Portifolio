@@ -1,7 +1,22 @@
-node_modules
-/felixo-standards
-dist
+# Dependências
+node_modules/
+
+# Build
+dist/
+
+# Repositórios/artefatos locais de apoio
+/felixo-standards/
+.tmp-felixo-system-design/
+.codex/
+.sixth/
+
+# Sistema
 .DS_Store
+
+# Ambiente
 .env
 .env.local
 .env.*.local
+
+# Logs
+npm-debug.log*

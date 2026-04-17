@@ -83,6 +83,9 @@ Felipe-Portifolio/
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
+├── .github/
+│   └── workflows/
+│       └── deploy.yml                  # Pipeline de deploy no GitHub Pages
 ├── scripts/
 │   └── sync-github-repos.mjs           # Script interno de sincronização GitHub -> dados do portfólio
 ├── .eslintrc.cjs                       # Configuração de lint
@@ -151,6 +154,8 @@ npm run build
 npm run preview
 ```
 
+A saída de build é gerada em `dist/` como artefato local de compilação.
+
 ### Opção 3: Sincronizar repositórios GitHub (uso interno)
 
 ```bash
@@ -199,6 +204,10 @@ Exemplo de override por `repoKey`:
 1. Consulte `docs/DESIGN-SYSTEM.md`.
 2. Ajuste classes Tailwind nos componentes `ui/`.
 3. Refine tokens e tema em `tailwind.config.js` e `src/index.css`.
+
+### Para validar o repositório
+1. Execute `npm run lint`.
+2. Execute `npm run build`.
 
 ---
 
