@@ -11,7 +11,7 @@
 // IMPORTAÇÕES
 // ================================================================================================
 // Hooks e funcionalidades do React.
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useMemo, useState, useEffect, lazy, Suspense } from "react";
 
 // Dados centralizados de projetos.
 import { allProjects } from "./data/projects.jsx";
@@ -19,9 +19,15 @@ import { allProjects } from "./data/projects.jsx";
 // Componentes de layout e UI reutilizáveis.
 import { Navbar } from "./components/layout/navbar";
 import { Footer } from "./components/layout/footer";
-import { ProjectsModal } from "./components/ui/projects-modal";
-import { ProjectDetailsModal } from "./components/ui/project-details-modal";
 import { BackgroundParticles } from "./components/ui/background-particles";
+
+// Modais carregados sob demanda (code-splitting) — não fazem parte do bundle inicial.
+const ProjectsModal = lazy(() =>
+  import("./components/ui/projects-modal").then((m) => ({ default: m.ProjectsModal }))
+);
+const ProjectDetailsModal = lazy(() =>
+  import("./components/ui/project-details-modal").then((m) => ({ default: m.ProjectDetailsModal }))
+);
 
 // Seções principais que compõem a página.
 import { HeroSection } from "./sections/hero";
@@ -179,18 +185,20 @@ export default function App() {
       </main>
       <Footer />
 
-      {/* Componentes de UI sobrepostos (Modais, etc.) */}
-      <ProjectsModal 
-        isOpen={isProjectsModalOpen}
-        onClose={handleCloseProjectsModal}
-        initialTag={initialTagForProjectsModal}
-      />
+      {/* Modais carregados sob demanda via React.lazy — fora do bundle inicial */}
+      <Suspense fallback={null}>
+        <ProjectsModal
+          isOpen={isProjectsModalOpen}
+          onClose={handleCloseProjectsModal}
+          initialTag={initialTagForProjectsModal}
+        />
 
-      <ProjectDetailsModal 
-        isOpen={!!selectedProject}
-        onClose={handleCloseProjectDetails}
-        project={selectedProject}
-      />
+        <ProjectDetailsModal
+          isOpen={!!selectedProject}
+          onClose={handleCloseProjectDetails}
+          project={selectedProject}
+        />
+      </Suspense>
     </div>
   );
 }
