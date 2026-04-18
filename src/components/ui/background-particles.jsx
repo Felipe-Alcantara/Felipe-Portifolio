@@ -1,7 +1,32 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 export function BackgroundParticles() {
+  const containerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(true);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  // Detecta prefers-reduced-motion
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReducedMotion(mq.matches);
+    const handler = (e) => setReducedMotion(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  // Pausa animações quando o container sai do viewport
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   const backgroundParticles = useMemo(() => {
     return Array.from({ length: 35 }).map((_, i) => ({
       id: i,
@@ -14,8 +39,11 @@ export function BackgroundParticles() {
     }));
   }, []);
 
+  // Se o usuário prefere movimento reduzido, não renderiza nada
+  if (reducedMotion) return null;
+
   return (
-    <div className="absolute inset-0 pointer-events-none select-none z-0">
+    <div ref={containerRef} className="absolute inset-0 pointer-events-none select-none z-0">
       {backgroundParticles.map((p) => (
         <motion.div
           key={p.id}
@@ -26,10 +54,10 @@ export function BackgroundParticles() {
             width: p.size,
             height: p.size,
           }}
-          animate={{
+          animate={isVisible ? {
             y: [0, -150],
             opacity: [0, p.opacity, 0],
-          }}
+          } : false}
           transition={{
             duration: p.duration,
             repeat: Infinity,
