@@ -9,6 +9,7 @@ Este diretório centraliza toda a documentação técnica e operacional do proje
 - 🤖 [Prompt do sub-sistema de importação de repositórios GitHub](./PROMPT-SUBSISTEMA-IMPORTACAO-REPOS-GITHUB.md)
 - 🧾 [Relatório de implementação do sub-sistema de importação GitHub](./RELATORIO-IMPLEMENTACAO-SUBSISTEMA-IMPORTACAO-GITHUB.md)
 - ✅ [Checklist de pendências do site](./PENDENCIAS-SITE.md)
+- ⚡ [Plano de otimização de performance](./plano-otimizacao-performance.md)
 
 ## Objetivo desta organização
 
