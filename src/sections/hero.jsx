@@ -7,7 +7,6 @@ import { Input } from "../components/ui/input";
 import { Badge } from "../components/ui/badge";
 import { tags, items } from "../data/projects.jsx";
 import { cx, getTagColor } from "../utils/utils";
-import { BackgroundParticles } from "../components/ui/background-particles";
 
 export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, setIsSearchOpen, onOpenProject }) {
   // Filtra itens para o overlay
@@ -26,9 +25,6 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
 
   return (
     <section id="inicio" className="relative w-full overflow-hidden pt-24 md:pt-28">
-      {/* Partículas de fundo (renderizadas diretamente aqui) */}
-      <BackgroundParticles />
-
       <div className="mx-auto max-w-7xl px-6 py-12 grid md:grid-cols-2 gap-10 items-center relative z-10">
       {/* Overlay de Busca Focada */}
       <AnimatePresence>
