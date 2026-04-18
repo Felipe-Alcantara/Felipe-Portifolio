@@ -106,7 +106,7 @@ export function ContactSection() {
                         <Mail size={24} />
                     </a>
                     
-                    <a href="http://discord.gg/DmW9tHcGpV" target="_blank" rel="noreferrer" className="group p-2 rounded-xl bg-black/20 border border-white/5 hover:border-white/20 hover:scale-125 hover:z-50 hover:shadow-[0_0_30px_rgba(88,101,242,0.4)] transition-all duration-200 flex items-center justify-center text-[#5865F2]" title="Discord">
+                    <a href="https://discord.gg/DmW9tHcGpV" target="_blank" rel="noreferrer" className="group p-2 rounded-xl bg-black/20 border border-white/5 hover:border-white/20 hover:scale-125 hover:z-50 hover:shadow-[0_0_30px_rgba(88,101,242,0.4)] transition-all duration-200 flex items-center justify-center text-[#5865F2]" title="Discord">
                         <FaDiscord size={24} />
                     </a>
                 </div>

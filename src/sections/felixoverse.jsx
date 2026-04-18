@@ -24,7 +24,7 @@ export function FelixoVerseSection() {
             </Button>
             <Button asChild variant="outline" className="relative group overflow-hidden border-purple-500/50 bg-purple-500/10 text-white shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:bg-purple-500/20 felixo-card-glow transition-all duration-300">
               <a 
-                href="http://discord.gg/DmW9tHcGpV" 
+                href="https://discord.gg/DmW9tHcGpV" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"

@@ -131,7 +131,7 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
               <FaWhatsapp size={28} className="text-felixo-purple-glow group-hover:scale-150 transition-transform" />
             </a>
             <a 
-              href="http://discord.gg/DmW9tHcGpV" 
+              href="https://discord.gg/DmW9tHcGpV" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-zinc-300 hover:text-purple-400 transition-colors group"

@@ -53,7 +53,7 @@ export function ContactModal({ isOpen, onClose, message, contactInfo }) {
               </Button>
 
               <Button asChild variant="outline" className="justify-start gap-3 text-lg py-6 border-white/10 hover:bg-indigo-500/20 hover:border-indigo-500/50 hover:text-white">
-                <a href="http://discord.gg/DmW9tHcGpV" target="_blank" rel="noopener noreferrer">
+                <a href="https://discord.gg/DmW9tHcGpV" target="_blank" rel="noopener noreferrer">
                   <FaDiscord className="text-indigo-400" size={24} /> Discord
                 </a>
               </Button>
