@@ -4,8 +4,9 @@ Este documento reúne o que ainda falta implementar/ajustar no site, com base no
 
 ## 1) Conteúdo e links reais
 
-- [ ] Substituir projetos placeholder por projetos reais no catálogo principal.
+- [x] Substituir projetos placeholder por projetos reais no catálogo principal.
   - Referência: `src/data/projects.jsx`
+  - Status atual: o catálogo principal já usa dados importados do GitHub (`baseProjects = mergedGeneratedProjects`) quando há itens gerados.
 - [ ] Trocar links de exemplo (`example.com`, `youtube.com/watch?v=demoX`, `#`) por URLs reais e válidas.
   - Referência: `src/data/projects.jsx`
 - [ ] Revisar status dos projetos (`Finalizado` / `Em Desenvolvimento`) para refletir o estado real.
