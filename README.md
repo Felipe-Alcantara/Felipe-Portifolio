@@ -65,7 +65,6 @@ Felipe-Portifolio/
 ├── docs/                               # Documentação centralizada
 │   ├── README.md                       # Índice da documentação
 │   ├── DOCUMENTATION.md                # Guia de customização e manutenção
-│   └── GUIA-DOMINIO-PAGES.md           # Configuração de domínio no GitHub Pages
 ├── public/                             # Arquivos estáticos públicos
 │   ├── CNAME
 │   └── Currículo/
@@ -127,7 +126,6 @@ Felipe-Portifolio/
 - 🤖 [Prompt do sub-sistema de importação de repositórios GitHub](docs/PROMPT-SUBSISTEMA-IMPORTACAO-REPOS-GITHUB.md)
 - 🧭 [Guia de customização e manutenção](docs/DOCUMENTATION.md)
 - 🎨 [Design system oficial (Felixo System Design)](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md)
-- 🌍 [Guia de domínio no GitHub Pages](docs/GUIA-DOMINIO-PAGES.md)
 
 ---
 

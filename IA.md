@@ -42,4 +42,3 @@ Portfólio web em React para centralizar projetos, stack e identidade visual Fel
 - `docs/README.md`
 - `docs/DOCUMENTATION.md`
 - `Felixo-System-Design/PADRÕES DE DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md`
-- `docs/GUIA-DOMINIO-PAGES.md`

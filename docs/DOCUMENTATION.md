@@ -113,4 +113,3 @@ npm run preview
 
 - [README principal](../README.md)
 - [Design System Frontend (Felixo System Design)](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md)
-- [Guia de domínio](./GUIA-DOMINIO-PAGES.md)
