@@ -46,14 +46,24 @@ A estratégia será reduzir custo de renderização por frame, manter a estétic
    - Revisar UX para confirmar manutenção da identidade visual.
    - Documentar padrões de performance para evitar regressão futura.
 
+## Status atual (auditoria rápida no código)
+
+- ⬜ **Fase 1 — Baseline**: pendente (não há registro de Lighthouse/TBT/INP/FPS no repositório).
+- ⬜ **Fase 2 — Animação contínua global**: pendente (há múltiplas instâncias de `BackgroundParticles` e não há `IntersectionObserver`/`prefers-reduced-motion`).
+- ⬜ **Fase 3 — Carrossel**: pendente (a estratégia atual ainda usa `loop` com triplicação e auto-scroll contínuo).
+- 🟡 **Fase 4 — Efeitos CSS caros**: parcial (existem utilitários de intensidade de glow, mas os efeitos contínuos ainda são amplos).
+- 🟡 **Fase 5 — JS não crítico**: parcial (há carregamento dinâmico de READMEs importados, mas modais/seções continuam no bundle inicial).
+- 🟡 **Fase 6 — Imagens e mídia**: parcial (já existe uso de WebP em parte dos assets, porém sem política ampla de `loading=\"lazy\"`/`decoding=\"async\"`).
+- ⬜ **Fase 7 — Validação final**: pendente.
+
 ## Todos (execução)
-- `perf-baseline`
-- `perf-particles`
-- `perf-carousel`
-- `perf-css-effects`
-- `perf-bundle-splitting`
-- `perf-images`
-- `perf-validate`
+- [ ] `perf-baseline`
+- [ ] `perf-particles`
+- [ ] `perf-carousel`
+- [ ] `perf-css-effects` (parcial)
+- [ ] `perf-bundle-splitting` (parcial)
+- [ ] `perf-images` (parcial)
+- [ ] `perf-validate`
 
 ## Notas importantes
 - Priorizar “sensação de fluidez” (scroll e clique) antes de micro-otimizações.

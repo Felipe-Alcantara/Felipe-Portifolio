@@ -48,7 +48,7 @@ Este documento reúne o que ainda falta implementar/ajustar no site, com base no
   - Referência: `package.json`
 
 ## 5) SEO, descoberta e apresentação
-
+1'
 - [ ] Trocar favicon padrão do Vite por ícone do projeto.
   - Referência: `index.html`
 - [ ] Melhorar metadados SEO básicos (title, description, Open Graph, Twitter Card, canonical).
