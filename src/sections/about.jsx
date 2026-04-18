@@ -56,6 +56,26 @@ function ExperienceTimer() {
   return <span className="font-mono text-felixo-purple font-bold whitespace-nowrap inline-block">{time}</span>;
 }
 
+// Mapeia label de tecnologia para a tag de categoria usada no filtro de projetos.
+// Tags válidas: "web" | "code" | "music" | "design" | "game" | "automation" | "all"
+const TECH_TO_TAG = {
+  HTML: "web",
+  CSS: "web",
+  JS: "web",
+  TypeScript: "web",
+  Tailwind: "web",
+  React: "web",
+  Vite: "web",
+  Python: "code",
+  Brython: "code",
+  Django: "code",
+  "C#": "code",
+  Git: "all",
+  GitHub: "all",
+  VSCode: "all",
+  Windows: "all",
+};
+
 export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
   const tech = [
     { label: "HTML", Icon: TbBrandHtml5, color: "#E34F26" },
@@ -184,11 +204,11 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
               {tech.map(({ label, Icon, color, isImage, src }) => (
                 <span
                   key={label}
-                  onClick={() => onTechClick && onTechClick(label)}
+                  onClick={() => onTechClick && onTechClick(TECH_TO_TAG[label] ?? "all")}
                   title={label}
                   aria-label={label}
                   className={`group relative p-2 rounded-xl bg-black/20 border border-white/5 hover:border-white/20 hover:scale-150 hover:z-50 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-200 cursor-pointer flex items-center justify-center ${
-                    activeTag === label && isSearchOpen 
+                    activeTag === (TECH_TO_TAG[label] ?? "all") && isSearchOpen
                       ? "border-white/20 scale-150 z-50 shadow-[0_0_30px_rgba(255,255,255,0.3)]"
                       : ""
                   }`}
@@ -197,8 +217,8 @@ export function AboutSection({ onTechClick, activeTag, isSearchOpen }) {
                   {/* Tooltip com nome da tecnologia */}
                   <span
                     className={`absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 rounded-md bg-black/90 text-xs font-semibold whitespace-nowrap transition-opacity duration-200 pointer-events-none ${
-                      activeTag === label && isSearchOpen 
-                        ? "opacity-100" 
+                      activeTag === (TECH_TO_TAG[label] ?? "all") && isSearchOpen
+                        ? "opacity-100"
                         : "opacity-0 group-hover:opacity-100"
                     }`}
                     style={{ color: isImage ? '#F7DF1E' : color }}
