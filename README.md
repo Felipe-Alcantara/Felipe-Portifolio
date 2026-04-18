@@ -10,7 +10,7 @@
 
 **Portfólio interativo em React com identidade visual FelixoVerse, filtros dinâmicos, modais de projeto e documentação técnica organizada.**
 
-[📖 Documentação](docs/README.md) • [🤖 Prompt de Importação GitHub](docs/PROMPT-SUBSISTEMA-IMPORTACAO-REPOS-GITHUB.md) • [🎨 Design System](docs/DESIGN-SYSTEM.md) • [🚀 Como Usar](#-como-usar)
+[📖 Documentação](docs/README.md) • [🤖 Prompt de Importação GitHub](docs/PROMPT-SUBSISTEMA-IMPORTACAO-REPOS-GITHUB.md) • [🎨 Design System](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md) • [🚀 Como Usar](#-como-usar)
 
 </div>
 
@@ -65,7 +65,6 @@ Felipe-Portifolio/
 ├── docs/                               # Documentação centralizada
 │   ├── README.md                       # Índice da documentação
 │   ├── DOCUMENTATION.md                # Guia de customização e manutenção
-│   ├── DESIGN-SYSTEM.md                # Sistema de design oficial
 │   └── GUIA-DOMINIO-PAGES.md           # Configuração de domínio no GitHub Pages
 ├── public/                             # Arquivos estáticos públicos
 │   ├── CNAME
@@ -127,7 +126,7 @@ Felipe-Portifolio/
 - 📖 [Índice da documentação](docs/README.md)
 - 🤖 [Prompt do sub-sistema de importação de repositórios GitHub](docs/PROMPT-SUBSISTEMA-IMPORTACAO-REPOS-GITHUB.md)
 - 🧭 [Guia de customização e manutenção](docs/DOCUMENTATION.md)
-- 🎨 [Design system oficial](docs/DESIGN-SYSTEM.md)
+- 🎨 [Design system oficial (Felixo System Design)](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md)
 - 🌍 [Guia de domínio no GitHub Pages](docs/GUIA-DOMINIO-PAGES.md)
 
 ---
@@ -201,7 +200,7 @@ Exemplo de override por `repoKey`:
 5. Atualize textos globais em `src/App.jsx` e componentes `layout/`.
 
 ### Para alterar visual
-1. Consulte `docs/DESIGN-SYSTEM.md`.
+1. Consulte o [Design System Frontend no Felixo System Design](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md).
 2. Ajuste classes Tailwind nos componentes `ui/`.
 3. Refine tokens e tema em `tailwind.config.js` e `src/index.css`.
 

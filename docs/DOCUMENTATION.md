@@ -40,7 +40,7 @@ Campos importantes por item:
 - `createdAt`, `status`
 - `links`: GitHub, site, demo, download e post
 
-> Ao criar uma nova categoria, adicione em `CATEGORIES` e configure ícone/cor em `ICONS` e `COLORS`.
+> As categorias (`CATEGORIES`) são geradas automaticamente a partir das `tags` existentes nos projetos normalizados. Ao criar uma nova `tag`, ajuste `ICONS` e `COLORS` se quiser mapeamento visual específico.
 
 ---
 
@@ -71,10 +71,11 @@ Ordem de renderização principal está em `src/App.jsx`.
 
 Arquivo: `src/utils/readme-loader.js`
 
-Adicione o título do projeto em `README_CONTENT` e associe:
+Fluxo atual de resolução do README:
 
-1. Um arquivo markdown importado via `?raw`; ou
-2. Um conteúdo inline temporário.
+1. Projetos importados via GitHub: usa `repoFolder` para buscar automaticamente `src/data/github-import/repos/<repoFolder>/readme.md` com `import.meta.glob`.
+2. Projetos legados/locais: usa fallback por título no `README_CONTENT` (com markdown importado via `?raw` ou conteúdo inline).
+3. Sem correspondência: retorna mensagem padrão de "README não encontrado".
 
 ---
 
@@ -102,7 +103,7 @@ npm run preview
 ## ✅ Checklist para mudanças
 
 - Atualizou conteúdo em `src/data/projects.jsx` quando necessário.
-- Manteve consistência visual conforme `docs/DESIGN-SYSTEM.md`.
+- Manteve consistência visual conforme o Design System Frontend do `felixo-standards` (https://github.com/Felipe-Alcantara/Felixo-System-Design).
 - Revisou links quebrados de projetos/documentação.
 - Atualizou este guia ou o `README.md` quando houver mudança estrutural.
 
@@ -111,5 +112,5 @@ npm run preview
 ## 🔗 Referências
 
 - [README principal](../README.md)
-- [Design System](./DESIGN-SYSTEM.md)
+- [Design System Frontend (Felixo System Design)](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md)
 - [Guia de domínio](./GUIA-DOMINIO-PAGES.md)
