@@ -125,6 +125,9 @@ Felipe-Portifolio/
 - 📖 [Índice da documentação](docs/README.md)
 - 🤖 [Prompt do sub-sistema de importação de repositórios GitHub](docs/PROMPT-SUBSISTEMA-IMPORTACAO-REPOS-GITHUB.md)
 - 🧭 [Guia de customização e manutenção](docs/DOCUMENTATION.md)
+- ✅ [Checklist de pendências do site](docs/PENDENCIAS-SITE.md)
+- ⚡ [Plano de otimização de performance](docs/plano-otimizacao-performance.md)
+- 🤖 [Contexto operacional para IA](IA.md)
 - 🎨 [Design system oficial (Felixo System Design)](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md)
 
 ---
@@ -223,6 +226,7 @@ Exemplo de override por `repoKey`:
 - Sem execução de `npm run sync:github`, o catálogo usa fallback local de placeholders.
 - Não há pipeline de testes automatizados neste repositório.
 - Parte dos links externos nos projetos é demonstrativa.
+- `public/favicon.png` e `public/og-image.png` precisam ser criados manualmente com assets reais.
 
 ## 🛡️ Segurança
 
