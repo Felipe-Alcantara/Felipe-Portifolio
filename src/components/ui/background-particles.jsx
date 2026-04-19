@@ -28,7 +28,7 @@ export function BackgroundParticles() {
   }, []);
 
   const backgroundParticles = useMemo(() => {
-    return Array.from({ length: 35 }).map((_, i) => ({
+    return Array.from({ length: 55 }).map((_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
