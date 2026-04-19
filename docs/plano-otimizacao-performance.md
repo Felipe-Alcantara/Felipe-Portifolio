@@ -90,6 +90,7 @@ A estratégia é reduzir custo de renderização por frame, manter a estética n
 | **Fase 2a — BackgroundParticles duplicado** | ✅ Concluído | Removido de `hero.jsx` — era 2× o custo de partículas |
 | **Fase 2b — prefers-reduced-motion** | ✅ Concluído | Partículas desabilitadas quando motion reduzido |
 | **Fase 2c — IntersectionObserver** | ✅ Concluído | Partículas pausam fora do viewport |
+| **Polish visual** | ✅ Concluído | Breathing 3s→5s (mais suave); partículas 35→55 (seguro com otimizações 2b/2c) |
 | **Fase 3 — Carrossel** | ⬜ Pendente | Estratégia de triplicação ainda em uso |
 | **Fase 4 — Efeitos CSS caros** | 🟡 Parcial | Utilitários de glow existem, efeitos contínuos ainda amplos |
 | **Fase 5 — Code-splitting modais** | ✅ Concluído | `React.lazy` aplicado em `ProjectsModal` e `ProjectDetailsModal` |
@@ -100,13 +101,15 @@ A estratégia é reduzir custo de renderização por frame, manter a estética n
 
 ## Bugs funcionais corrigidos nesta sessão (2026-04-18)
 
-| Bug | Arquivo | Fix |
-|-----|---------|-----|
+| Bug / Ajuste | Arquivo | Fix |
+|--------------|---------|-----|
 | BackgroundParticles duplicado | `hero.jsx:30` | Removida instância + import |
 | Links Discord em HTTP | `about.jsx`, `contact.jsx`, `contact-modal.jsx`, `felixoverse.jsx` | Trocado para HTTPS |
 | Filtro de stack quebrado | `about.jsx` | Labels mapeados para tags de categoria |
 | SEO ausente | `index.html`, `public/` | Meta tags, OG, favicon, robots.txt |
 | Modais no bundle inicial | `App.jsx` | `React.lazy` + `Suspense` |
+| Breathing muito rápido | `src/index.css` | Todos os glows/breathes 3s→5s; intense hover 2.5s→4s |
+| Poucas partículas | `background-particles.jsx` | 35→55 (seguro com IntersectionObserver + reduced-motion) |
 
 ---
 

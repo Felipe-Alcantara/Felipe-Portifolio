@@ -22,6 +22,7 @@ Deploy em produção: https://felixo.com.br (GitHub Pages).
 | [2026-04-18] | ✅ | Filtro de stack corrigido — labels mapeados para tags de categoria |
 | [2026-04-18] | ✅ | Code-splitting de modais com React.lazy |
 | [2026-04-18] | ✅ | prefers-reduced-motion e IntersectionObserver nas partículas |
+| [2026-04-18] | ✅ | Breathing animations ajustadas (3s→5s) e partículas aumentadas (35→55) |
 | — | ⬜ | Virtualização do carrossel (Fase 3 do plano de performance) |
 | — | ⬜ | React Router + rota `/felixoverse` |
 | — | ⬜ | Formulário de contato com envio real |
@@ -58,7 +59,9 @@ Deploy em produção: https://felixo.com.br (GitHub Pages).
 
 ## 🎨 Decisões de Design & Convenções
 
-[2026-04-18] Paleta: Zinc 950 fundo, `#C084FC` roxo de marca, Space Grotesk como fonte global.  
+[2026-04-18] Paleta: Zinc 950 fundo, `#C084FC` roxo de marca, Space Grotesk como fonte global.
+[2026-04-18] Breathing animations em `5s` — ritmo preferido pelo usuário. Não voltar para 3s (ficava rápido demais).
+[2026-04-18] Partículas: 55 unidades. Era 35 antes do ajuste; 70 era o valor bugado (2 instâncias). 55 é o equilíbrio visual mantendo performance.  
 [2026-04-18] Design System documentado em `felixo-standards/PADRÕES DE DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md`.  
 [2026-04-18] Tags de categoria dos projetos: `web` | `code` | `music` | `design` | `game` | `automation`.  
 [2026-04-18] Interface e textos em português. Componentes e arquivos em `kebab-case` e `.jsx`.  
