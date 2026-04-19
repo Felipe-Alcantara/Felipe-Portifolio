@@ -140,7 +140,11 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
         </h1>
         <div className="mt-4 text-zinc-300 space-y-4 text-glow-white">
           <p>
-            Olá, eu sou <strong className="text-felixo-purple-glow">Felipe Martin</strong>: desenvolvo aplicações, bots, extensões e automações, também atuo com produção musical e sound design, e crio experiências colaborativas.
+            Olá, eu sou{" "}
+            <a href="#contato" className="text-felixo-purple-glow font-bold hover:underline">
+              Felipe Martin
+            </a>
+            : desenvolvo aplicações, bots, extensões e automações, também atuo com produção musical e sound design, e crio experiências colaborativas.
           </p>
           <p>
             Aqui você encontra meus projetos, demos e colaborações e um link dedicado ao meu projeto{" "}
