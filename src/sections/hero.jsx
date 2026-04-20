@@ -148,7 +148,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
           </p>
           <p>
             Aqui você encontra meus projetos, demos e colaborações e um link dedicado ao meu projeto{" "}
-            <a href="/felixoverse" className="text-felixo-purple-glow hover:underline font-semibold" title="Em breve">
+            <a href="#felixoverse" className="text-felixo-purple-glow hover:underline font-semibold" title="Em breve">
               FelixoVerse
             </a>
             , minha comunidade e plataforma de divulgação artística, de desenvolvimento e entretenimento!
