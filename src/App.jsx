@@ -167,13 +167,13 @@ export default function App() {
         />
         <PortfolioSection 
           key={`portfolio-${activeTag}`} // Chave para forçar re-renderização se a tag mudar
-          items={filteredProjects.length ? filteredProjects : allProjects} 
+          items={filteredProjects} 
           setIsProjectsModalOpen={setIsProjectsModalOpen}
           setInitialTagForProjectsModal={setInitialTagForProjectsModal}
           sectionTag="web" // Filtra apenas projetos web para o carrossel
         />
         <ProjectsGridSection 
-          items={allProjects} 
+          items={filteredProjects} 
           setIsProjectsModalOpen={setIsProjectsModalOpen}
           setInitialTagForProjectsModal={setInitialTagForProjectsModal}
           onOpenProject={handleOpenProjectDetails}

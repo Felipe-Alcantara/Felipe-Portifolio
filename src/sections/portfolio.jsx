@@ -45,6 +45,10 @@ export function PortfolioSection({ items, setIsProjectsModalOpen, setInitialTagF
     }
   };
 
+  if (displayItems.length === 0) {
+    return null;
+  }
+
   return (
     <section id="portfolio" className="relative border-t border-white/5 overflow-hidden">
       <BackgroundParticles />
