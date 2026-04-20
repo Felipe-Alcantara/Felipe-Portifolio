@@ -7,8 +7,13 @@ import { Input } from "../components/ui/input";
 import { Badge } from "../components/ui/badge";
 import { tags, items } from "../data/projects.jsx";
 import { cx, getTagColor } from "../utils/utils";
+import { smoothScrollToHash } from "../utils/smooth-scroll";
 
 export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, setIsSearchOpen, onOpenProject }) {
+  const handleSectionLinkClick = (e, href) => {
+    smoothScrollToHash(e, href);
+  };
+
   // Filtra itens para o overlay
   const filteredItems = useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -141,14 +146,14 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
         <div className="mt-4 text-zinc-300 space-y-4 text-glow-white">
           <p>
             Olá, eu sou{" "}
-            <a href="#contato" className="text-felixo-purple-glow font-bold hover:underline">
+            <a href="#contato" onClick={(e) => handleSectionLinkClick(e, "#contato")} className="text-felixo-purple-glow font-bold hover:underline">
               Felipe Martin
             </a>
             : desenvolvo aplicações, bots, extensões e automações, também atuo com produção musical e sound design, e crio experiências colaborativas.
           </p>
           <p>
             Aqui você encontra meus projetos, demos e colaborações e um link dedicado ao meu projeto{" "}
-            <a href="#felixoverse" className="text-felixo-purple-glow hover:underline font-semibold" title="Em breve">
+            <a href="#felixoverse" onClick={(e) => handleSectionLinkClick(e, "#felixoverse")} className="text-felixo-purple-glow hover:underline font-semibold" title="Em breve">
               FelixoVerse
             </a>
             , minha comunidade e plataforma de divulgação artística, de desenvolvimento e entretenimento!
@@ -156,7 +161,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
         </div>
         <div className="mt-6 flex gap-3">
           <Button asChild variant="outline" className="relative group overflow-hidden border-purple-500/50 bg-purple-500/10 text-white shadow-[0_0_20px_rgba(168,85,247,0.5)] hover:bg-purple-500/20 felixo-card-glow transition-all duration-300">
-            <a href="#portfolio" className="inline-flex items-center gap-2">
+            <a href="#portfolio" onClick={(e) => handleSectionLinkClick(e, "#portfolio")} className="inline-flex items-center gap-2">
               {/* Brilho passando (Shimmer) */}
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
 
@@ -178,7 +183,7 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
             </a>
           </Button>
           <Button variant="outline" asChild className="relative group overflow-hidden border-white/30 bg-white/5 text-white shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:bg-white/10 felixo-card-glow-white transition-all duration-300">
-            <a href="#contato" className="inline-flex items-center gap-2">
+            <a href="#contato" onClick={(e) => handleSectionLinkClick(e, "#contato")} className="inline-flex items-center gap-2">
               {/* Brilho passando (Shimmer) */}
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent z-0" />
 

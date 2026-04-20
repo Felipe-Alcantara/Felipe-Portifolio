@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "../ui/button";
 import logo from "../../assets/images/CATT transparente.png";
+import { smoothScrollToHash } from "../../utils/smooth-scroll";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,38 +26,7 @@ export function Navbar() {
   ];
 
   const handleLinkClick = (e, href) => {
-    e.preventDefault();
-    const targetId = href.replace(/.*#/, "");
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-      const headerOffset = 80;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - headerOffset;
-      const startPosition = window.scrollY;
-      const distance = offsetPosition - startPosition;
-      const duration = 2000; // 2000ms = 2 segundos (mais lento e suave)
-      let start = null;
-
-      const step = (timestamp) => {
-        if (!start) start = timestamp;
-        const progress = timestamp - start;
-        
-        // Função de Easing (Cubic Ease In Out) para suavidade no início e fim
-        const ease = (t, b, c, d) => {
-          t /= d / 2;
-          if (t < 1) return c / 2 * t * t * t + b;
-          t -= 2;
-          return c / 2 * (t * t * t + 2) + b;
-        };
-
-        window.scrollTo({ top: ease(progress, startPosition, distance, duration), behavior: "auto" });
-
-        if (progress < duration) window.requestAnimationFrame(step);
-      };
-
-      window.requestAnimationFrame(step);
-    }
+    smoothScrollToHash(e, href);
     setIsOpen(false);
   };
 
