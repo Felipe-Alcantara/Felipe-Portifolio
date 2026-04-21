@@ -1,9 +1,10 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CalendarDays, CheckCircle2, ListOrdered, Wrench, X } from "lucide-react";
 import { Button } from "./button";
 import { Badge } from "./badge";
 import { cx, getTagColor } from "../../utils/utils";
+import { tags } from "../../data/projects.jsx";
 
 function toTimestamp(dateValue) {
   const parsed = Date.parse(dateValue || "");
@@ -25,6 +26,8 @@ function formatDate(dateValue) {
 }
 
 export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }) {
+  const [activeTag, setActiveTag] = useState("all");
+
   const sortedItems = useMemo(
     () =>
       [...items].sort((a, b) => {
@@ -37,6 +40,14 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
         return String(a.title || "").localeCompare(String(b.title || ""), "pt-BR");
       }),
     [items]
+  );
+
+  const filteredItems = useMemo(
+    () =>
+      sortedItems.filter(
+        (item) => activeTag === "all" || String(item.tag || "").toLowerCase() === activeTag
+      ),
+    [sortedItems, activeTag]
   );
 
   useEffect(() => {
@@ -57,6 +68,12 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
       document.body.style.overflow = previousBodyOverflow;
       document.body.style.paddingRight = previousBodyPaddingRight;
     };
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (isOpen) {
+      setActiveTag("all");
+    }
   }, [isOpen]);
 
   const handleOpenProject = (project) => {
@@ -85,12 +102,30 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
             className="w-full max-w-5xl bg-zinc-950 border border-white/20 rounded-3xl p-7 md:p-8 shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-2 text-zinc-200">
-                <ListOrdered size={18} className="text-purple-400" />
-                <h3 className="text-base md:text-lg font-semibold">
-                  Projetos por criação (mais novos primeiro)
-                </h3>
+            <div className="flex items-start justify-between gap-4 mb-6">
+              <div className="flex-1">
+                <div className="flex items-center gap-2 text-zinc-200">
+                  <ListOrdered size={18} className="text-purple-400" />
+                  <h3 className="text-base md:text-lg font-semibold">
+                    Projetos por criação (mais novos primeiro)
+                  </h3>
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {tags.map((tag) => (
+                    <Badge
+                      key={tag.id}
+                      onClick={() => setActiveTag(tag.id)}
+                      className={
+                        "cursor-pointer px-3 py-1.5 text-xs md:text-sm transition-all " +
+                        (activeTag === tag.id
+                          ? "bg-purple-600 text-black shadow-[0_0_15px_rgba(147,51,234,0.5)] scale-105"
+                          : "bg-zinc-800 hover:bg-zinc-700 text-zinc-200")
+                      }
+                    >
+                      {tag.label}
+                    </Badge>
+                  ))}
+                </div>
               </div>
               <Button
                 variant="ghost"
@@ -104,7 +139,7 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
             </div>
 
             <div className="max-h-[70vh] overflow-y-auto p-1 md:p-2 custom-scrollbar space-y-4">
-              {sortedItems.map((item) => (
+              {filteredItems.map((item) => (
                 <button
                   key={item.title}
                   type="button"
@@ -150,9 +185,9 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
                 </button>
               ))}
 
-              {sortedItems.length === 0 && (
+              {filteredItems.length === 0 && (
                 <div className="py-10 text-center text-zinc-500">
-                  Nenhum projeto disponível para listar.
+                  Nenhum projeto encontrado para a tag selecionada.
                 </div>
               )}
             </div>
