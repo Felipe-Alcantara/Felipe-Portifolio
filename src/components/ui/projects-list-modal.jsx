@@ -138,59 +138,73 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
               </Button>
             </div>
 
-            <div className="max-h-[70vh] overflow-y-auto p-1 md:p-2 custom-scrollbar space-y-4">
-              {filteredItems.map((item) => (
-                <button
-                  key={item.title}
-                  type="button"
-                  onClick={() => handleOpenProject(item)}
-                  className="w-full text-left rounded-2xl border border-white/10 bg-zinc-900/40 p-5 transition-colors hover:bg-zinc-900/70 hover:border-white/20"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="min-w-0">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-purple-400">{item.icon}</span>
-                        <h4 className="font-semibold text-zinc-100 truncate">{item.title}</h4>
+            <motion.div
+              layout
+              className="max-h-[70vh] overflow-y-auto p-1 md:p-2 custom-scrollbar space-y-4"
+            >
+              <AnimatePresence mode="popLayout">
+                {filteredItems.map((item) => (
+                  <motion.button
+                    layout
+                    key={item.title}
+                    type="button"
+                    initial={{ scale: 0.96, opacity: 0, y: 8 }}
+                    animate={{ scale: 1, opacity: 1, y: 0 }}
+                    exit={{ scale: 0.94, opacity: 0, y: -8, transition: { duration: 0.18 } }}
+                    transition={{ type: "spring", damping: 20, stiffness: 300 }}
+                    onClick={() => handleOpenProject(item)}
+                    className="w-full text-left rounded-2xl border border-white/10 bg-zinc-900/40 p-5 transition-colors hover:bg-zinc-900/70 hover:border-white/20"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="min-w-0">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-purple-400">{item.icon}</span>
+                          <h4 className="font-semibold text-zinc-100 truncate">{item.title}</h4>
+                        </div>
+                        <p className="text-sm text-zinc-400 line-clamp-2">{item.desc}</p>
                       </div>
-                      <p className="text-sm text-zinc-400 line-clamp-2">{item.desc}</p>
+                      <Badge className={cx("capitalize border shrink-0", getTagColor(item.tag))}>
+                        {item.tag}
+                      </Badge>
                     </div>
-                    <Badge className={cx("capitalize border shrink-0", getTagColor(item.tag))}>
-                      {item.tag}
-                    </Badge>
-                  </div>
 
-                  <div className="mt-3 pt-3 border-t border-white/10 flex items-center justify-between gap-3 text-xs">
-                    <div className="flex items-center gap-1.5 text-zinc-400">
-                      <CalendarDays size={14} />
-                      <span>{formatDate(item.createdAt)}</span>
-                    </div>
-                    {item.status && (
-                      <div
-                        className={cx(
-                          "flex items-center gap-1.5 font-semibold",
-                          item.status === "Finalizado"
-                            ? "text-green-400/80"
-                            : "text-amber-400/80"
-                        )}
-                      >
-                        {item.status === "Finalizado" ? (
-                          <CheckCircle2 size={14} />
-                        ) : (
-                          <Wrench size={14} />
-                        )}
-                        <span>{item.status}</span>
+                    <div className="mt-3 pt-3 border-t border-white/10 flex items-center justify-between gap-3 text-xs">
+                      <div className="flex items-center gap-1.5 text-zinc-400">
+                        <CalendarDays size={14} />
+                        <span>{formatDate(item.createdAt)}</span>
                       </div>
-                    )}
-                  </div>
-                </button>
-              ))}
+                      {item.status && (
+                        <div
+                          className={cx(
+                            "flex items-center gap-1.5 font-semibold",
+                            item.status === "Finalizado"
+                              ? "text-green-400/80"
+                              : "text-amber-400/80"
+                          )}
+                        >
+                          {item.status === "Finalizado" ? (
+                            <CheckCircle2 size={14} />
+                          ) : (
+                            <Wrench size={14} />
+                          )}
+                          <span>{item.status}</span>
+                        </div>
+                      )}
+                    </div>
+                  </motion.button>
+                ))}
+              </AnimatePresence>
 
               {filteredItems.length === 0 && (
-                <div className="py-10 text-center text-zinc-500">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="py-10 text-center text-zinc-500"
+                >
                   Nenhum projeto encontrado para a tag selecionada.
-                </div>
+                </motion.div>
               )}
-            </div>
+            </motion.div>
           </motion.div>
         </motion.div>
       )}
