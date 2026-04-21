@@ -82,7 +82,7 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
             initial={{ opacity: 0, scale: 0.98, y: 8 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.98, y: 8 }}
-            className="w-full max-w-5xl bg-zinc-950 border border-white/20 rounded-3xl p-6 shadow-2xl"
+            className="w-full max-w-5xl bg-zinc-950 border border-white/20 rounded-3xl p-7 md:p-8 shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="flex items-center justify-between mb-6">
@@ -103,13 +103,13 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
               </Button>
             </div>
 
-            <div className="max-h-[70vh] overflow-y-auto pr-1 custom-scrollbar space-y-3">
+            <div className="max-h-[70vh] overflow-y-auto p-1 md:p-2 custom-scrollbar space-y-4">
               {sortedItems.map((item) => (
                 <button
                   key={item.title}
                   type="button"
                   onClick={() => handleOpenProject(item)}
-                  className="w-full text-left rounded-2xl border border-white/10 bg-zinc-900/40 p-4 transition-colors hover:bg-zinc-900/70 hover:border-white/20"
+                  className="w-full text-left rounded-2xl border border-white/10 bg-zinc-900/40 p-5 transition-colors hover:bg-zinc-900/70 hover:border-white/20"
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div className="min-w-0">
