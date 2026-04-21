@@ -25,6 +25,9 @@ import { BackgroundParticles } from "./components/ui/background-particles";
 const ProjectsModal = lazy(() =>
   import("./components/ui/projects-modal").then((m) => ({ default: m.ProjectsModal }))
 );
+const ProjectsListModal = lazy(() =>
+  import("./components/ui/projects-list-modal").then((m) => ({ default: m.ProjectsListModal }))
+);
 const ProjectDetailsModal = lazy(() =>
   import("./components/ui/project-details-modal").then((m) => ({ default: m.ProjectDetailsModal }))
 );
@@ -61,6 +64,8 @@ export default function App() {
   const [isProjectsModalOpen, setIsProjectsModalOpen] = useState(false);
   // Estado para definir a tag inicial ao abrir o modal de projetos.
   const [initialTagForProjectsModal, setInitialTagForProjectsModal] = useState("all");
+  // Estado para controlar a visibilidade do modal de lista (ordem por criação).
+  const [isProjectsListModalOpen, setIsProjectsListModalOpen] = useState(false);
   // Estado para o projeto selecionado no modal de detalhes
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -99,6 +104,10 @@ export default function App() {
   const handleCloseProjectsModal = () => {
     setIsProjectsModalOpen(false);
     setInitialTagForProjectsModal("all");
+  };
+
+  const handleCloseProjectsListModal = () => {
+    setIsProjectsListModalOpen(false);
   };
 
   /**
@@ -175,6 +184,7 @@ export default function App() {
         <ProjectsGridSection 
           items={filteredProjects} 
           setIsProjectsModalOpen={setIsProjectsModalOpen}
+          setIsProjectsListModalOpen={setIsProjectsListModalOpen}
           setInitialTagForProjectsModal={setInitialTagForProjectsModal}
           onOpenProject={handleOpenProjectDetails}
         />
@@ -191,6 +201,13 @@ export default function App() {
           isOpen={isProjectsModalOpen}
           onClose={handleCloseProjectsModal}
           initialTag={initialTagForProjectsModal}
+        />
+
+        <ProjectsListModal
+          isOpen={isProjectsListModalOpen}
+          onClose={handleCloseProjectsListModal}
+          items={filteredProjects}
+          onOpenProject={handleOpenProjectDetails}
         />
 
         <ProjectDetailsModal

@@ -4,6 +4,7 @@ import {
   ArrowLeft,
   ArrowRight,
   LayoutGrid,
+  ListOrdered,
   CalendarDays,
   CheckCircle2,
   Wrench, // Alterado de Loader para Wrench
@@ -136,6 +137,7 @@ const ProjectCard = ({
 export function ProjectsGridSection({
   items,
   setIsProjectsModalOpen,
+  setIsProjectsListModalOpen,
   setInitialTagForProjectsModal,
   onOpenProject,
 }) {
@@ -236,6 +238,15 @@ export function ProjectsGridSection({
             >
               <LayoutGrid size={16} className="mr-2" />
               Ver todos
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => {
+                if (setIsProjectsListModalOpen) setIsProjectsListModalOpen(true);
+              }}
+            >
+              <ListOrdered size={16} className="mr-2" />
+              Ver em lista
             </Button>
           </div>
         </div>
