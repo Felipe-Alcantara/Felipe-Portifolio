@@ -371,22 +371,40 @@ function formatTagLabel(tag) {
     .replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
+function generateGitHubZipUrl(githubUrl) {
+  if (typeof githubUrl !== "string" || !githubUrl.trim()) {
+    return "#";
+  }
+
+  const match = githubUrl.match(/github\.com\/([^/]+)\/([^/]+)\/?$/);
+  if (!match) {
+    return "#";
+  }
+
+  const [, owner, repo] = match;
+  return `https://github.com/${owner}/${repo}/archive/refs/heads/main.zip`;
+}
+
 function normalizeLinks(rawLinks, fallbackLink) {
   const links = rawLinks && typeof rawLinks === "object" ? rawLinks : {};
 
+  const githubUrl =
+    typeof links.github === "string" && links.github.trim()
+      ? links.github.trim()
+      : fallbackLink;
+
+  const downloadUrl =
+    typeof links.download === "string" && links.download.trim()
+      ? links.download.trim()
+      : generateGitHubZipUrl(githubUrl);
+
   return {
-    github:
-      typeof links.github === "string" && links.github.trim()
-        ? links.github.trim()
-        : fallbackLink,
+    github: githubUrl,
     site:
       typeof links.site === "string" && links.site.trim() ? links.site.trim() : "#",
     demo:
       typeof links.demo === "string" && links.demo.trim() ? links.demo.trim() : "#",
-    download:
-      typeof links.download === "string" && links.download.trim()
-        ? links.download.trim()
-        : "#",
+    download: downloadUrl,
     post:
       typeof links.post === "string" && links.post.trim() ? links.post.trim() : "#",
   };
