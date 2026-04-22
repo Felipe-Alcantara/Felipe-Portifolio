@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "repoKey": "felipe-alcantara/alura",
+    "properties": {
+      "online": false
+    },
+    "links": {
+      "site": "#"
+    }
+  }
+]

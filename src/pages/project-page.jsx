@@ -113,11 +113,13 @@ export default function ProjectPage({ project }) {
             <p className="mt-5 max-w-3xl text-lg leading-8 text-zinc-300">{project.desc}</p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              {projectHasOwnSite ? (
-                <ActionLink href={primaryProjectUrl} icon={<Globe size={18} className="shrink-0" />}>
-                  {primaryProjectLabel}
-                </ActionLink>
-              ) : null}
+              <Button variant="outline" className="justify-start gap-3 text-left" asChild>
+                <a href={primaryProjectUrl} target={projectHasOwnSite ? "_blank" : undefined} rel={projectHasOwnSite ? "noopener noreferrer" : undefined}>
+                  <Globe size={18} className="shrink-0" />
+                  <span className="flex-1 text-left">{primaryProjectLabel}</span>
+                  {projectHasOwnSite ? <ExternalLink size={16} className="text-zinc-500" /> : null}
+                </a>
+              </Button>
               <ActionLink href={project.links?.github} icon={<Github size={18} className="shrink-0" />}>
                 Repositório GitHub
               </ActionLink>

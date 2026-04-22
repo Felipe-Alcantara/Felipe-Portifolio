@@ -23,6 +23,7 @@ Deploy em produção: https://felixo.com.br (GitHub Pages).
 | [2026-04-18] | ✅ | Code-splitting de modais com React.lazy |
 | [2026-04-18] | ✅ | prefers-reduced-motion e IntersectionObserver nas partículas |
 | [2026-04-18] | ✅ | Breathing animations ajustadas (3s→5s) e partículas aumentadas (35→55) |
+| [2026-04-22] | ✅ | Projeto "Alura" — removido link externo inválido, botão redirecionado para página de detalhes via SPA |
 | — | ⬜ | Virtualização do carrossel (Fase 3 do plano de performance) |
 | — | ⬜ | React Router + rota `/felixoverse` |
 | — | ⬜ | Formulário de contato com envio real |
@@ -47,6 +48,7 @@ Deploy em produção: https://felixo.com.br (GitHub Pages).
 ## 📐 Decisões de Arquitetura
 
 [2026-04-18] SPA sem router — portfólio é uma única página longa com scroll; `/felixoverse` ainda não funciona como rota real.  
+[2026-04-22] **SPA Project Routes** — Sistema de roteamento via `src/utils/project-routes.js`. Gera rotas `/projetos/{slug}` dinamicamente para cada projeto. Componente `ProjectPage` (em `src/pages/project-page.jsx`) renderiza a página detalhada com README, links de ação e galeria do projeto. Se não houver site externo válido, o botão "Ver Site Online" leva à página interna de detalhes.  
 [2026-04-18] `BackgroundParticles` global em `App.jsx` — instância única gerencia todas as partículas do fundo. Não duplicar em seções filhas.  
 [2026-04-18] Dados de projetos centralizados em `src/data/projects.jsx` — merge automático entre `portfolio-items.generated.json` (sync GitHub) e `portfolio-items.overrides.json` (personalizações manuais por `repoKey`).  
 [2026-04-18] Sub-sistema de importação GitHub modularizado em `src/utils/github-import/`. Script em `scripts/sync-github-repos.mjs`.  
