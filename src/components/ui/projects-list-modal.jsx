@@ -125,37 +125,17 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
                     Projetos por criação ({isNewestFirst ? "mais novos primeiro" : "mais antigos primeiro"})
                   </h3>
                 </div>
-                <div className="flex items-center gap-2 shrink-0">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="rounded-full border-white/20 bg-zinc-900/70 text-xs md:text-sm hover:bg-zinc-800/80"
-                    onClick={() =>
-                      setSortDirection((currentDirection) =>
-                        currentDirection === "desc" ? "asc" : "desc"
-                      )
-                    }
-                    aria-label={
-                      isNewestFirst
-                        ? "Inverter para mais antigos primeiro"
-                        : "Inverter para mais novos primeiro"
-                    }
-                  >
-                    <ArrowUpDown size={14} />
-                    {isNewestFirst ? "Mais novos" : "Mais antigos"}
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="h-8 w-8 rounded-full hover:bg-white/10"
-                    onClick={onClose}
-                    aria-label="Fechar modal de lista"
-                  >
-                    <X size={18} />
-                  </Button>
-                </div>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-8 w-8 rounded-full hover:bg-white/10 shrink-0"
+                  onClick={onClose}
+                  aria-label="Fechar modal de lista"
+                >
+                  <X size={18} />
+                </Button>
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 {tags.map((tag) => (
                   <Badge
                     key={tag.id}
@@ -170,6 +150,24 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
                     {tag.label}
                   </Badge>
                 ))}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="rounded-full border-white/20 bg-zinc-900/70 text-xs md:text-sm hover:bg-zinc-800/80"
+                  onClick={() =>
+                    setSortDirection((currentDirection) =>
+                      currentDirection === "desc" ? "asc" : "desc"
+                    )
+                  }
+                  aria-label={
+                    isNewestFirst
+                      ? "Inverter para mais antigos primeiro"
+                      : "Inverter para mais novos primeiro"
+                  }
+                >
+                  <ArrowUpDown size={14} />
+                  {isNewestFirst ? "Mais novos" : "Mais antigos"}
+                </Button>
               </div>
             </div>
 
