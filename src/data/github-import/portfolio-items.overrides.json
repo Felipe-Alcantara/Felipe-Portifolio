@@ -1,11 +1,132 @@
 [
   {
     "repoKey": "felipe-alcantara/alura",
+    "tag": "estudo",
     "properties": {
       "online": false
     },
     "links": {
       "site": "#"
     }
+  },
+  {
+    "repoKey": "felipe-alcantara/estudos-py-api-fastapi-echo-lab",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/curso-em-video",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/curso-em-video---curso-de-html",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/curso-de-html-completo-programacao-web",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/exemplos_clean_code",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/aprendendo-orientacao-a-objeto-em-python",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/aprendendo-logica-de-programacao-de-listas-em-python",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/aprendendo-a-fazer-bots-do-discord",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/programacao-orientada-a-objetos-com-python-e-dataclass",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/programacao-orientada-a-objeto-em-python-sistema-bancario",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/programacao-orientada-a-objeto-em-python-sistema-de-streaming",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/automacao-em-python-e-desenvolvimento-de-interfaces-graficas-com-pysimplegui",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/classes-e-programacao-orientada-a-objetos-em-python",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/como-fazer-condicoes-no-python",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/python-classes-e-metodos",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/python-variaveis-como-declarar-e-utilizar-nos-scripts",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/amostragem-casual-simples",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/trabalho-da-faculdade",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/animacao-usando-javascript",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/diferenca-entre-classe-objeto-e-instancia-em-python",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/cifra-de-cesar-em-python",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/soma-em-serie",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/desconto-de-salario-em-python",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/identificador-de-str-em-python",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/identificador-numerico",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/calcular-area-irregular-sorteando-pontos-aleatorios",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/calcular-soma-com-funcao-em-python",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/calculadora-simples-em-python",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/mdn-web-docs",
+    "tag": "estudo"
+  },
+  {
+    "repoKey": "felipe-alcantara/scripts-html",
+    "tag": "estudo"
   }
 ]

@@ -65,7 +65,7 @@ Deploy em produção: https://felixo.com.br (GitHub Pages).
 [2026-04-18] Breathing animations em `5s` — ritmo preferido pelo usuário. Não voltar para 3s (ficava rápido demais).
 [2026-04-18] Partículas: 55 unidades. Era 35 antes do ajuste; 70 era o valor bugado (2 instâncias). 55 é o equilíbrio visual mantendo performance.  
 [2026-04-18] Design System documentado em `felixo-standards/PADRÕES DE DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md`.  
-[2026-04-18] Tags de categoria dos projetos: `web` | `code` | `music` | `design` | `game` | `automation`.  
+[2026-04-18] Tags de categoria dos projetos: `web` | `code` | `music` | `design` | `game` | `automation` | `estudo` (adicionada 2026-04-22).  
 [2026-04-18] Interface e textos em português. Componentes e arquivos em `kebab-case` e `.jsx`.  
 [2026-04-18] Tailwind como padrão de estilização; CSS global quando necessário.  
 [2026-04-18] Commits seguem Conventional Commits: `feat/fix/perf/docs/refactor`.

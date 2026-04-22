@@ -15,6 +15,7 @@ import {
   Server,
   Pipette,
   Layers,
+  BookOpen,
 } from "lucide-react";
 import generatedPortfolioItems from "./github-import/portfolio-items.generated.json";
 import overridePortfolioItems from "./github-import/portfolio-items.overrides.json";
@@ -38,6 +39,7 @@ const ICONS = {
   design: <Palette size={16} />,
   game: <Puzzle size={16} />,
   automation: <Bot size={16} />,
+  estudo: <BookOpen size={16} />,
   default: <Rocket size={16} />,
   html: <Code size={16} />,
   css: <Pipette size={16} />,
@@ -63,6 +65,7 @@ const COLORS = {
   design: "bg-pink-700",
   game: "bg-green-700",
   automation: "bg-orange-700",
+  estudo: "bg-indigo-700",
   default: "bg-zinc-800",
   html: "bg-red-700",
   css: "bg-blue-600",
@@ -89,6 +92,7 @@ const CATEGORY_LABELS = {
   design: "Design",
   game: "Game",
   automation: "Automação",
+  estudo: "Estudo",
   html: "HTML",
   css: "CSS",
   js: "JavaScript",
