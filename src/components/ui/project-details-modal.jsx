@@ -31,74 +31,78 @@ function SimpleMarkdown({ content }) {
   const normalizedContent = normalizeReadme(content);
 
   return (
-    <ReactMarkdown
-      components={{
-        h1: ({ children }) => (
-          <h1 className="text-xl font-bold text-purple-400 mb-3">{children}</h1>
-        ),
-        h2: ({ children }) => (
-          <h2 className="text-lg font-semibold text-purple-300 mb-2">{children}</h2>
-        ),
-        h3: ({ children }) => (
-          <h3 className="text-base font-medium text-purple-200 mb-2">{children}</h3>
-        ),
-        p: ({ children }) => (
-          <p className="text-zinc-300 mb-3 leading-relaxed">{children}</p>
-        ),
-        blockquote: ({ children }) => (
-          <blockquote className="border-l-4 border-purple-500 pl-4 italic text-zinc-400 mb-3">
-            {children}
-          </blockquote>
-        ),
-        ul: ({ children }) => <ul className="list-disc list-inside mb-3 space-y-1">{children}</ul>,
-        ol: ({ children }) => (
-          <ol className="list-decimal list-inside mb-3 space-y-1">{children}</ol>
-        ),
-        li: ({ children }) => <li className="text-zinc-300">{children}</li>,
-        a: ({ href, children }) => {
-          const isAnchorLink = typeof href === "string" && href.startsWith("#");
-          return (
-            <a
-              href={href}
-              target={isAnchorLink ? undefined : "_blank"}
-              rel={isAnchorLink ? undefined : "noopener noreferrer"}
-              className="text-purple-300 underline hover:text-purple-200 transition-colors"
-            >
+    <div className="text-zinc-300 leading-relaxed break-words">
+      <ReactMarkdown
+        components={{
+          h1: ({ children }) => (
+            <h1 className="text-xl font-bold text-purple-400 mb-3 break-words">{children}</h1>
+          ),
+          h2: ({ children }) => (
+            <h2 className="text-lg font-semibold text-purple-300 mb-2 break-words">{children}</h2>
+          ),
+          h3: ({ children }) => (
+            <h3 className="text-base font-medium text-purple-200 mb-2 break-words">{children}</h3>
+          ),
+          p: ({ children }) => (
+            <p className="text-zinc-300 mb-3 leading-relaxed break-words">{children}</p>
+          ),
+          blockquote: ({ children }) => (
+            <blockquote className="border-l-4 border-purple-500 pl-4 italic text-zinc-400 mb-3 break-words">
               {children}
-            </a>
-          );
-        },
-        code: ({ className, children }) => {
-          const value = String(children).replace(/\n$/, "");
-          const isBlock = Boolean(className) || value.includes("\n");
-
-          if (!isBlock) {
+            </blockquote>
+          ),
+          ul: ({ children }) => (
+            <ul className="list-disc list-inside mb-3 space-y-1 break-words">{children}</ul>
+          ),
+          ol: ({ children }) => (
+            <ol className="list-decimal list-inside mb-3 space-y-1 break-words">{children}</ol>
+          ),
+          li: ({ children }) => <li className="text-zinc-300 break-words">{children}</li>,
+          a: ({ href, children }) => {
+            const isAnchorLink = typeof href === "string" && href.startsWith("#");
             return (
-              <code className="bg-zinc-800 px-1.5 py-0.5 rounded text-purple-300 font-mono text-sm">
-                {value}
-              </code>
+              <a
+                href={href}
+                target={isAnchorLink ? undefined : "_blank"}
+                rel={isAnchorLink ? undefined : "noopener noreferrer"}
+                className="text-purple-300 underline hover:text-purple-200 transition-colors break-all"
+              >
+                {children}
+              </a>
             );
-          }
+          },
+          code: ({ className, children }) => {
+            const value = String(children).replace(/\n$/, "");
+            const isBlock = Boolean(className) || value.includes("\n");
 
-          return (
-            <pre className="bg-zinc-900 border border-white/10 rounded-lg p-3 mb-3 overflow-x-auto">
-              <code className="text-zinc-200 font-mono text-sm">{value}</code>
-            </pre>
-          );
-        },
-        hr: () => <hr className="border-white/10 my-4" />,
-        img: ({ src, alt }) => (
-          <img
-            src={src}
-            alt={alt || ""}
-            className="max-w-full rounded-lg border border-white/10 my-3"
-            loading="lazy"
-          />
-        ),
-      }}
-    >
-      {normalizedContent}
-    </ReactMarkdown>
+            if (!isBlock) {
+              return (
+                <code className="bg-zinc-800 px-1.5 py-0.5 rounded text-purple-300 font-mono text-sm break-all">
+                  {value}
+                </code>
+              );
+            }
+
+            return (
+              <pre className="bg-zinc-900 border border-white/10 rounded-lg p-3 mb-3 overflow-x-auto max-w-full">
+                <code className="text-zinc-200 font-mono text-sm">{value}</code>
+              </pre>
+            );
+          },
+          hr: () => <hr className="border-white/10 my-4" />,
+          img: ({ src, alt }) => (
+            <img
+              src={src}
+              alt={alt || ""}
+              className="max-w-full rounded-lg border border-white/10 my-3"
+              loading="lazy"
+            />
+          ),
+        }}
+      >
+        {normalizedContent}
+      </ReactMarkdown>
+    </div>
   );
 }
 
@@ -183,13 +187,13 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
             </div>
 
             {/* Scrollable Body */}
-            <div className="flex-1 overflow-y-auto custom-scrollbar p-6">
+            <div className="flex-1 overflow-y-auto overflow-x-hidden custom-scrollbar p-6">
               
               {/* Grid Principal */}
-              <div className="flex gap-8 min-h-full">
+              <div className="flex gap-8 min-h-full min-w-0">
                 
                 {/* Coluna Esquerda: Informações Principais */}
-                <div className="flex-1 space-y-6">
+                <div className="flex-1 space-y-6 min-w-0">
                   
                   {/* Descrição */}
                   <div>
@@ -212,13 +216,13 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                   </div>
 
                   {/* README Preview Area */}
-                  <div className="bg-zinc-900/30 rounded-2xl border border-white/5 p-6 h-96">
+                  <div className="bg-zinc-900/30 rounded-2xl border border-white/5 p-6 h-96 min-w-0">
                     <div className="flex items-center justify-between mb-4 border-b border-white/5 pb-2">
                       <h3 className="font-mono text-sm text-zinc-400 flex items-center gap-2">
                         <FileText size={16} /> README.md
                       </h3>
                     </div>
-                    <div className="h-80 overflow-y-auto custom-scrollbar">
+                    <div className="h-80 overflow-y-auto overflow-x-hidden custom-scrollbar">
                       {readmeContent ? (
                         <SimpleMarkdown content={readmeContent} />
                       ) : (
