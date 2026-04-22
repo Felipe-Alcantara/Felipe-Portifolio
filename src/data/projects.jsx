@@ -17,6 +17,7 @@ import {
   Layers,
   BookOpen,
 } from "lucide-react";
+import { getProjectRoute } from "../utils/project-routes.js";
 import generatedPortfolioItems from "./github-import/portfolio-items.generated.json";
 import overridePortfolioItems from "./github-import/portfolio-items.overrides.json";
 
@@ -385,7 +386,7 @@ function generateGitHubZipUrl(githubUrl) {
   return `https://github.com/${owner}/${repo}/archive/refs/heads/main.zip`;
 }
 
-function normalizeLinks(rawLinks, fallbackLink) {
+function normalizeLinks(rawLinks, fallbackLink, projectData) {
   const links = rawLinks && typeof rawLinks === "object" ? rawLinks : {};
 
   const githubUrl =
@@ -398,6 +399,11 @@ function normalizeLinks(rawLinks, fallbackLink) {
       ? links.download.trim()
       : generateGitHubZipUrl(githubUrl);
 
+  // Por padrão, o link de post leva para a página do projeto
+  const defaultPostUrl = projectData ? getProjectRoute(projectData) : "#";
+  const postUrl =
+    typeof links.post === "string" && links.post.trim() ? links.post.trim() : defaultPostUrl;
+
   return {
     github: githubUrl,
     site:
@@ -405,8 +411,7 @@ function normalizeLinks(rawLinks, fallbackLink) {
     demo:
       typeof links.demo === "string" && links.demo.trim() ? links.demo.trim() : "#",
     download: downloadUrl,
-    post:
-      typeof links.post === "string" && links.post.trim() ? links.post.trim() : "#",
+    post: postUrl,
   };
 }
 
@@ -456,7 +461,7 @@ function normalizeProject(project) {
       : "Sem descrição";
   const fallbackLink =
     typeof project?.link === "string" && project.link.trim() ? project.link.trim() : "#";
-  const normalizedLinks = normalizeLinks(project?.links, fallbackLink);
+  const normalizedLinks = normalizeLinks(project?.links, fallbackLink, project);
 
   const stack = Array.isArray(project?.stack) && project.stack.length > 0
     ? project.stack
