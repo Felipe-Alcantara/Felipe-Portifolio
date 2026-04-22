@@ -170,8 +170,8 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                   <Button variant="outline" className="w-full justify-start gap-3 text-left" asChild>
                     <a
                       href={primaryProjectUrl}
-                      target={primaryProjectIsExternal ? "_blank" : undefined}
-                      rel={primaryProjectIsExternal ? "noopener noreferrer" : undefined}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <Globe size={18} className="shrink-0" />
                       <span className="flex-1 text-left">{primaryProjectLabel}</span>
