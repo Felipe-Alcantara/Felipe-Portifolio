@@ -26,6 +26,22 @@ function normalizeReadme(content) {
     .replace(/^\s*<\/div>\s*$/gim, "");
 }
 
+function formatCreatedAt(dateValue) {
+  const parsedTimestamp = Date.parse(dateValue || "");
+
+  if (Number.isNaN(parsedTimestamp)) {
+    return "N/A";
+  }
+
+  return new Date(parsedTimestamp).toLocaleString("pt-BR", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
 function SimpleMarkdown({ content }) {
   if (!content) return null;
   const normalizedContent = normalizeReadme(content);
@@ -252,7 +268,7 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                   <div className="space-y-3">
                     <div className="flex justify-between items-center text-sm">
                       <span className="flex items-center gap-2 text-zinc-500"><Calendar size={14} /> Criado em</span>
-                      <span className="text-zinc-200">{project.createdAt || "N/A"}</span>
+                      <span className="text-zinc-200">{formatCreatedAt(project.createdAt)}</span>
                     </div>
                     <div className="flex justify-between items-center text-sm">
                       <span className="flex items-center gap-2 text-zinc-500"><BarChart size={14} /> Complexidade</span>
