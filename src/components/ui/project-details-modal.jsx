@@ -283,7 +283,7 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                     <FileText size={16} /> README.md
                   </h3>
                 </div>
-                <div className="flex-1 overflow-y-auto overflow-x-hidden custom-scrollbar">
+                <div className="flex-1 overflow-y-auto overflow-x-hidden custom-scrollbar rounded-xl border border-white/10 bg-zinc-800/50 p-4">
                   {readmeContent ? (
                     <SimpleMarkdown content={readmeContent} />
                   ) : (

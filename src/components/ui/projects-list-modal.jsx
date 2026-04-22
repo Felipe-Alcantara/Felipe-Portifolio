@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { CalendarDays, CheckCircle2, ListOrdered, Wrench, X } from "lucide-react";
+import { ArrowUpDown, CalendarDays, CheckCircle2, ListOrdered, Wrench, X } from "lucide-react";
 import { Button } from "./button";
 import { Badge } from "./badge";
 import { cx, getTagColor } from "../../utils/utils";
@@ -27,19 +27,33 @@ function formatDate(dateValue) {
 
 export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }) {
   const [activeTag, setActiveTag] = useState("all");
+  const [sortDirection, setSortDirection] = useState("desc");
+  const isNewestFirst = sortDirection === "desc";
 
   const sortedItems = useMemo(
     () =>
       [...items].sort((a, b) => {
-        const dateDifference = toTimestamp(b.createdAt) - toTimestamp(a.createdAt);
+        const timestampA = toTimestamp(a.createdAt);
+        const timestampB = toTimestamp(b.createdAt);
 
-        if (dateDifference !== 0) {
-          return dateDifference;
+        if (timestampA === -Infinity || timestampB === -Infinity) {
+          if (timestampA !== timestampB) {
+            return timestampA === -Infinity ? 1 : -1;
+          }
+        } else {
+          const dateDifference =
+            sortDirection === "desc"
+              ? timestampB - timestampA
+              : timestampA - timestampB;
+
+          if (dateDifference !== 0) {
+            return dateDifference;
+          }
         }
 
         return String(a.title || "").localeCompare(String(b.title || ""), "pt-BR");
       }),
-    [items]
+    [items, sortDirection]
   );
 
   const filteredItems = useMemo(
@@ -73,6 +87,7 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
   useEffect(() => {
     if (isOpen) {
       setActiveTag("all");
+      setSortDirection("desc");
     }
   }, [isOpen]);
 
@@ -102,40 +117,60 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
             className="w-full max-w-5xl bg-zinc-950 border border-white/20 rounded-3xl p-7 md:p-8 shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="flex items-start justify-between gap-4 mb-6">
-              <div className="flex-1">
+            <div className="mb-6 space-y-3">
+              <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-2 text-zinc-200">
                   <ListOrdered size={18} className="text-purple-400" />
                   <h3 className="text-base md:text-lg font-semibold">
-                    Projetos por criação (mais novos primeiro)
+                    Projetos por criação ({isNewestFirst ? "mais novos primeiro" : "mais antigos primeiro"})
                   </h3>
                 </div>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {tags.map((tag) => (
-                    <Badge
-                      key={tag.id}
-                      onClick={() => setActiveTag(tag.id)}
-                      className={
-                        "cursor-pointer px-3 py-1.5 text-xs md:text-sm transition-all " +
-                        (activeTag === tag.id
-                          ? "bg-purple-600 text-black shadow-[0_0_15px_rgba(147,51,234,0.5)] scale-105"
-                          : "bg-zinc-800 hover:bg-zinc-700 text-zinc-200")
-                      }
-                    >
-                      {tag.label}
-                    </Badge>
-                  ))}
+                <div className="flex items-center gap-2 shrink-0">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="rounded-full border-white/20 bg-zinc-900/70 text-xs md:text-sm hover:bg-zinc-800/80"
+                    onClick={() =>
+                      setSortDirection((currentDirection) =>
+                        currentDirection === "desc" ? "asc" : "desc"
+                      )
+                    }
+                    aria-label={
+                      isNewestFirst
+                        ? "Inverter para mais antigos primeiro"
+                        : "Inverter para mais novos primeiro"
+                    }
+                  >
+                    <ArrowUpDown size={14} />
+                    {isNewestFirst ? "Mais novos" : "Mais antigos"}
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8 rounded-full hover:bg-white/10"
+                    onClick={onClose}
+                    aria-label="Fechar modal de lista"
+                  >
+                    <X size={18} />
+                  </Button>
                 </div>
               </div>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8 rounded-full hover:bg-white/10"
-                onClick={onClose}
-                aria-label="Fechar modal de lista"
-              >
-                <X size={18} />
-              </Button>
+              <div className="flex flex-wrap gap-2">
+                {tags.map((tag) => (
+                  <Badge
+                    key={tag.id}
+                    onClick={() => setActiveTag(tag.id)}
+                    className={
+                      "cursor-pointer px-3 py-1.5 text-xs md:text-sm transition-all " +
+                      (activeTag === tag.id
+                        ? "bg-purple-600 text-black shadow-[0_0_15px_rgba(147,51,234,0.5)] scale-105"
+                        : "bg-zinc-800 hover:bg-zinc-700 text-zinc-200")
+                    }
+                  >
+                    {tag.label}
+                  </Badge>
+                ))}
+              </div>
             </div>
 
             <motion.div
