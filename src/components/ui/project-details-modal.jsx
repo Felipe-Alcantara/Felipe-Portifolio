@@ -214,29 +214,34 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
 
                 {/* Links de Ação */}
                 <div className="flex flex-col gap-3">
-                  <Button variant="outline" className="w-full justify-start gap-3" asChild>
+                  <Button variant="outline" className="w-full justify-start gap-3 text-left" asChild>
                     <a href={project.links?.site} target="_blank" rel="noopener noreferrer">
-                      <Globe size={18} /> Ver Site Online
+                      <Globe size={18} className="shrink-0" />
+                      <span className="flex-1 text-left">Ver Site Online</span>
                     </a>
                   </Button>
-                  <Button variant="outline" className="w-full justify-start gap-3" asChild>
+                  <Button variant="outline" className="w-full justify-start gap-3 text-left" asChild>
                     <a href={project.links?.github} target="_blank" rel="noopener noreferrer">
-                      <Github size={18} /> Repositório GitHub
+                      <Github size={18} className="shrink-0" />
+                      <span className="flex-1 text-left">Repositório GitHub</span>
                     </a>
                   </Button>
-                  <Button variant="outline" className="w-full justify-start gap-3" asChild>
+                  <Button variant="outline" className="w-full justify-start gap-3 text-left" asChild>
                     <a href={project.links?.demo} target="_blank" rel="noopener noreferrer">
-                      <Youtube size={18} /> Ver Demonstração
+                      <Youtube size={18} className="shrink-0" />
+                      <span className="flex-1 text-left">Ver Demonstração</span>
                     </a>
                   </Button>
-                  <Button variant="outline" className="w-full justify-start gap-3" asChild>
+                  <Button variant="outline" className="w-full justify-start gap-3 text-left" asChild>
                     <a href={project.links?.download} target="_blank" rel="noopener noreferrer">
-                      <Download size={18} /> Download
+                      <Download size={18} className="shrink-0" />
+                      <span className="flex-1 text-left">Download</span>
                     </a>
                   </Button>
-                  <Button variant="outline" className="w-full justify-start gap-3" asChild>
+                  <Button variant="outline" className="w-full justify-start gap-3 text-left" asChild>
                     <a href={project.links?.post} target="_blank" rel="noopener noreferrer">
-                      <FileText size={18} /> Ler Post sobre o Projeto
+                      <FileText size={18} className="shrink-0" />
+                      <span className="flex-1 text-left">Ler Post sobre o Projeto</span>
                     </a>
                   </Button>
                 </div>
