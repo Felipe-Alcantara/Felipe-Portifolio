@@ -2,6 +2,7 @@
   {
     "repoKey": "felipe-alcantara/alura",
     "tag": "estudo",
+    "desc": "Coleção de projetos práticos dos cursos da Alura, abrangendo JavaScript, CSS, HTML e Python. Inclui exercícios de front-end responsivo, manipulação do DOM e lógica de programação.",
     "properties": {
       "online": false
     },
