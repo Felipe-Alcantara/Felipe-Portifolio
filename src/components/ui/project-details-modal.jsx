@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import GithubSlugger from "github-slugger";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
@@ -22,10 +23,167 @@ import { Badge } from "./badge";
 import { cx, getTagColor } from "../../utils/utils";
 import { getReadmePlaceholder, loadReadme } from "../../utils/readme-loader";
 
+const IMPORTED_REPO_METADATA = import.meta.glob(
+  "../../data/github-import/repos/*/metadata.json",
+  {
+    import: "default",
+    eager: true,
+  }
+);
+
 function normalizeReadme(content) {
   return content
     .replace(/^\s*<div[^>]*>\s*$/gim, "")
     .replace(/^\s*<\/div>\s*$/gim, "");
+}
+
+function extractText(children) {
+  return React.Children.toArray(children)
+    .map((child) => {
+      if (typeof child === "string" || typeof child === "number") {
+        return String(child);
+      }
+
+      if (React.isValidElement(child)) {
+        return extractText(child.props.children);
+      }
+
+      return "";
+    })
+    .join("");
+}
+
+function normalizeGitHubRepoUrl(value) {
+  if (typeof value !== "string" || !value.trim()) {
+    return null;
+  }
+
+  const match = value.trim().match(/^https?:\/\/github\.com\/([^/]+)\/([^/#?]+)/i);
+
+  if (!match) {
+    return null;
+  }
+
+  return {
+    owner: match[1],
+    repo: match[2].replace(/\.git$/i, ""),
+  };
+}
+
+function resolveRepoContext(project) {
+  if (!project || typeof project !== "object") {
+    return null;
+  }
+
+  const metadataPath =
+    typeof project.repoFolder === "string" && project.repoFolder.trim()
+      ? `../../data/github-import/repos/${project.repoFolder.trim()}/metadata.json`
+      : "";
+  const importedMetadata = metadataPath ? IMPORTED_REPO_METADATA[metadataPath] : null;
+  const fallbackRepo =
+    normalizeGitHubRepoUrl(project?.links?.github) || normalizeGitHubRepoUrl(project?.link);
+
+  const owner = importedMetadata?.owner || fallbackRepo?.owner;
+  const repo = importedMetadata?.name || fallbackRepo?.repo;
+  const branch =
+    typeof importedMetadata?.defaultBranch === "string" && importedMetadata.defaultBranch.trim()
+      ? importedMetadata.defaultBranch.trim()
+      : "main";
+
+  if (!owner || !repo) {
+    return null;
+  }
+
+  return {
+    owner,
+    repo,
+    branch,
+    repoUrl: importedMetadata?.repoUrl || `https://github.com/${owner}/${repo}`,
+  };
+}
+
+function splitUrlParts(url) {
+  const hashIndex = url.indexOf("#");
+  const queryIndex = url.indexOf("?");
+  let pathEnd = url.length;
+
+  if (queryIndex >= 0) {
+    pathEnd = Math.min(pathEnd, queryIndex);
+  }
+
+  if (hashIndex >= 0) {
+    pathEnd = Math.min(pathEnd, hashIndex);
+  }
+
+  return {
+    pathname: url.slice(0, pathEnd),
+    search: queryIndex >= 0 ? url.slice(queryIndex, hashIndex >= 0 ? hashIndex : undefined) : "",
+    hash: hashIndex >= 0 ? url.slice(hashIndex) : "",
+  };
+}
+
+function isSafeAbsoluteUrl(url) {
+  return /^(https?:|mailto:|tel:)/i.test(url);
+}
+
+function isRelativeRepoUrl(url) {
+  return Boolean(url) && !isSafeAbsoluteUrl(url) && !url.startsWith("#") && !url.startsWith("/");
+}
+
+function isImagePath(pathname) {
+  return /\.(avif|bmp|gif|jpe?g|png|svg|webp)$/i.test(pathname);
+}
+
+function resolveMarkdownUrl(url, key, project) {
+  if (typeof url !== "string") {
+    return url;
+  }
+
+  if (!isRelativeRepoUrl(url)) {
+    return url;
+  }
+
+  const repoContext = resolveRepoContext(project);
+
+  if (!repoContext) {
+    return url;
+  }
+
+  const { pathname, search, hash } = splitUrlParts(url);
+  const normalizedPath = pathname.replace(/^\.\/+/, "");
+
+  if (!normalizedPath) {
+    return url;
+  }
+
+  if (key === "src" || isImagePath(normalizedPath)) {
+    return `https://raw.githubusercontent.com/${repoContext.owner}/${repoContext.repo}/${repoContext.branch}/${normalizedPath}${search}${hash}`;
+  }
+
+  return `${repoContext.repoUrl}/blob/${repoContext.branch}/${normalizedPath}${search}${hash}`;
+}
+
+function createHeadingRenderer(Tag, className, slugger) {
+  return function Heading({ children }) {
+    const headingText = extractText(children).trim();
+    const id = headingText ? slugger.slug(headingText) : undefined;
+
+    return (
+      <Tag id={id} className={className}>
+        {id ? (
+          <a
+            href={`#${id}`}
+            className="group inline-flex items-start gap-2 no-underline hover:text-inherit"
+          >
+            <span className="opacity-0 transition-opacity group-hover:opacity-100 text-zinc-500">#</span>
+            <span>{children}</span>
+          </a>
+        ) : (
+          children
+        )}
+      </Tag>
+    );
+  };
 }
 
 function formatCreatedAt(dateValue) {
@@ -44,25 +202,42 @@ function formatCreatedAt(dateValue) {
   });
 }
 
-function SimpleMarkdown({ content }) {
+function SimpleMarkdown({ content, project }) {
   if (!content) return null;
   const normalizedContent = normalizeReadme(content);
+  const slugger = new GithubSlugger();
+  const renderHeading1 = createHeadingRenderer(
+    "h1",
+    "scroll-mt-6 text-xl font-bold text-purple-400 mb-3 break-words",
+    slugger
+  );
+  const renderHeading2 = createHeadingRenderer(
+    "h2",
+    "scroll-mt-6 text-lg font-semibold text-purple-300 mb-2 break-words",
+    slugger
+  );
+  const renderHeading3 = createHeadingRenderer(
+    "h3",
+    "scroll-mt-6 text-base font-medium text-purple-200 mb-2 break-words",
+    slugger
+  );
+  const renderHeading4 = createHeadingRenderer(
+    "h4",
+    "scroll-mt-6 text-sm font-semibold text-purple-100 mb-2 break-words",
+    slugger
+  );
 
   return (
     <div className="text-zinc-300 leading-relaxed break-words">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}
+        urlTransform={(url, key) => resolveMarkdownUrl(url, key, project)}
         components={{
-          h1: ({ children }) => (
-            <h1 className="text-xl font-bold text-purple-400 mb-3 break-words">{children}</h1>
-          ),
-          h2: ({ children }) => (
-            <h2 className="text-lg font-semibold text-purple-300 mb-2 break-words">{children}</h2>
-          ),
-          h3: ({ children }) => (
-            <h3 className="text-base font-medium text-purple-200 mb-2 break-words">{children}</h3>
-          ),
+          h1: renderHeading1,
+          h2: renderHeading2,
+          h3: renderHeading3,
+          h4: renderHeading4,
           p: ({ children }) => (
             <p className="text-zinc-300 mb-3 leading-relaxed break-words">{children}</p>
           ),
@@ -98,6 +273,21 @@ function SimpleMarkdown({ content }) {
             return (
               <a
                 href={href}
+                onClick={(event) => {
+                  if (!isAnchorLink || typeof href !== "string") {
+                    return;
+                  }
+
+                  const targetId = decodeURIComponent(href.slice(1));
+                  const targetElement = document.getElementById(targetId);
+
+                  if (!targetElement) {
+                    return;
+                  }
+
+                  event.preventDefault();
+                  targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
                 target={isAnchorLink ? undefined : "_blank"}
                 rel={isAnchorLink ? undefined : "noopener noreferrer"}
                 className="text-purple-300 underline hover:text-purple-200 transition-colors break-all"
@@ -368,7 +558,7 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                 </div>
                 <div className="flex-1 overflow-y-auto overflow-x-hidden custom-scrollbar rounded-xl border border-white/10 bg-zinc-800/50 p-4">
                   {readmeContent ? (
-                    <SimpleMarkdown content={readmeContent} />
+                    <SimpleMarkdown content={readmeContent} project={project} />
                   ) : (
                     <div className="text-zinc-400 font-mono text-sm">Carregando README...</div>
                   )}
