@@ -22,7 +22,7 @@ export function ProjectsSection({ items }) {
               </CardContent>
               <CardFooter>
                 <Button asChild size="sm" variant="secondary">
-                  <a href={it.link} className="inline-flex items-center gap-1">
+                  <a href={it.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">
                     Abrir <ExternalLink size={16} />
                   </a>
                 </Button>

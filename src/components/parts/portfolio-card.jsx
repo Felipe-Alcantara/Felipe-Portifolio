@@ -42,7 +42,7 @@ export function PortfolioCard({ item }) {
       <CardFooter className="flex items-center justify-between mt-auto pt-4">
         <Badge className={`${tagColor} capitalize`}>{tag}</Badge>
         <Button asChild size="sm" variant="secondary">
-          <a href={link} className="inline-flex items-center gap-1">
+          <a href={link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1">
             Abrir <ExternalLink size={16} />
           </a>
         </Button>
