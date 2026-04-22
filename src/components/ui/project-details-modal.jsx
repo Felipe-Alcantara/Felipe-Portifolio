@@ -186,118 +186,109 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
               </Button>
             </div>
 
-            {/* Scrollable Body */}
-            <div className="flex-1 overflow-y-auto overflow-x-hidden custom-scrollbar p-6">
-              
-              {/* Grid Principal */}
-              <div className="flex gap-8 min-h-full min-w-0">
-                
-                {/* Coluna Esquerda: Informações Principais */}
-                <div className="flex-1 space-y-6 min-w-0">
-                  
-                  {/* Descrição */}
-                  <div>
-                    <h3 className="text-lg font-semibold text-purple-400 mb-2">Sobre o Projeto</h3>
-                    <p className="text-zinc-300 leading-relaxed">{project.desc}</p>
-                  </div>
+            {/* Body: sidebar esquerda + README à direita */}
+            <div className="flex flex-1 overflow-hidden min-h-0">
 
-                  {/* Stack Tecnológica */}
-                  <div>
-                    <h3 className="text-lg font-semibold text-purple-400 mb-3 flex items-center gap-2">
-                      <Layers size={18} /> Stack Utilizada
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {project.stack?.map((tech, i) => (
-                        <Badge key={i} variant="outline" className={getTagColor(tech)}>
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
+              {/* Sidebar Esquerda: Informações + Links + Propriedades */}
+              <div className="flex flex-col gap-5 w-80 shrink-0 overflow-y-auto overflow-x-hidden custom-scrollbar p-6 border-r border-white/5">
 
-                  {/* README Preview Area */}
-                  <div className="bg-zinc-900/30 rounded-2xl border border-white/5 p-6 h-96 min-w-0">
-                    <div className="flex items-center justify-between mb-4 border-b border-white/5 pb-2">
-                      <h3 className="font-mono text-sm text-zinc-400 flex items-center gap-2">
-                        <FileText size={16} /> README.md
-                      </h3>
+                {/* Descrição */}
+                <div>
+                  <h3 className="text-lg font-semibold text-purple-400 mb-2">Sobre o Projeto</h3>
+                  <p className="text-zinc-300 leading-relaxed text-sm">{project.desc}</p>
+                </div>
+
+                {/* Stack Tecnológica */}
+                <div>
+                  <h3 className="text-lg font-semibold text-purple-400 mb-3 flex items-center gap-2">
+                    <Layers size={18} /> Stack Utilizada
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {project.stack?.map((tech, i) => (
+                      <Badge key={i} variant="outline" className={getTagColor(tech)}>
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Links de Ação */}
+                <div className="flex flex-col gap-3">
+                  <Button variant="outline" className="w-full justify-start gap-3" asChild>
+                    <a href={project.links?.site} target="_blank" rel="noopener noreferrer">
+                      <Globe size={18} /> Ver Site Online
+                    </a>
+                  </Button>
+                  <Button variant="outline" className="w-full justify-start gap-3" asChild>
+                    <a href={project.links?.github} target="_blank" rel="noopener noreferrer">
+                      <Github size={18} /> Repositório GitHub
+                    </a>
+                  </Button>
+                  <Button variant="outline" className="w-full justify-start gap-3" asChild>
+                    <a href={project.links?.demo} target="_blank" rel="noopener noreferrer">
+                      <Youtube size={18} /> Ver Demonstração
+                    </a>
+                  </Button>
+                  <Button variant="outline" className="w-full justify-start gap-3" asChild>
+                    <a href={project.links?.download} target="_blank" rel="noopener noreferrer">
+                      <Download size={18} /> Download
+                    </a>
+                  </Button>
+                  <Button variant="outline" className="w-full justify-start gap-3" asChild>
+                    <a href={project.links?.post} target="_blank" rel="noopener noreferrer">
+                      <FileText size={18} /> Ler Post sobre o Projeto
+                    </a>
+                  </Button>
+                </div>
+
+                {/* Propriedades */}
+                <div className="bg-zinc-900/50 rounded-2xl border border-white/10 p-5 space-y-4">
+                  <h4 className="font-semibold text-sm text-zinc-400 uppercase tracking-wider">Propriedades</h4>
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="flex items-center gap-2 text-zinc-500"><Calendar size={14} /> Criado em</span>
+                      <span className="text-zinc-200">{project.createdAt || "N/A"}</span>
                     </div>
-                    <div className="h-80 overflow-y-auto overflow-x-hidden custom-scrollbar">
-                      {readmeContent ? (
-                        <SimpleMarkdown content={readmeContent} />
-                      ) : (
-                        <div className="text-zinc-400 font-mono text-sm">Carregando README...</div>
-                      )}
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="flex items-center gap-2 text-zinc-500"><BarChart size={14} /> Complexidade</span>
+                      <span className={cx(
+                        "font-medium",
+                        project.complexity === "Alta" ? "text-red-400" :
+                        project.complexity === "Média" ? "text-amber-400" : "text-green-400"
+                      )}>{project.complexity}</span>
+                    </div>
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="flex items-center gap-2 text-zinc-500"><Clock size={14} /> Tempo Est.</span>
+                      <span className="text-zinc-200">{project.properties?.timeEstimated}</span>
+                    </div>
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="flex items-center gap-2 text-zinc-500"><HardDrive size={14} /> Tamanho</span>
+                      <span className="text-zinc-200">{project.properties?.size}</span>
+                    </div>
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="flex items-center gap-2 text-zinc-500"><Wifi size={14} /> Status</span>
+                      <span className={project.properties?.online ? "text-green-400" : "text-zinc-500"}>
+                        {project.properties?.online ? "Online" : "Offline"}
+                      </span>
                     </div>
                   </div>
                 </div>
 
-                {/* Coluna Direita: Metadados e Links */}
-                        <div className="flex flex-col space-y-4 w-80 min-h-full">
-                          
-                          {/* Links de Ação */}
-                          <div className="flex flex-col gap-3">
-                          <Button variant="outline" className="w-full justify-start gap-3" asChild>
-                            <a href={project.links?.site} target="_blank" rel="noopener noreferrer">
-                            <Globe size={18} /> Ver Site Online
-                            </a>
-                          </Button>
-                          <Button variant="outline" className="w-full justify-start gap-3" asChild>
-                            <a href={project.links?.github} target="_blank" rel="noopener noreferrer">
-                            <Github size={18} /> Repositório GitHub
-                            </a>
-                          </Button>
-                          <Button variant="outline" className="w-full justify-start gap-3" asChild>
-                            <a href={project.links?.demo} target="_blank" rel="noopener noreferrer">
-                            <Youtube size={18} /> Ver Demonstração
-                            </a>
-                          </Button>
-                          <Button variant="outline" className="w-full justify-start gap-3" asChild>
-                            <a href={project.links?.download} target="_blank" rel="noopener noreferrer">
-                            <Download size={18} /> Download
-                            </a>
-                          </Button>
-                          <Button variant="outline" className="w-full justify-start gap-3" asChild>
-                            <a href={project.links?.post} target="_blank" rel="noopener noreferrer">
-                            <FileText size={18} /> Ler Post sobre o Projeto
-                            </a>
-                          </Button>
-                          </div>
+              </div>
 
-                          {/* Propriedades e Estatísticas */}
-                  <div className="bg-zinc-900/50 rounded-2xl border border-white/10 p-5 space-y-4 flex-1">
-                    <h4 className="font-semibold text-sm text-zinc-400 uppercase tracking-wider">Propriedades</h4>
-                    
-                    <div className="space-y-3">
-                      <div className="flex justify-between items-center text-sm">
-                        <span className="flex items-center gap-2 text-zinc-500"><Calendar size={14} /> Criado em</span>
-                        <span className="text-zinc-200">{project.createdAt || "N/A"}</span>
-                      </div>
-                      <div className="flex justify-between items-center text-sm">
-                        <span className="flex items-center gap-2 text-zinc-500"><BarChart size={14} /> Complexidade</span>
-                        <span className={cx(
-                          "font-medium",
-                          project.complexity === "Alta" ? "text-red-400" : 
-                          project.complexity === "Média" ? "text-amber-400" : "text-green-400"
-                        )}>{project.complexity}</span>
-                      </div>
-                      <div className="flex justify-between items-center text-sm">
-                        <span className="flex items-center gap-2 text-zinc-500"><Clock size={14} /> Tempo Est.</span>
-                        <span className="text-zinc-200">{project.properties?.timeEstimated}</span>
-                      </div>
-                      <div className="flex justify-between items-center text-sm">
-                        <span className="flex items-center gap-2 text-zinc-500"><HardDrive size={14} /> Tamanho</span>
-                        <span className="text-zinc-200">{project.properties?.size}</span>
-                      </div>
-                      <div className="flex justify-between items-center text-sm">
-                        <span className="flex items-center gap-2 text-zinc-500"><Wifi size={14} /> Status</span>
-                        <span className={project.properties?.online ? "text-green-400" : "text-zinc-500"}>
-                          {project.properties?.online ? "Online" : "Offline"}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
+              {/* README: ocupa toda a altura disponível */}
+              <div className="flex-1 flex flex-col min-w-0 p-6">
+                <div className="flex items-center gap-2 mb-4 pb-2 border-b border-white/5">
+                  <h3 className="font-mono text-sm text-zinc-400 flex items-center gap-2">
+                    <FileText size={16} /> README.md
+                  </h3>
+                </div>
+                <div className="flex-1 overflow-y-auto overflow-x-hidden custom-scrollbar">
+                  {readmeContent ? (
+                    <SimpleMarkdown content={readmeContent} />
+                  ) : (
+                    <div className="text-zinc-400 font-mono text-sm">Carregando README...</div>
+                  )}
                 </div>
               </div>
 
