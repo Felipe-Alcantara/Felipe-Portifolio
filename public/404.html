@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecionando...</title>
+    <script>
+      (function () {
+        var location = window.location;
+        var targetPath = location.pathname + location.search + location.hash;
+        var redirectUrl = location.origin + "/?p=" + encodeURIComponent(targetPath);
+        location.replace(redirectUrl);
+      })();
+    </script>
+  </head>
+  <body></body>
+  </html>
