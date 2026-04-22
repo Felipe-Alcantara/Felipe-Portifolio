@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import { 
   X, 
   Github, 
@@ -18,7 +20,7 @@ import {
 import { Button } from "./button";
 import { Badge } from "./badge";
 import { cx, getTagColor } from "../../utils/utils";
-import { loadReadme } from "../../utils/readme-loader";
+import { getReadmePlaceholder, loadReadme } from "../../utils/readme-loader";
 
 function normalizeReadme(content) {
   return content
@@ -49,6 +51,8 @@ function SimpleMarkdown({ content }) {
   return (
     <div className="text-zinc-300 leading-relaxed break-words">
       <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw]}
         components={{
           h1: ({ children }) => (
             <h1 className="text-xl font-bold text-purple-400 mb-3 break-words">{children}</h1>
@@ -74,6 +78,21 @@ function SimpleMarkdown({ content }) {
             <ol className="list-decimal list-inside mb-3 space-y-1 break-words">{children}</ol>
           ),
           li: ({ children }) => <li className="text-zinc-300 break-words">{children}</li>,
+          input: ({ type, checked, disabled }) => {
+            if (type === "checkbox") {
+              return (
+                <input
+                  type="checkbox"
+                  checked={Boolean(checked)}
+                  disabled={disabled ?? true}
+                  readOnly
+                  className="mr-2 h-4 w-4 rounded border-white/20 bg-zinc-900 accent-purple-400 align-middle"
+                />
+              );
+            }
+
+            return <input type={type} disabled={disabled} readOnly />;
+          },
           a: ({ href, children }) => {
             const isAnchorLink = typeof href === "string" && href.startsWith("#");
             return (
@@ -114,6 +133,34 @@ function SimpleMarkdown({ content }) {
               loading="lazy"
             />
           ),
+          table: ({ children }) => (
+            <div className="mb-4 overflow-x-auto rounded-xl border border-white/10">
+              <table className="min-w-full border-collapse text-sm">{children}</table>
+            </div>
+          ),
+          thead: ({ children }) => <thead className="bg-zinc-900/80">{children}</thead>,
+          tbody: ({ children }) => <tbody className="divide-y divide-white/10">{children}</tbody>,
+          tr: ({ children }) => <tr className="border-b border-white/10 last:border-b-0">{children}</tr>,
+          th: ({ children }) => (
+            <th className="px-3 py-2 text-left font-semibold text-purple-200">{children}</th>
+          ),
+          td: ({ children }) => <td className="px-3 py-2 align-top text-zinc-300">{children}</td>,
+          details: ({ children, ...props }) => (
+            <details
+              {...props}
+              className="group mb-4 overflow-hidden rounded-xl border border-white/10 bg-zinc-900/60"
+            >
+              {children}
+            </details>
+          ),
+          summary: ({ children, ...props }) => (
+            <summary
+              {...props}
+              className="cursor-pointer list-none select-none px-4 py-3 font-medium text-purple-200 transition-colors hover:bg-white/5 hover:text-purple-100 [&::-webkit-details-marker]:hidden"
+            >
+              {children}
+            </summary>
+          ),
         }}
       >
         {normalizedContent}
@@ -123,12 +170,26 @@ function SimpleMarkdown({ content }) {
 }
 
 export function ProjectDetailsModal({ isOpen, onClose, project }) {
-  const [readmeContent, setReadmeContent] = useState(project?.readme || "");
+  const [readmeContent, setReadmeContent] = useState(() => getReadmePlaceholder(project));
   
   useEffect(() => {
-    if (isOpen && project) {
-      loadReadme(project).then(setReadmeContent);
+    if (!isOpen || !project) {
+      return undefined;
     }
+
+    let isCancelled = false;
+
+    setReadmeContent(getReadmePlaceholder(project));
+
+    loadReadme(project).then((content) => {
+      if (!isCancelled) {
+        setReadmeContent(content);
+      }
+    });
+
+    return () => {
+      isCancelled = true;
+    };
   }, [isOpen, project]);
 
   useEffect(() => {
@@ -168,6 +229,7 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
 
           {/* Modal Content */}
           <motion.div
+            key={project.repoFolder || project.title}
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
