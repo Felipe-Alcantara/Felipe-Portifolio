@@ -444,6 +444,16 @@ function normalizeProject(project) {
     ? project.stack
     : [tag, "React", "Tailwind"];
 
+  let status =
+    typeof project?.status === "string" && project.status.trim()
+      ? project.status.trim()
+      : "Em Desenvolvimento";
+
+  // Projetos com tag "estudo" não podem ter status "Finalizado" ou "Em Desenvolvimento"
+  if (tag === "estudo" && (status === "Finalizado" || status === "Em Desenvolvimento")) {
+    status = "";
+  }
+
   return {
     title: normalizedTitle,
     tag,
@@ -456,10 +466,7 @@ function normalizeProject(project) {
       typeof project?.createdAt === "string" && project.createdAt.trim()
         ? project.createdAt.trim()
         : "",
-    status:
-      typeof project?.status === "string" && project.status.trim()
-        ? project.status.trim()
-        : "Em Desenvolvimento",
+    status,
     complexity:
       typeof project?.complexity === "string" && project.complexity.trim()
         ? project.complexity.trim()
