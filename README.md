@@ -171,10 +171,14 @@ npm run sync:github
 Esse fluxo atualiza, com estratégia de upsert e sem clone, os arquivos:
 - `src/data/github-import/index.json`
 - `src/data/github-import/portfolio-items.generated.json`
+- `src/data/github-import/portfolio-items.ignore.json`
 - `src/data/github-import/repos/<owner>__<repo>/{metadata.json,languages.json,readme.md,manifest.json}`
 
 Para personalizações manuais de apresentação (sem perder na próxima sync), edite:
 - `src/data/github-import/portfolio-items.overrides.json`
+
+Para ignorar repositórios específicos no catálogo gerado mesmo após nova sync, edite:
+- `src/data/github-import/portfolio-items.ignore.json` (array de `repoKey`)
 
 Exemplo de override por `repoKey`:
 

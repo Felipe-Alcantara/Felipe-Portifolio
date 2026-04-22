@@ -59,6 +59,18 @@ function resolvePortfolioItemKey(item) {
   return null;
 }
 
+function normalizeIgnoreRepoKeys(rawIgnoreList) {
+  if (!Array.isArray(rawIgnoreList)) {
+    return new Set();
+  }
+
+  return new Set(
+    rawIgnoreList
+      .map((value) => (typeof value === "string" ? value.trim().toLowerCase() : ""))
+      .filter(Boolean)
+  );
+}
+
 function createSerializableError(error, { stage, repoKey } = {}) {
   if (error instanceof GitHubImportError) {
     return {
@@ -137,13 +149,13 @@ function mergeRepositoryRecords(existingRecords, freshRecords, syncedAt) {
   });
 }
 
-function mergePortfolioItems(existingItems, freshItems) {
+function mergePortfolioItems(existingItems, freshItems, ignoredKeys = new Set()) {
   const mergedByKey = new Map();
 
   for (const item of existingItems) {
     const key = resolvePortfolioItemKey(item);
 
-    if (!key) {
+    if (!key || ignoredKeys.has(key)) {
       continue;
     }
 
@@ -153,7 +165,7 @@ function mergePortfolioItems(existingItems, freshItems) {
   for (const item of freshItems) {
     const key = resolvePortfolioItemKey(item);
 
-    if (!key) {
+    if (!key || ignoredKeys.has(key)) {
       continue;
     }
 
@@ -241,12 +253,24 @@ export async function runGitHubImport({
     .sort((a, b) => toDateValue(b.updated_at) - toDateValue(a.updated_at))
     .slice(0, config.maxRepos);
 
+  const ignoredRepoKeysRaw = await readJsonFile(
+    config.paths.portfolioIgnoreFile,
+    []
+  );
+  const ignoredRepoKeys = normalizeIgnoreRepoKeys(ignoredRepoKeysRaw);
+  const repositoriesFilteredByIgnore = repositories.filter((repository) => {
+    const owner = typeof repository?.owner?.login === "string" ? repository.owner.login : "";
+    const name = typeof repository?.name === "string" ? repository.name : "";
+    const repoKey = buildRepositoryKey(owner, name);
+    return !ignoredRepoKeys.has(repoKey);
+  });
+
   const syncedAt = new Date().toISOString();
   const syncErrors = [];
   const freshRecords = [];
   const freshPortfolioItems = [];
 
-  for (const repository of repositories) {
+  for (const repository of repositoriesFilteredByIgnore) {
     const metadata = normalizeGitHubRepositoryMetadata(repository);
     const repoKey = buildRepositoryKey(metadata.owner, metadata.name);
     metadata.repoKey = repoKey;
@@ -359,7 +383,8 @@ export async function runGitHubImport({
     : [];
   const mergedPortfolioItems = mergePortfolioItems(
     normalizedExistingPortfolioItems,
-    freshPortfolioItems
+    freshPortfolioItems,
+    ignoredRepoKeys
   );
 
   const consolidatedIndex = {

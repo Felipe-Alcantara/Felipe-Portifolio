@@ -2066,32 +2066,5 @@
     },
     "repoKey": "felipe-alcantara/alura",
     "repoFolder": "Felipe-Alcantara__Alura"
-  },
-  {
-    "title": "Desktop Tutorial",
-    "tag": "code",
-    "desc": "GitHub Desktop tutorial repository",
-    "link": "https://github.com/Felipe-Alcantara/desktop-tutorial",
-    "createdAt": "2024-03-26T08:00:05Z",
-    "status": "Em Desenvolvimento",
-    "complexity": "Baixa",
-    "stack": [
-      "code"
-    ],
-    "properties": {
-      "timeEstimated": "Em evolução",
-      "size": "Pequeno",
-      "online": false,
-      "techPercentage": {}
-    },
-    "links": {
-      "github": "https://github.com/Felipe-Alcantara/desktop-tutorial",
-      "site": "#",
-      "demo": "#",
-      "download": "#",
-      "post": "#"
-    },
-    "repoKey": "felipe-alcantara/desktop-tutorial",
-    "repoFolder": "Felipe-Alcantara__desktop-tutorial"
   }
 ]

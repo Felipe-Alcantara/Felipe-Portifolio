@@ -92,6 +92,7 @@ export async function ensureImportDataStructure(paths) {
   });
 
   await createJsonFileIfMissing(paths.portfolioItemsFile, []);
+  await createJsonFileIfMissing(paths.portfolioIgnoreFile, []);
 }
 
 export async function upsertRepositoryFiles({

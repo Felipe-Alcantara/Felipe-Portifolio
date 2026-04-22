@@ -56,6 +56,10 @@ export function loadGitHubImportConfig(env = process.env, cwd = process.cwd()) {
         dataDir,
         "portfolio-items.generated.json"
       ),
+      portfolioIgnoreFile: path.resolve(
+        dataDir,
+        "portfolio-items.ignore.json"
+      ),
     },
   };
 }
