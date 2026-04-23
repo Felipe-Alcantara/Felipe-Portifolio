@@ -41,24 +41,25 @@ function formatCreatedAt(dateValue) {
   });
 }
 
-function calculateProjectDuration(createdAt) {
+function calculateProjectDuration(createdAt, lastCommitAt) {
   const createdTimestamp = Date.parse(createdAt || "");
+  const endTimestamp = Date.parse(lastCommitAt || "") || Date.now();
 
   if (Number.isNaN(createdTimestamp)) {
     return "N/A";
   }
 
   const createdDate = new Date(createdTimestamp);
-  const now = new Date();
+  const endDate = new Date(endTimestamp);
 
-  let years = now.getFullYear() - createdDate.getFullYear();
-  let months = now.getMonth() - createdDate.getMonth();
-  let days = now.getDate() - createdDate.getDate();
+  let years = endDate.getFullYear() - createdDate.getFullYear();
+  let months = endDate.getMonth() - createdDate.getMonth();
+  let days = endDate.getDate() - createdDate.getDate();
 
   // Ajustar dias negativos
   if (days < 0) {
     months -= 1;
-    const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+    const prevMonth = new Date(endDate.getFullYear(), endDate.getMonth(), 0);
     days += prevMonth.getDate();
   }
 
@@ -257,7 +258,7 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                     </div>
                     <div className="flex justify-between items-center text-sm">
                       <span className="flex items-center gap-2 text-zinc-500"><Clock size={14} /> Duração do Projeto</span>
-                      <span className="text-zinc-200">{calculateProjectDuration(project.lastCommitAt)}</span>
+                      <span className="text-zinc-200">{calculateProjectDuration(project.createdAt, project.lastCommitAt)}</span>
                     </div>
                     <div className="flex justify-between items-center text-sm">
                       <span className="flex items-center gap-2 text-zinc-500"><HardDrive size={14} /> Tamanho</span>
