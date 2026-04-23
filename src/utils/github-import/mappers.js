@@ -385,6 +385,7 @@ export function mapRepositoryToPortfolioItem({
     desc: metadata.description || "Sem descrição",
     link: metadata.repoUrl,
     createdAt: metadata.createdAt,
+    updatedAt: metadata.updatedAt,
     status: metadata.archived ? "Finalizado" : "Em Desenvolvimento",
     complexity: inferComplexityLabel(metadata, languagesByBytes),
     stack,

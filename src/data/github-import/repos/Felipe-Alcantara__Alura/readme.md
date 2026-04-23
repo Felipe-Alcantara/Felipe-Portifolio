@@ -37,10 +37,6 @@
 
 ## 🌐 Destaque Principal ⭐
 
-> **🚀 ACESSE O PROJETO RAIZ PUBLICADO NA VERCEL**
->
-> **[👉 Abrir projeto principal 👈](https://alura-gamma.vercel.app/)**
-
 ### 💡 Por que usar?
 
 - **🧠 Prática de lógica**: exercícios progressivos de estruturas condicionais, laços, funções e listas.
@@ -108,11 +104,7 @@ Alura/
 
 ## 🚀 Como Usar
 
-### Opção 1: Abrir a versão online (Recomendado) 🌐
-
-**🚀 Link direto:** [https://alura-gamma.vercel.app/](https://alura-gamma.vercel.app/)
-
-### Opção 2: Executar localmente
+### Opção 1: Executar localmente
 
 #### Instalação
 
