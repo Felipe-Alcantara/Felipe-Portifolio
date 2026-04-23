@@ -143,6 +143,20 @@
   },
   {
     "repoKey": "felipe-alcantara/scripts-html",
-    "tag": "estudo"
+    "tag": "estudo",
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": true,
+      "techPercentage": {
+        "HTML": 78,
+        "CSS": 22
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Scripts-HTML",
+      "site": "http://scripts-html.felixo.com.br/",
+      "demo": "#"
+    }
   }
 ]
