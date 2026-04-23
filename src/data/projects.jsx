@@ -394,9 +394,10 @@ function normalizeLinks(rawLinks, fallbackLink, projectData) {
       ? links.github.trim()
       : fallbackLink;
 
+  const rawDownload = typeof links.download === "string" ? links.download.trim() : "";
   const downloadUrl =
-    typeof links.download === "string" && links.download.trim()
-      ? links.download.trim()
+    rawDownload && rawDownload !== "#"
+      ? rawDownload
       : generateGitHubZipUrl(githubUrl);
 
   // Por padrão, o link de post leva para a página do projeto
