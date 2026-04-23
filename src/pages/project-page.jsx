@@ -14,6 +14,7 @@ import { Navbar } from "../components/layout/navbar";
 import { Footer } from "../components/layout/footer";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
+import { BackgroundParticles } from "../components/ui/background-particles";
 import { ProjectReadmeContent } from "../components/ui/project-readme-content";
 import { getReadmePlaceholder, loadReadme } from "../utils/readme-loader";
 import {
@@ -87,6 +88,7 @@ export default function ProjectPage({ project }) {
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(88,28,135,0.35),_transparent_35%),linear-gradient(180deg,_#050505_0%,_#111111_45%,_#050505_100%)] text-zinc-50">
+      <BackgroundParticles />
       <Navbar />
       <main className="mx-auto flex max-w-7xl flex-col gap-8 px-4 pb-20 pt-28 sm:px-6">
         <div className="flex flex-wrap items-center gap-3">
