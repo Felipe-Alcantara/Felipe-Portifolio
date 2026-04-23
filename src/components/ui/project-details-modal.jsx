@@ -41,6 +41,42 @@ function formatCreatedAt(dateValue) {
   });
 }
 
+function calculateProjectDuration(createdAt) {
+  const createdTimestamp = Date.parse(createdAt || "");
+
+  if (Number.isNaN(createdTimestamp)) {
+    return "N/A";
+  }
+
+  const createdDate = new Date(createdTimestamp);
+  const now = new Date();
+
+  let years = now.getFullYear() - createdDate.getFullYear();
+  let months = now.getMonth() - createdDate.getMonth();
+  let days = now.getDate() - createdDate.getDate();
+
+  // Ajustar dias negativos
+  if (days < 0) {
+    months -= 1;
+    const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+    days += prevMonth.getDate();
+  }
+
+  // Ajustar meses negativos
+  if (months < 0) {
+    years -= 1;
+    months += 12;
+  }
+
+  // Formatar a saída
+  const parts = [];
+  if (years > 0) parts.push(`${years}a`);
+  if (months > 0) parts.push(`${months}m`);
+  if (days > 0 && years === 0) parts.push(`${days}d`);
+
+  return parts.length > 0 ? parts.join(" ") : "Recente";
+}
+
 export function ProjectDetailsModal({ isOpen, onClose, project }) {
   const [readmeContent, setReadmeContent] = useState(() => getReadmePlaceholder(project));
   const primaryProjectUrl = getPrimaryProjectUrl(project);
@@ -220,8 +256,8 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                       )}>{project.complexity}</span>
                     </div>
                     <div className="flex justify-between items-center text-sm">
-                      <span className="flex items-center gap-2 text-zinc-500"><Clock size={14} /> Tempo Est.</span>
-                      <span className="text-zinc-200">{project.properties?.timeEstimated}</span>
+                      <span className="flex items-center gap-2 text-zinc-500"><Clock size={14} /> Duração do Projeto</span>
+                      <span className="text-zinc-200">{calculateProjectDuration(project.createdAt)}</span>
                     </div>
                     <div className="flex justify-between items-center text-sm">
                       <span className="flex items-center gap-2 text-zinc-500"><HardDrive size={14} /> Tamanho</span>
