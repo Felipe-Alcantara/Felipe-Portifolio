@@ -304,9 +304,9 @@
       "size": "Médio",
       "online": false,
       "techPercentage": {
-        "JavaScript": 88,
-        "CSS": 12,
-        "HTML": 0
+        "JavaScript": 92,
+        "CSS": 7,
+        "HTML": 1
       }
     },
     "links": {
@@ -2049,7 +2049,7 @@
     "properties": {
       "timeEstimated": "Em evolução",
       "size": "Grande",
-      "online": true,
+      "online": false,
       "techPercentage": {
         "JavaScript": 40,
         "CSS": 31,
@@ -2059,7 +2059,7 @@
     },
     "links": {
       "github": "https://github.com/Felipe-Alcantara/Alura",
-      "site": "https://alura-jade-seven.vercel.app",
+      "site": "#",
       "demo": "#",
       "download": "#",
       "post": "#"

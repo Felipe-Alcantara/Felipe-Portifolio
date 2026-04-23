@@ -10,7 +10,7 @@
 
 **Portfólio interativo em React com identidade visual FelixoVerse, filtros dinâmicos, modais de projeto e documentação técnica organizada.**
 
-[📖 Documentação](docs/README.md) • [🎨 Design System](docs/DESIGN-SYSTEM.md) • [🚀 Como Usar](#-como-usar)
+[📖 Documentação](docs/README.md) • [🤖 Prompt de Importação GitHub](docs/PROMPT-SUBSISTEMA-IMPORTACAO-REPOS-GITHUB.md) • [🎨 Design System](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md) • [🚀 Como Usar](#-como-usar)
 
 </div>
 
@@ -65,8 +65,6 @@ Felipe-Portifolio/
 ├── docs/                               # Documentação centralizada
 │   ├── README.md                       # Índice da documentação
 │   ├── DOCUMENTATION.md                # Guia de customização e manutenção
-│   ├── DESIGN-SYSTEM.md                # Sistema de design oficial
-│   └── GUIA-DOMINIO-PAGES.md           # Configuração de domínio no GitHub Pages
 ├── public/                             # Arquivos estáticos públicos
 │   ├── CNAME
 │   └── Currículo/
@@ -76,12 +74,18 @@ Felipe-Portifolio/
 │   │   ├── parts/
 │   │   └── ui/
 │   ├── data/
+│   │   └── github-import/              # Saída do sincronizador interno de repositórios
 │   ├── pages/
 │   ├── sections/
 │   ├── utils/
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
+├── .github/
+│   └── workflows/
+│       └── deploy.yml                  # Pipeline de deploy no GitHub Pages
+├── scripts/
+│   └── sync-github-repos.mjs           # Script interno de sincronização GitHub -> dados do portfólio
 ├── .eslintrc.cjs                       # Configuração de lint
 ├── package.json
 ├── tailwind.config.js
@@ -102,7 +106,9 @@ Felipe-Portifolio/
 
 ### 🗂️ Camada de Dados (`src/data/projects.jsx`)
 
-- Catálogo central de projetos
+- Catálogo central de projetos com fallback local
+- Leitura automática de `src/data/github-import/portfolio-items.generated.json`
+- Merge automático com `src/data/github-import/portfolio-items.overrides.json` por `repoKey`
 - Categorização por tags
 - Metadados para filtros e modais
 
@@ -110,15 +116,19 @@ Felipe-Portifolio/
 
 - Loader de README dinâmico para conteúdo por projeto
 - Helpers de classes e estilos visuais
+- Sub-sistema interno de sincronização GitHub em `src/utils/github-import/`
 
 ---
 
 ## 📚 Documentação Completa
 
 - 📖 [Índice da documentação](docs/README.md)
+- 🤖 [Prompt do sub-sistema de importação de repositórios GitHub](docs/PROMPT-SUBSISTEMA-IMPORTACAO-REPOS-GITHUB.md)
 - 🧭 [Guia de customização e manutenção](docs/DOCUMENTATION.md)
-- 🎨 [Design system oficial](docs/DESIGN-SYSTEM.md)
-- 🌍 [Guia de domínio no GitHub Pages](docs/GUIA-DOMINIO-PAGES.md)
+- ✅ [Checklist de pendências do site](docs/PENDENCIAS-SITE.md)
+- ⚡ [Plano de otimização de performance](docs/plano-otimizacao-performance.md)
+- 🤖 [Contexto operacional para IA](IA.md)
+- 🎨 [Design system oficial (Felixo System Design)](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md)
 
 ---
 
@@ -144,19 +154,64 @@ npm run build
 npm run preview
 ```
 
+A saída de build é gerada em `dist/` como artefato local de compilação.
+
+### Opção 3: Sincronizar repositórios GitHub (uso interno)
+
+```bash
+# 1) Configure as variáveis no shell (ou copie .env.example para .env local)
+export GITHUB_USERNAME=Felipe-Alcantara
+export GITHUB_TOKEN= # opcional (necessário para privados)
+export GITHUB_IMPORT_MAX_REPOS=500 # opcional
+
+# 2) Executar sincronização
+npm run sync:github
+```
+
+Esse fluxo atualiza, com estratégia de upsert e sem clone, os arquivos:
+- `src/data/github-import/index.json`
+- `src/data/github-import/portfolio-items.generated.json`
+- `src/data/github-import/portfolio-items.ignore.json`
+- `src/data/github-import/repos/<owner>__<repo>/{metadata.json,languages.json,readme.md,manifest.json}`
+
+Para personalizações manuais de apresentação (sem perder na próxima sync), edite:
+- `src/data/github-import/portfolio-items.overrides.json`
+
+Para ignorar repositórios específicos no catálogo gerado mesmo após nova sync, edite:
+- `src/data/github-import/portfolio-items.ignore.json` (array de `repoKey`)
+
+Exemplo de override por `repoKey`:
+
+```json
+[
+  {
+    "repoKey": "felipe-alcantara/felipe-portifolio",
+    "title": "FelixoVerse Portfolio",
+    "desc": "Versão de apresentação com foco em UX e narrativa visual.",
+    "tag": "web"
+  }
+]
+```
+
 ---
 
 ## ⚡ Guia Rápido
 
 ### Para personalizar conteúdo
-1. Edite `src/data/projects.jsx` para atualizar projetos e categorias.
-2. Ajuste seções em `src/sections/`.
-3. Atualize textos globais em `src/App.jsx` e componentes `layout/`.
+1. Para projetos sincronizados do GitHub, edite `src/data/github-import/portfolio-items.overrides.json` usando `repoKey`.
+2. `src/data/projects.jsx` faz o merge automático entre gerado + overrides.
+3. Sem dados sincronizados, o fallback local continua em `src/data/projects.jsx`.
+4. Ajuste seções em `src/sections/`.
+5. Atualize textos globais em `src/App.jsx` e componentes `layout/`.
 
 ### Para alterar visual
-1. Consulte `docs/DESIGN-SYSTEM.md`.
+1. Consulte o [Design System Frontend no Felixo System Design](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md).
 2. Ajuste classes Tailwind nos componentes `ui/`.
 3. Refine tokens e tema em `tailwind.config.js` e `src/index.css`.
+
+### Para validar o repositório
+1. Execute `npm run lint`.
+2. Execute `npm run build`.
 
 ---
 
@@ -164,19 +219,22 @@ npm run preview
 
 - **`filteredProjects` em `App.jsx`**: combina filtro por categoria (`activeTag`) e busca por texto (`q`).
 - **`ProjectsModal` e `ProjectDetailsModal`**: expõem conteúdo detalhado sem navegação externa.
-- **`loadReadme(projectTitle)`**: injeta README por projeto de forma dinâmica via `?raw`.
+- **`loadReadme(project)`**: injeta README por projeto, incluindo READMEs importados do sincronizador GitHub.
+- **Inferência de tags no importador GitHub**: classifica projetos web (React/TypeScript/JavaScript/HTML/CSS) para aparecerem na seção **Aplicações Web**.
+- **`PortfolioCard`**: usa clamp em título/descrição para manter altura visual mais consistente no carrossel.
 
 ---
 
 ## ⚠️ Limitações
 
-- Dados de projetos ainda usam placeholders em parte do catálogo.
+- Sem execução de `npm run sync:github`, o catálogo usa fallback local de placeholders.
 - Não há pipeline de testes automatizados neste repositório.
 - Parte dos links externos nos projetos é demonstrativa.
+- `public/favicon.png` e `public/og-image.png` precisam ser criados manualmente com assets reais.
 
 ## 🛡️ Segurança
 
-Não inclua chaves, tokens ou credenciais reais em `src/data/projects.jsx`, `docs/` ou qualquer arquivo versionado. Para integrações reais, use variáveis de ambiente e gestão segura de segredos.
+Não inclua chaves, tokens ou credenciais reais em `src/data/projects.jsx`, `docs/` ou qualquer arquivo versionado. Para integrações reais, use variáveis de ambiente e gestão segura de segredos. Para o sincronizador interno GitHub, mantenha token apenas no ambiente local (`.env` não versionado).
 
 ---
 
