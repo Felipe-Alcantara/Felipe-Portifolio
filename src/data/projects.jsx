@@ -489,6 +489,12 @@ function normalizeProject(project) {
       typeof project?.createdAt === "string" && project.createdAt.trim()
         ? project.createdAt.trim()
         : "",
+    lastCommitAt:
+      typeof project?.updatedAt === "string" && project.updatedAt.trim()
+        ? project.updatedAt.trim()
+        : typeof project?.createdAt === "string" && project.createdAt.trim()
+        ? project.createdAt.trim()
+        : "",
     status,
     complexity:
       typeof project?.complexity === "string" && project.complexity.trim()
