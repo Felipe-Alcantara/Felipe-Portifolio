@@ -75,7 +75,7 @@ function calculateProjectDuration(createdAt, lastCommitAt) {
   if (months > 0) parts.push(`${months}m`);
   if (days > 0 && years === 0) parts.push(`${days}d`);
 
-  return parts.length > 0 ? parts.join(" ") : "Recente";
+  return parts.length > 0 ? parts.join(" ") : "1 dia";
 }
 
 export function ProjectDetailsModal({ isOpen, onClose, project }) {

@@ -125,7 +125,23 @@
   },
   {
     "repoKey": "felipe-alcantara/mdn-web-docs",
-    "tag": "estudo"
+    "tag": "estudo",
+    "desc": "Projetos que eu fiz com o curso do MDN",
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": true,
+      "techPercentage": {
+        "HTML": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/MDN-Web-Docs",
+      "site": "http://mdn-web-docs.felixo.com.br/",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    }
   },
   {
     "repoKey": "felipe-alcantara/scripts-html",
