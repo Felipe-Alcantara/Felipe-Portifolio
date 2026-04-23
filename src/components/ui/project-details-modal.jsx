@@ -256,7 +256,7 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
                       )}>{project.complexity}</span>
                     </div>
                     <div className="flex justify-between items-center text-sm">
-                      <span className="flex items-center gap-2 text-zinc-500"><Clock size={14} /> Desde o último commit</span>
+                      <span className="flex items-center gap-2 text-zinc-500"><Clock size={14} /> Duração do Projeto</span>
                       <span className="text-zinc-200">{calculateProjectDuration(project.lastCommitAt)}</span>
                     </div>
                     <div className="flex justify-between items-center text-sm">
