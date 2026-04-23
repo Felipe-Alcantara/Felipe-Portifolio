@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  X, 
-  Github, 
-  Globe, 
-  Youtube, 
-  Download, 
-  FileText, 
-  Calendar, 
-  BarChart, 
-  Layers, 
-  Clock, 
-  HardDrive, 
-  Wifi 
+import {
+  X,
+  ArrowLeft,
+  Github,
+  Globe,
+  Youtube,
+  Download,
+  FileText,
+  Calendar,
+  BarChart,
+  Layers,
+  Clock,
+  HardDrive,
+  Wifi
 } from "lucide-react";
 import { Button } from "./button";
 import { Badge } from "./badge";
@@ -78,7 +79,7 @@ function calculateProjectDuration(createdAt, lastCommitAt) {
   return parts.length > 0 ? parts.join(" ") : "1 dia";
 }
 
-export function ProjectDetailsModal({ isOpen, onClose, project }) {
+export function ProjectDetailsModal({ isOpen, onClose, onBack, project }) {
   const [readmeContent, setReadmeContent] = useState(() => getReadmePlaceholder(project));
   const primaryProjectUrl = getPrimaryProjectUrl(project);
   const primaryProjectLabel = getPrimaryProjectLabel(project);
@@ -150,6 +151,17 @@ export function ProjectDetailsModal({ isOpen, onClose, project }) {
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-white/10 bg-zinc-900/50">
               <div className="flex items-center gap-4">
+                {onBack && (
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={onBack}
+                    className="rounded-full hover:bg-white/10 shrink-0"
+                    aria-label="Voltar para a lista"
+                  >
+                    <ArrowLeft size={22} />
+                  </Button>
+                )}
                 <div className="p-3 bg-zinc-800 rounded-xl text-purple-400 border border-white/5">
                   {project.icon}
                 </div>

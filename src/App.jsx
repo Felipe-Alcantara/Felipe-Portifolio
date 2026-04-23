@@ -68,6 +68,8 @@ export default function App() {
   const [isProjectsListModalOpen, setIsProjectsListModalOpen] = useState(false);
   // Estado para o projeto selecionado no modal de detalhes
   const [selectedProject, setSelectedProject] = useState(null);
+  // Origem de onde o modal de detalhes foi aberto ("list" | null)
+  const [projectOpenedFrom, setProjectOpenedFrom] = useState(null);
 
   // ================================================================================================
   // EFEITOS COLATERAIS (SIDE EFFECTS)
@@ -112,13 +114,23 @@ export default function App() {
 
   /**
    * Abre o modal de detalhes para um projeto específico.
+   * @param {object} project - O projeto a ser exibido.
+   * @param {string|null} from - Origem da abertura ("list" | null).
    */
-  const handleOpenProjectDetails = (project) => {
+  const handleOpenProjectDetails = (project, from = null) => {
     setSelectedProject(project);
+    setProjectOpenedFrom(from);
   };
 
   const handleCloseProjectDetails = () => {
     setSelectedProject(null);
+    setProjectOpenedFrom(null);
+  };
+
+  const handleBackFromProjectDetails = () => {
+    setSelectedProject(null);
+    setProjectOpenedFrom(null);
+    setIsProjectsListModalOpen(true);
   };
 
   // ================================================================================================
@@ -207,12 +219,13 @@ export default function App() {
           isOpen={isProjectsListModalOpen}
           onClose={handleCloseProjectsListModal}
           items={filteredProjects}
-          onOpenProject={handleOpenProjectDetails}
+          onOpenProject={(project) => handleOpenProjectDetails(project, "list")}
         />
 
         <ProjectDetailsModal
           isOpen={!!selectedProject}
           onClose={handleCloseProjectDetails}
+          onBack={projectOpenedFrom === "list" ? handleBackFromProjectDetails : null}
           project={selectedProject}
         />
       </Suspense>
