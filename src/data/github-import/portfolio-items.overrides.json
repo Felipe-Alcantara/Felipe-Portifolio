@@ -122,7 +122,7 @@
   {
     "repoKey": "felipe-alcantara/mdn-web-docs",
     "tag": "estudo",
-    "desc": "Projetos que eu fiz com o curso do MDN",
+    "desc": "Projetos práticos desenvolvidos seguindo o curso do MDN Web Docs (Mozilla Developer Network) — a principal referência de documentação web da Mozilla, usada por desenvolvedores do mundo todo.",
     "properties": {
       "timeEstimated": "Em evolução",
       "size": "Pequeno",
