@@ -69,7 +69,7 @@ export function PortfolioSection({ items, setIsProjectsModalOpen, setInitialTagF
 
   return (
     <section ref={sectionRef} id="portfolio" className="relative border-t border-white/5 overflow-hidden">
-      <BackgroundParticles count={18} />
+      <BackgroundParticles />
       <div className="relative z-10 py-14">
         <div className="mx-auto max-w-6xl px-4 flex items-end justify-between gap-4">
           <div className="relative">

@@ -197,7 +197,7 @@ export function ProjectsGridSection({
       id="outros-projetos"
       className="relative border-t border-white/5 overflow-hidden"
     >
-      <BackgroundParticles count={18} />
+      <BackgroundParticles />
       <div className="relative z-10 mx-auto max-w-6xl px-4 py-14">
         <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-gradient-glow-python">

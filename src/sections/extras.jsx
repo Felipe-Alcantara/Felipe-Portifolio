@@ -85,7 +85,7 @@ const aluraCoursesData = [
 export function ExtrasSection() {
   return (
     <section id="extras" className="relative border-t border-white/5 overflow-hidden">
-      <BackgroundParticles count={14} />
+      <BackgroundParticles />
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-16">
         <h2 className="text-3xl font-bold mb-12 text-center text-gradient-glow-amethyst">Formação & Certificações</h2>
         
