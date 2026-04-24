@@ -140,6 +140,7 @@
   {
     "repoKey": "felipe-alcantara/scripts-html",
     "tag": "estudo",
+    "desc": "Projeto de estudos em HTML5 e CSS3 voltado à criação de páginas web e formulários interativos, aplicando estrutura semântica, estilização de componentes e publicação via GitHub Pages.",
     "properties": {
       "timeEstimated": "Em evolução",
       "size": "Pequeno",

@@ -10,6 +10,31 @@ const __dirname = path.dirname(__filename)
 export default defineConfig({
   plugins: [react()],
   base: '/',
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes('node_modules')) {
+            return undefined
+          }
+
+          if (id.includes('framer-motion')) {
+            return 'motion-vendor'
+          }
+
+          if (id.includes('react-icons') || id.includes('lucide-react')) {
+            return 'icons-vendor'
+          }
+
+          if (id.includes('react-dom') || id.includes('/react/')) {
+            return 'react-vendor'
+          }
+
+          return undefined
+        },
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
