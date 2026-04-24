@@ -64,6 +64,21 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
     [sortedItems, activeTag]
   );
 
+  const chronologicalRank = useMemo(() => {
+    const byOldest = [...items].sort((a, b) => {
+      const timestampA = toTimestamp(a.createdAt);
+      const timestampB = toTimestamp(b.createdAt);
+      if (timestampA === -Infinity || timestampB === -Infinity) {
+        return timestampA === -Infinity ? 1 : -1;
+      }
+      const diff = timestampA - timestampB;
+      return diff !== 0 ? diff : String(a.title || "").localeCompare(String(b.title || ""), "pt-BR");
+    });
+    const rankMap = new Map();
+    byOldest.forEach((item, index) => rankMap.set(item.title, index + 1));
+    return rankMap;
+  }, [items]);
+
   useEffect(() => {
     if (!isOpen) {
       return undefined;
@@ -205,6 +220,8 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
                       <div className="flex items-center gap-1.5 text-zinc-400">
                         <CalendarDays size={14} />
                         <span>{formatDate(item.createdAt)}</span>
+                        <span className="text-zinc-600">·</span>
+                        <span className="font-mono text-zinc-500">#{chronologicalRank.get(item.title)}</span>
                       </div>
                       {item.status && (
                         <div
