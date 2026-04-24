@@ -298,6 +298,14 @@ function normalizeRepoKey(repoKey) {
   return typeof repoKey === "string" ? repoKey.trim().toLowerCase() : "";
 }
 
+function hasRenderableProjectData(project) {
+  if (!project || typeof project !== "object") {
+    return false;
+  }
+
+  return typeof project.title === "string" && project.title.trim().length > 0;
+}
+
 function mergeGeneratedWithOverrides(generatedItems, overrideItems) {
   const normalizedGeneratedItems = Array.isArray(generatedItems) ? generatedItems : [];
   const normalizedOverrideItems = Array.isArray(overrideItems) ? overrideItems : [];
@@ -337,7 +345,7 @@ function mergeGeneratedWithOverrides(generatedItems, overrideItems) {
   const overrideOnlyItems = [];
 
   for (const [repoKey, overrideItem] of overridesByRepoKey.entries()) {
-    if (!generatedRepoKeys.has(repoKey)) {
+    if (!generatedRepoKeys.has(repoKey) && hasRenderableProjectData(overrideItem)) {
       overrideOnlyItems.push(overrideItem);
     }
   }
