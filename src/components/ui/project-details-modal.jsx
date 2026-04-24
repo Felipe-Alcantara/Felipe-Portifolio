@@ -23,6 +23,7 @@ import { getReadmePlaceholder, loadReadme } from "../../utils/readme-loader";
 import {
   getPrimaryProjectLabel,
   getPrimaryProjectUrl,
+  getProjectRoute,
   isExternalUrl,
 } from "../../utils/project-routes";
 
@@ -233,7 +234,11 @@ export function ProjectDetailsModal({ isOpen, onClose, onBack, project }) {
                     </a>
                   </Button>
                   <Button variant="outline" className="w-full justify-start gap-3 text-left" asChild>
-                    <a href={project.links?.demo} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={isExternalUrl(project.links?.demo) ? project.links.demo : getProjectRoute(project)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Youtube size={18} className="shrink-0" />
                       <span className="flex-1 text-left">Ver Demonstração</span>
                     </a>
