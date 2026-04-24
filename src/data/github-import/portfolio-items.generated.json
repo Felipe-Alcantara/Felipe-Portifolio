@@ -5,7 +5,7 @@
     "desc": "Repositório central do Felixo System Design. Contém diretrizes de arquitetura, padrões de código e componentes para garantir consistência em todos os projetos.",
     "link": "https://github.com/Felipe-Alcantara/Felixo-System-Design",
     "createdAt": "2026-03-12T02:39:12Z",
-    "updatedAt": "2026-04-14T14:37:25Z",
+    "updatedAt": "2026-04-23T03:23:49Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [
@@ -301,7 +301,7 @@
     "desc": "Um hub criativo em React que conecta código, música e projetos colaborativos. Este repositório serve como base inicial para o FelixoVerse, explorando design moderno, animações e uma estrutura flexível para crescimento contínuo.",
     "link": "https://github.com/Felipe-Alcantara/Felipe-Portifolio",
     "createdAt": "2026-01-08T17:54:47Z",
-    "updatedAt": "2026-04-23T02:25:29Z",
+    "updatedAt": "2026-04-23T03:41:49Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [
@@ -2043,7 +2043,7 @@
     "desc": "Meus projetos de estudo de HTML",
     "link": "https://github.com/Felipe-Alcantara/Scripts-HTML",
     "createdAt": "2024-03-26T08:24:35Z",
-    "updatedAt": "2025-10-30T05:35:56Z",
+    "updatedAt": "2026-04-24T05:37:02Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [
@@ -2075,7 +2075,7 @@
     "desc": "Projetos que eu fiz com o curso do MDN",
     "link": "https://github.com/Felipe-Alcantara/MDN-Web-Docs",
     "createdAt": "2024-03-26T08:20:30Z",
-    "updatedAt": "2026-04-23T02:33:43Z",
+    "updatedAt": "2026-04-23T02:42:07Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [

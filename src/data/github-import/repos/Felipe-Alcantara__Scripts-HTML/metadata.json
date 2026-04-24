@@ -3,7 +3,7 @@
   "name": "Scripts-HTML",
   "fullName": "Felipe-Alcantara/Scripts-HTML",
   "description": "Meus projetos de estudo de HTML",
-  "private": true,
+  "private": false,
   "repoUrl": "https://github.com/Felipe-Alcantara/Scripts-HTML",
   "homepage": "",
   "topics": [],
@@ -11,10 +11,10 @@
   "stars": 0,
   "forks": 0,
   "createdAt": "2024-03-26T08:24:35Z",
-  "updatedAt": "2025-10-30T05:35:56Z",
+  "updatedAt": "2026-04-24T05:37:02Z",
   "defaultBranch": "main",
   "archived": false,
-  "sizeKb": 3,
+  "sizeKb": 5,
   "repoKey": "felipe-alcantara/scripts-html",
-  "lastSyncedAt": "2026-04-23T02:37:27.846Z"
+  "lastSyncedAt": "2026-04-24T05:41:00.817Z"
 }

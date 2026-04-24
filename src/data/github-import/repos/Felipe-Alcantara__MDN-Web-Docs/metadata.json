@@ -3,7 +3,7 @@
   "name": "MDN-Web-Docs",
   "fullName": "Felipe-Alcantara/MDN-Web-Docs",
   "description": "Projetos que eu fiz com o curso do MDN",
-  "private": true,
+  "private": false,
   "repoUrl": "https://github.com/Felipe-Alcantara/MDN-Web-Docs",
   "homepage": "",
   "topics": [],
@@ -11,10 +11,10 @@
   "stars": 0,
   "forks": 0,
   "createdAt": "2024-03-26T08:20:30Z",
-  "updatedAt": "2026-04-23T02:33:43Z",
+  "updatedAt": "2026-04-23T02:42:07Z",
   "defaultBranch": "main",
   "archived": false,
-  "sizeKb": 25,
+  "sizeKb": 29,
   "repoKey": "felipe-alcantara/mdn-web-docs",
-  "lastSyncedAt": "2026-04-23T02:37:27.846Z"
+  "lastSyncedAt": "2026-04-24T05:41:00.817Z"
 }
