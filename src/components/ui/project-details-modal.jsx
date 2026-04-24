@@ -84,7 +84,6 @@ export function ProjectDetailsModal({ isOpen, onClose, onBack, project }) {
   const [readmeContent, setReadmeContent] = useState(() => getReadmePlaceholder(project));
   const primaryProjectUrl = getPrimaryProjectUrl(project);
   const primaryProjectLabel = getPrimaryProjectLabel(project);
-  const primaryProjectIsExternal = isExternalUrl(primaryProjectUrl);
   
   useEffect(() => {
     if (!isOpen || !project) {

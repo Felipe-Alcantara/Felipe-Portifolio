@@ -1,10 +1,14 @@
 import React, { useMemo, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-export function BackgroundParticles() {
+export function BackgroundParticles({ count = 55 }) {
   const containerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(true);
-  const [reducedMotion, setReducedMotion] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(() => {
+    return typeof window !== "undefined"
+      ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      : false;
+  });
 
   // Detecta prefers-reduced-motion
   useEffect(() => {
@@ -28,7 +32,7 @@ export function BackgroundParticles() {
   }, []);
 
   const backgroundParticles = useMemo(() => {
-    return Array.from({ length: 55 }).map((_, i) => ({
+    return Array.from({ length: Math.max(0, count) }).map((_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
@@ -37,7 +41,7 @@ export function BackgroundParticles() {
       delay: Math.random() * 2,
       opacity: Math.random() * 0.5 + 0.5,
     }));
-  }, []);
+  }, [count]);
 
   // Se o usuário prefere movimento reduzido, não renderiza nada
   if (reducedMotion) return null;

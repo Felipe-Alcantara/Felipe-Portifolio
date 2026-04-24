@@ -9,8 +9,18 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
+    let lastScrolled = window.scrollY > 20;
+    setScrolled(lastScrolled);
+
+    const handleScroll = () => {
+      const nextScrolled = window.scrollY > 20;
+      if (nextScrolled === lastScrolled) return;
+
+      lastScrolled = nextScrolled;
+      setScrolled(nextScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

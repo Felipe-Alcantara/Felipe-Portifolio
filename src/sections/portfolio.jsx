@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useMemo, useRef, useState, useEffect } from "react";
 import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 import { Button } from "../components/ui/button";
 import { PortfolioCard } from "../components/parts/portfolio-card";
@@ -8,12 +8,30 @@ import { BackgroundParticles } from "../components/ui/background-particles";
 
 export function PortfolioSection({ items, setIsProjectsModalOpen, setInitialTagForProjectsModal, sectionTag }) {
   // Filtrar itens por sectionTag se fornecido
-  const displayItems = sectionTag ? items.filter(it => it.tag?.toLowerCase() === sectionTag.toLowerCase()) : items;
-  const marquee = loop(displayItems.length ? displayItems : []);
+  const displayItems = useMemo(
+    () => sectionTag ? items.filter(it => it.tag?.toLowerCase() === sectionTag.toLowerCase()) : items,
+    [items, sectionTag]
+  );
+  const marquee = useMemo(() => loop(displayItems.length ? displayItems : []), [displayItems]);
+  const sectionRef = useRef(null);
   const carouselRef = useRef(null);
   const x = useMotionValue(0);
   const [isDragging, setIsDragging] = useState(false);
   const [itemWidth, setItemWidth] = useState(0);
+  const [isInView, setIsInView] = useState(true);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInView(entry.isIntersecting),
+      { threshold: 0 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const calculateWidth = () => {
@@ -27,13 +45,13 @@ export function PortfolioSection({ items, setIsProjectsModalOpen, setInitialTagF
   }, [marquee]);
 
   useAnimationFrame((t, delta) => {
-    if (!isDragging && itemWidth > 0) {
-      const moveBy = delta * 0.04; // Velocidade do auto-scroll
-      let newX = x.get() - moveBy;
-      if (newX <= -itemWidth) newX += itemWidth;
-      if (newX > 0) newX -= itemWidth;
-      x.set(newX);
-    }
+    if (!isInView || document.hidden || isDragging || itemWidth <= 0) return;
+
+    const moveBy = delta * 0.04; // Velocidade do auto-scroll
+    let newX = x.get() - moveBy;
+    if (newX <= -itemWidth) newX += itemWidth;
+    if (newX > 0) newX -= itemWidth;
+    x.set(newX);
   });
 
   const handleDrag = () => {
@@ -50,8 +68,8 @@ export function PortfolioSection({ items, setIsProjectsModalOpen, setInitialTagF
   }
 
   return (
-    <section id="portfolio" className="relative border-t border-white/5 overflow-hidden">
-      <BackgroundParticles />
+    <section ref={sectionRef} id="portfolio" className="relative border-t border-white/5 overflow-hidden">
+      <BackgroundParticles count={18} />
       <div className="relative z-10 py-14">
         <div className="mx-auto max-w-6xl px-4 flex items-end justify-between gap-4">
           <div className="relative">

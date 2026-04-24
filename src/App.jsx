@@ -167,7 +167,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-zinc-950 to-black text-zinc-50 selection:bg-purple-600/40 font-sans relative">
       {/* Componente de partículas para o fundo */}
-      <BackgroundParticles />
+      <BackgroundParticles count={36} />
 
       {/* Layout Principal */}
       <Navbar />
