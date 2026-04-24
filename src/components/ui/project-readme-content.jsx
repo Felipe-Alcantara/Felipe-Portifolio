@@ -3,14 +3,7 @@ import GithubSlugger from "github-slugger";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-
-const IMPORTED_REPO_METADATA = import.meta.glob(
-  "../../data/github-import/repos/*/metadata.json",
-  {
-    import: "default",
-    eager: true,
-  }
-);
+import { resolveGitHubRepoContext } from "../../utils/github-readme-url";
 
 function normalizeReadme(content) {
   return content
@@ -32,55 +25,6 @@ function extractText(children) {
       return "";
     })
     .join("");
-}
-
-function normalizeGitHubRepoUrl(value) {
-  if (typeof value !== "string" || !value.trim()) {
-    return null;
-  }
-
-  const match = value.trim().match(/^https?:\/\/github\.com\/([^/]+)\/([^/#?]+)/i);
-
-  if (!match) {
-    return null;
-  }
-
-  return {
-    owner: match[1],
-    repo: match[2].replace(/\.git$/i, ""),
-  };
-}
-
-function resolveRepoContext(project) {
-  if (!project || typeof project !== "object") {
-    return null;
-  }
-
-  const metadataPath =
-    typeof project.repoFolder === "string" && project.repoFolder.trim()
-      ? `../../data/github-import/repos/${project.repoFolder.trim()}/metadata.json`
-      : "";
-  const importedMetadata = metadataPath ? IMPORTED_REPO_METADATA[metadataPath] : null;
-  const fallbackRepo =
-    normalizeGitHubRepoUrl(project?.links?.github) || normalizeGitHubRepoUrl(project?.link);
-
-  const owner = importedMetadata?.owner || fallbackRepo?.owner;
-  const repo = importedMetadata?.name || fallbackRepo?.repo;
-  const branch =
-    typeof importedMetadata?.defaultBranch === "string" && importedMetadata.defaultBranch.trim()
-      ? importedMetadata.defaultBranch.trim()
-      : "main";
-
-  if (!owner || !repo) {
-    return null;
-  }
-
-  return {
-    owner,
-    repo,
-    branch,
-    repoUrl: importedMetadata?.repoUrl || `https://github.com/${owner}/${repo}`,
-  };
 }
 
 function splitUrlParts(url) {
@@ -124,7 +68,7 @@ function resolveMarkdownUrl(url, key, project) {
     return url;
   }
 
-  const repoContext = resolveRepoContext(project);
+  const repoContext = resolveGitHubRepoContext(project);
 
   if (!repoContext) {
     return url;

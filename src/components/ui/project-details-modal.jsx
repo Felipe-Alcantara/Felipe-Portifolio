@@ -20,6 +20,7 @@ import { Badge } from "./badge";
 import { ProjectReadmeContent } from "./project-readme-content";
 import { cx, getTagColor } from "../../utils/utils";
 import { getReadmePlaceholder, loadReadme } from "../../utils/readme-loader";
+import { getGitHubReadmeUrl } from "../../utils/github-readme-url";
 import {
   getPrimaryProjectLabel,
   getPrimaryProjectUrl,
@@ -84,6 +85,7 @@ export function ProjectDetailsModal({ isOpen, onClose, onBack, project }) {
   const [readmeContent, setReadmeContent] = useState(() => getReadmePlaceholder(project));
   const primaryProjectUrl = getPrimaryProjectUrl(project);
   const primaryProjectLabel = getPrimaryProjectLabel(project);
+  const githubReadmeUrl = getGitHubReadmeUrl(project);
   
   useEffect(() => {
     if (!isOpen || !project) {
@@ -294,9 +296,20 @@ export function ProjectDetailsModal({ isOpen, onClose, onBack, project }) {
               {/* README: ocupa toda a altura disponível */}
               <div className="flex-1 flex flex-col min-w-0 p-6">
                 <div className="flex items-center gap-2 mb-4 pb-2 border-b border-white/5">
-                  <h3 className="font-mono text-sm text-zinc-400 flex items-center gap-2">
-                    <FileText size={16} /> README.md
-                  </h3>
+                  {githubReadmeUrl ? (
+                    <a
+                      href={githubReadmeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-mono text-sm text-zinc-400 hover:text-purple-300 transition-colors flex items-center gap-2"
+                    >
+                      <FileText size={16} /> README.md
+                    </a>
+                  ) : (
+                    <h3 className="font-mono text-sm text-zinc-400 flex items-center gap-2">
+                      <FileText size={16} /> README.md
+                    </h3>
+                  )}
                 </div>
                 <div className="flex-1 overflow-y-auto overflow-x-hidden custom-scrollbar rounded-xl border border-white/10 bg-zinc-800/50 p-4">
                   {readmeContent ? (
