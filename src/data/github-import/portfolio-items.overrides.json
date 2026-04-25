@@ -117,7 +117,23 @@
   },
   {
     "repoKey": "felipe-alcantara/calculadora-simples-em-python",
-    "tag": "estudo"
+    "tag": "estudo",
+    "desc": "Projeto de estudo em Python criado no início da minha jornada na programação, a partir de uma calculadora simples ensinada por um amigo. A aplicação serviu como prática de lógica, entrada de dados, operações matemáticas e organização de código, evoluindo como um registro dos meus primeiros passos com a linguagem.",
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": true,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Calculadora-simples-em-python",
+      "site": "#",
+      "demo": "https://felipe-alcantara.github.io/Calculadora-simples-em-python/",
+      "download": "https://github.com/Felipe-Alcantara/Calculadora-simples-em-python/archive/refs/heads/main.zip",
+      "post": "https://github.com/Felipe-Alcantara/Calculadora-simples-em-python/blob/main/README.md"
+    }
   },
   {
     "repoKey": "felipe-alcantara/mdn-web-docs",
