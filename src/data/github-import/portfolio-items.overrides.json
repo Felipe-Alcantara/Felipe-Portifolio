@@ -113,7 +113,10 @@
   },
   {
     "repoKey": "felipe-alcantara/calcular-soma-com-funcao-em-python",
-    "tag": "estudo"
+    "tag": "estudo",
+    "links": {
+      "post": "/projetos/calcular-soma-com-funcao-em-python"
+    }
   },
   {
     "repoKey": "felipe-alcantara/calculadora-simples-em-python",
