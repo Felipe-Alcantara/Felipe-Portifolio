@@ -453,6 +453,10 @@ function normalizeProperties(rawProperties, fallbackTag) {
 
 function normalizeProject(project) {
   const tag = normalizeTag(project?.tag);
+  const extraTags = Array.isArray(project?.extraTags)
+    ? project.extraTags.map(normalizeTag).filter(Boolean)
+    : [];
+  const tags = Array.from(new Set([tag, ...extraTags]));
   const rawTitle =
     typeof project?.title === "string" && project.title.trim()
       ? project.title.trim()
@@ -489,6 +493,7 @@ function normalizeProject(project) {
   return {
     title: normalizedTitle,
     tag,
+    tags,
     desc: description,
     link:
       typeof project?.link === "string" && project.link.trim()

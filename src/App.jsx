@@ -150,12 +150,12 @@ export default function App() {
     }
 
     return allProjects.filter((project) => {
-      const byTag = activeTag === "all" || project.tag === activeTag;
+      const byTag = activeTag === "all" || (project.tags ?? [project.tag]).includes(activeTag);
       const byQuery =
         !query ||
         project.title.toLowerCase().includes(query) ||
         project.desc.toLowerCase().includes(query) ||
-        project.tag.toLowerCase().includes(query);
+        (project.tags ?? [project.tag]).some((t) => t.toLowerCase().includes(query));
       return byTag && byQuery;
     });
   }, [q, activeTag]);

@@ -2,9 +2,10 @@
   {
     "repoKey": "felipe-alcantara/alura",
     "tag": "estudo",
+    "extraTags": ["web"],
     "desc": "Registro de projetos práticos dos cursos da Alura, abrangendo JavaScript, CSS, HTML e Python com exercícios de front-end responsivo, manipulação do DOM e lógica de programação. ⚠️ Repositório original privado: conteúdo pago e protegido.",
     "properties": {
-      "online": false
+      "online": true
     },
     "links": {
       "site": "#",
@@ -94,7 +95,10 @@
   {
     "repoKey": "felipe-alcantara/cifra-de-cesar-em-python",
     "tag": "estudo",
-    "desc": "Implementação completa da Cifra de César em Python com cifração tradicional, codificação numérica e suporte a acentos, além de uma versão web interativa com dark mode que roda no navegador via Brython"
+    "desc": "Implementação completa da Cifra de César em Python com cifração tradicional, codificação numérica e suporte a acentos, além de uma versão web interativa com dark mode que roda no navegador via Brython",
+    "links": {
+      "site": "https://cesar.felixo.com.br"
+    }
   },
   {
     "repoKey": "felipe-alcantara/soma-em-serie",

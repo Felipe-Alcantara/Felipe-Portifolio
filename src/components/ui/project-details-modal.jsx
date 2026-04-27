@@ -170,7 +170,9 @@ export function ProjectDetailsModal({ isOpen, onClose, onBack, project }) {
                 <div>
                   <h2 className="text-2xl font-bold text-white">{project.title}</h2>
                   <div className="flex items-center gap-2 mt-1">
-                    <Badge className={`capitalize ${project.tagColor}`}>{project.tag}</Badge>
+                    {(project.tags ?? [project.tag]).map((t) => (
+                      <Badge key={t} className={`capitalize ${getTagColor(t)}`}>{t}</Badge>
+                    ))}
                     {project.status && (
                       <Badge
                         className={

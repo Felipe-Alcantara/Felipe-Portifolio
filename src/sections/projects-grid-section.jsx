@@ -83,9 +83,13 @@ const ProjectCard = ({
         <div className="p-2 bg-black/40 rounded-lg text-purple-400">
           {item.icon}
         </div>
-        <Badge className={cx("capitalize border", getTagColor(item.tag))}>
-          {item.tag}
-        </Badge>
+        <div className="flex flex-wrap gap-1">
+          {(item.tags ?? [item.tag]).map((t) => (
+            <Badge key={t} className={cx("capitalize border", getTagColor(t))}>
+              {t}
+            </Badge>
+          ))}
+        </div>
       </div>
       <div className="flex flex-col flex-grow">
         <h3 className="font-bold text-zinc-100 group-hover:text-purple-400 transition-colors">

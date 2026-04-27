@@ -9,7 +9,7 @@ import { BackgroundParticles } from "../components/ui/background-particles";
 export function PortfolioSection({ items, setIsProjectsModalOpen, setInitialTagForProjectsModal, sectionTag }) {
   // Filtrar itens por sectionTag se fornecido
   const displayItems = useMemo(
-    () => sectionTag ? items.filter(it => it.tag?.toLowerCase() === sectionTag.toLowerCase()) : items,
+    () => sectionTag ? items.filter(it => (it.tags ?? [it.tag]).map(t => t?.toLowerCase()).includes(sectionTag.toLowerCase())) : items,
     [items, sectionTag]
   );
   const marquee = useMemo(() => loop(displayItems.length ? displayItems : []), [displayItems]);

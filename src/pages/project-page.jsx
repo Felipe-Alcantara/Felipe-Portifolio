@@ -16,6 +16,7 @@ import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 import { BackgroundParticles } from "../components/ui/background-particles";
 import { ProjectReadmeContent } from "../components/ui/project-readme-content";
+import { getTagColor } from "../utils/utils";
 import { getReadmePlaceholder, loadReadme } from "../utils/readme-loader";
 import {
   getPrimaryProjectLabel,
@@ -98,7 +99,9 @@ export default function ProjectPage({ project }) {
               Voltar ao portfólio
             </a>
           </Button>
-          <Badge className={project.tagColor}>{project.tag}</Badge>
+          {(project.tags ?? [project.tag]).map((t) => (
+            <Badge key={t} className={getTagColor(t)}>{t}</Badge>
+          ))}
           {project.status ? (
             <Badge className="border border-white/10 bg-white/5 text-zinc-200">{project.status}</Badge>
           ) : null}

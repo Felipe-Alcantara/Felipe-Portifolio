@@ -59,7 +59,7 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
   const filteredItems = useMemo(
     () =>
       sortedItems.filter(
-        (item) => activeTag === "all" || String(item.tag || "").toLowerCase() === activeTag
+        (item) => activeTag === "all" || (item.tags ?? [item.tag]).map(t => String(t || "").toLowerCase()).includes(activeTag)
       ),
     [sortedItems, activeTag]
   );
@@ -211,9 +211,13 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
                         </div>
                         <p className="text-sm text-zinc-400 line-clamp-2">{item.desc}</p>
                       </div>
-                      <Badge className={cx("capitalize border shrink-0", getTagColor(item.tag))}>
-                        {item.tag}
-                      </Badge>
+                      <div className="flex flex-wrap gap-1 justify-end">
+                        {(item.tags ?? [item.tag]).map((t) => (
+                          <Badge key={t} className={cx("capitalize border shrink-0", getTagColor(t))}>
+                            {t}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
 
                     <div className="mt-3 pt-3 border-t border-white/10 flex items-center justify-between gap-3 text-xs">

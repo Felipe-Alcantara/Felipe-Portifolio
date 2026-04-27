@@ -18,12 +18,12 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
   const filteredItems = useMemo(() => {
     const query = q.trim().toLowerCase();
     return items.filter((it) => {
-      const byTag = activeTag === "all" || it.tag === activeTag;
+      const byTag = activeTag === "all" || (it.tags ?? [it.tag]).includes(activeTag);
       const byQuery =
         !query ||
         it.title.toLowerCase().includes(query) ||
         it.desc.toLowerCase().includes(query) ||
-        it.tag.toLowerCase().includes(query);
+        (it.tags ?? [it.tag]).some((t) => t.toLowerCase().includes(query));
       return byTag && byQuery;
     });
   }, [q, activeTag]);
@@ -111,9 +111,13 @@ export function HeroSection({ q, setQ, activeTag, setActiveTag, isSearchOpen, se
                          <div className="p-2 bg-black/40 rounded-lg text-purple-400">
                            {item.icon}
                          </div>
-                         <span className={cx("text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full border", getTagColor(item.tag))}>
-                           {item.tag}
-                         </span>
+                         <div className="flex flex-wrap gap-1 justify-end">
+                           {(item.tags ?? [item.tag]).map((t) => (
+                             <span key={t} className={cx("text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full border", getTagColor(t))}>
+                               {t}
+                             </span>
+                           ))}
+                         </div>
                       </div>
                       <h3 className="font-bold text-zinc-100 group-hover:text-purple-400 transition-colors">
                         {item.title}
