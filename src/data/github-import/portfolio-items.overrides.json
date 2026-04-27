@@ -84,10 +84,6 @@
     "tag": "estudo"
   },
   {
-    "repoKey": "felipe-alcantara/trabalho-da-faculdade",
-    "tag": "estudo"
-  },
-  {
     "repoKey": "felipe-alcantara/animacao-usando-javascript",
     "tag": "estudo"
   },
@@ -97,12 +93,16 @@
   },
   {
     "repoKey": "felipe-alcantara/cifra-de-cesar-em-python",
-    "tag": "estudo"
+    "tag": "estudo",
+    "desc": "Implementação completa da Cifra de César em Python com cifração tradicional, codificação numérica e suporte a acentos, além de uma versão web interativa com dark mode que roda no navegador via Brython"
   },
   {
     "repoKey": "felipe-alcantara/soma-em-serie",
     "tag": "estudo",
-    "desc": "Programa que implementa o cálculo de uma série matemática em Python, praticando conceitos de loops, iteração e lógica de progressões numéricas"
+    "desc": "Programa que implementa o cálculo de uma série matemática em Python, praticando conceitos de loops, iteração e lógica de progressões numéricas",
+    "links": {
+      "post": "/projetos/soma-em-serie"
+    }
   },
   {
     "repoKey": "felipe-alcantara/desconto-de-salario-em-python",

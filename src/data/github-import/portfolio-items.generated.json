@@ -1828,36 +1828,6 @@
     "repoFolder": "Felipe-Alcantara__Cifra-de-cesar-em-python"
   },
   {
-    "title": "Trabalho DA Faculdade",
-    "tag": "python",
-    "desc": "Trabalho da faculdade de programação, exercícios do livro de python",
-    "link": "https://github.com/Felipe-Alcantara/Trabalho-da-faculdade",
-    "createdAt": "2024-03-26T09:37:10Z",
-    "updatedAt": "2026-04-11T18:37:59Z",
-    "status": "Em Desenvolvimento",
-    "complexity": "Baixa",
-    "stack": [
-      "Python"
-    ],
-    "properties": {
-      "timeEstimated": "Em evolução",
-      "size": "Pequeno",
-      "online": false,
-      "techPercentage": {
-        "Python": 100
-      }
-    },
-    "links": {
-      "github": "https://github.com/Felipe-Alcantara/Trabalho-da-faculdade",
-      "site": "#",
-      "demo": "#",
-      "download": "#",
-      "post": "#"
-    },
-    "repoKey": "felipe-alcantara/trabalho-da-faculdade",
-    "repoFolder": "Felipe-Alcantara__Trabalho-da-faculdade"
-  },
-  {
     "title": "Soma EM Serie",
     "tag": "python",
     "desc": "Este código Python calcula a soma da série 1 + (2*0 - 1) + (2*1 - 1) + (2*2 - 1) + ... + (2*n - 1).  ",
