@@ -101,7 +101,10 @@
   },
   {
     "repoKey": "felipe-alcantara/desconto-de-salario-em-python",
-    "tag": "estudo"
+    "tag": "estudo",
+    "links": {
+      "post": "/projetos/desconto-de-salario-em-python"
+    }
   },
   {
     "repoKey": "felipe-alcantara/identificador-de-str-em-python",
