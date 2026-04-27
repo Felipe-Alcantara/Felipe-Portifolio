@@ -95,7 +95,11 @@
   {
     "repoKey": "felipe-alcantara/cifra-de-cesar-em-python",
     "tag": "estudo",
+    "extraTags": ["web"],
     "desc": "Implementação completa da Cifra de César em Python com cifração tradicional, codificação numérica e suporte a acentos, além de uma versão web interativa com dark mode que roda no navegador via Brython",
+    "properties": {
+      "online": true
+    },
     "links": {
       "site": "https://cesar.felixo.com.br"
     }
@@ -118,6 +122,7 @@
   {
     "repoKey": "felipe-alcantara/identificador-de-str-em-python",
     "tag": "estudo",
+    "extraTags": ["web"],
     "desc": "Ferramenta que analisa e identifica 11 características diferentes de strings em Python, com versão web interativa usando Brython",
     "properties": {
       "timeEstimated": "Em evolução",
@@ -146,6 +151,7 @@
   {
     "repoKey": "felipe-alcantara/calculadora-simples-em-python",
     "tag": "estudo",
+    "extraTags": ["web"],
     "desc": "Projeto de estudo em Python criado no início da minha jornada na programação, a partir de uma calculadora simples ensinada por um amigo. A aplicação serviu como prática de lógica, entrada de dados, operações matemáticas e organização de código, evoluindo como um registro dos meus primeiros passos com a linguagem.",
     "properties": {
       "timeEstimated": "Em evolução",
@@ -166,6 +172,7 @@
   {
     "repoKey": "felipe-alcantara/mdn-web-docs",
     "tag": "estudo",
+    "extraTags": ["web"],
     "desc": "Projetos práticos desenvolvidos seguindo o curso do MDN Web Docs (Mozilla Developer Network) — a principal referência de documentação web da Mozilla, usada por desenvolvedores do mundo todo.",
     "properties": {
       "timeEstimated": "Em evolução",
@@ -184,6 +191,7 @@
   {
     "repoKey": "felipe-alcantara/scripts-html",
     "tag": "estudo",
+    "extraTags": ["web"],
     "desc": "Projeto de estudos em HTML5 e CSS3 voltado à criação de páginas web e formulários interativos, aplicando estrutura semântica, estilização de componentes e publicação via GitHub Pages.",
     "properties": {
       "timeEstimated": "Em evolução",
