@@ -101,7 +101,8 @@
   },
   {
     "repoKey": "felipe-alcantara/soma-em-serie",
-    "tag": "estudo"
+    "tag": "estudo",
+    "desc": "Programa que implementa o cálculo de uma série matemática em Python, praticando conceitos de loops, iteração e lógica de progressões numéricas"
   },
   {
     "repoKey": "felipe-alcantara/desconto-de-salario-em-python",
