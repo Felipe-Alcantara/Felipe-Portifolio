@@ -105,7 +105,19 @@
   },
   {
     "repoKey": "felipe-alcantara/identificador-de-str-em-python",
-    "tag": "estudo"
+    "tag": "estudo",
+    "desc": "Ferramenta que analisa e identifica 11 características diferentes de strings em Python, com versão web interativa usando Brython",
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": true,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "site": "https://felipe-alcantara.github.io/Identificador-de-str-em-python/"
+    }
   },
   {
     "repoKey": "felipe-alcantara/calcular-area-irregular-sorteando-pontos-aleatorios",
