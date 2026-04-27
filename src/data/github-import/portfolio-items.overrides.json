@@ -18,7 +18,10 @@
   {
     "repoKey": "felipe-alcantara/curso-em-video",
     "tag": "estudo",
-    "desc": "Repositório com meus primeiros projetos práticos do Curso em Vídeo com Gustavo Guanabara, a porta de entrada que marcou o início da minha jornada na programação, onde aprendi os fundamentos de lógica e desenvolvimento"
+    "desc": "Repositório com meus primeiros projetos práticos do Curso em Vídeo com Gustavo Guanabara, a porta de entrada que marcou o início da minha jornada na programação, onde aprendi os fundamentos de lógica e desenvolvimento",
+    "links": {
+      "demo": "https://www.cursoemvideo.com/"
+    }
   },
   {
     "repoKey": "felipe-alcantara/curso-em-video---curso-de-html",
