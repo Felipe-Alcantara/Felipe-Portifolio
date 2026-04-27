@@ -138,6 +138,13 @@
     }
   },
   {
+    "repoKey": "felipe-alcantara/importando-bibliotecas",
+    "tag": "estudo",
+    "links": {
+      "post": "/projetos/importando-bibliotecas"
+    }
+  },
+  {
     "repoKey": "felipe-alcantara/calcular-area-irregular-sorteando-pontos-aleatorios",
     "tag": "estudo"
   },

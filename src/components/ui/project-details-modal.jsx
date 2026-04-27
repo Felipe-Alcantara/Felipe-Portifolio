@@ -253,13 +253,7 @@ export function ProjectDetailsModal({ isOpen, onClose, onBack, project }) {
                     </a>
                   </Button>
                   <Button variant="outline" className="w-full justify-start gap-3 text-left" asChild>
-                    <a
-                      href={project.links?.post}
-                      {...(isExternalUrl(project.links?.post) && {
-                        target: "_blank",
-                        rel: "noopener noreferrer"
-                      })}
-                    >
+                    <a href={project.links?.post} target="_blank" rel="noopener noreferrer">
                       <FileText size={18} className="shrink-0" />
                       <span className="flex-1 text-left">Ler Post sobre o Projeto</span>
                     </a>
