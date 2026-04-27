@@ -138,6 +138,10 @@
     }
   },
   {
+    "repoKey": "felipe-alcantara/meu-jogo",
+    "hidden": true
+  },
+  {
     "repoKey": "felipe-alcantara/importando-bibliotecas",
     "tag": "estudo",
     "links": {

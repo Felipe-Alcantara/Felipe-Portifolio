@@ -359,7 +359,9 @@ const mergedGeneratedProjects = hasGeneratedItems
   ? mergeGeneratedWithOverrides(generatedPortfolioItems, overridePortfolioItems)
   : [];
 const hasImportedProjects = mergedGeneratedProjects.length > 0;
-const baseProjects = hasImportedProjects ? mergedGeneratedProjects : fallbackProjects;
+const baseProjects = (hasImportedProjects ? mergedGeneratedProjects : fallbackProjects).filter(
+  (p) => !p.hidden
+);
 
 function normalizeTag(tag) {
   return String(tag || "code")
