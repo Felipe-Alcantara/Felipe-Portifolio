@@ -138,6 +138,19 @@
     }
   },
   {
+    "repoKey": "felipe-alcantara/gerador-de-cpf-valido-em-python",
+    "tag": "estudo",
+    "extraTags": ["web"],
+    "status": "Finalizado",
+    "properties": {
+      "online": true
+    },
+    "links": {
+      "site": "https://felipe-alcantara.github.io/Gerador-de-CPF-valido-em-Python/",
+      "demo": "https://felipe-alcantara.github.io/Gerador-de-CPF-valido-em-Python/"
+    }
+  },
+  {
     "repoKey": "felipe-alcantara/meu-jogo",
     "hidden": true
   },
