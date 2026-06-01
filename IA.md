@@ -24,6 +24,7 @@ Deploy em produção: https://felixo.com.br (GitHub Pages).
 | [2026-04-18] | ✅ | prefers-reduced-motion e IntersectionObserver nas partículas |
 | [2026-04-18] | ✅ | Breathing animations ajustadas (3s→5s) e partículas aumentadas (35→55) |
 | [2026-04-22] | ✅ | Projeto "Alura" — removido link externo inválido, botão redirecionado para página de detalhes via SPA |
+| [2026-06-01] | ✅ | Sync de repositórios GitHub automatizado no deploy (READMEs/metadados sempre atualizados no site) |
 | — | ⬜ | Virtualização do carrossel (Fase 3 do plano de performance) |
 | — | ⬜ | React Router + rota `/felixoverse` |
 | — | ⬜ | Formulário de contato com envio real |
@@ -52,6 +53,8 @@ Deploy em produção: https://felixo.com.br (GitHub Pages).
 [2026-04-18] `BackgroundParticles` global em `App.jsx` — instância única gerencia todas as partículas do fundo. Não duplicar em seções filhas.  
 [2026-04-18] Dados de projetos centralizados em `src/data/projects.jsx` — merge automático entre `portfolio-items.generated.json` (sync GitHub) e `portfolio-items.overrides.json` (personalizações manuais por `repoKey`).  
 [2026-04-18] Sub-sistema de importação GitHub modularizado em `src/utils/github-import/`. Script em `scripts/sync-github-repos.mjs`.  
+[2026-06-01] **Sync no deploy** — O site NÃO lê o GitHub em tempo real; READMEs/metadados são arquivos estáticos em `src/data/github-import/` empacotados no build. Por isso o deploy (`deploy.yml`) roda `node scripts/sync-github-repos.mjs` antes do `npm run build`, garantindo conteúdo atual a cada publicação. Token via Secret `GH_SYNC_TOKEN` (escopo `repo`, inclui privados); sem ele só públicos. `GITHUB_USERNAME` fixado no workflow. Os arquivos sincronizados vão direto pro `dist/`, sem commit de volta (mudança mínima, sem poluir histórico). No CI o sync usa `node scripts/...` com `env:` em vez do script `sync:github` do package.json, porque este depende de `--env-file=.env`, inexistente no CI.  
+[2026-06-01] **Remoção permanente de projeto = `portfolio-items.ignore.json`** — É o único mecanismo que o sync respeita: repos com `repoKey` na lista nem são baixados ([sync-service.js](src/utils/github-import/sync-service.js) filtra antes do fetch e descarta no merge). Apagar item só do `generated.json`/`overrides.json` faz ele REAPARECER no próximo sync. Hoje no ignore: `felipe-alcantara/desktop-tutorial`, `felipe-alcantara/trabalho-da-faculdade`.  
 [2026-04-18] Modais (`ProjectsModal`, `ProjectDetailsModal`) carregados via `React.lazy` — fora do bundle inicial.  
 [2026-04-18] Seções desacopladas em `src/sections/`; componentes atômicos em `src/components/ui/`.  
 [2026-04-18] `PortfolioCard` aplica line-clamp em título/descrição para manter cards de carrossel com altura previsível.  

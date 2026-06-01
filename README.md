@@ -190,6 +190,14 @@ Para personalizações manuais de apresentação (sem perder na próxima sync), 
 Para ignorar repositórios específicos no catálogo gerado mesmo após nova sync, edite:
 - `src/data/github-import/portfolio-items.ignore.json` (array de `repoKey`)
 
+> ⚠️ **Remoção permanente de um projeto**: a única forma de impedir que um repositório volte ao site em uma sincronização futura é adicionar seu `repoKey` ao `portfolio-items.ignore.json`. O sync respeita essa lista e nem baixa README/metadados desses repos. Apagar o item só do `generated.json` ou do `overrides.json` **não** basta — ele reaparece no próximo sync.
+
+#### Sincronização automática no deploy
+
+O workflow `.github/workflows/deploy.yml` roda `node scripts/sync-github-repos.mjs` **antes** do `npm run build`, então cada deploy publica os READMEs e metadados atuais do GitHub sem nenhuma ação manual. Os arquivos sincronizados entram direto no `dist/` publicado; eles **não** são commitados de volta no repositório a cada deploy.
+
+Pré-requisito (configurado uma única vez): um Secret `GH_SYNC_TOKEN` no repositório, com um Personal Access Token de escopo `repo` do dono do perfil. Sem ele, o sync ainda roda, mas só com repositórios públicos. O `GITHUB_USERNAME` está fixado no workflow (`felipe-alcantara`) e precisa bater com o dono do token para incluir privados.
+
 Exemplo de override por `repoKey`:
 
 ```json
