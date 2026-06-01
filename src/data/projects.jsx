@@ -487,8 +487,9 @@ function normalizeProject(project) {
       ? project.status.trim()
       : "Em Desenvolvimento";
 
-  // Projetos com tag "estudo" não podem ter status "Finalizado" ou "Em Desenvolvimento"
-  if (tag === "estudo" && (status === "Finalizado" || status === "Em Desenvolvimento")) {
+  // Projetos com tag "estudo" não exibem o status padrão "Em Desenvolvimento"
+  // (ruído visual), mas podem exibir "Finalizado" quando explicitamente marcado.
+  if (tag === "estudo" && status === "Em Desenvolvimento") {
     status = "";
   }
 

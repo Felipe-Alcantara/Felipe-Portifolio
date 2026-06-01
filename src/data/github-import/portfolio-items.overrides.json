@@ -2,7 +2,9 @@
   {
     "repoKey": "felipe-alcantara/alura",
     "tag": "estudo",
-    "extraTags": ["web"],
+    "extraTags": [
+      "web"
+    ],
     "desc": "Registro de projetos práticos dos cursos da Alura, abrangendo JavaScript, CSS, HTML e Python com exercícios de front-end responsivo, manipulação do DOM e lógica de programação. ⚠️ Repositório original privado: conteúdo pago e protegido.",
     "properties": {
       "online": true
@@ -10,7 +12,8 @@
     "links": {
       "site": "#",
       "demo": "https://www.alura.com.br"
-    }
+    },
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/estudos-py-api-fastapi-echo-lab",
@@ -22,7 +25,8 @@
     "desc": "Repositório com meus primeiros projetos práticos do Curso em Vídeo com Gustavo Guanabara, a porta de entrada que marcou o início da minha jornada na programação, onde aprendi os fundamentos de lógica e desenvolvimento",
     "links": {
       "demo": "https://www.cursoemvideo.com/"
-    }
+    },
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/curso-em-video---curso-de-html",
@@ -95,14 +99,17 @@
   {
     "repoKey": "felipe-alcantara/cifra-de-cesar-em-python",
     "tag": "estudo",
-    "extraTags": ["web"],
+    "extraTags": [
+      "web"
+    ],
     "desc": "Implementação completa da Cifra de César em Python com cifração tradicional, codificação numérica e suporte a acentos, além de uma versão web interativa com dark mode que roda no navegador via Brython",
     "properties": {
       "online": true
     },
     "links": {
       "site": "https://cesar.felixo.com.br"
-    }
+    },
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/soma-em-serie",
@@ -110,19 +117,23 @@
     "desc": "Programa que implementa o cálculo de uma série matemática em Python, praticando conceitos de loops, iteração e lógica de progressões numéricas",
     "links": {
       "post": "/projetos/soma-em-serie"
-    }
+    },
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/desconto-de-salario-em-python",
     "tag": "estudo",
     "links": {
       "post": "/projetos/desconto-de-salario-em-python"
-    }
+    },
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/identificador-de-str-em-python",
     "tag": "estudo",
-    "extraTags": ["web"],
+    "extraTags": [
+      "web"
+    ],
     "desc": "Ferramenta que analisa e identifica 11 características diferentes de strings em Python, com versão web interativa usando Brython",
     "properties": {
       "timeEstimated": "Em evolução",
@@ -135,7 +146,8 @@
     "links": {
       "site": "https://felipe-alcantara.github.io/Identificador-de-str-em-python/",
       "demo": "https://felipe-alcantara.github.io/Identificador-de-str-em-python/"
-    }
+    },
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/indentificador-numerico",
@@ -144,7 +156,9 @@
   {
     "repoKey": "felipe-alcantara/gerador-de-cpf-valido-em-python",
     "tag": "estudo",
-    "extraTags": ["web"],
+    "extraTags": [
+      "web"
+    ],
     "status": "Finalizado",
     "properties": {
       "online": true
@@ -156,30 +170,36 @@
   },
   {
     "repoKey": "felipe-alcantara/meu-jogo",
-    "hidden": true
+    "hidden": true,
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/importando-bibliotecas",
     "tag": "estudo",
     "links": {
       "post": "/projetos/importando-bibliotecas"
-    }
+    },
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/calcular-area-irregular-sorteando-pontos-aleatorios",
-    "tag": "estudo"
+    "tag": "estudo",
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/calcular-soma-com-funcao-em-python",
     "tag": "estudo",
     "links": {
       "post": "/projetos/calcular-soma-com-funcao-em-python"
-    }
+    },
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/calculadora-simples-em-python",
     "tag": "estudo",
-    "extraTags": ["web"],
+    "extraTags": [
+      "web"
+    ],
     "desc": "Projeto de estudo em Python criado no início da minha jornada na programação, a partir de uma calculadora simples ensinada por um amigo. A aplicação serviu como prática de lógica, entrada de dados, operações matemáticas e organização de código, evoluindo como um registro dos meus primeiros passos com a linguagem.",
     "properties": {
       "timeEstimated": "Em evolução",
@@ -195,12 +215,15 @@
       "demo": "https://felipe-alcantara.github.io/Calculadora-simples-em-python/",
       "download": "https://github.com/Felipe-Alcantara/Calculadora-simples-em-python/archive/refs/heads/main.zip",
       "post": "/projetos/calculadora-simples-em-python"
-    }
+    },
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/mdn-web-docs",
     "tag": "estudo",
-    "extraTags": ["web"],
+    "extraTags": [
+      "web"
+    ],
     "desc": "Projetos práticos desenvolvidos seguindo o curso do MDN Web Docs (Mozilla Developer Network) — a principal referência de documentação web da Mozilla, usada por desenvolvedores do mundo todo.",
     "properties": {
       "timeEstimated": "Em evolução",
@@ -214,12 +237,15 @@
       "github": "https://github.com/Felipe-Alcantara/MDN-Web-Docs",
       "site": "http://mdn-web-docs.felixo.com.br/",
       "demo": "https://developer.mozilla.org/pt-BR/"
-    }
+    },
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/scripts-html",
     "tag": "estudo",
-    "extraTags": ["web"],
+    "extraTags": [
+      "web"
+    ],
     "desc": "Projeto de estudos em HTML5 e CSS3 voltado à criação de páginas web e formulários interativos, aplicando estrutura semântica, estilização de componentes e publicação via GitHub Pages.",
     "properties": {
       "timeEstimated": "Em evolução",
@@ -234,6 +260,7 @@
       "github": "https://github.com/Felipe-Alcantara/Scripts-HTML",
       "site": "http://scripts-html.felixo.com.br/",
       "demo": "#"
-    }
+    },
+    "status": "Finalizado"
   }
 ]
