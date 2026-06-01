@@ -46,11 +46,13 @@
   },
   {
     "repoKey": "felipe-alcantara/aprendendo-logica-de-programacao-de-listas-em-python",
-    "tag": "estudo"
+    "tag": "estudo",
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/aprendendo-a-fazer-bots-do-discord",
-    "tag": "estudo"
+    "tag": "estudo",
+    "hidden": true
   },
   {
     "repoKey": "felipe-alcantara/programacao-orientada-a-objetos-com-python-e-dataclass",
@@ -82,7 +84,8 @@
   },
   {
     "repoKey": "felipe-alcantara/python-variaveis-como-declarar-e-utilizar-nos-scripts",
-    "tag": "estudo"
+    "tag": "estudo",
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/amostragem-casual-simples",
