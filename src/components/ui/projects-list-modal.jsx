@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpDown, CalendarDays, CheckCircle2, ListOrdered, Wrench, X } from "lucide-react";
 import { Button } from "./button";
@@ -34,7 +34,11 @@ export function ProjectsListModal({
   onActiveTagChange,
   sortDirection: controlledSortDirection,
   onSortDirectionChange,
+  initialScrollTop = 0,
+  onScrollPersist,
 }) {
+  // Referência à área rolável, para salvar/restaurar a posição de scroll.
+  const scrollContainerRef = useRef(null);
   // Permite uso controlado (estado mantido pelo pai para sobreviver ao fechar/reabrir)
   // ou autônomo (fallback para estado interno).
   const [internalActiveTag, setInternalActiveTag] = useState("all");
@@ -43,13 +47,24 @@ export function ProjectsListModal({
   const activeTag = controlledActiveTag ?? internalActiveTag;
   const sortDirection = controlledSortDirection ?? internalSortDirection;
 
+  // Mudar filtro/ordenação invalida a posição de scroll anterior (o conteúdo
+  // muda de tamanho/ordem), então volta ao topo e descarta a posição salva.
+  const resetScroll = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = 0;
+    }
+    if (onScrollPersist) onScrollPersist(0);
+  };
+
   const setActiveTag = (value) => {
+    resetScroll();
     if (onActiveTagChange) onActiveTagChange(value);
     else setInternalActiveTag(value);
   };
 
   const setSortDirection = (updater) => {
     const next = typeof updater === "function" ? updater(sortDirection) : updater;
+    resetScroll();
     if (onSortDirectionChange) onSortDirectionChange(next);
     else setInternalSortDirection(next);
   };
@@ -125,14 +140,41 @@ export function ProjectsListModal({
     };
   }, [isOpen]);
 
+  // Restaura a posição de scroll ao (re)abrir a lista, antes do paint para
+  // evitar um "flash" começando do topo.
+  useLayoutEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = initialScrollTop;
+    }
+    // Só na abertura; não reposiciona enquanto o usuário rola.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen]);
+
+  const persistScroll = () => {
+    if (onScrollPersist && scrollContainerRef.current) {
+      onScrollPersist(scrollContainerRef.current.scrollTop);
+    }
+  };
+
   const handleOpenProject = (project) => {
     if (!onOpenProject) {
       return;
     }
 
+    // Salva a posição de scroll antes de abrir o card, para restaurá-la ao voltar.
+    persistScroll();
     // Não chama onClose() aqui: o fechamento da lista é responsabilidade do
     // pai (App) ao abrir os detalhes, para preservar filtro/ordenação ao voltar.
     onOpenProject(project);
+  };
+
+  const handleClose = () => {
+    // Mantém a posição salva também ao fechar pelo X / clique fora.
+    persistScroll();
+    onClose();
   };
 
   return (
@@ -143,7 +185,7 @@ export function ProjectsListModal({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
-          onClick={onClose}
+          onClick={handleClose}
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.98, y: 8 }}
@@ -164,7 +206,7 @@ export function ProjectsListModal({
                   variant="ghost"
                   size="icon"
                   className="h-8 w-8 rounded-full hover:bg-white/10 shrink-0"
-                  onClick={onClose}
+                  onClick={handleClose}
                   aria-label="Fechar modal de lista"
                 >
                   <X size={18} />
@@ -207,6 +249,7 @@ export function ProjectsListModal({
             </div>
 
             <motion.div
+              ref={scrollContainerRef}
               layout
               className="max-h-[70vh] overflow-y-auto p-1 md:p-2 custom-scrollbar space-y-4"
             >

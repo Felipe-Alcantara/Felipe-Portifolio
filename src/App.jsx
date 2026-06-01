@@ -70,6 +70,9 @@ export default function App() {
   // abrir/fechar um card (ex.: voltar para "mais antigos" após fechar o detalhe).
   const [listModalTag, setListModalTag] = useState("all");
   const [listModalSortDirection, setListModalSortDirection] = useState("desc");
+  // Posição de scroll da lista, preservada ao abrir/voltar de um card.
+  // Em ref (não state) para não re-renderizar a cada evento de scroll.
+  const listModalScrollRef = React.useRef(0);
   // Estado para o projeto selecionado no modal de detalhes
   const [selectedProject, setSelectedProject] = useState(null);
   // Origem de onde o modal de detalhes foi aberto ("list" | null)
@@ -235,6 +238,10 @@ export default function App() {
           onActiveTagChange={setListModalTag}
           sortDirection={listModalSortDirection}
           onSortDirectionChange={setListModalSortDirection}
+          initialScrollTop={listModalScrollRef.current}
+          onScrollPersist={(scrollTop) => {
+            listModalScrollRef.current = scrollTop;
+          }}
         />
 
         <ProjectDetailsModal
