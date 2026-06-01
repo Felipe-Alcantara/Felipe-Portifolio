@@ -113,10 +113,9 @@ export default function App() {
   };
 
   const handleCloseProjectsListModal = () => {
+    // Mantém filtro/ordenação entre aberturas: a lista lembra do último estado
+    // escolhido pelo usuário, independente de como foi fechada.
     setIsProjectsListModalOpen(false);
-    // Fechamento intencional do modal: volta ao estado padrão.
-    setListModalTag("all");
-    setListModalSortDirection("desc");
   };
 
   /**
@@ -125,6 +124,11 @@ export default function App() {
    * @param {string|null} from - Origem da abertura ("list" | null).
    */
   const handleOpenProjectDetails = (project, from = null) => {
+    // Quando vem da lista, fecha o modal de lista SEM resetar o filtro/ordenação,
+    // para que ao voltar o estado ("mais antigos", tag) seja preservado.
+    if (from === "list") {
+      setIsProjectsListModalOpen(false);
+    }
     setSelectedProject(project);
     setProjectOpenedFrom(from);
   };

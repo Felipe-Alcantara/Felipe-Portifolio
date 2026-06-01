@@ -134,7 +134,17 @@ Felipe-Portifolio/
 
 ## 🎯 Como Usar
 
-### Opção 1: Desenvolvimento local (Recomendado)
+### Opção 1: Início automático com Python (Recomendado) 🚀
+
+Um único comando instala as dependências (se necessário), sobe o servidor de desenvolvimento e abre o site no navegador:
+
+```bash
+python3 start_app.py
+```
+
+Encerre com `Ctrl+C` — o servidor é desligado automaticamente.
+
+### Opção 2: Desenvolvimento local manual
 
 ```bash
 # Instalar dependências
@@ -144,7 +154,7 @@ npm install
 npm run dev
 ```
 
-### Opção 2: Build de produção
+### Opção 3: Build de produção
 
 ```bash
 # Gerar build otimizada
@@ -156,7 +166,7 @@ npm run preview
 
 A saída de build é gerada em `dist/` como artefato local de compilação.
 
-### Opção 3: Sincronizar repositórios GitHub (uso interno)
+### Opção 4: Sincronizar repositórios GitHub (uso interno)
 
 ```bash
 # 1) Configure as variáveis no shell (ou copie .env.example para .env local)

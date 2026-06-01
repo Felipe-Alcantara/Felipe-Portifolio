@@ -130,7 +130,8 @@ export function ProjectsListModal({
       return;
     }
 
-    onClose();
+    // Não chama onClose() aqui: o fechamento da lista é responsabilidade do
+    // pai (App) ao abrir os detalhes, para preservar filtro/ordenação ao voltar.
     onOpenProject(project);
   };
 
