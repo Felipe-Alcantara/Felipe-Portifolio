@@ -10,7 +10,7 @@
 
 **Portfólio interativo em React com identidade visual FelixoVerse, filtros dinâmicos, modais de projeto e documentação técnica organizada.**
 
-[📖 Documentação](docs/README.md) • [🤖 Prompt de Importação GitHub](docs/PROMPT-SUBSISTEMA-IMPORTACAO-REPOS-GITHUB.md) • [🎨 Design System](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md) • [🚀 Como Usar](#-como-usar)
+[📖 Documentação](docs/README.md) • [🤖 Prompt de Importação GitHub](docs/PROMPT-SUBSISTEMA-IMPORTACAO-REPOS-GITHUB.md) • [🎨 Design System](felixo-standards/core/DESIGN_SYSTEM_FRONTEND.md) • [🚀 Como Usar](#-como-usar)
 
 </div>
 
@@ -128,7 +128,7 @@ Felipe-Portifolio/
 - ✅ [Checklist de pendências do site](docs/PENDENCIAS-SITE.md)
 - ⚡ [Plano de otimização de performance](docs/plano-otimizacao-performance.md)
 - 🤖 [Contexto operacional para IA](IA.md)
-- 🎨 [Design system oficial (Felixo System Design)](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md)
+- 🎨 [Design system oficial (felixo-standards)](felixo-standards/core/DESIGN_SYSTEM_FRONTEND.md)
 
 ---
 
@@ -205,7 +205,7 @@ Exemplo de override por `repoKey`:
 5. Atualize textos globais em `src/App.jsx` e componentes `layout/`.
 
 ### Para alterar visual
-1. Consulte o [Design System Frontend no Felixo System Design](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md).
+1. Consulte o [Design System Frontend (felixo-standards)](felixo-standards/core/DESIGN_SYSTEM_FRONTEND.md).
 2. Ajuste classes Tailwind nos componentes `ui/`.
 3. Refine tokens e tema em `tailwind.config.js` e `src/index.css`.
 

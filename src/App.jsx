@@ -66,6 +66,10 @@ export default function App() {
   const [initialTagForProjectsModal, setInitialTagForProjectsModal] = useState("all");
   // Estado para controlar a visibilidade do modal de lista (ordem por criação).
   const [isProjectsListModalOpen, setIsProjectsListModalOpen] = useState(false);
+  // Filtro e ordenação do modal de lista, mantidos no App para sobreviver ao
+  // abrir/fechar um card (ex.: voltar para "mais antigos" após fechar o detalhe).
+  const [listModalTag, setListModalTag] = useState("all");
+  const [listModalSortDirection, setListModalSortDirection] = useState("desc");
   // Estado para o projeto selecionado no modal de detalhes
   const [selectedProject, setSelectedProject] = useState(null);
   // Origem de onde o modal de detalhes foi aberto ("list" | null)
@@ -110,6 +114,9 @@ export default function App() {
 
   const handleCloseProjectsListModal = () => {
     setIsProjectsListModalOpen(false);
+    // Fechamento intencional do modal: volta ao estado padrão.
+    setListModalTag("all");
+    setListModalSortDirection("desc");
   };
 
   /**
@@ -220,6 +227,10 @@ export default function App() {
           onClose={handleCloseProjectsListModal}
           items={filteredProjects}
           onOpenProject={(project) => handleOpenProjectDetails(project, "list")}
+          activeTag={listModalTag}
+          onActiveTagChange={setListModalTag}
+          sortDirection={listModalSortDirection}
+          onSortDirectionChange={setListModalSortDirection}
         />
 
         <ProjectDetailsModal

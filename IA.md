@@ -1,7 +1,7 @@
 # 🤖 Contexto Operacional de IA — FelixoVerse Portfolio
 
 > Memória técnica acumulada do projeto para uso por IAs em novas sessões.  
-> Baseado no template padrão de [`felixo-standards/IA.md`](felixo-standards/IA.md).
+> Baseado no template padrão de [`felixo-standards/core/IA.md`](felixo-standards/core/IA.md).
 
 ---
 
@@ -64,7 +64,7 @@ Deploy em produção: https://felixo.com.br (GitHub Pages).
 [2026-04-18] Paleta: Zinc 950 fundo, `#C084FC` roxo de marca, Space Grotesk como fonte global.
 [2026-04-18] Breathing animations em `5s` — ritmo preferido pelo usuário. Não voltar para 3s (ficava rápido demais).
 [2026-04-18] Partículas: 55 unidades. Era 35 antes do ajuste; 70 era o valor bugado (2 instâncias). 55 é o equilíbrio visual mantendo performance.  
-[2026-04-18] Design System documentado em `felixo-standards/PADRÕES DE DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md`.  
+[2026-04-18] Design System documentado em `felixo-standards/core/DESIGN_SYSTEM_FRONTEND.md`.  
 [2026-04-18] Tags de categoria dos projetos: `web` | `code` | `music` | `design` | `game` | `automation` | `estudo` (adicionada 2026-04-22).  
 [2026-04-18] Interface e textos em português. Componentes e arquivos em `kebab-case` e `.jsx`.  
 [2026-04-18] Tailwind como padrão de estilização; CSS global quando necessário.  
@@ -131,4 +131,4 @@ Deploy em produção: https://felixo.com.br (GitHub Pages).
 - [`docs/DOCUMENTATION.md`](docs/DOCUMENTATION.md)
 - [`docs/PENDENCIAS-SITE.md`](docs/PENDENCIAS-SITE.md)
 - [`docs/plano-otimizacao-performance.md`](docs/plano-otimizacao-performance.md)
-- [`felixo-standards/PADRÕES DE DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md`](felixo-standards/PADRÕES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md)
+- [`felixo-standards/core/DESIGN_SYSTEM_FRONTEND.md`](felixo-standards/core/DESIGN_SYSTEM_FRONTEND.md)

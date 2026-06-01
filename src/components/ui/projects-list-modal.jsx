@@ -25,9 +25,35 @@ function formatDate(dateValue) {
   });
 }
 
-export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }) {
-  const [activeTag, setActiveTag] = useState("all");
-  const [sortDirection, setSortDirection] = useState("desc");
+export function ProjectsListModal({
+  isOpen,
+  onClose,
+  items = [],
+  onOpenProject,
+  activeTag: controlledActiveTag,
+  onActiveTagChange,
+  sortDirection: controlledSortDirection,
+  onSortDirectionChange,
+}) {
+  // Permite uso controlado (estado mantido pelo pai para sobreviver ao fechar/reabrir)
+  // ou autônomo (fallback para estado interno).
+  const [internalActiveTag, setInternalActiveTag] = useState("all");
+  const [internalSortDirection, setInternalSortDirection] = useState("desc");
+
+  const activeTag = controlledActiveTag ?? internalActiveTag;
+  const sortDirection = controlledSortDirection ?? internalSortDirection;
+
+  const setActiveTag = (value) => {
+    if (onActiveTagChange) onActiveTagChange(value);
+    else setInternalActiveTag(value);
+  };
+
+  const setSortDirection = (updater) => {
+    const next = typeof updater === "function" ? updater(sortDirection) : updater;
+    if (onSortDirectionChange) onSortDirectionChange(next);
+    else setInternalSortDirection(next);
+  };
+
   const isNewestFirst = sortDirection === "desc";
 
   const sortedItems = useMemo(
@@ -97,13 +123,6 @@ export function ProjectsListModal({ isOpen, onClose, items = [], onOpenProject }
       document.body.style.overflow = previousBodyOverflow;
       document.body.style.paddingRight = previousBodyPaddingRight;
     };
-  }, [isOpen]);
-
-  useEffect(() => {
-    if (isOpen) {
-      setActiveTag("all");
-      setSortDirection("desc");
-    }
   }, [isOpen]);
 
   const handleOpenProject = (project) => {

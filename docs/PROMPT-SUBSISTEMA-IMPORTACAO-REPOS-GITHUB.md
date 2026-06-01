@@ -8,7 +8,7 @@
 
 - Repositório alvo: `Felipe-Portifolio`
 - Fonte de padrão: [`felixo-standards`](https://github.com/Felipe-Alcantara/Felixo-System-Design)
-- Guia base usado: `felixo-standards/Utils/GUIA-INTEGRACAO-REUTILIZAVEL-COM-API-DO-GITHUB-PARA-COLETA-DE-REPOSITORIOS-PUBLICOS-E-PRIVADOS.md`
+- Guia base usado: `felixo-standards/guias/integracao/GUIA-INTEGRACAO-API-GITHUB.md`
 - Formato atual do site: `src/data/projects.jsx`
 
 ---
@@ -19,10 +19,10 @@
 Você é um engenheiro sênior responsável por implementar um novo sub-sistema neste repositório React (Vite) para importar meus repositórios do GitHub e transformar os dados para o formato que o site já entende.
 
 Siga os padrões do guia:
-- `felixo-standards/Utils/GUIA-INTEGRACAO-REUTILIZAVEL-COM-API-DO-GITHUB-PARA-COLETA-DE-REPOSITORIOS-PUBLICOS-E-PRIVADOS.md`
+- `felixo-standards/guias/integracao/GUIA-INTEGRACAO-API-GITHUB.md`
 
 Siga também, de forma obrigatória, o padrão de qualidade do felixo-standards:
-- `felixo-standards/PADRÕES DE DESIGN/DESIGN_SYSTEM_PARA_BACKEND.md`
+- `felixo-standards/core/DESIGN_SYSTEM_BACKEND.md`
 
 ## Objetivo
 Criar um sub-sistema de sincronização que:

@@ -112,4 +112,4 @@ npm run preview
 ## 🔗 Referências
 
 - [README principal](../README.md)
-- [Design System Frontend (Felixo System Design)](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md)
+- [Design System Frontend (felixo-standards)](../felixo-standards/core/DESIGN_SYSTEM_FRONTEND.md)
