@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Felixo-AI-Core",
+  "fullName": "Felipe-Alcantara/Felixo-AI-Core",
+  "description": "Felixo AI Core é o núcleo inteligente do ecossistema FelixoVerse: uma aplicação desktop para controlar, organizar e orquestrar múltiplas IAs, agentes, terminais, repositórios e fluxos de trabalho.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Felixo-AI-Core",
+  "homepage": "",
+  "topics": [],
+  "language": "JavaScript",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2026-04-30T18:41:32Z",
+  "updatedAt": "2026-05-07T20:33:00Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 2024,
+  "repoKey": "felipe-alcantara/felixo-ai-core",
+  "lastSyncedAt": "2026-06-01T22:18:04.134Z"
+}

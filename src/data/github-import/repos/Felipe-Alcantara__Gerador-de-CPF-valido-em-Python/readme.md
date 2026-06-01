@@ -10,7 +10,7 @@
 
 **Gerador educacional de CPF com validação algorítmica e seleção por região fiscal**
 
-[🌐 Demo Online](https://felipe-alcantara.github.io/Gerador-de-CPF-valido-em-Python/) • [📖 Documentação Web](docs/README.md) • [🚀 Como Usar](#-como-usar) • [🗺️ Regiões Fiscais](#️-tabela-de-regiões-fiscais)
+[🌐 Demo Online](https://cpf.felixo.com.br/) • [📖 Documentação Web](docs/README.md) • [🚀 Como Usar](#-como-usar) • [🗺️ Regiões Fiscais](#️-tabela-de-regiões-fiscais)
 
 </div>
 
@@ -36,7 +36,7 @@
 
 > **🚀 USE DIRETO NO NAVEGADOR, SEM INSTALAR NADA!**
 > 
-> **[👉 ABRIR GERADOR DE CPF WEB 👈](https://felipe-alcantara.github.io/Gerador-de-CPF-valido-em-Python/)**
+> **[👉 ABRIR GERADOR DE CPF WEB 👈](https://cpf.felixo.com.br/)**
 
 ### 💡 Por que usar?
 
@@ -81,17 +81,23 @@ Gerador-de-CPF-valido-em-Python/
 │   ├── index.html
 │   ├── style.css
 │   ├── gerador.py
+│   ├── CNAME
 │   └── README.md
 │
 ├── 📁 Versão no terminal/             # Scripts para terminal
+│   ├── cpf_core.py
 │   ├── Gerador de CPF.py
 │   ├── Gerador de CPF por Região.py
 │   └── Validador de CPF.py
 │
 ├── 📁 System Design/                  # Padrões de design e documentação
-│   ├── DESIGN-SYSTEM.md
+│   ├── GUIA_DE_BACKEND_PARA_CPF_TESTES_E_DADOS_REAIS.md
 │   └── GUIA_DOCUMENTACAO_README.md
 │
+├── 📁 tests/                          # Testes automatizados
+│   └── test_cpf_core.py
+│
+├── IA.md                              # Contexto operacional do projeto
 ├── README.md                          # Este arquivo
 └── LICENSE
 ```
@@ -142,7 +148,7 @@ Gerador-de-CPF-valido-em-Python/
 
 ### Opção 1: Versão Web (Recomendado!) 🌐
 
-**🚀 Link direto:** [Abrir Gerador Web](https://felipe-alcantara.github.io/Gerador-de-CPF-valido-em-Python/)
+**🚀 Link direto:** [Abrir Gerador Web](https://cpf.felixo.com.br/)
 
 ### Opção 2: Para Desenvolvedores
 
@@ -324,15 +330,6 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 
 ---
 
-## 🤝 Contribuições
-
-Contribuições são bem-vindas! Sinta-se à vontade para:
-- 🐛 Reportar bugs
-- 💡 Sugerir melhorias
-- 🔀 Enviar pull requests
-
----
-
 <div align="center">
 
 **Feito com 💙 e Python**
@@ -340,3 +337,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 *De um iniciante em 2024 para um código mais maduro em 2025* 🚀
 
 </div>
+

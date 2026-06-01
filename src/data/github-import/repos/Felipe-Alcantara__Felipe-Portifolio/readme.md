@@ -10,7 +10,7 @@
 
 **Portfólio interativo em React com identidade visual FelixoVerse, filtros dinâmicos, modais de projeto e documentação técnica organizada.**
 
-[📖 Documentação](docs/README.md) • [🤖 Prompt de Importação GitHub](docs/PROMPT-SUBSISTEMA-IMPORTACAO-REPOS-GITHUB.md) • [🎨 Design System](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md) • [🚀 Como Usar](#-como-usar)
+[📖 Documentação](docs/README.md) • [🤖 Prompt de Importação GitHub](docs/PROMPT-SUBSISTEMA-IMPORTACAO-REPOS-GITHUB.md) • [🎨 Design System](felixo-standards/core/DESIGN_SYSTEM_FRONTEND.md) • [🚀 Como Usar](#-como-usar)
 
 </div>
 
@@ -128,13 +128,23 @@ Felipe-Portifolio/
 - ✅ [Checklist de pendências do site](docs/PENDENCIAS-SITE.md)
 - ⚡ [Plano de otimização de performance](docs/plano-otimizacao-performance.md)
 - 🤖 [Contexto operacional para IA](IA.md)
-- 🎨 [Design system oficial (Felixo System Design)](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md)
+- 🎨 [Design system oficial (felixo-standards)](felixo-standards/core/DESIGN_SYSTEM_FRONTEND.md)
 
 ---
 
 ## 🎯 Como Usar
 
-### Opção 1: Desenvolvimento local (Recomendado)
+### Opção 1: Início automático com Python (Recomendado) 🚀
+
+Um único comando instala as dependências (se necessário), sobe o servidor de desenvolvimento e abre o site no navegador:
+
+```bash
+python3 start_app.py
+```
+
+Encerre com `Ctrl+C` — o servidor é desligado automaticamente.
+
+### Opção 2: Desenvolvimento local manual
 
 ```bash
 # Instalar dependências
@@ -144,7 +154,7 @@ npm install
 npm run dev
 ```
 
-### Opção 2: Build de produção
+### Opção 3: Build de produção
 
 ```bash
 # Gerar build otimizada
@@ -156,7 +166,7 @@ npm run preview
 
 A saída de build é gerada em `dist/` como artefato local de compilação.
 
-### Opção 3: Sincronizar repositórios GitHub (uso interno)
+### Opção 4: Sincronizar repositórios GitHub (uso interno)
 
 ```bash
 # 1) Configure as variáveis no shell (ou copie .env.example para .env local)
@@ -179,6 +189,14 @@ Para personalizações manuais de apresentação (sem perder na próxima sync), 
 
 Para ignorar repositórios específicos no catálogo gerado mesmo após nova sync, edite:
 - `src/data/github-import/portfolio-items.ignore.json` (array de `repoKey`)
+
+> ⚠️ **Remoção permanente de um projeto**: a única forma de impedir que um repositório volte ao site em uma sincronização futura é adicionar seu `repoKey` ao `portfolio-items.ignore.json`. O sync respeita essa lista e nem baixa README/metadados desses repos. Apagar o item só do `generated.json` ou do `overrides.json` **não** basta — ele reaparece no próximo sync.
+
+#### Sincronização automática no deploy
+
+O workflow `.github/workflows/deploy.yml` roda `node scripts/sync-github-repos.mjs` **antes** do `npm run build`, então cada deploy publica os READMEs e metadados atuais do GitHub sem nenhuma ação manual. Os arquivos sincronizados entram direto no `dist/` publicado; eles **não** são commitados de volta no repositório a cada deploy.
+
+Pré-requisito (configurado uma única vez): um Secret `GH_SYNC_TOKEN` no repositório, com um Personal Access Token de escopo `repo` do dono do perfil. Sem ele, o sync ainda roda, mas só com repositórios públicos. O `GITHUB_USERNAME` está fixado no workflow (`felipe-alcantara`) e precisa bater com o dono do token para incluir privados.
 
 Exemplo de override por `repoKey`:
 
@@ -205,7 +223,7 @@ Exemplo de override por `repoKey`:
 5. Atualize textos globais em `src/App.jsx` e componentes `layout/`.
 
 ### Para alterar visual
-1. Consulte o [Design System Frontend no Felixo System Design](https://github.com/Felipe-Alcantara/Felixo-System-Design/blob/main/PADR%C3%95ES%20DE%20DESIGN/DESIGN_SYSTEM_PARA_FRONTEND.md).
+1. Consulte o [Design System Frontend (felixo-standards)](felixo-standards/core/DESIGN_SYSTEM_FRONTEND.md).
 2. Ajuste classes Tailwind nos componentes `ui/`.
 3. Refine tokens e tema em `tailwind.config.js` e `src/index.css`.
 

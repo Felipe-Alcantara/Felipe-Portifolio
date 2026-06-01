@@ -191,10 +191,14 @@ Para ignorar repositórios específicos no catálogo gerado mesmo após nova syn
 - `src/data/github-import/portfolio-items.ignore.json` (array de `repoKey`)
 
 > ⚠️ **Remoção permanente de um projeto**: a única forma de impedir que um repositório volte ao site em uma sincronização futura é adicionar seu `repoKey` ao `portfolio-items.ignore.json`. O sync respeita essa lista e nem baixa README/metadados desses repos. Apagar o item só do `generated.json` ou do `overrides.json` **não** basta — ele reaparece no próximo sync.
+>
+> ⚠️ **Repos novos aparecem automaticamente** (curadoria opt-out): quando o sync descobre um repositório novo, ele entra visível no site. Para esconder um projeto sem removê-lo do GitHub, use `"hidden": true` no override; para tirá-lo de vez do pipeline, use o `ignore.json`.
+>
+> ⚠️ **Renomear um repo quebra a curadoria**: tanto o `ignore.json` quanto o `hidden` amarram por `repoKey` (`owner/nome-do-repo`). Se você renomear o repositório no GitHub, o `repoKey` muda e a regra antiga deixa de valer — o projeto reaparece com o nome novo. Ao renomear um repo curado, atualize o `repoKey` correspondente no `ignore.json`/`overrides.json`.
 
 #### Sincronização automática no deploy
 
-O workflow `.github/workflows/deploy.yml` roda `node scripts/sync-github-repos.mjs` **antes** do `npm run build`, então cada deploy publica os READMEs e metadados atuais do GitHub sem nenhuma ação manual. Os arquivos sincronizados entram direto no `dist/` publicado; eles **não** são commitados de volta no repositório a cada deploy.
+O workflow `.github/workflows/deploy.yml` roda `node scripts/sync-github-repos.mjs` **antes** do `npm run build`, então cada deploy publica os READMEs e metadados atuais do GitHub sem nenhuma ação manual. Em seguida, o workflow **commita os dados sincronizados de volta na `main`** (commit `chore(data): ... [skip ci]`), para que seu repositório local e a produção fiquem sempre iguais — basta um `git pull`. O marcador `[skip ci]` evita que esse commit dispare um novo deploy em loop.
 
 Pré-requisito (configurado uma única vez): um Secret `GH_SYNC_TOKEN` no repositório, com um Personal Access Token de escopo `repo` do dono do perfil. Sem ele, o sync ainda roda, mas só com repositórios públicos. O `GITHUB_USERNAME` está fixado no workflow (`felipe-alcantara`) e precisa bater com o dono do token para incluir privados.
 

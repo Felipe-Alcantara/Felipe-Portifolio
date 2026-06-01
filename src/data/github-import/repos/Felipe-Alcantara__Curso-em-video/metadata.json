@@ -3,7 +3,7 @@
   "name": "Curso-em-video",
   "fullName": "Felipe-Alcantara/Curso-em-video",
   "description": "Meus projetos do Curso em vídeo",
-  "private": true,
+  "private": false,
   "repoUrl": "https://github.com/Felipe-Alcantara/Curso-em-video",
   "homepage": "",
   "topics": [],
@@ -11,10 +11,10 @@
   "stars": 0,
   "forks": 0,
   "createdAt": "2024-03-26T09:16:05Z",
-  "updatedAt": "2026-04-11T18:18:20Z",
+  "updatedAt": "2026-04-27T04:34:06Z",
   "defaultBranch": "main",
   "archived": false,
   "sizeKb": 9,
   "repoKey": "felipe-alcantara/curso-em-video",
-  "lastSyncedAt": "2026-04-24T05:43:54.441Z"
+  "lastSyncedAt": "2026-06-01T22:18:04.134Z"
 }

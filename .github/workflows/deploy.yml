@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write # necessário para commitar os dados sincronizados de volta
   pages: write
   id-token: write
 
@@ -39,6 +39,21 @@ jobs:
         env:
           GITHUB_USERNAME: felipe-alcantara
           GITHUB_TOKEN: ${{ secrets.GH_SYNC_TOKEN }}
+
+      # Commita os dados sincronizados de volta na main para que o repositório
+      # local e a produção não divirjam. Usa [skip ci] para não disparar um novo
+      # deploy em loop. Repositórios novos entram ocultos (curadoria opt-in).
+      - name: Commit synced data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/github-import
+          if git diff --staged --quiet; then
+            echo "Nenhuma mudança nos dados sincronizados."
+          else
+            git commit -m "chore(data): sincroniza repositórios do GitHub [skip ci]"
+            git push
+          fi
 
       - name: Build
         run: npm run build
