@@ -76,11 +76,13 @@
   },
   {
     "repoKey": "felipe-alcantara/como-fazer-condicoes-no-python",
-    "tag": "estudo"
+    "tag": "estudo",
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/python-classes-e-metodos",
-    "tag": "estudo"
+    "tag": "estudo",
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/python-variaveis-como-declarar-e-utilizar-nos-scripts",
@@ -93,7 +95,12 @@
   },
   {
     "repoKey": "felipe-alcantara/animacao-usando-javascript",
-    "tag": "estudo"
+    "tag": "estudo",
+    "links": {
+      "site": "https://animacao.felixo.com.br/",
+      "demo": "https://animacao.felixo.com.br/"
+    },
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/diferenca-entre-classe-objeto-e-instancia-em-python",
