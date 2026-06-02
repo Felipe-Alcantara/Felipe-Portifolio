@@ -519,7 +519,7 @@
     "desc": "Um hub criativo em React que conecta código, música e projetos colaborativos. Este repositório serve como base inicial para o FelixoVerse, explorando design moderno, animações e uma estrutura flexível para crescimento contínuo.",
     "link": "https://github.com/Felipe-Alcantara/Felipe-Portifolio",
     "createdAt": "2026-01-08T17:54:47Z",
-    "updatedAt": "2026-06-01T22:34:43Z",
+    "updatedAt": "2026-06-02T12:09:25Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [
@@ -1603,7 +1603,7 @@
     "desc": "These updates enhance the functionality of your repository and provide different options for automating Cookie Clicker, making it a valuable resource for anyone interested in game automation. ",
     "link": "https://github.com/Felipe-Alcantara/Cookie-counter-automation",
     "createdAt": "2024-04-17T19:49:56Z",
-    "updatedAt": "2024-04-22T02:35:06Z",
+    "updatedAt": "2026-06-02T12:08:53Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [
@@ -1615,8 +1615,8 @@
       "size": "Pequeno",
       "online": false,
       "techPercentage": {
-        "Python": 55,
-        "JavaScript": 45
+        "Python": 63,
+        "JavaScript": 37
       }
     },
     "links": {
