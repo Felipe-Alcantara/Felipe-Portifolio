@@ -1,5 +1,9 @@
 [
   {
+    "repoKey": "felipe-alcantara/cookie-counter-automation",
+    "status": "Finalizado"
+  },
+  {
     "repoKey": "felipe-alcantara/alura",
     "tag": "estudo",
     "extraTags": [
@@ -42,7 +46,8 @@
   },
   {
     "repoKey": "felipe-alcantara/aprendendo-orientacao-a-objeto-em-python",
-    "tag": "estudo"
+    "tag": "estudo",
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/aprendendo-logica-de-programacao-de-listas-em-python",
@@ -56,19 +61,23 @@
   },
   {
     "repoKey": "felipe-alcantara/programacao-orientada-a-objetos-com-python-e-dataclass",
-    "tag": "estudo"
+    "tag": "estudo",
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/programacao-orientada-a-objeto-em-python-sistema-bancario",
-    "tag": "estudo"
+    "tag": "estudo",
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/programacao-orientada-a-objeto-em-python-sistema-de-streaming",
-    "tag": "estudo"
+    "tag": "estudo",
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/automacao-em-python-e-desenvolvimento-de-interfaces-graficas-com-pysimplegui",
-    "tag": "estudo"
+    "tag": "estudo",
+    "status": "Finalizado"
   },
   {
     "repoKey": "felipe-alcantara/classes-e-programacao-orientada-a-objetos-em-python",
