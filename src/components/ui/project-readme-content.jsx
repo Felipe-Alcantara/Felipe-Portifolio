@@ -5,11 +5,6 @@ import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import { resolveGitHubRepoContext } from "../../utils/github-readme-url";
 
-function normalizeReadme(content) {
-  return content
-    .replace(/^\s*<div[^>]*>\s*$/gim, "")
-    .replace(/^\s*<\/div>\s*$/gim, "");
-}
 
 function extractText(children) {
   return React.Children.toArray(children)
@@ -116,7 +111,7 @@ export function ProjectReadmeContent({ content, project }) {
     return null;
   }
 
-  const normalizedContent = normalizeReadme(content);
+  const normalizedContent = content;
   const slugger = new GithubSlugger();
 
   return (
