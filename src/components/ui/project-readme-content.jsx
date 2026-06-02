@@ -3,6 +3,8 @@ import GithubSlugger from "github-slugger";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/github-dark.css";
 import { resolveGitHubRepoContext } from "../../utils/github-readme-url";
 
 
@@ -118,7 +120,7 @@ export function ProjectReadmeContent({ content, project }) {
     <div className="text-zinc-300 leading-relaxed break-words">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeRaw]}
+        rehypePlugins={[rehypeRaw, rehypeHighlight]}
         urlTransform={(url, key) => resolveMarkdownUrl(url, key, project)}
         components={{
           h1: createHeadingRenderer(
@@ -201,23 +203,27 @@ export function ProjectReadmeContent({ content, project }) {
             );
           },
           code: ({ className, children }) => {
-            const value = String(children).replace(/\n$/, "");
-            const isBlock = Boolean(className) || value.includes("\n");
+            const isBlock = Boolean(className) || String(children).includes("\n");
 
             if (!isBlock) {
               return (
-                <code className="bg-zinc-800 px-1.5 py-0.5 rounded text-purple-300 font-mono text-sm break-all">
-                  {value}
+                <code className="bg-zinc-800 px-1.5 py-0.5 rounded text-purple-300 font-mono text-sm break-words">
+                  {children}
                 </code>
               );
             }
 
             return (
-              <pre className="bg-zinc-900 border border-white/10 rounded-lg p-3 mb-3 overflow-x-auto max-w-full">
-                <code className="text-zinc-200 font-mono text-sm">{value}</code>
-              </pre>
+              <code className={`${className ?? ""} font-mono text-sm`}>
+                {children}
+              </code>
             );
           },
+          pre: ({ children }) => (
+            <pre className="bg-zinc-900 border border-white/10 rounded-lg p-3 mb-3 overflow-x-auto max-w-full">
+              {children}
+            </pre>
+          ),
           hr: () => <hr className="border-white/10 my-4" />,
           img: ({ src, alt }) => (
             <img
