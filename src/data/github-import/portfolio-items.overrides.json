@@ -5,6 +5,7 @@
   },
   {
     "repoKey": "felipe-alcantara/alura",
+    "allowPrivatePresentation": true,
     "tag": "estudo",
     "extraTags": [
       "web"

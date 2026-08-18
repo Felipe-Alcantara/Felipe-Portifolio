@@ -1,8 +1,10 @@
 {
-  "JavaScript": 571084,
-  "TypeScript": 399323,
-  "Python": 33235,
-  "CSS": 4691,
-  "Shell": 1228,
+  "TypeScript": 1218927,
+  "JavaScript": 1061806,
+  "Python": 155373,
+  "CSS": 20556,
+  "Shell": 11722,
+  "PowerShell": 9587,
+  "Batchfile": 7772,
   "HTML": 355
 }

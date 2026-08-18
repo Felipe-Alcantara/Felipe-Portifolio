@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "components-database",
+  "fullName": "Felipe-Alcantara/components-database",
+  "description": "Um agregador que cataloga componentes de UI de bibliotecas open source da comunidade (Uiverse, shadcn/ui, Magic UI, Aceternity e outras), salvando código, metadados, licença e link de origem em um banco SQLite pesquisável. A coleta é feita por uma arquitetura de **adapters** (um por fonte), com persistência idempotente e respeito às licenças.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/components-database",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 1,
+  "forks": 0,
+  "createdAt": "2026-06-05T18:15:23Z",
+  "updatedAt": "2026-07-18T13:01:53Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 4138,
+  "repoKey": "felipe-alcantara/components-database",
+  "lastSyncedAt": "2026-08-18T16:33:11.577Z"
+}

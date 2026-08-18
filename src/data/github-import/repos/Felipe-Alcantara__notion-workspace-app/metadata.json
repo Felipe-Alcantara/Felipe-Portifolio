@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "notion-workspace-app",
+  "fullName": "Felipe-Alcantara/notion-workspace-app",
+  "description": "Aplicação local para operar o Notion: API Django, SPA React, servidor MCP e launcher TUI",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/notion-workspace-app",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2026-07-02T13:08:54Z",
+  "updatedAt": "2026-07-18T13:59:55Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 223,
+  "repoKey": "felipe-alcantara/notion-workspace-app",
+  "lastSyncedAt": "2026-08-18T16:33:11.577Z"
+}

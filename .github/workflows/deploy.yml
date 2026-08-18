@@ -33,7 +33,8 @@ jobs:
 
       # Sincroniza READMEs e metadados dos repositórios direto da API do GitHub
       # antes do build, garantindo que o site publicado reflita o conteúdo atual.
-      # Token via Secret (escopo `repo`) para incluir repositórios privados do dono.
+      # O token só é usado para autenticação/limites; a sincronização aceita
+      # exclusivamente repositórios públicos.
       - name: Sync GitHub repositories
         run: node scripts/sync-github-repos.mjs
         env:

@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "notion-tasks-cli",
+  "fullName": "Felipe-Alcantara/notion-tasks-cli",
+  "description": "CLI do Notion pensado para IAs: um 'MCP via CLI' que permite a qualquer modelo manipular o workspace",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/notion-tasks-cli",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 1,
+  "createdAt": "2026-07-02T13:08:49Z",
+  "updatedAt": "2026-08-17T09:38:56Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 475,
+  "repoKey": "felipe-alcantara/notion-tasks-cli",
+  "lastSyncedAt": "2026-08-18T16:33:11.577Z"
+}

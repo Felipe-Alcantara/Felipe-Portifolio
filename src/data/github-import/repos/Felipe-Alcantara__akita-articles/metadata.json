@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "akita-articles",
+  "fullName": "Felipe-Alcantara/akita-articles",
+  "description": "Acesso programático aos artigos do blog AkitaOnRails: sincronização Git, busca, análise editorial e separação de texto.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/akita-articles",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2026-07-17T07:09:05Z",
+  "updatedAt": "2026-07-17T07:09:25Z",
+  "defaultBranch": "master",
+  "archived": false,
+  "sizeKb": 12,
+  "repoKey": "felipe-alcantara/akita-articles",
+  "lastSyncedAt": "2026-08-18T16:33:11.577Z"
+}

@@ -1,0 +1,27 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Backup-Videos-Para-Membros",
+  "fullName": "Felipe-Alcantara/Backup-Videos-Para-Membros",
+  "description": "Backup local de videos exclusivos para membros de canais do YouTube via yt-dlp: menu interativo, download incremental, autenticacao por cookies e metadados embutidos em um unico MKV por video.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Backup-Videos-Para-Membros",
+  "homepage": "",
+  "topics": [
+    "archiving",
+    "backup",
+    "members-only",
+    "python",
+    "youtube",
+    "yt-dlp"
+  ],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2026-07-06T14:11:40Z",
+  "updatedAt": "2026-07-06T14:14:14Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 35,
+  "repoKey": "felipe-alcantara/backup-videos-para-membros",
+  "lastSyncedAt": "2026-08-18T16:33:11.577Z"
+}

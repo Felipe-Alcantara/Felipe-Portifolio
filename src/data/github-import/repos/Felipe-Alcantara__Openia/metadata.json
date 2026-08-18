@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Openia",
+  "fullName": "Felipe-Alcantara/Openia",
+  "description": "## openia — launcher de CLIs de IA com OpenRouter  `openia` é um pequeno programa em Python que deixa você escolher, instalar e abrir uma CLI de IA de terminal já configurada com sua chave do OpenRouter. A escolha do **modelo** acontece dentro de cada ferramenta; o `openia` cuida de instalar.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Openia",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 1,
+  "forks": 0,
+  "createdAt": "2026-06-23T18:39:53Z",
+  "updatedAt": "2026-07-23T08:49:07Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 370,
+  "repoKey": "felipe-alcantara/openia",
+  "lastSyncedAt": "2026-08-18T16:33:11.577Z"
+}

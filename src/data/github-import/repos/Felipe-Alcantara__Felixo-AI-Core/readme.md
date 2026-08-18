@@ -40,6 +40,8 @@ Primeira versão funcional entregue:
 - Empacotamento Electron Builder e base de auto-update via GitHub Releases
 - Append incremental de resposta com cursor de streaming
 - Botão de parar para interromper processo em andamento
+- Canvas visual para organizar agentes, arquivos compartilhados, notas, grupos e páginas web (mini-navegador embutido)
+- Launcher **Agente** com reutilização das últimas configurações e arquivo de planejamento opcional
 - Frontend organizado por feature em `app/src/features/chat/`
 - Processo Electron modularizado em `core/`, `services/` e `windows/`
 - Testes unitários para adapters, orquestrador, catálogo MCP e leitura JSONL
@@ -61,10 +63,32 @@ Primeira versão funcional entregue:
 
 ## Como rodar
 
-Atalho recomendado:
+Forma mais simples — abre o menu interativo onde você instala, configura e inicia:
 
 ```bash
 python3 start_app.py
+```
+
+No menu você tem: **Iniciar/Rodar** (app desktop ou preview web), **Instalar/Setup**, **Configurar** (CLIs, permissões dos agentes, branch de produção) e **Status/Sair**.
+
+### Atualização automática
+
+Ao iniciar, o launcher verifica sozinho se há uma versão nova da branch em que você está e atualiza antes de abrir o app — você não precisa ficar rodando `git pull` para saber se saiu novidade. Quando já está em dia, não mostra nada e não custa nada perceptível.
+
+Ele só atualiza quando é seguro, e **nunca impede o app de abrir**. Pula a atualização quando:
+
+- há alterações locais não commitadas (seu trabalho sempre ganha da atualização);
+- não há rede, ou o `fetch` demora demais (é interrompido e o app abre normalmente);
+- o histórico divergiu, quando um fast-forward reescreveria commits locais;
+- o checkout está em *detached HEAD*, sem branch para atualizar.
+
+Atualiza a branch em que você **já está** — não troca de branch nem puxa de `production` quando você está em `main`.
+
+Para desligar (necessário em CI, que deve compilar exatamente o commit que baixou):
+
+```bash
+FELIXO_AUTO_UPDATE=off python3 start_app.py
+python3 start_app.py --no-auto-update --web
 ```
 
 Ou manualmente:
@@ -76,13 +100,7 @@ npm install
 npm run dev
 ```
 
-Para atualizar uma cópia rodada pelo código-fonte a partir da branch de produção:
-
-```bash
-python3 start_app.py --update
-```
-
-Esse comando faz `git pull --ff-only origin production` antes de abrir o app e bloqueia a atualização se houver alterações locais não commitadas.
+Scripts/CI que já chamam `start_app.py` com flags continuam funcionando sem o menu (`--web`, `--skip-install`, `--update`, `--branch`) — ver [`docs/projeto/RODAR-VIA-CODIGO-FONTE.md`](docs/projeto/RODAR-VIA-CODIGO-FONTE.md).
 
 ## Rodar em outro PC
 
@@ -109,7 +127,23 @@ cd Felixo-AI-Core
 py start_app.py
 ```
 
-O `start_app.py` instala dependências Python de `requirements.txt` quando houver pacotes listados e instala dependências Node com `npm install` quando necessário. Hoje o `requirements.txt` fica sem pacotes porque o launcher usa apenas a biblioteca padrão do Python.
+O `start_app.py` instala dependências Python de `requirements.txt` (hoje `questionary` e `rich`, usadas pelo menu interativo) e dependências Node com `npm install` quando necessário.
+
+### Se o Python for "externally managed" (macOS com Homebrew, Debian/Ubuntu)
+
+Nessas instalações o `pip` recusa instalar pacotes no Python do sistema e responde `error: externally-managed-environment` (PEP 668).
+
+O launcher lida com isso sozinho: primeiro verifica se os pacotes já estão disponíveis (é o caso de várias distribuições Linux, e aí nem tenta instalar); se faltarem, tenta `--user` e, se o sistema também bloquear, `--break-system-packages`.
+
+Essas dependências servem só para desenhar o menu — o app em si é Node. Se a instalação falhar mesmo assim, o launcher avisa e **segue rodando o app normalmente**.
+
+Se quiser o ambiente mais previsível em qualquer SO, use um virtualenv:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+python3 start_app.py
+```
 
 No macOS, o launcher procura Node/npm em instalações comuns de Homebrew Apple Silicon, Homebrew Intel, MacPorts, NVM, fnm, Volta, asdf, mise e nodenv, mesmo quando o app é iniciado por uma GUI com `PATH` reduzido. Se precisar forçar um diretório específico, use `FELIXO_NODE_BIN=/caminho/do/bin`.
 
@@ -139,13 +173,16 @@ Observações importantes:
 - Usuários precisam ter as CLIs `codex`, `claude` e/ou `gemini` instaladas e autenticadas no próprio sistema.
 - Se a CLI não estiver no `PATH`, defina `FELIXO_CLI_PATHS` com os diretórios extras onde os comandos estão instalados.
 - No Linux, prefira o AppImage para auto-update dentro do app; pacote `.deb` é útil para instalação tradicional, mas não segue o mesmo fluxo de atualização automática.
-- Releases públicas de macOS/Windows ainda devem receber assinatura/notarização antes de distribuição ampla.
+- **macOS: os artefatos não são assinados nem notarizados**, então o Gatekeeper bloqueia a primeira abertura — às vezes com uma mensagem confusa que sugere procurar um app na App Store. O usuário precisa liberar manualmente em **Ajustes do Sistema > Privacidade e Segurança**, ou rodar `xattr -dr com.apple.quarantine "/Applications/Felixo AI Core.app"`. Resolver isso de vez exige uma conta do Apple Developer Program (US$ 99/ano) e os secrets de assinatura no workflow de release.
+- No Windows, o SmartScreen pode alertar enquanto não houver assinatura, mas o app abre após confirmar.
 
-Detalhes: [Distribuição e Atualizações](./docs/projeto/DISTRIBUICAO-E-ATUALIZACOES.md).
+Detalhes de instalação por sistema operacional: [Guia do Usuário](./docs/guias/GUIA-USUARIO.md#2-instalação-por-sistema-operacional).
 
 ---
 
 ## Validação
+
+Aplicação:
 
 ```bash
 cd app
@@ -153,6 +190,33 @@ npm test
 npm run lint
 npm run build
 ```
+
+Launcher (`start_app.py`) — não precisa de Node nem de dependências instaladas:
+
+```bash
+python3 -m unittest discover -s tests -t .
+```
+
+Os testes do launcher cobrem o que costuma quebrar entre sistemas operacionais: descoberta de Node no macOS (Homebrew Apple Silicon/Intel, gerenciadores de versão, `PATH` reduzido de apps de GUI), `Path`/`npm.cmd` no Windows, instalação de pacotes em Python "externally managed" (PEP 668) e a limpeza de processos, que só pode encerrar processos iniciados pelo próprio launcher. O CI roda esses testes em Linux, Windows e macOS.
+
+### Estrutura do launcher
+
+O `start_app.py` na raiz é a porta de entrada (exigida pelo padrão de qualidade) e apenas chama o pacote `felixo_launcher/`, onde cada módulo tem uma responsabilidade:
+
+| Módulo | Responsabilidade |
+|---|---|
+| `paths` | Caminhos do repositório e configurações compartilhadas |
+| `config` | Arquivo local de configuração escrito pelo menu |
+| `node` | Encontrar Node.js/npm e montar o ambiente dele |
+| `commands` | Resolver e executar comandos filhos |
+| `process` | Parar o app e limpar processos de execuções anteriores |
+| `node_deps` | Manter `app/node_modules` em dia com o `package.json` |
+| `python_deps` | Instalar as dependências Python do próprio launcher |
+| `git` | Atualizar o checkout a partir da branch de produção |
+| `runner` | Preparo de ambiente e o caminho sem menu (flags) |
+| `menu` | O menu interativo — interface principal do launcher |
+
+Cada módulo tem seu arquivo de teste correspondente em `tests/`.
 
 ---
 

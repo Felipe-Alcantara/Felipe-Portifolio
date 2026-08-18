@@ -12,7 +12,7 @@
 
 **Repositorio central de padroes de design, qualidade de sistema, prompts estruturados, documentacao operacional e guias reutilizaveis para IA.**
 
-[Core (Obrigatorio)](#-core--padroes-obrigatorios) | [Guias (Opcional)](#-guias--padroes-especificos) | [Stack](#%EF%B8%8F-minha-stack) | [Como Usar](#-como-usar-em-outros-projetos)
+[Core (Obrigatorio)](docs/CORE-PADROES-OBRIGATORIOS.md) | [Guias (Opcional)](docs/GUIAS-OPCIONAIS.md) | [Como Usar](docs/INSTALACAO-EM-OUTROS-PROJETOS.md) | [Stack](#%EF%B8%8F-minha-stack)
 
 </div>
 
@@ -20,14 +20,49 @@
 
 ## Indice
 
+- [Quick Start — Como Usar](#quick-start--como-usar)
 - [Sobre o Repositorio](#-sobre-o-repositorio)
-- [Minha Stack](#%EF%B8%8F-minha-stack)
+- [Mapa do Repositorio](#-mapa-do-repositorio)
 - [Estrutura do Repositorio](#-estrutura-do-repositorio)
-- [Core — Padroes Obrigatorios](#-core--padroes-obrigatorios)
-- [Guias — Padroes Especificos](#-guias--padroes-especificos)
-- [Como Usar em Outros Projetos](#-como-usar-em-outros-projetos)
+- [Minha Stack](#%EF%B8%8F-minha-stack)
+- [Para Agentes de IA](#-para-agentes-de-ia)
 - [Licenca](#-licenca)
 - [Autor](#-autor)
+
+---
+
+## Quick Start — Como Usar
+
+### Comando global `felixo` (mais rapido)
+
+Instalador multiplataforma que registra o comando `felixo` no seu terminal. A instalacao e **uma linha, direto do GitHub** — nao precisa clonar o repositorio nem ter arquivos locais. Depois de instalar, rode `felixo` em qualquer pasta para baixar automaticamente a versao mais recente do Felixo System Design.
+
+**PowerShell** (Windows / Linux / macOS):
+```powershell
+irm https://raw.githubusercontent.com/Felipe-Alcantara/Felixo-System-Design/main/scripts/powershell/install-felixo-powershell.ps1 | iex
+```
+> No Windows, o instalador ajusta a `ExecutionPolicy` do usuario para `RemoteSigned` se necessario (sem isso o PowerShell nao carrega o `$PROFILE` e o comando nao apareceria).
+
+**CMD** (Windows classico):
+```cmd
+curl -fsSL -o "%TEMP%\install-felixo.cmd" https://raw.githubusercontent.com/Felipe-Alcantara/Felixo-System-Design/main/scripts/cmd/install-felixo-cmd.cmd && "%TEMP%\install-felixo.cmd"
+```
+
+**Bash / Zsh** (Linux, macOS, WSL):
+```bash
+curl -fsSL https://raw.githubusercontent.com/Felipe-Alcantara/Felixo-System-Design/main/scripts/bash-zsh/install-felixo-bash-zsh.sh | bash
+```
+> Requer `git` e `rsync` para o comando `felixo` funcionar. O Git Bash do Windows nao tem `rsync` — nele, prefira o instalador do PowerShell ou do CMD.
+
+Requisito comum: [Git](https://git-scm.com/downloads) instalado (o `felixo` usa `git clone` para baixar o repositorio). Para desinstalar: rode o instalador com `--uninstall` (CMD/Bash) ou `-Uninstall` (PowerShell).
+
+Depois abra um novo terminal e use: `felixo` (ou `felixo -s` para incluir o banco de componentes).
+
+Se rodar dentro de um repositorio git, o `felixo` **adiciona a pasta baixada ao `.gitignore` da raiz automaticamente** (sem duplicar a entrada) — os padroes ficam disponiveis no projeto sem entrar no versionamento dele.
+
+### Ou sincronizar manualmente
+
+Para todos os metodos (ZIP, rsync, git clone direto, etc.) → [docs/INSTALACAO-EM-OUTROS-PROJETOS.md](docs/INSTALACAO-EM-OUTROS-PROJETOS.md) (8 opcoes completas).
 
 ---
 
@@ -41,12 +76,113 @@ Padroes de qualidade que devem acompanhar **todo projeto**:
 
 - **Design Systems** — Contratos de qualidade para frontend, backend e documentacao
 - **Prompt Bases** — Guias para montar prompts de IA completos na primeira interacao
-- **Guia Minimo de Qualidade** — Regras curtas e obrigatorias para preservar qualidade de software
+- **Guia Minimo de Qualidade** — Regras curtas e obrigatorias para preservar qualidade de software, incluindo priorizar scripts, automacoes e ferramentas reutilizaveis antes de edicao manual
+- **Start App Script** — `start_app.py` obrigatorio em todo programa: um menu interativo, colorido e descritivo que instala, configura e inicia (a porta de entrada do programa)
 - **Template de Contexto IA** — Memoria operacional padronizada para continuidade entre sessoes
 
 ### `guias/` — Opcional
 
 Guias reutilizaveis extraidos de **projetos reais**, organizados por dominio. Use apenas quando o projeto precisar daquela funcionalidade especifica.
+
+---
+
+## Mapa do Repositorio
+
+Cada area tem um documento proprio, com uma responsabilidade unica. Use o mapa abaixo para ir direto ao que precisa.
+
+| Documento | Responsabilidade | O que voce encontra |
+|-----------|------------------|---------------------|
+| **[AGENTS.md](AGENTS.md)** | **Roteiro de leitura para IA** | Protocolo de leitura por tipo de tarefa e indice de guias com palavras-chave — o que um agente deve abrir (e o que ignorar) conforme o prompt. |
+| **[docs/CORE-PADROES-OBRIGATORIOS.md](docs/CORE-PADROES-OBRIGATORIOS.md)** | Padroes **obrigatorios** | Design systems (frontend, backend, README), guia minimo de qualidade, start app script, prompts base e o template de contexto `IA.md` — cada um descrito e com link. |
+| **[docs/GUIAS-OPCIONAIS.md](docs/GUIAS-OPCIONAIS.md)** | Padroes **opcionais** por dominio | Guias reutilizaveis de **frontend** (10), **backend** (2) e **integracao** (4): o que cada um resolve, de qual projeto foi extraido e quando reutilizar. |
+| **[docs/INSTALACAO-EM-OUTROS-PROJETOS.md](docs/INSTALACAO-EM-OUTROS-PROJETOS.md)** | **Como usar** em outros projetos | Os 8 metodos de download/sincronizacao (incluindo o comando global `felixo`), variantes com/sem submodulo e a tabela de escolha rapida por cenario. |
+| **[docs/GIT-POLITICA-DE-VERSIONAMENTO.md](docs/GIT-POLITICA-DE-VERSIONAMENTO.md)** | **Politica de git** neste repo — **obrigatoria** | Quando criar branch (excecao, nao padrao), formato de commit (`tipo: descricao`), documentacao viva, separacao minima entre interno/publico/API, exemplos e checklist. Fonte unica das regras de versionamento; vale em toda sessao. |
+| **[CONTRIBUTING.md](CONTRIBUTING.md)** | **Contribuir** de fora | Fluxo de fork + Pull Request para contribuicoes externas. |
+| [Estrutura do Repositorio](#-estrutura-do-repositorio) | **Layout** das pastas | Arvore completa de arquivos e pastas com uma linha por item. |
+| [Para Agentes de IA](#-para-agentes-de-ia) | Regras para agentes **neste** repo | Politica de git/branches, commits e documentacao viva. |
+
+### Mapa rapido por necessidade
+
+- **Quero instalar/sincronizar este repo num projeto AGORA** → [Quick Start](#quick-start--como-usar) (comandos prontos acima)
+- **Quero todas as opcoes de instalacao** (8 metodos: ZIP, rsync, git clone, etc.) → [docs/INSTALACAO-EM-OUTROS-PROJETOS.md](docs/INSTALACAO-EM-OUTROS-PROJETOS.md)
+- **Quero os padroes obrigatorios de qualidade** → [docs/CORE-PADROES-OBRIGATORIOS.md](docs/CORE-PADROES-OBRIGATORIOS.md)
+- **Preciso de um padrao especifico** (arvore, heatmap, scraping, deploy...) → [docs/GUIAS-OPCIONAIS.md](docs/GUIAS-OPCIONAIS.md)
+- **Quero o banco de componentes UI** → submodulo [`components-database/`](components-database/) (veja as variantes "com submodulo" em [docs/INSTALACAO-EM-OUTROS-PROJETOS.md](docs/INSTALACAO-EM-OUTROS-PROJETOS.md))
+- **Quero a politica de git** (branches, commits, doc viva) → [docs/GIT-POLITICA-DE-VERSIONAMENTO.md](docs/GIT-POLITICA-DE-VERSIONAMENTO.md)
+- **Vou contribuir de fora** → [CONTRIBUTING.md](CONTRIBUTING.md)
+- **Sou um agente de IA** (aqui ou consumindo o repo em outro projeto) → [AGENTS.md](AGENTS.md) (roteiro de leitura por tarefa)
+- **Vou versionar mudancas neste repo** → [Para Agentes de IA](#-para-agentes-de-ia) (resumo) e [docs/GIT-POLITICA-DE-VERSIONAMENTO.md](docs/GIT-POLITICA-DE-VERSIONAMENTO.md) (completo)
+
+---
+
+## Estrutura do Repositorio
+
+```
+Felixo-System-Design/
+│
+├── core/                                    # OBRIGATORIO — usar em todo projeto
+│   ├── TEMPLATE-CONTEXTO-IA.md              # Template de contexto operacional (copiar como IA.md no projeto)
+│   ├── DESIGN_SYSTEM_FRONTEND.md            # Padroes de qualidade frontend
+│   ├── DESIGN_SYSTEM_BACKEND.md             # Padroes de qualidade backend
+│   ├── DESIGN_SYSTEM_README.md              # Padroes de documentacao README
+│   ├── GUIA_MINIMO_QUALIDADE.md             # Regras minimas obrigatorias de qualidade
+│   ├── GUIA-START-APP-SCRIPT.md             # Menu de entrada obrigatorio (instala/configura/inicia)
+│   ├── PROMPT_BASE_FRONTEND.md              # Prompt guiado para frontend
+│   └── PROMPT_BASE_BACKEND.md               # Prompt guiado para backend
+│
+├── guias/                                   # OPCIONAL — usar quando relevante
+│   ├── frontend/                            # UI, visual, UX, dados
+│   │   ├── GUIA-COMPONENTES-UI-COMPOSTOS.md
+│   │   ├── GUIA-PARTICULAS-E-GLOW.md
+│   │   ├── GUIA-BACKGROUND-VISUAL.md
+│   │   ├── GUIA-HEATMAP-DE-ATIVIDADE.md
+│   │   ├── GUIA-ONBOARDING-E-AJUDA.md
+│   │   ├── GUIA-ARVORE-HIERARQUICA.md
+│   │   ├── GUIA-ARVORE-DE-MATERIAIS-DUAL-VIEW.md
+│   │   ├── GUIA-CALENDARIO-ACADEMICO.md
+│   │   ├── GUIA-SISTEMA-DE-ALERTA-E-GRADE.md
+│   │   └── GUIA-PAINEL-DE-COLECAO-COM-FILTROS-E-VIEWS.md
+│   ├── backend/                             # Logica pura Python/Django
+│   │   ├── GUIA-BACKEND-CPF.md
+│   │   └── GUIA-CRIPTOGRAFIA-CIFRA-DE-CESAR.md
+│   └── integracao/                          # Integracoes externas
+│       ├── GUIA-INTEGRACAO-API-GITHUB.md
+│       ├── GUIA-SCRAPING-MULTIFORMATO.md
+│       ├── GUIA-NOTION-COMO-BASE-DE-DADOS.md
+│       └── GUIA-DEPLOY-RAILWAY.md
+│
+├── components-database/                     # SUBMODULO — banco de componentes UI
+│   ├── scraper/                             # Coletor de componentes (10 fontes)
+│   ├── site/                                # Biblioteca visual (Flask + React/Vite)
+│   └── start_app.py                         # Setup + coleta com um comando
+│
+├── scripts/                                 # Instaladores do comando global "felixo"
+│   ├── bash-zsh/
+│   │   ├── install-felixo-bash-zsh.sh       # Instalador p/ Bash e Zsh (Linux, macOS, Git Bash, WSL)
+│   │   └── tests/
+│   │       └── installers.tests.sh          # Suite nativa Bash (roda em Linux/macOS, sem rede)
+│   ├── powershell/
+│   │   └── install-felixo-powershell.ps1    # Instalador p/ PowerShell (Windows, Linux, macOS)
+│   ├── cmd/                                  # CMD (Prompt classico do Windows)
+│   │   ├── install-felixo-cmd.cmd           # Instalador (roda uma vez; baixa do GitHub se preciso)
+│   │   ├── felixo-command.cmd               # Comando felixo em si (instalado como felixo.cmd)
+│   │   └── tests/                           # Testes do passo .gitignore automatico
+│   └── tests/                               # Testes automatizados dos instaladores
+│       ├── installers.tests.ps1             # Suite PowerShell + CMD + Bash (Windows)
+│       └── run-tests.ps1                    # Roda todas as suites PowerShell
+│
+├── docs/                                    # Documentacao por responsabilidade
+│   ├── CORE-PADROES-OBRIGATORIOS.md         # Detalhe dos padroes obrigatorios
+│   ├── GUIAS-OPCIONAIS.md                   # Detalhe dos guias por dominio
+│   ├── GIT-POLITICA-DE-VERSIONAMENTO.md     # Politica de git (branches, commits, doc viva)
+│   └── INSTALACAO-EM-OUTROS-PROJETOS.md     # Como usar em outros projetos (8 metodos)
+│
+├── AGENTS.md                                # Roteiro de leitura para agentes de IA
+├── CONTRIBUTING.md
+├── README.md
+├── LICENSE
+└── .gitmodules
+```
 
 ---
 
@@ -80,378 +216,42 @@ Guias reutilizaveis extraidos de **projetos reais**, organizados por dominio. Us
 | **Git** | Controle de versao |
 | **GitHub** | Repositorios, CI/CD, colaboracao |
 | **VS Code** | IDE principal |
+| **Railway** | Plataforma padrao para deploy de backend online (PaaS) |
 | **Windows** | Sistema operacional de desenvolvimento |
 
 ---
 
-## Estrutura do Repositorio
+## Para Agentes de IA
 
-```
-Felixo-System-Design/
-│
-├── core/                                    # OBRIGATORIO — usar em todo projeto
-│   ├── IA.md                                # Template de contexto operacional para IA
-│   ├── DESIGN_SYSTEM_FRONTEND.md            # Padroes de qualidade frontend
-│   ├── DESIGN_SYSTEM_BACKEND.md             # Padroes de qualidade backend
-│   ├── DESIGN_SYSTEM_README.md              # Padroes de documentacao README
-│   ├── GUIA_MINIMO_QUALIDADE.md             # Regras minimas obrigatorias de qualidade
-│   ├── PROMPT_BASE_FRONTEND.md              # Prompt guiado para frontend
-│   └── PROMPT_BASE_BACKEND.md               # Prompt guiado para backend
-│
-├── guias/                                   # OPCIONAL — usar quando relevante
-│   ├── frontend/                            # UI, visual, UX, dados
-│   │   ├── GUIA-COMPONENTES-UI-COMPOSTOS.md
-│   │   ├── GUIA-PARTICULAS-E-GLOW.md
-│   │   ├── GUIA-BACKGROUND-VISUAL.md
-│   │   ├── GUIA-HEATMAP-DE-ATIVIDADE.md
-│   │   ├── GUIA-ONBOARDING-E-AJUDA.md
-│   │   ├── GUIA-ARVORE-HIERARQUICA.md
-│   │   ├── GUIA-ARVORE-DE-MATERIAIS-DUAL-VIEW.md
-│   │   ├── GUIA-CALENDARIO-ACADEMICO.md
-│   │   └── GUIA-SISTEMA-DE-ALERTA-E-GRADE.md
-│   ├── backend/                             # Logica pura Python/Django
-│   │   ├── GUIA-BACKEND-CPF.md
-│   │   └── GUIA-CRIPTOGRAFIA-CIFRA-DE-CESAR.md
-│   └── integracao/                          # Integracoes externas
-│       ├── GUIA-INTEGRACAO-API-GITHUB.md
-│       └── GUIA-SCRAPING-MULTIFORMATO.md
-│
-├── README.md
-└── LICENSE
-```
+> **Comece por [`AGENTS.md`](AGENTS.md)** — o roteiro de leitura por tipo de tarefa. Ele diz quais documentos abrir (e quais ignorar) conforme o prompt, tanto para quem trabalha neste repositorio quanto para quem consome uma copia dele em outro projeto.
 
----
+Instrucoes para agentes que trabalham **diretamente neste repositorio** (nao via fork). Para contribuicoes externas, siga o fluxo de fork + Pull Request descrito em [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-## Core — Padroes Obrigatorios
+> **Obrigatorio**: a politica de git completa esta em [`docs/GIT-POLITICA-DE-VERSIONAMENTO.md`](docs/GIT-POLITICA-DE-VERSIONAMENTO.md) — branches, commits, documentacao viva e separacao minima entre interno/publico/API, com exemplos de mensagem boa/ruim e checklist. Vale em toda sessao de trabalho neste repositorio, sem excecao. O resumo abaixo e o essencial; leia o documento dedicado antes de versionar.
 
-A pasta `core/` concentra os artefatos que devem acompanhar **todo projeto**. Ela separa padroes tecnicos de qualidade, prompts operacionais para IA e template de memoria operacional.
+### Git e branches — o padrao e *nao* criar branch
 
-### Design System Frontend
+- **Trabalhe direto no `main` por padrao.** Commite no `main` sem branch para: correcoes simples, documentacao, ajustes pequenos e refatoracoes seguras (que nao mudam comportamento).
+- **So crie uma branch nova nestes tres casos:** (1) **feature grande**, (2) **refatoracao significativa** que mexe em varios modulos distintos, ou (3) algo de **alto risco** (altera comportamento e precisa ser testado antes de entrar, ou pode quebrar algo existente). Se voce nao consegue dizer qual dos tres justifica a branch, **nao crie branch**.
+- **Evite o vicio de abrir uma branch por implementacao.** Varios agentes criam branches demais; aqui isso e considerado errado.
+- **Apos o merge, apague a branch** (local e remota). Branch ja mesclada que fica para tras polui o historico e confunde o que ainda esta em andamento.
 
-Guia completo de padronizacao visual para front-end, extraido do **FelixoVerse**. Documenta paleta, tipografia, layout, componentes, animacoes e padroes de interface. Inclui separacao explicita entre principios universais e escolhas especificas do FelixoVerse.
+### Commits — pequenos, frequentes e descritivos
 
-[Ver design system frontend](core/DESIGN_SYSTEM_FRONTEND.md)
+- **Sempre commite apos uma adicao concluida.** Nao acumule varias mudancas soltas sem commitar.
+- **Commits pequenos, mas bem descritivos.** Cada commit e uma unidade coesa (uma ideia, um motivo). Se precisar de varios "e" para descrever, sao varios commits.
+- **Mensagem no formato `tipo: descricao`** (Conventional Commits): `feat:`, `fix:`, `docs:`, `refactor:`, `chore:` — explicando **o que** mudou e **por que**. Detalhes e exemplos em [`docs/GIT-POLITICA-DE-VERSIONAMENTO.md`](docs/GIT-POLITICA-DE-VERSIONAMENTO.md#3-commits--pequenos-frequentes-e-descritivos).
 
-### Design System Backend
+### Documentacao viva — no mesmo commit
 
-Guia de **qualidade de sistema backend**. Define principios de arquitetura, escolha de stack, modularizacao forte, separacao de responsabilidades, estrutura por camadas, padroes de API, persistencia, testes, TDD, SQLite como padrao inicial, Open/Closed, documentacao viva e checklist de qualidade.
+- **Mantenha a documentacao atualizada e viva durante os commits.** Ao mudar comportamento, estrutura ou comandos, atualize no mesmo passo o `README.md`, os documentos em [`docs/`](docs/), os guias e o `IA.md` afetados — documentacao desatualizada conta como trabalho incompleto.
+- **Preserve o `IA.md` como linha do tempo.** Quando uma decisao tecnica mudar, nao apague o registro anterior; adicione uma nova entrada datada com contexto, motivo e validacao.
+- A pasta [`docs/`](docs/) ja existe para documentacao por responsabilidade (core, guias, git, instalacao). Mantenha cada arquivo com **uma responsabilidade unica** e adicione novos documentos ali quando um tema nao couber naturalmente nos existentes.
 
-[Ver design system backend](core/DESIGN_SYSTEM_BACKEND.md)
+### Separacao minima — nunca misture interno, publico e API
 
-### Design System README
-
-Guia de padronizacao para `README.md`, usado como referencia para manter documentacao consistente entre projetos.
-
-[Ver design system README](core/DESIGN_SYSTEM_README.md)
-
-### Guia Minimo de Qualidade
-
-Contrato curto e obrigatorio para preservar qualidade de software em qualquer projeto. Resume os padroes essenciais de arquitetura, seguranca, testes, documentacao e criterio de pronto antes de consultar os documentos longos.
-
-[Ver guia minimo de qualidade](core/GUIA_MINIMO_QUALIDADE.md)
-
-### Prompt Base Backend
-
-Guia tecnico para montar prompts de backend completos na primeira interacao. Inclui stacks recomendadas, decisoes tecnicas por cenario e exige que a IA siga o `DESIGN_SYSTEM_BACKEND.md` como contrato de qualidade.
-
-[Ver prompt base backend](core/PROMPT_BASE_BACKEND.md)
-
-### Prompt Base Frontend
-
-Guia tecnico para montar prompts de frontend completos na primeira interacao. Inclui stacks recomendadas, decisoes visuais por cenario, campos para componentes, identidade visual, responsividade e animacoes.
-
-[Ver prompt base frontend](core/PROMPT_BASE_FRONTEND.md)
-
-### IA.md — Template de Contexto Operacional
-
-Template padrao de **memoria operacional** para projetos com IA. Deve ser copiado e preenchido continuamente durante o desenvolvimento para registrar:
-
-- objetivo atual e milestones
-- decisoes tecnicas
-- stack e convencoes
-- bugs e correcoes relevantes
-- testes importantes
-- contexto necessario para outra IA retomar o trabalho sem reler tudo
-
-[Ver IA.md](core/IA.md)
-
----
-
-## Guias — Padroes Especificos
-
-A pasta `guias/` contem **guias reutilizaveis extraidos de projetos reais**, organizados por dominio. Diferente do `core/`, estes arquivos sao **opcionais** — use apenas quando o projeto precisar daquela funcionalidade.
-
-Cada guia responde a tres perguntas:
-
-- Qual problema ele resolve
-- De qual projeto o padrao foi extraido
-- Em que tipo de sistema vale reutiliza-lo
-
-### Frontend
-
-#### Arvore Hierarquica
-
-Padrao de **exploracao hierarquica de categorias** com modelo Django (self-referential FK), serializer recursivo e componente React recursivo com animacoes.
-
-**Quando usar:** explorador de categorias/pastas, menus hierarquicos, qualquer dado em arvore parent-child.
-
-[Ver guia](guias/frontend/GUIA-ARVORE-HIERARQUICA.md)
-
-#### Background Visual
-
-Padrao de **background visual em camadas** com gradiente, simbolos animados e troca de tema. Extraido da Calculadora Pro Web (Brython).
-
-**Quando usar:** calculadoras, paginas educacionais, dashboards tecnicos, interfaces com profundidade visual.
-
-[Ver guia](guias/frontend/GUIA-BACKGROUND-VISUAL.md)
-
-#### Heatmap de Atividade
-
-Padrao de **calendario de atividade com intensidade visual** no estilo GitHub. Extraido do Reading Tracker.
-
-**Quando usar:** visualizacao de atividade por dia/semana/mes, dashboards de uso, analise temporal.
-
-[Ver guia](guias/frontend/GUIA-HEATMAP-DE-ATIVIDADE.md)
-
-#### Onboarding e Ajuda
-
-Padrao de **primeira experiencia do usuario** com onboarding leve, destaque contextual e centro de ajuda permanente. Extraido do Reading Tracker.
-
-**Quando usar:** produtos com multiplas funcionalidades, interfaces com curva de aprendizado, dashboards.
-
-[Ver guia](guias/frontend/GUIA-ONBOARDING-E-AJUDA.md)
-
-#### Componentes UI Compostos
-
-Kit de **componentes UI compostos** com Card (compound component), Button (4 variantes x 3 tamanhos), Badge e utilitario de classnames. TypeScript + Tailwind, zero dependencias.
-
-**Quando usar:** qualquer projeto React + Tailwind que precise de componentes base consistentes.
-
-[Ver guia](guias/frontend/GUIA-COMPONENTES-UI-COMPOSTOS.md)
-
-#### Particulas e Sistema de Glow
-
-**Background de particulas flutuantes** com Framer Motion e **sistema completo de glow CSS** com 5 niveis de intensidade controlados por CSS variable.
-
-**Quando usar:** landing pages, portfolios, dashboards dark-theme, interfaces com efeitos de glow.
-
-[Ver guia](guias/frontend/GUIA-PARTICULAS-E-GLOW.md)
-
-#### Arvore de Materiais Dual-View
-
-**Arvore de materiais com dois modos de visualizacao** (simples e dinamico), tracking de itens vistos via localStorage e contagem de progresso por pasta.
-
-**Quando usar:** bibliotecas de materiais, exploradores de documentos, listas de leitura com progresso.
-
-[Ver guia](guias/frontend/GUIA-ARVORE-DE-MATERIAIS-DUAL-VIEW.md)
-
-#### Calendario Academico
-
-**Calendario mensal interativo** com grade de dias, agrupamento de eventos por data, status do usuario e 11 funcoes de data sem dependencias externas.
-
-**Quando usar:** dashboards academicos, calendarios de entregas, agendas de projeto.
-
-[Ver guia](guias/frontend/GUIA-CALENDARIO-ACADEMICO.md)
-
-#### Sistema de Alerta e Grade de Horarios
-
-**Sistema de alerta automatico de proxima aula** com parser de grade, cores por sala e tabela semanal com coluna sticky.
-
-**Quando usar:** paineis academicos, portais de turma, apps de agenda escolar.
-
-[Ver guia](guias/frontend/GUIA-SISTEMA-DE-ALERTA-E-GRADE.md)
-
-### Backend
-
-#### Backend CPF
-
-Padrao de **backend logico para CPF** com algoritmo, contratos, fluxo de validacao, matriz de testes e guardrails para dados reais.
-
-**Quando usar:** geracao sintetica de CPF para testes, validacao backend, normalizacao de entrada, formularios.
-
-[Ver guia](guias/backend/GUIA-BACKEND-CPF.md)
-
-#### Criptografia Cifra de Cesar
-
-Sistemas reutilizaveis da **Cifra de Cesar em Python**: cifra tradicional, cifra numerica, normalizacao de acentos e interface web com Brython.
-
-**Quando usar:** apps educacionais de criptografia, playgrounds web, utilitarios de encode/decode.
-
-[Ver guia](guias/backend/GUIA-CRIPTOGRAFIA-CIFRA-DE-CESAR.md)
-
-### Integracao
-
-#### Integracao API GitHub
-
-Padrao de **coleta robusta de repositorios no GitHub** com autenticacao por token, paginacao, deduplicacao, retry com backoff e tratamento de rate limit.
-
-**Quando usar:** importadores de portfolio, dashboards de projetos, sincronizadores, ETLs de inventario tecnico.
-
-[Ver guia](guias/integracao/GUIA-INTEGRACAO-API-GITHUB.md)
-
-#### Scraping Multiformato
-
-Padrao de **scraping multiformato** com Playwright, parsers offline, JSON embutido, captura manual assistida, persistencia idempotente, URL publica segura, testes e guardrails operacionais.
-
-**Quando usar:** coletores, catalogos, ETLs, comparadores, importadores e pipelines que precisam transformar paginas heterogeneas em dados estruturados auditaveis.
-
-[Ver guia](guias/integracao/GUIA-SCRAPING-MULTIFORMATO.md)
-
----
-
-## Como Usar em Outros Projetos
-
-Use os metodos abaixo do mais usual para o mais especifico.
-
-### 1. Sincronizar `felixo-standards` com a versao mais recente (Recomendado)
-
-Melhor opcao quando voce quer manter uma pasta local sem vinculo com o git original e poder rodar o comando quantas vezes quiser para atualizar.
-
-**Linux / macOS / Git Bash:**
-```bash
-tmp_dir="$(mktemp -d)" && git clone --depth 1 https://github.com/Felipe-Alcantara/Felixo-System-Design.git "$tmp_dir/repo" && rm -rf "$tmp_dir/repo/.git" && mkdir -p ./felixo-standards && rsync -a --delete "$tmp_dir/repo/" ./felixo-standards/ && rm -rf "$tmp_dir"
-```
-
-**PowerShell (Windows):**
-```powershell
-$tmpDir = Join-Path $env:TEMP ("felixo-standards-" + [guid]::NewGuid())
-git clone --depth 1 https://github.com/Felipe-Alcantara/Felixo-System-Design.git $tmpDir
-Remove-Item -Recurse -Force (Join-Path $tmpDir ".git")
-New-Item -ItemType Directory -Force -Path "./felixo-standards" | Out-Null
-robocopy $tmpDir "./felixo-standards" /MIR | Out-Null
-Remove-Item -Recurse -Force $tmpDir
-```
-
-**CMD (Windows):**
-```cmd
-set TMP_DIR=%TEMP%\felixo-standards-%RANDOM% && git clone --depth 1 https://github.com/Felipe-Alcantara/Felixo-System-Design.git %TMP_DIR% && rmdir /s /q %TMP_DIR%\.git && if not exist felixo-standards mkdir felixo-standards && robocopy %TMP_DIR% felixo-standards /MIR >nul && rmdir /s /q %TMP_DIR%
-```
-
-- **Use quando**: quer todos os arquivos como base independente, com atualizacao simples depois
-- **Requisito**: Git
-- **Vinculo com o git original?** Nao
-
-#### Atalho global `felixo` (Bash/Zsh)
-
-```bash
-felixo() {
-  local dest="./felixo-standards"
-  local repo_url="https://github.com/Felipe-Alcantara/Felixo-System-Design.git"
-  local tmp_dir
-  tmp_dir="$(mktemp -d)" || return 1
-  git clone --depth 1 "$repo_url" "$tmp_dir/repo" || { rm -rf "$tmp_dir"; return 1; }
-  rm -rf "$tmp_dir/repo/.git"
-  mkdir -p "$dest"
-  rsync -a --delete "$tmp_dir/repo/" "$dest/"
-  rm -rf "$tmp_dir"
-}
-```
-
----
-
-### 2. Baixar o repositorio inteiro como ZIP
-
-**PowerShell (Windows):**
-```powershell
-Invoke-WebRequest -Uri "https://github.com/Felipe-Alcantara/Felixo-System-Design/archive/refs/heads/main.zip" -OutFile "felixo.zip"
-Expand-Archive "felixo.zip" -DestinationPath .
-Rename-Item "Felixo-System-Design-main" "felixo-standards"
-Remove-Item "felixo.zip"
-```
-
-**CMD (Windows):**
-```cmd
-curl -L https://github.com/Felipe-Alcantara/Felixo-System-Design/archive/refs/heads/main.zip -o felixo.zip
-tar -xf felixo.zip
-ren Felixo-System-Design-main felixo-standards
-del felixo.zip
-```
-
-**Linux / macOS:**
-```bash
-curl -L https://github.com/Felipe-Alcantara/Felixo-System-Design/archive/refs/heads/main.zip -o felixo.zip
-unzip felixo.zip && mv Felixo-System-Design-main felixo-standards && rm felixo.zip
-```
-
----
-
-### 3. Baixar com `npx degit`
-
-```bash
-npx degit Felipe-Alcantara/Felixo-System-Design ./felixo-standards
-```
-
----
-
-### 4. Clonar com `git`
-
-```bash
-git clone --depth 1 https://github.com/Felipe-Alcantara/Felixo-System-Design.git ./felixo-standards
-```
-
----
-
-### 5. Baixar apenas `guias/` com `npx degit`
-
-```bash
-npx degit Felipe-Alcantara/Felixo-System-Design/guias ./felixo-guias
-```
-
----
-
-### 6. Baixar apenas `core/` com `git sparse-checkout`
-
-```bash
-mkdir felixo-core
-cd felixo-core
-git init
-git remote add -f origin https://github.com/Felipe-Alcantara/Felixo-System-Design.git
-git sparse-checkout init --no-cone
-git sparse-checkout set core
-git pull origin main
-```
-
----
-
-### 7. Baixar apenas `guias/` com `git sparse-checkout`
-
-```bash
-mkdir felixo-guias
-cd felixo-guias
-git init
-git remote add -f origin https://github.com/Felipe-Alcantara/Felixo-System-Design.git
-git sparse-checkout init --no-cone
-git sparse-checkout set guias
-git pull origin main
-```
-
----
-
-### 8. Clonar tudo e copiar so a pasta desejada
-
-```bash
-git clone --depth 1 https://github.com/Felipe-Alcantara/Felixo-System-Design.git ./felixo-standards
-```
-
-Depois, copie manualmente:
-
-- `./felixo-standards/core`
-- `./felixo-standards/guias`
-
----
-
-### Escolha Rapida por Cenario
-
-| Cenario | Melhor opcao |
-|---------|--------------|
-| Quero tudo com atualizacao simples | sincronizacao sem `.git` (metodo 1 / atalho `felixo`) |
-| Quero tudo da forma mais simples | ZIP |
-| Quero tudo sem `.git` via terminal | `npx degit` |
-| Quero tudo e depois atualizar | `git clone` |
-| Quero so `guias/` sem `git` | `npx degit` em `guias` |
-| Quero so `guias/` com atualizacao futura | `git sparse-checkout` |
-| Quero so `core/` com atualizacao futura | `git sparse-checkout` |
-| Quero uma opcao universal | clone completo + copiar a pasta |
+- **Separe pelo minimo possivel**: cada commit, branch ou documento cobre um unico tema. Mudanca interna (decisoes, `IA.md`), mudanca publica (README, guias) e mudanca de API/integracao nao entram no mesmo commit.
+- Detalhes e exemplos em [`docs/GIT-POLITICA-DE-VERSIONAMENTO.md`](docs/GIT-POLITICA-DE-VERSIONAMENTO.md#5-separacao-minima--nunca-misture-temas).
 
 ---
 
@@ -469,6 +269,6 @@ Este projeto esta sob a licenca MIT — veja o arquivo `LICENSE`.
 > **Assinatura de Origem**  
 > Este arquivo foi criado por **Felipe Martin** e faz parte do repositorio **Felixo System Design**.  
 > Origem: https://github.com/Felipe-Alcantara/Felixo-System-Design  
-> Data desta versao: 2026-05-27
+> Data desta versao: 2026-06-12
 > Sugestoes e pull requests sao bem-vindos.
 

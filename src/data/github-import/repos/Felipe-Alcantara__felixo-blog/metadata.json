@@ -1,0 +1,25 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "felixo-blog",
+  "fullName": "Felipe-Alcantara/felixo-blog",
+  "description": "Blog pessoal do Felixo — programação descomplicada, boas práticas e automações. Astro + Tailwind, publicado no GitHub Pages.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/felixo-blog",
+  "homepage": "https://blog.felixo.com.br",
+  "topics": [
+    "astro",
+    "blog",
+    "felixoverse",
+    "tailwindcss"
+  ],
+  "language": "TypeScript",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2026-07-31T19:40:04Z",
+  "updatedAt": "2026-08-14T22:12:27Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 771,
+  "repoKey": "felipe-alcantara/felixo-blog",
+  "lastSyncedAt": "2026-08-18T16:33:11.577Z"
+}

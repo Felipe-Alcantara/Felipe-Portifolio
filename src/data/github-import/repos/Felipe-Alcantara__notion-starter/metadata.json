@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "notion-starter",
+  "fullName": "Felipe-Alcantara/notion-starter",
+  "description": "Biblioteca Python para a API oficial do Notion: cliente resiliente, schema, tarefas, conteúdo e inventário",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/notion-starter",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 1,
+  "createdAt": "2026-07-02T13:08:45Z",
+  "updatedAt": "2026-08-17T09:48:33Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 394,
+  "repoKey": "felipe-alcantara/notion-starter",
+  "lastSyncedAt": "2026-08-18T16:33:11.577Z"
+}

@@ -42,9 +42,8 @@ Toda a persistência é feita via **localStorage**, permitindo que você salve e
 Organizador-de-presentes-do-Felixo/
 │
 ├── index.html                # Aplicação completa (HTML + CSS + JS)
+├── start_app.py              # Menu de entrada (instalar, configurar, iniciar)
 ├── CNAME                     # Domínio customizado (gifts.felixo.com.br)
-│
-├── felixo-standards/         # Padrões de design do Felixo System
 │
 ├── README.md                 # Este arquivo
 ├── IA.md                     # Contexto técnico do projeto para IA
@@ -62,6 +61,13 @@ Organizador-de-presentes-do-Felixo/
 - Associar imagem via URL ou upload de arquivo local
 - Marcar presentes como **comprados** com toggle visual
 - Editar ou apagar qualquer presente cadastrado
+
+### 📊 Painel de Estatísticas
+
+- Contagem em tempo real de presentes **registrados**, **comprados** e **faltando**
+- **Valor total** somado dos presentes com preço, mais o quanto ainda falta gastar
+- Barra de progresso mostrando a **porcentagem já comprada** (ex: "40% comprado — 2 de 5")
+- Os números refletem toda a coleção, independentemente da busca ou filtro ativos
 
 ### 🔍 Busca e Filtros
 
@@ -92,20 +98,35 @@ Organizador-de-presentes-do-Felixo/
 
 Nenhuma instalação necessária — abre direto no navegador.
 
-### Opção 2: Rodar localmente
+### Opção 2: Menu de entrada (Recomendado para rodar localmente) 🖥️
+
+A forma mais simples de rodar localmente — abre um menu interativo onde você
+instala as dependências, configura e inicia o site com uma URL `http://`:
 
 ```bash
 # Clone o repositório
 git clone https://github.com/Felipe-Alcantara/Organizador-de-presentes-do-Felixo.git
-
-# Entre na pasta
 cd Organizador-de-presentes-do-Felixo
 
-# Abra o arquivo no navegador
-xdg-open index.html   # Linux
+# Abra o menu interativo
+python start_app.py
+```
+
+No menu você escolhe: **Instalar/Setup**, **Configurar** (porta e navegador),
+**Iniciar/Rodar** (sobe o servidor local) e **Status/Sair**.
+
+### Opção 3: Abrir o arquivo direto
+
+Por ser um site single-file, você também pode abrir o `index.html` direto no navegador:
+
+```bash
+xdg-open index.html    # Linux
 open index.html        # macOS
 start index.html       # Windows
 ```
+
+> Alguns navegadores restringem `localStorage` em páginas abertas via `file://`.
+> Se notar que os dados não persistem, use o menu (Opção 2), que serve o site via `http://`.
 
 ---
 

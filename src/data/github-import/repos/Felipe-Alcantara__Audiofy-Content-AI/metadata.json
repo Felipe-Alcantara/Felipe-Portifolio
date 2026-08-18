@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Audiofy-Content-AI",
+  "fullName": "Felipe-Alcantara/Audiofy-Content-AI",
+  "description": "Transforme qualquer conteúdo em podcasts auditáveis com IA — pipeline verificável (matriz de cobertura, roteiro, auditoria), múltiplos apresentadores, custo em tempo real via OpenRouter. Akita on Rails como primeiro módulo de fonte.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Audiofy-Content-AI",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 0,
+  "createdAt": "2026-07-16T22:10:44Z",
+  "updatedAt": "2026-07-30T02:31:30Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 621200,
+  "repoKey": "felipe-alcantara/audiofy-content-ai",
+  "lastSyncedAt": "2026-08-18T16:33:11.577Z"
+}

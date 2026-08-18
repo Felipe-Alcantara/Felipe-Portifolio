@@ -1,0 +1,20 @@
+{
+  "owner": "Felipe-Alcantara",
+  "name": "Automa-es-do-Notion",
+  "fullName": "Felipe-Alcantara/Automa-es-do-Notion",
+  "description": "Aplicação local para operar o Notion com API Django, SPA React, CLI/MCP para IA e inventário GitHub.",
+  "private": false,
+  "repoUrl": "https://github.com/Felipe-Alcantara/Automa-es-do-Notion",
+  "homepage": "",
+  "topics": [],
+  "language": "Python",
+  "stars": 0,
+  "forks": 1,
+  "createdAt": "2026-06-24T17:43:32Z",
+  "updatedAt": "2026-08-17T10:02:59Z",
+  "defaultBranch": "main",
+  "archived": false,
+  "sizeKb": 742,
+  "repoKey": "felipe-alcantara/automa-es-do-notion",
+  "lastSyncedAt": "2026-08-18T16:33:11.577Z"
+}

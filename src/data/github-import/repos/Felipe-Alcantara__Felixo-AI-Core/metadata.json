@@ -7,14 +7,14 @@
   "repoUrl": "https://github.com/Felipe-Alcantara/Felixo-AI-Core",
   "homepage": "",
   "topics": [],
-  "language": "JavaScript",
-  "stars": 0,
-  "forks": 0,
+  "language": "TypeScript",
+  "stars": 3,
+  "forks": 1,
   "createdAt": "2026-04-30T18:41:32Z",
-  "updatedAt": "2026-05-07T20:33:00Z",
+  "updatedAt": "2026-08-18T16:10:06Z",
   "defaultBranch": "main",
   "archived": false,
-  "sizeKb": 2024,
+  "sizeKb": 9960,
   "repoKey": "felipe-alcantara/felixo-ai-core",
-  "lastSyncedAt": "2026-06-02T13:49:29.823Z"
+  "lastSyncedAt": "2026-08-18T16:33:11.577Z"
 }

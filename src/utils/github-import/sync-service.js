@@ -102,6 +102,9 @@ function mergeRepositoryRecords(existingRecords, freshRecords, syncedAt) {
   const activeKeys = new Set();
 
   for (const record of existingRecords) {
+    if (record?.private === true) {
+      continue;
+    }
     const key = resolveRepositoryRecordKey(record);
 
     if (!key) {
@@ -155,7 +158,11 @@ function mergePortfolioItems(existingItems, freshItems, ignoredKeys = new Set())
   for (const item of existingItems) {
     const key = resolvePortfolioItemKey(item);
 
-    if (!key || ignoredKeys.has(key)) {
+    if (
+      !key ||
+      ignoredKeys.has(key) ||
+      (item?.private === true && item?.allowPrivatePresentation !== true)
+    ) {
       continue;
     }
 
@@ -165,7 +172,11 @@ function mergePortfolioItems(existingItems, freshItems, ignoredKeys = new Set())
   for (const item of freshItems) {
     const key = resolvePortfolioItemKey(item);
 
-    if (!key || ignoredKeys.has(key)) {
+    if (
+      !key ||
+      ignoredKeys.has(key) ||
+      (item?.private === true && item?.allowPrivatePresentation !== true)
+    ) {
       continue;
     }
 
@@ -259,6 +270,9 @@ export async function runGitHubImport({
   );
   const ignoredRepoKeys = normalizeIgnoreRepoKeys(ignoredRepoKeysRaw);
   const repositoriesFilteredByIgnore = repositories.filter((repository) => {
+    if (repository?.private === true) {
+      return false;
+    }
     const owner = typeof repository?.owner?.login === "string" ? repository.owner.login : "";
     const name = typeof repository?.name === "string" ? repository.name : "";
     const repoKey = buildRepositoryKey(owner, name);

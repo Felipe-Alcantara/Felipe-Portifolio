@@ -224,7 +224,7 @@ export function createGitHubApiClient({
     async fetchOwnedRepositories(maxRepos) {
       return fetchPaginatedRepositories(
         (page) =>
-          `/user/repos?per_page=${GITHUB_PAGE_SIZE}&page=${page}&sort=updated&visibility=all&affiliation=owner`,
+          `/user/repos?per_page=${GITHUB_PAGE_SIZE}&page=${page}&sort=updated&visibility=public&affiliation=owner`,
         maxRepos
       );
     },

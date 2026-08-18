@@ -360,7 +360,7 @@ const mergedGeneratedProjects = hasGeneratedItems
   : [];
 const hasImportedProjects = mergedGeneratedProjects.length > 0;
 const baseProjects = (hasImportedProjects ? mergedGeneratedProjects : fallbackProjects).filter(
-  (p) => !p.hidden
+  (p) => !p.hidden && (p.private !== true || p.allowPrivatePresentation === true)
 );
 
 function normalizeTag(tag) {

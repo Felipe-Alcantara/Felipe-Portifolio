@@ -1,5 +1,589 @@
 [
   {
+    "title": "Felipe Alcantara",
+    "tag": "code",
+    "desc": "Perfil de Felipe Alcântara",
+    "link": "https://github.com/Felipe-Alcantara/Felipe-Alcantara",
+    "createdAt": "2026-08-17T13:16:50Z",
+    "updatedAt": "2026-08-17T13:26:28Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "code"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {}
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Felipe-Alcantara",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/felipe-alcantara",
+    "repoFolder": "Felipe-Alcantara__Felipe-Alcantara"
+  },
+  {
+    "title": "Historias Sinistras Web",
+    "tag": "web",
+    "desc": "Jogo web de enigmas investigativos: o mestre le a solucao em segredo e os outros resolvem so com perguntas de sim ou nao.",
+    "link": "https://github.com/Felipe-Alcantara/historias-sinistras-web",
+    "createdAt": "2026-08-10T06:48:35Z",
+    "updatedAt": "2026-08-10T08:05:44Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "TypeScript",
+      "Python",
+      "CSS",
+      "JavaScript",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Médio",
+      "online": false,
+      "techPercentage": {
+        "TypeScript": 72,
+        "Python": 25,
+        "CSS": 1,
+        "JavaScript": 1,
+        "HTML": 1
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/historias-sinistras-web",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/historias-sinistras-web",
+    "repoFolder": "Felipe-Alcantara__historias-sinistras-web"
+  },
+  {
+    "title": "Felixo Blog",
+    "tag": "web",
+    "desc": "Blog pessoal do Felixo — programação descomplicada, boas práticas e automações. Astro + Tailwind, publicado no GitHub Pages.",
+    "link": "https://github.com/Felipe-Alcantara/felixo-blog",
+    "createdAt": "2026-07-31T19:40:04Z",
+    "updatedAt": "2026-08-14T22:12:27Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "astro",
+      "blog",
+      "felixoverse",
+      "tailwindcss",
+      "TypeScript",
+      "Python",
+      "CSS",
+      "JavaScript",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Médio",
+      "online": true,
+      "techPercentage": {
+        "TypeScript": 64,
+        "Python": 13,
+        "Astro": 13,
+        "CSS": 9,
+        "JavaScript": 0,
+        "HTML": 1
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/felixo-blog",
+      "site": "https://blog.felixo.com.br",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/felixo-blog",
+    "repoFolder": "Felipe-Alcantara__felixo-blog"
+  },
+  {
+    "title": "Akita Articles",
+    "tag": "python",
+    "desc": "Acesso programático aos artigos do blog AkitaOnRails: sincronização Git, busca, análise editorial e separação de texto.",
+    "link": "https://github.com/Felipe-Alcantara/akita-articles",
+    "createdAt": "2026-07-17T07:09:05Z",
+    "updatedAt": "2026-07-17T07:09:25Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/akita-articles",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/akita-articles",
+    "repoFolder": "Felipe-Alcantara__akita-articles"
+  },
+  {
+    "title": "Audiofy Content AI",
+    "tag": "web",
+    "desc": "Transforme qualquer conteúdo em podcasts auditáveis com IA — pipeline verificável (matriz de cobertura, roteiro, auditoria), múltiplos apresentadores, custo em tempo real via OpenRouter. Akita on Rails como primeiro módulo de fonte.",
+    "link": "https://github.com/Felipe-Alcantara/Audiofy-Content-AI",
+    "createdAt": "2026-07-16T22:10:44Z",
+    "updatedAt": "2026-07-30T02:31:30Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python",
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Grande",
+      "online": false,
+      "techPercentage": {
+        "Python": 76,
+        "JavaScript": 19,
+        "CSS": 3,
+        "HTML": 2
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Audiofy-Content-AI",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/audiofy-content-ai",
+    "repoFolder": "Felipe-Alcantara__Audiofy-Content-AI"
+  },
+  {
+    "title": "Codechat",
+    "tag": "web",
+    "desc": "Don't code alone.",
+    "link": "https://github.com/Felipe-Alcantara/codechat",
+    "createdAt": "2026-07-16T14:31:45Z",
+    "updatedAt": "2026-07-16T14:31:45Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Rust",
+      "HTML",
+      "Shell",
+      "JavaScript",
+      "CSS",
+      "PLpgSQL"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": true,
+      "techPercentage": {
+        "Rust": 43,
+        "HTML": 22,
+        "Shell": 15,
+        "JavaScript": 14,
+        "CSS": 3,
+        "PLpgSQL": 3
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/codechat",
+      "site": "https://www.codechat.live/",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/codechat",
+    "repoFolder": "Felipe-Alcantara__codechat"
+  },
+  {
+    "title": "Backup Videos Para Membros",
+    "tag": "python",
+    "desc": "Backup local de videos exclusivos para membros de canais do YouTube via yt-dlp: menu interativo, download incremental, autenticacao por cookies e metadados embutidos em um unico MKV por video.",
+    "link": "https://github.com/Felipe-Alcantara/Backup-Videos-Para-Membros",
+    "createdAt": "2026-07-06T14:11:40Z",
+    "updatedAt": "2026-07-06T14:14:14Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "archiving",
+      "backup",
+      "members-only",
+      "python",
+      "youtube",
+      "yt-dlp"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Backup-Videos-Para-Membros",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/backup-videos-para-membros",
+    "repoFolder": "Felipe-Alcantara__Backup-Videos-Para-Membros"
+  },
+  {
+    "title": "Battery Monitor",
+    "tag": "python",
+    "desc": "Monitor de bateria para Linux: lê o histórico do upower, mede a saúde real da bateria e prevê autonomia com gráficos estilo Android",
+    "link": "https://github.com/Felipe-Alcantara/Battery-Monitor",
+    "createdAt": "2026-07-06T06:00:27Z",
+    "updatedAt": "2026-07-06T06:21:22Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Battery-Monitor",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/battery-monitor",
+    "repoFolder": "Felipe-Alcantara__Battery-Monitor"
+  },
+  {
+    "title": "Fetch All",
+    "tag": "python",
+    "desc": "Repositório para dar Fetch All Projects",
+    "link": "https://github.com/Felipe-Alcantara/Fetch-All",
+    "createdAt": "2026-07-03T20:27:45Z",
+    "updatedAt": "2026-08-04T17:13:33Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Fetch-All",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/fetch-all",
+    "repoFolder": "Felipe-Alcantara__Fetch-All"
+  },
+  {
+    "title": "Notion Workspace App",
+    "tag": "web",
+    "desc": "Aplicação local para operar o Notion: API Django, SPA React, servidor MCP e launcher TUI",
+    "link": "https://github.com/Felipe-Alcantara/notion-workspace-app",
+    "createdAt": "2026-07-02T13:08:54Z",
+    "updatedAt": "2026-07-18T13:59:55Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python",
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 78,
+        "JavaScript": 18,
+        "CSS": 2,
+        "HTML": 2
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/notion-workspace-app",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/notion-workspace-app",
+    "repoFolder": "Felipe-Alcantara__notion-workspace-app"
+  },
+  {
+    "title": "Notion Tasks Cli",
+    "tag": "python",
+    "desc": "CLI do Notion pensado para IAs: um 'MCP via CLI' que permite a qualquer modelo manipular o workspace",
+    "link": "https://github.com/Felipe-Alcantara/notion-tasks-cli",
+    "createdAt": "2026-07-02T13:08:49Z",
+    "updatedAt": "2026-08-17T09:38:56Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/notion-tasks-cli",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/notion-tasks-cli",
+    "repoFolder": "Felipe-Alcantara__notion-tasks-cli"
+  },
+  {
+    "title": "Notion Starter",
+    "tag": "python",
+    "desc": "Biblioteca Python para a API oficial do Notion: cliente resiliente, schema, tarefas, conteúdo e inventário",
+    "link": "https://github.com/Felipe-Alcantara/notion-starter",
+    "createdAt": "2026-07-02T13:08:45Z",
+    "updatedAt": "2026-08-17T09:48:33Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/notion-starter",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/notion-starter",
+    "repoFolder": "Felipe-Alcantara__notion-starter"
+  },
+  {
+    "title": "OpenRouter Monitorator",
+    "tag": "web",
+    "desc": "Programa para monitorar o uso do OpenRouter",
+    "link": "https://github.com/Felipe-Alcantara/OpenRouter-Monitorator",
+    "createdAt": "2026-07-01T19:00:04Z",
+    "updatedAt": "2026-07-23T09:09:35Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python",
+      "JavaScript",
+      "PowerShell",
+      "Shell",
+      "Batchfile",
+      "CSS",
+      "Mako",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 77,
+        "JavaScript": 8,
+        "PowerShell": 4,
+        "Shell": 4,
+        "Batchfile": 3,
+        "CSS": 3,
+        "Mako": 0,
+        "HTML": 1
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/OpenRouter-Monitorator",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/openrouter-monitorator",
+    "repoFolder": "Felipe-Alcantara__OpenRouter-Monitorator"
+  },
+  {
+    "title": "Automa ES DO Notion",
+    "tag": "python",
+    "desc": "Aplicação local para operar o Notion com API Django, SPA React, CLI/MCP para IA e inventário GitHub.",
+    "link": "https://github.com/Felipe-Alcantara/Automa-es-do-Notion",
+    "createdAt": "2026-06-24T17:43:32Z",
+    "updatedAt": "2026-08-17T10:02:59Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Médio",
+      "online": false,
+      "techPercentage": {
+        "Python": 100
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Automa-es-do-Notion",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/automa-es-do-notion",
+    "repoFolder": "Felipe-Alcantara__Automa-es-do-Notion"
+  },
+  {
+    "title": "Openia",
+    "tag": "python",
+    "desc": "## openia — launcher de CLIs de IA com OpenRouter  `openia` é um pequeno programa em Python que deixa você escolher, instalar e abrir uma CLI de IA de terminal já configurada com sua chave do OpenRouter. A escolha do **modelo** acontece dentro de cada ferramenta; o `openia` cuida de instalar.",
+    "link": "https://github.com/Felipe-Alcantara/Openia",
+    "createdAt": "2026-06-23T18:39:53Z",
+    "updatedAt": "2026-07-23T08:49:07Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python",
+      "PowerShell",
+      "Shell",
+      "Batchfile"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 70,
+        "PowerShell": 10,
+        "Shell": 10,
+        "Batchfile": 10
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/Openia",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/openia",
+    "repoFolder": "Felipe-Alcantara__Openia"
+  },
+  {
+    "title": "SharePath",
+    "tag": "python",
+    "desc": "Compartilhamento P2P de arquivos entre 2 PCs usando Python + Radmin VPN",
+    "link": "https://github.com/Felipe-Alcantara/SharePath",
+    "createdAt": "2026-06-22T05:22:14Z",
+    "updatedAt": "2026-06-22T06:27:22Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python",
+      "Batchfile"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Pequeno",
+      "online": false,
+      "techPercentage": {
+        "Python": 88,
+        "Batchfile": 12
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/SharePath",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/sharepath",
+    "repoFolder": "Felipe-Alcantara__SharePath"
+  },
+  {
+    "title": "Components Database",
+    "tag": "web",
+    "desc": "Um agregador que cataloga componentes de UI de bibliotecas open source da comunidade (Uiverse, shadcn/ui, Magic UI, Aceternity e outras), salvando código, metadados, licença e link de origem em um banco SQLite pesquisável. A coleta é feita por uma arquitetura de **adapters** (um por fonte), com persistência idempotente e respeito às licenças.",
+    "link": "https://github.com/Felipe-Alcantara/components-database",
+    "createdAt": "2026-06-05T18:15:23Z",
+    "updatedAt": "2026-07-18T13:01:53Z",
+    "status": "Em Desenvolvimento",
+    "complexity": "Baixa",
+    "stack": [
+      "Python",
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "properties": {
+      "timeEstimated": "Em evolução",
+      "size": "Médio",
+      "online": false,
+      "techPercentage": {
+        "Python": 68,
+        "JavaScript": 31,
+        "CSS": 1,
+        "HTML": 0
+      }
+    },
+    "links": {
+      "github": "https://github.com/Felipe-Alcantara/components-database",
+      "site": "#",
+      "demo": "#",
+      "download": "#",
+      "post": "#"
+    },
+    "repoKey": "felipe-alcantara/components-database",
+    "repoFolder": "Felipe-Alcantara__components-database"
+  },
+  {
     "title": "Trabalho 2 Deep Learning Aplicado AO MNist",
     "tag": "python",
     "desc": "Trabalho de Inteligência Artificial - MNist em Redes Neurais Convolucionais Equipes de até 4 componentes. Com base na implementação da arquitetura LeNET para deep learning associada a solução do MNist (marceloarantes19/deepLearning). Pesquise mais duas arquiteturas de Redes Neurais profundas que possam ser associadas a solução do MNist.",
@@ -77,7 +661,7 @@
     "desc": "O Jovem Nerd existe desde 2006 e o NerdCast é um dos podcasts mais antigos e queridos do Brasil — com mais de 2.000 episódios espalhados por dezenas de programas diferentes. Mas quem chega hoje no site pela primeira vez se depara com uma experiência que não acompanhou o crescimento do acervo",
     "link": "https://github.com/Felipe-Alcantara/nerdcast-explorer",
     "createdAt": "2026-05-25T04:37:00Z",
-    "updatedAt": "2026-06-01T13:15:00Z",
+    "updatedAt": "2026-07-06T04:28:40Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [
@@ -117,7 +701,7 @@
     "desc": "Unihub trata-se de um projeto voltado à facilitar a vida acadêmica dos estudantes em um único lugar, de forma prática e intuitiva, visando uma interface moderna, de fácil utilização e organizada.",
     "link": "https://github.com/Felipe-Alcantara/UniHub",
     "createdAt": "2026-05-23T19:49:32Z",
-    "updatedAt": "2026-05-26T21:50:51Z",
+    "updatedAt": "2026-07-06T07:05:04Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [
@@ -128,11 +712,11 @@
     ],
     "properties": {
       "timeEstimated": "Em evolução",
-      "size": "Médio",
+      "size": "Grande",
       "online": false,
       "techPercentage": {
-        "JavaScript": 72,
-        "Python": 22,
+        "JavaScript": 73,
+        "Python": 21,
         "CSS": 5,
         "HTML": 1
       }
@@ -183,28 +767,32 @@
     "desc": "Felixo AI Core é o núcleo inteligente do ecossistema FelixoVerse: uma aplicação desktop para controlar, organizar e orquestrar múltiplas IAs, agentes, terminais, repositórios e fluxos de trabalho.",
     "link": "https://github.com/Felipe-Alcantara/Felixo-AI-Core",
     "createdAt": "2026-04-30T18:41:32Z",
-    "updatedAt": "2026-05-07T20:33:00Z",
+    "updatedAt": "2026-08-18T16:10:06Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [
-      "JavaScript",
       "TypeScript",
+      "JavaScript",
       "Python",
       "CSS",
       "Shell",
+      "PowerShell",
+      "Batchfile",
       "HTML"
     ],
     "properties": {
       "timeEstimated": "Em evolução",
-      "size": "Médio",
+      "size": "Grande",
       "online": false,
       "techPercentage": {
-        "JavaScript": 57,
-        "TypeScript": 40,
-        "Python": 3,
-        "CSS": 0,
+        "TypeScript": 49,
+        "JavaScript": 43,
+        "Python": 6,
+        "CSS": 1,
         "Shell": 0,
-        "HTML": 0
+        "PowerShell": 0,
+        "Batchfile": 0,
+        "HTML": 1
       }
     },
     "links": {
@@ -219,21 +807,27 @@
   },
   {
     "title": "Felixo System Design",
-    "tag": "code",
+    "tag": "automation",
     "desc": "Repositório central do Felixo System Design. Contém diretrizes de arquitetura, padrões de código e componentes para garantir consistência em todos os projetos.",
     "link": "https://github.com/Felipe-Alcantara/Felixo-System-Design",
     "createdAt": "2026-03-12T02:39:12Z",
-    "updatedAt": "2026-06-01T13:21:59Z",
+    "updatedAt": "2026-07-29T19:20:07Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [
-      "code"
+      "PowerShell",
+      "Shell",
+      "Batchfile"
     ],
     "properties": {
       "timeEstimated": "Em evolução",
       "size": "Pequeno",
       "online": false,
-      "techPercentage": {}
+      "techPercentage": {
+        "PowerShell": 51,
+        "Shell": 27,
+        "Batchfile": 22
+      }
     },
     "links": {
       "github": "https://github.com/Felipe-Alcantara/Felixo-System-Design",
@@ -519,7 +1113,7 @@
     "desc": "Um hub criativo em React que conecta código, música e projetos colaborativos. Este repositório serve como base inicial para o FelixoVerse, explorando design moderno, animações e uma estrutura flexível para crescimento contínuo.",
     "link": "https://github.com/Felipe-Alcantara/Felipe-Portifolio",
     "createdAt": "2026-01-08T17:54:47Z",
-    "updatedAt": "2026-06-02T12:10:37Z",
+    "updatedAt": "2026-06-02T13:50:55Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [
@@ -711,18 +1305,20 @@
     "desc": "Um projeto simples e funcional desenvolvido em HTML, CSS e JavaScript para ajudar na organização de ideias de presentes. A aplicação roda localmente, sem necessidade de servidor ou banco de dados externo, utilizando LocalStorage do navegador para salvar os dados.",
     "link": "https://github.com/Felipe-Alcantara/Organizador-de-presentes-do-Felixo",
     "createdAt": "2025-12-19T05:02:47Z",
-    "updatedAt": "2026-06-01T04:34:11Z",
+    "updatedAt": "2026-07-06T15:32:18Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [
-      "HTML"
+      "HTML",
+      "Python"
     ],
     "properties": {
       "timeEstimated": "Em evolução",
       "size": "Pequeno",
       "online": false,
       "techPercentage": {
-        "HTML": 100
+        "HTML": 81,
+        "Python": 19
       }
     },
     "links": {
@@ -1129,24 +1725,24 @@
     "desc": "Jogo web de casal com “Eu Nunca”, “Quem é Mais Provável” e “Verdade ou Desafio”. Sem anúncios, visual vermelho e cartas personalizáveis. React + Vite + Tailwind.",
     "link": "https://github.com/Felipe-Alcantara/SpicyGame",
     "createdAt": "2025-09-03T10:15:57Z",
-    "updatedAt": "2025-09-03T19:39:45Z",
+    "updatedAt": "2026-08-17T13:44:02Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [
       "TypeScript",
+      "CSS",
       "HTML",
-      "JavaScript",
-      "CSS"
+      "JavaScript"
     ],
     "properties": {
       "timeEstimated": "Em evolução",
-      "size": "Grande",
+      "size": "Médio",
       "online": false,
       "techPercentage": {
-        "TypeScript": 99,
-        "HTML": 1,
-        "JavaScript": 0,
-        "CSS": 0
+        "TypeScript": 98,
+        "CSS": 1,
+        "HTML": 0,
+        "JavaScript": 1
       }
     },
     "links": {
@@ -1323,7 +1919,7 @@
     "desc": "Este projeto automatiza a coleta e download de faixas do SoundCloud utilizando Selenium para navegar pela página e yt-dlp para baixar os áudios. Ele facilita o processo de extrair links e salvar as músicas desejadas localmente de forma rápida e eficiente.",
     "link": "https://github.com/Felipe-Alcantara/SoundScraper-soundcloud_track_scraper_downloader",
     "createdAt": "2024-11-06T00:38:55Z",
-    "updatedAt": "2026-03-18T05:35:56Z",
+    "updatedAt": "2026-06-12T14:23:53Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [
@@ -1337,8 +1933,8 @@
       "size": "Grande",
       "online": false,
       "techPercentage": {
-        "Python": 84,
-        "JavaScript": 15,
+        "Python": 87,
+        "JavaScript": 12,
         "CSS": 1,
         "HTML": 0
       }
@@ -1415,26 +2011,22 @@
   },
   {
     "title": "Amostragem Casual Simples",
-    "tag": "web",
+    "tag": "python",
     "desc": "📊 Descrição do Projeto: Técnicas de Amostragem em Python Visão Geral Este projeto é uma coleção educacional de scripts Python que demonstram e implementam três das principais técnicas de amostragem estatística de forma interativa e visual. Desenvolvido originalmente durante aulas de Estatística em setembro de 2024",
     "link": "https://github.com/Felipe-Alcantara/Amostragem-casual-simples",
     "createdAt": "2024-09-03T21:57:20Z",
-    "updatedAt": "2025-10-31T05:16:07Z",
+    "updatedAt": "2026-06-02T14:14:22Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [
-      "python",
-      "CSS",
-      "HTML"
+      "python"
     ],
     "properties": {
       "timeEstimated": "Em evolução",
       "size": "Médio",
       "online": false,
       "techPercentage": {
-        "Python": 58,
-        "CSS": 22,
-        "HTML": 20
+        "Python": 100
       }
     },
     "links": {
@@ -1573,7 +2165,7 @@
     "desc": "Este repositório contém um sistema de gerenciamento de clientes e filmes. O arquivo \"Cliente.py\" define uma classe `Cliente` que representa um cliente com atributos como nome, email, plano e idade.",
     "link": "https://github.com/Felipe-Alcantara/Programacao-Orientada-A-Objeto-em-Python-Sistema-De-Streaming",
     "createdAt": "2024-04-26T01:08:10Z",
-    "updatedAt": "2024-05-01T20:41:52Z",
+    "updatedAt": "2026-07-06T04:28:37Z",
     "status": "Em Desenvolvimento",
     "complexity": "Baixa",
     "stack": [
