@@ -19,12 +19,20 @@ Privacidade do repositório não decide sozinha se a apresentação é inadequad
 Um projeto privado pode ter uma ficha editorial pública quando isso fizer
 sentido e não publicar código, README ou metadados sensíveis. Esse caso precisa
 ser explícito em `portfolio-items.overrides.json` com
-`allowPrivatePresentation: true`; atualmente o único caso aprovado é Alura,
-que descreve estudos de um curso pago sem expor o código-fonte.
+`allowPrivatePresentation: true`. A revisão de 18/08/2026 aprovou fichas para
+Alura, Aprendendo-a-fazer-bots-do-discord, Cardshot-Roulette,
+Curso-em-Video---Curso-de-HTML, Curso-de-HTML-Completo-Programacao-Web,
+Exemplos_Clean_Code, Meu-jogo e Podcast-organizer. Elas são manuais e não
+possuem `repoFolder`, portanto o carregador não empacota README privado.
 
-Novos repositórios privados não entram automaticamente no site. Para publicar
-uma apresentação, a curadoria deve revisar o conteúdo e criar uma entrada
-manual sem importar arquivos do repositório.
+Ficaram fora do site FelixoVerse (planejamento interno, conversas e orçamento),
+LM-consultoria-imobili-ria-Controle-de-Captacao (sistema interno de cliente e
+credenciais de demonstração), Verstappen (fluxo de verificação de cartões),
+Presente-de-anivers-rio-Gemini-2.0 (conteúdo pessoal), Trabalho-da-faculdade
+(entrega acadêmica com identificação de equipe) e desktop-tutorial (tutorial
+genérico sem apresentação de portfólio). Novos repositórios privados não entram
+automaticamente no site; uma apresentação futura exige a mesma revisão e uma
+entrada manual sem importar arquivos do repositório.
 
 ## Histórico
 

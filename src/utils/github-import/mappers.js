@@ -383,6 +383,7 @@ export function mapRepositoryToPortfolioItem({
     title: normalizeProjectTitle(metadata.name),
     tag,
     desc: metadata.description || "Sem descrição",
+    private: metadata.private,
     link: metadata.repoUrl,
     createdAt: metadata.createdAt,
     updatedAt: metadata.updatedAt,

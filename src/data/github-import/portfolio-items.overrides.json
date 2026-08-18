@@ -5,6 +5,8 @@
   },
   {
     "repoKey": "felipe-alcantara/alura",
+    "title": "Projetos da Alura",
+    "private": true,
     "allowPrivatePresentation": true,
     "tag": "estudo",
     "extraTags": [
@@ -35,15 +37,27 @@
   },
   {
     "repoKey": "felipe-alcantara/curso-em-video---curso-de-html",
-    "tag": "estudo"
+    "title": "Curso em Vídeo — HTML e CSS",
+    "private": true,
+    "allowPrivatePresentation": true,
+    "tag": "estudo",
+    "desc": "Registro de estudos práticos de HTML5 e CSS3 realizados no Curso em Vídeo, sem publicação do código-fonte privado."
   },
   {
     "repoKey": "felipe-alcantara/curso-de-html-completo-programacao-web",
-    "tag": "estudo"
+    "title": "Curso de HTML Completo",
+    "private": true,
+    "allowPrivatePresentation": true,
+    "tag": "estudo",
+    "desc": "Registro de estudos de desenvolvimento web com HTML, mantido como apresentação do aprendizado sem expor o código-fonte privado."
   },
   {
     "repoKey": "felipe-alcantara/exemplos_clean_code",
-    "tag": "estudo"
+    "title": "Exemplos de Clean Code",
+    "private": true,
+    "allowPrivatePresentation": true,
+    "tag": "estudo",
+    "desc": "Exercícios de estudo sobre princípios e práticas de Clean Code."
   },
   {
     "repoKey": "felipe-alcantara/aprendendo-orientacao-a-objeto-em-python",
@@ -57,7 +71,11 @@
   },
   {
     "repoKey": "felipe-alcantara/aprendendo-a-fazer-bots-do-discord",
+    "title": "Aprendendo a fazer bots do Discord",
+    "private": true,
+    "allowPrivatePresentation": true,
     "tag": "estudo",
+    "desc": "Registro de estudos sobre desenvolvimento de bots para Discord com Python.",
     "hidden": true
   },
   {
@@ -192,8 +210,30 @@
   },
   {
     "repoKey": "felipe-alcantara/meu-jogo",
+    "title": "Meu jogo de cartas",
+    "private": true,
+    "allowPrivatePresentation": true,
+    "desc": "Protótipo de um jogo de cartas inspirado em Buckshot Roulette, desenvolvido para praticar Python e modularização.",
     "hidden": true,
     "status": "Finalizado"
+  },
+  {
+    "repoKey": "felipe-alcantara/cardshot-roulette",
+    "title": "Cardshot Roulette",
+    "private": true,
+    "allowPrivatePresentation": true,
+    "tag": "game",
+    "desc": "Jogo de cartas experimental para navegador, desenvolvido com React, Vite e Tailwind CSS em um formato pass-and-play.",
+    "status": "Em desenvolvimento"
+  },
+  {
+    "repoKey": "felipe-alcantara/podcast-organizer",
+    "title": "Podcast Organizer",
+    "private": true,
+    "allowPrivatePresentation": true,
+    "tag": "web",
+    "desc": "Template de uma aplicação web para organizar podcasts, com agregação de fontes, filtros, playlists e armazenamento local no navegador. As credenciais de APIs permanecem apenas no ambiente de execução.",
+    "status": "Em desenvolvimento"
   },
   {
     "repoKey": "felipe-alcantara/importando-bibliotecas",
